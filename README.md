@@ -1,2 +1,4 @@
 # C-ProgrammingTraining
-Window From programming using C# for training
+Window Form programming using C# for training
+
+using newtonsoft.json
