@@ -73,7 +73,8 @@ namespace JsonGenerator
                 MessageBox.Show("오류 발생: json이름이나 객체이름, 대사 중 하나라도 비어있습니다!");
             }
             else {
-                string JsonDirectory = Directory.GetCurrentDirectory() + "\\" + txtJson.Text + ".json";
+                string JsonDirectory = Path.GetFullPath(@"..\..\..\..\scriptList") + "\\" + txtJson.Text + ".json";
+                MessageBox.Show(JsonDirectory);
                 string result = "{\"" + txtObject.Text + "\":[" + txtScript.Text + "]}";
                 MessageBox.Show("파일 저장 주소: "+JsonDirectory);
                 try
