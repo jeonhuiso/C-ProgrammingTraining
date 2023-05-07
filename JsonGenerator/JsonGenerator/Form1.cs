@@ -28,35 +28,15 @@ namespace JsonGenerator
                 send();
             }
         }
-        private void KeyDownCheck(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtObject.Focus();
-            }
-        }
-        private void KeyDownCheck2(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtSpeaker.Focus();
-            }
-        }
-        private void KeyDownCheck3(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtComment.Focus();
-            }
-        }
+       
         private void send() {
             string completeText = "";
             if (txtScript.Text.Length == 0)
             {
-                completeText = "{\"Speaker\":" + "\"" + txtSpeaker.Text + "\"," + "\"Comment\":" + "\"" + txtComment.Text + "\"}\n";
+                completeText = "{\"Speaker\":" + "\"" + txtSpeaker.Text + "\"," + "\"Comment\":" + "\"" + txtComment.Text +"\",\"Image\":\""+txtImage.Text+ "\"}\n";
             }
             else {
-                completeText = ",{\"Speaker\":" + "\"" + txtSpeaker.Text + "\"," + "\"Comment\":" + "\"" + txtComment.Text + "\"}";
+                completeText = ",{\"Speaker\":" + "\"" + txtSpeaker.Text + "\"," + "\"Comment\":" + "\"" + txtComment.Text + "\",\"Image\":\"" + txtImage.Text + "\"}";
             }
 
             txtScript.Text = txtScript.Text + completeText;
@@ -69,7 +49,7 @@ namespace JsonGenerator
 
         private void btnMakeJson_Click(object sender, EventArgs e)
         {
-            if (txtJson.Text == "" || txtObject.Text == "" || txtScript.Text == "") {
+            if (txtJson.Text == "" || txtObject.Text == "" || txtScript.Text == ""||txtImage.Text=="") {
                 MessageBox.Show("오류 발생: json이름이나 객체이름, 대사 중 하나라도 비어있습니다!");
             }
             else {

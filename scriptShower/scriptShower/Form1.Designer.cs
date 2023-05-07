@@ -29,9 +29,7 @@ namespace scriptShower
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.CharactoPicture = new System.Windows.Forms.PictureBox();
-            this.charactorIist = new System.Windows.Forms.ImageList(this.components);
             this.txtSpeaker = new System.Windows.Forms.TextBox();
             this.txtComment = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CharactoPicture)).BeginInit();
@@ -42,15 +40,10 @@ namespace scriptShower
             this.CharactoPicture.Dock = System.Windows.Forms.DockStyle.Left;
             this.CharactoPicture.Location = new System.Drawing.Point(0, 0);
             this.CharactoPicture.Name = "CharactoPicture";
-            this.CharactoPicture.Size = new System.Drawing.Size(153, 153);
+            this.CharactoPicture.Size = new System.Drawing.Size(153, 183);
+            this.CharactoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CharactoPicture.TabIndex = 0;
             this.CharactoPicture.TabStop = false;
-            // 
-            // charactorIist
-            // 
-            this.charactorIist.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.charactorIist.ImageSize = new System.Drawing.Size(16, 16);
-            this.charactorIist.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // txtSpeaker
             // 
@@ -74,14 +67,15 @@ namespace scriptShower
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
             this.txtComment.ReadOnly = true;
-            this.txtComment.Size = new System.Drawing.Size(729, 125);
+            this.txtComment.Size = new System.Drawing.Size(729, 155);
             this.txtComment.TabIndex = 3;
+            this.txtComment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtScript_KeyDown);
             // 
             // ContextForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 153);
+            this.ClientSize = new System.Drawing.Size(882, 183);
             this.ControlBox = false;
             this.Controls.Add(this.txtComment);
             this.Controls.Add(this.txtSpeaker);
@@ -100,7 +94,6 @@ namespace scriptShower
         #endregion
 
         private System.Windows.Forms.PictureBox CharactoPicture;
-        private System.Windows.Forms.ImageList charactorIist;
         private System.Windows.Forms.TextBox txtSpeaker;
         private System.Windows.Forms.TextBox txtComment;
     }

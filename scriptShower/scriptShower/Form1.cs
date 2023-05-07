@@ -20,8 +20,10 @@ namespace scriptShower
         JToken jtkn;
         List<string> SpeakerList = new List<string>();
         List<string> CommentList = new List<string>();
+        List<string> ImageList = new List<string>();
         
         int i;
+        string ImageLink;
         public ContextForm()
         {
             InitializeComponent();
@@ -37,15 +39,19 @@ namespace scriptShower
             try
             {
                 string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\..\scriptList") + "\\" + jsonName + ".json");
+                ImageLink= Path.GetFullPath(@"..\..\..\..\Image");
                 job = JObject.Parse(@jsonData);
                 jtkn = job[token];
             foreach (JToken data in jtkn) {
                 SpeakerList.Add((string)data["Speaker"]);
                 CommentList.Add((string)data["Comment"]);
+                ImageList.Add((string)data["Image"]);
             }
                 if (SpeakerList.Count() != 0) {
                     txtComment.Text = CommentList[0];
                     txtSpeaker.Text = SpeakerList[0];
+                    string link = ImageLink +"\\"+ ImageList[0] + ".png";
+                    CharactoPicture.Image = Image.FromFile(@link);
                     i = 1;
                 }
             }
@@ -55,21 +61,26 @@ namespace scriptShower
             
         }
         public void ShowComment(KeyEventArgs e) {
-            if (e.KeyCode == Keys.Space||e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Space|| e.KeyCode == Keys.Enter)
             {
                 if (i < SpeakerList.Count())
                 {
 
                     txtSpeaker.Text = SpeakerList[i];
                     txtComment.Text = CommentList[i];
+                    string link = ImageLink +"\\"+ ImageList[i] + ".png";
+                    CharactoPicture.Image = Image.FromFile(@link);
                     i++;
                 }
                 else
                 {
                     txtSpeaker.Text = "";
                     txtComment.Text = "";
+                    CharactoPicture.Image = null;
                     SpeakerList.Clear();
                     CommentList.Clear();
+                    ImageList.Clear();
+
                 }
             }
         }
