@@ -1,2 +1,14 @@
-{"prologue":[{"Speaker":"1번","Comment":"안녕","Image":"1번"}
-,{"Speaker":"2번","Comment":"hello","Image":"2번"}]}
+{
+  "prologue": 
+  [
+    {
+      "Speaker": "1번",
+      "Comment": "안녕",
+      "Image": "1번"
+    },
+    {
+      "Speaker": "2번",
+      "Comment": "hello",
+      "Image": "2번"
+    }
+  ]}
