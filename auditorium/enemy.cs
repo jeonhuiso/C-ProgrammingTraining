@@ -14,6 +14,11 @@ namespace auditorium
             enemy_y = y;
         }
 
+        public void direction_init(int east, int west, int south, int north)
+        {
+            direction_change(east, west, south, north);
+        }
+
         public void change_enemy_xy(int x, int y)
         {
             enemy_x = x;

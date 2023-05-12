@@ -29,8 +29,8 @@ namespace auditorium
             maze_array = new int[16, 25] { { 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1 },
                                            { 1, 0,  0,  0,  0,  1,  0,  1,  1,  0,  1,  6,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1 },
                                            { 1, 0,  1,  1,  0,  0,  0,  0,  1,  0,  1,  1,  1,  0,  1,  0,  1,  0,  0,  1,  1,  0,  0,  1,  1 },
-                                           { 1, 7,  0,  1,  1,  0,  1,  0,  0,  0,  1,  0,  1,  0,  0,  0,  1,  1,  0,  0,  1,  2,  0,  0,  1 },
-                                           { 1, 1,  0,  0,  0,  0,  1,  1,  1,  0,  1,  0,  1,  1,  1,  1,  1,  0,  0,  0,  1,  1,  1,  1,  1 },
+                                           { 1, 7,  0,  1,  1,  0,  1,  0,  0,  0,  1,  0,  1,  0,  0,  0,  1,  1,  0,  0,  1,  2,  1,  0,  1 },
+                                           { 1, 1,  0,  0,  0,  0,  1,  1,  1,  0,  1,  0,  1,  1,  1,  1,  1,  0,  0,  0,  1,  1,  1,  0,  1 },
                                            { 1, 1,  1,  1,  0,  1,  1,  0,  0,  2,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1,  1,  0,  1,  0,  1 },
                                            { 1, 5,  1,  0,  0,  1,  0,  0,  1,  1,  1,  0,  1,  1,  0,  0,  0,  1,  0,  0,  1,  0,  1,  0,  1 },
                                            { 1, 0,  1,  1,  0,  1,  0,  0,  1,  0,  1,  0,  0,  1,  0,  1,  0,  1,  1,  1,  1,  0,  1,  0,  1 },
@@ -73,7 +73,7 @@ namespace auditorium
                             s = 1;
                         if (maze_array[i - 1, j] == 0)
                             n = 1;
-                        enemy_char[enemy_num].direction_change(e, w, s, n);
+                        enemy_char[enemy_num].direction_init(e, w, s, n);
                         pic[i, j].Image = maze_image.Images[2];
                         enemy_num++;
                     }
@@ -167,7 +167,7 @@ namespace auditorium
             }
         }
 
-        private void char_move_enemy_check() // 캐릭터와 적이 동일 선상에 있으면 위치 변경
+        private void char_move_enemy_check()
         {
             for (int i = 0; i < enemy_num; i++)
             {
@@ -207,7 +207,7 @@ namespace auditorium
                 }
             }
         }
-        private void maze_exit() // 미로 탈출 종료
+        private void maze_exit()
         {
             maze_timer.Stop();
             var maze_exit = MessageBox.Show(
@@ -243,6 +243,7 @@ namespace auditorium
             else if (maze_array[next_y, next_x] == 2) // enemy를 만나는 경우
             {
                 new_maze_init();
+                //MessageBox.Show("적을 만났습니다.\r\n처음부터 다시 시작합니다.");
                 return 2;
             }
             else if (maze_array[next_y, next_x] == 3) // 미로 탈출
@@ -319,7 +320,7 @@ namespace auditorium
                             s = 1;
                         if (maze_array[i - 1, j] == 0)
                             n = 1;
-                        enemy_char[enemy_num].direction_change(e, w, s, n);
+                        enemy_char[enemy_num].direction_init(e, w, s, n);
                         pic[i, j].Image = maze_image.Images[2];
                         enemy_num++;
                     }
@@ -389,7 +390,7 @@ namespace auditorium
                     }
                 }
 
-                enemy_direction_x = enemy_char[i].return_direction_x(); // 주인공 움직임 때문에 추가
+                enemy_direction_x = enemy_char[i].return_direction_x();
                 enemy_direction_y = enemy_char[i].return_direction_y();
                 if (maze_array[enemy_y + enemy_direction_y, enemy_x + enemy_direction_x] == 0)
                 {
@@ -402,6 +403,9 @@ namespace auditorium
                 }
                 else
                 {
+
+                    enemy_x = enemy_char[i].return_enemy_x();
+                    enemy_y = enemy_char[i].return_enemy_y();
                     int ee = 0, w = 0, s = 0, n = 0;
                     if (maze_array[enemy_y, enemy_x + 1] == 0)
                         ee = 1;
@@ -412,21 +416,23 @@ namespace auditorium
                     if (maze_array[enemy_y - 1, enemy_x] == 0)
                         n = 1;
                     enemy_char[i].direction_change(ee, w, s, n);
-                    
-                    //enemy_direction_x = enemy_char[i].return_direction_x();
-                    //enemy_direction_y = enemy_char[i].return_direction_y();
-                    //enemy_char[i].change_enemy_xy(enemy_x + enemy_direction_x, enemy_y + enemy_direction_y);
-                    //enemy_move(enemy_x, enemy_y, enemy_direction_x, enemy_direction_y);
+                    enemy_direction_x = enemy_char[i].return_direction_x();
+                    enemy_direction_y = enemy_char[i].return_direction_y();
+                    if (maze_array[enemy_y + enemy_direction_y, enemy_x + enemy_direction_x] == 0)
+                    {
+                        enemy_char[i].change_enemy_xy(enemy_x + enemy_direction_x, enemy_y + enemy_direction_y);
+                        enemy_move(enemy_x, enemy_y, enemy_direction_x, enemy_direction_y);
+                    }
                 }
             }
         }
 
-        private void enemy_move(int enemy_x, int enemy_y, int enemy_direction_x, int enemy_direction_y)
+        private void enemy_move(int enemy_x, int enemy_y, int dir_x, int dir_y)
         {
-                pic[enemy_y, enemy_x].Image = maze_image.Images[0];
-                maze_array[enemy_y, enemy_x] = 0;
-                pic[enemy_y + enemy_direction_x, enemy_x + enemy_direction_y].Image = maze_image.Images[2];
-                maze_array[enemy_y + enemy_direction_x, enemy_x + enemy_direction_y] = 2;
+            pic[enemy_y, enemy_x].Image = maze_image.Images[0];
+            maze_array[enemy_y, enemy_x] = 0;
+            pic[enemy_y + dir_y, enemy_x + dir_x].Image = maze_image.Images[2];
+            maze_array[enemy_y + dir_y, enemy_x + dir_x] = 2;
         }
 
         private bool find_character(int x, int y, int dir_x, int dir_y) // enemy가 주인공을 볼 수 있는지 확인 
