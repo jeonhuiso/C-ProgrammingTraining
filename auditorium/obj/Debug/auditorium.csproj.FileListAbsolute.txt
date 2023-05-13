@@ -10,3 +10,4 @@ C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csp
 C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.CoreCompileInputs.cache
 C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.exe
 C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.pdb
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.clock.resources

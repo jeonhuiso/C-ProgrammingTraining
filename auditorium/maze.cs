@@ -260,6 +260,10 @@ namespace auditorium
             }
             else if (maze_array[next_y, next_x] == 5) // 2번 퍼즐
             {
+                clock clock_mad = new clock();
+                clock_mad.Owner = this;
+                clock_mad.Show();
+                maze_timer.Stop();
                 return 5;
             }
             else if (maze_array[next_y, next_x] == 6) // 3번 퍼즐

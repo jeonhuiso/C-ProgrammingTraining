@@ -1,7 +1,7 @@
 ﻿
 namespace auditorium
 {
-    partial class nono
+    partial class clock
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,21 @@ namespace auditorium
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nono));
-            this.lbl_nono_level = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clock));
+            this.lbl_clock_level = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lbl_nono_level
+            // lbl_clock_level
             // 
-            this.lbl_nono_level.AutoSize = true;
-            this.lbl_nono_level.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbl_nono_level.Location = new System.Drawing.Point(75, 55);
-            this.lbl_nono_level.Name = "lbl_nono_level";
-            this.lbl_nono_level.Size = new System.Drawing.Size(73, 36);
-            this.lbl_nono_level.TabIndex = 6;
-            this.lbl_nono_level.Text = "4 / 1";
+            this.lbl_clock_level.AutoSize = true;
+            this.lbl_clock_level.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lbl_clock_level.Location = new System.Drawing.Point(75, 55);
+            this.lbl_clock_level.Name = "lbl_clock_level";
+            this.lbl_clock_level.Size = new System.Drawing.Size(73, 36);
+            this.lbl_clock_level.TabIndex = 7;
+            this.lbl_clock_level.Text = "2 / 1";
             // 
-            // nono
+            // clock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -51,19 +51,20 @@ namespace auditorium
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 600);
-            this.Controls.Add(this.lbl_nono_level);
+            this.Controls.Add(this.lbl_clock_level);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(100, 100);
-            this.Name = "nono";
+            this.Name = "clock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form3";
+            this.Text = "clock";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lbl_nono_level;
+
+        private System.Windows.Forms.Label lbl_clock_level;
     }
 }

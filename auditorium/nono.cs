@@ -12,11 +12,11 @@ namespace auditorium
 {
     public partial class nono : Form
     {
-        Button[,] nono_btn;
-        int[,] nono_check_array;
-        int level = 0;
-        int s_location_x = 150;
-        int s_location_y = 40;
+        private Button[,] nono_btn;
+        private int[,] nono_check_array;
+        private int level = 0;
+        private int s_location_x = 150;
+        private int s_location_y = 40;
 
         public nono()
         {
@@ -153,12 +153,8 @@ namespace auditorium
             if (check_complete(4 + level))
             {
                 for (int i = 0; i < 4 + level; i++)
-                {
                     for (int j = 0; j < 4 + level; j++)
-                    {
                         this.Controls.Remove(nono_btn[i, j]);
-                    }
-                }
                 level++;
                 if (level == 4)
                 {
@@ -169,7 +165,7 @@ namespace auditorium
                     nono_btn = new Button[4 + level, 4 + level];
                     nono_check_array = new int[3 + level, 3 + level];
                     make_game(4 + level);
-                    lbl_nono_level.Text = (int.Parse(lbl_nono_level.Text) + 1).ToString();
+                    lbl_nono_level.Text = "4 / " + (int.Parse(lbl_nono_level.Text.Remove(0, 3)) + 1).ToString();
                 }
             }
             else
