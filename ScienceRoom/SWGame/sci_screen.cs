@@ -12,24 +12,68 @@ namespace SWGame
 {
     public partial class sci_screen : Form
     {
-        public sci_screen()
+        public int sci_ans;
+        public sci_screen(int ans)
         {
             InitializeComponent();
+            sci_ans = ans;
+                        
+            //정답을 이미 맞춘경우 정답만 다시 표시
+            if (sci_ans == 1)
+            {
+                MessageBox.Show("노말정답");
+                //노말정답 표시
+                sci_ans = 1;
+            }
+            else if (sci_ans == 2)
+            {
+                MessageBox.Show("히든정답");
+                //히든정답 표시
+                sci_ans = 2;
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void aply_btn_Click(object sender, EventArgs e)
         {
             string msg;
             string code = textBox1.Text;
+            int ans = 0;    //부모에게 답 결과 전달용;
 
-            if (code == "f7d11913")
-                msg = "normal";
+            //아직 정답을 맞추지 못했다면
+            if (sci_ans == 0)
+            {
+                if (code == "f7d11913")
+                {
+                    msg = "normal";
+                    //노말 정답 표시 기능 임시
+                    MessageBox.Show("노말정답");
+                    sci_ans = 1;
+                }
+                else if (code == "ffd11t13")
+                {
+                    msg = "hidden";
+                    //히든 정답 표시 기능 임시
+                    MessageBox.Show("히든정답");
+                    sci_ans = 2;
+                }
+                else
+                {
+                    msg = "wrong";
+                    sci_ans = 0;
+                }
+            }
 
-            else if (code == "ffd11t13")
-                msg = "hidden";
+            //결과 전달
+            DialogResult = DialogResult.OK;
+            science ScienceRoom = (science)Owner;
+            ScienceRoom.sci_ans = sci_ans;
+        }
 
-            else
-                msg = "wrong";
+        //이미 정답을 맞췄으면 답만 보여주고 화면은 닫아버림
+        private void sci_screen_Activated(object sender, EventArgs e)
+        {
+            if (sci_ans != 0)
+                this.Close();
         }
     }
 }

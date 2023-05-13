@@ -9,3 +9,14 @@ C:\Users\최지원\Desktop\jumble\SWGame\obj\Debug\SWGame.csproj.GenerateResourc
 C:\Users\최지원\Desktop\jumble\SWGame\obj\Debug\SWGame.csproj.CoreCompileInputs.cache
 C:\Users\최지원\Desktop\jumble\SWGame\obj\Debug\SWGame.exe
 C:\Users\최지원\Desktop\jumble\SWGame\obj\Debug\SWGame.pdb
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\bin\Debug\SWGame.exe.config
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\bin\Debug\SWGame.exe
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\bin\Debug\SWGame.pdb
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.AssemblyReference.cache
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.science.resources
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.Properties.Resources.resources
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.sci_screen.resources
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.GenerateResource.cache
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.CoreCompileInputs.cache
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.exe
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.pdb
