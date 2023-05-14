@@ -221,7 +221,7 @@ namespace SWGame
             }
         }
 
-        private void sci_lockf_Click(object sender, EventArgs e)
+        private void sci_lock_Click(object sender, EventArgs e)
         {
             if(lock_event != 2)
             {
@@ -230,6 +230,7 @@ namespace SWGame
             else
             {
                 //열쇠 사용 후 밖으로 이동
+                MessageBox.Show("밖으로 이동");
             }
         }
     }

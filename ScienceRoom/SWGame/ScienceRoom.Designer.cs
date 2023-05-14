@@ -43,7 +43,7 @@
             this.sci_lighter = new System.Windows.Forms.CheckBox();
             this.sci_phenol = new System.Windows.Forms.CheckBox();
             this.Na = new System.Windows.Forms.CheckBox();
-            this.sci_lockf = new System.Windows.Forms.Button();
+            this.sci_lock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sci_1
@@ -187,22 +187,22 @@
             this.Na.Text = "나트륨";
             this.Na.UseVisualStyleBackColor = true;
             // 
-            // sci_lockf
+            // sci_lock
             // 
-            this.sci_lockf.Location = new System.Drawing.Point(124, 521);
-            this.sci_lockf.Name = "sci_lockf";
-            this.sci_lockf.Size = new System.Drawing.Size(75, 23);
-            this.sci_lockf.TabIndex = 17;
-            this.sci_lockf.Text = "자물쇠";
-            this.sci_lockf.UseVisualStyleBackColor = true;
-            this.sci_lockf.Click += new System.EventHandler(this.sci_lockf_Click);
+            this.sci_lock.Location = new System.Drawing.Point(124, 521);
+            this.sci_lock.Name = "sci_lock";
+            this.sci_lock.Size = new System.Drawing.Size(75, 23);
+            this.sci_lock.TabIndex = 17;
+            this.sci_lock.Text = "자물쇠";
+            this.sci_lock.UseVisualStyleBackColor = true;
+            this.sci_lock.Click += new System.EventHandler(this.sci_lock_Click);
             // 
             // science
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.sci_lockf);
+            this.Controls.Add(this.sci_lock);
             this.Controls.Add(this.Na);
             this.Controls.Add(this.sci_phenol);
             this.Controls.Add(this.sci_lighter);
@@ -242,7 +242,7 @@
         private System.Windows.Forms.CheckBox sci_lighter;
         private System.Windows.Forms.CheckBox sci_phenol;
         private System.Windows.Forms.CheckBox Na;
-        private System.Windows.Forms.Button sci_lockf;
+        private System.Windows.Forms.Button sci_lock;
     }
 }
 
