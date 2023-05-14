@@ -48,7 +48,7 @@
             ClientSize = new Size(882, 553);
             Controls.Add(btnComputer);
             Name = "Comp_Room";
-            Text = "Form1";
+            Text = "Computer Room";
             ResumeLayout(false);
         }
 

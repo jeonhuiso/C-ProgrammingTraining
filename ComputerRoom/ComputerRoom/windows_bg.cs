@@ -9,6 +9,7 @@ namespace ComputerRoom
             InitializeComponent();
             string CombinedPath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\..\\..");
             ofd.InitialDirectory = System.IO.Path.GetFullPath(CombinedPath);
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void boxFolder_Click(object sender, EventArgs e)
@@ -22,7 +23,7 @@ namespace ComputerRoom
         private void boxQuiz_Click(object sender, EventArgs e)
         {
             quiz qz = new quiz();
-            qz.MdiParent = this;
+            qz.Owner = this;          
             qz.Show();
         }
     }

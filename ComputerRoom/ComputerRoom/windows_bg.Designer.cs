@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(windows_bg));
-            windowBg = new PictureBox();
             boxQuiz = new PictureBox();
             lbl_boxQuiz = new Label();
             txtTime = new TextBox();
@@ -38,21 +37,10 @@
             boxFolder = new PictureBox();
             lblFolder = new Label();
             ofd = new OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)windowBg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxQuiz).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxInternet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxFolder).BeginInit();
             SuspendLayout();
-            // 
-            // windowBg
-            // 
-            windowBg.Image = (Image)resources.GetObject("windowBg.Image");
-            windowBg.Location = new Point(-43, -29);
-            windowBg.Name = "windowBg";
-            windowBg.Size = new Size(970, 610);
-            windowBg.SizeMode = PictureBoxSizeMode.StretchImage;
-            windowBg.TabIndex = 2;
-            windowBg.TabStop = false;
             // 
             // boxQuiz
             // 
@@ -142,19 +130,19 @@
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(882, 553);
+            Controls.Add(txtTime);
+            Controls.Add(lbl_boxQuiz);
+            Controls.Add(boxQuiz);
             Controls.Add(lblFolder);
             Controls.Add(boxFolder);
             Controls.Add(label1);
             Controls.Add(boxInternet);
-            Controls.Add(txtTime);
-            Controls.Add(lbl_boxQuiz);
-            Controls.Add(boxQuiz);
-            Controls.Add(windowBg);
+            DoubleBuffered = true;
             IsMdiContainer = true;
             Name = "windows_bg";
             Text = "Window";
-            ((System.ComponentModel.ISupportInitialize)windowBg).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxQuiz).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxInternet).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxFolder).EndInit();
@@ -163,8 +151,6 @@
         }
 
         #endregion
-
-        private PictureBox windowBg;
         private PictureBox boxQuiz;
         private Label lbl_boxQuiz;
         private TextBox txtTime;
