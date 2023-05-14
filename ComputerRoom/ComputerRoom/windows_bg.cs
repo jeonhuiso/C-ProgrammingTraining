@@ -1,8 +1,8 @@
 namespace ComputerRoom
 {
-    public partial class Form1 : Form
+    public partial class windows_bg : Form
     {
-        public Form1()
+        public windows_bg()
         {
             InitializeComponent();
         }
