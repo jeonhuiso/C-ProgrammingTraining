@@ -4,6 +4,9 @@
     <Compile Update="Comp_Room.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="quiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="windows_bg.cs">
       <SubType>Form</SubType>
     </Compile>

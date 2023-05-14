@@ -61,7 +61,7 @@
   <data name="windowBg.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAArwAAAINCAYAAADcLKyTAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAHKdJREFUeF7t3U1yI0l6LdA0TZ+mGmimuTTTArQImb3tVDVX1jvppbTgxfQqT/AD
+        cQAAEnEB89x6jgAAHKdJREFUeF7t3U1yI0l6LdA0TZ+mGmimuTTTArQImb3tVDVX1jvppbTgxfQqT/AD
         GPgND7/nyk4T/2RcoBo3IXbWDxERERERERERERERERERERERERERERERERERERERERERERERERERERER
         ERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERER
         ERERERERERERERERkdXy/378+7//94//+q//H+c///N/f/zHf/zPj3/913879fAvn3WIiIiIyD75/fd/
@@ -229,7 +229,7 @@
   <data name="boxQuiz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAAd0SU1FB98FFQ8OEub9N3wAACynSURBVHhe7dZLbmTLsiTRO/Q3tDOzKiOQLUIa
+        DAAACwwBP0AiyAAAAAd0SU1FB98FFQ8OEub9N3wAACynSURBVHhe7dZLbmTLsiTRO/Q3tDOzKiOQLUIa
         1DAkFZYuAqxuwDf3R/m/6/3f//3f/5OkF/35DJq9Gb0UkvSCP59Bszejl0KSXvDnM2j2ZvRSSNIL/nwG
         zd6MXgpJesGfz6DZm9FLIUkv+PMZNHszeikk6QV/PoNmb0YvhSS94M9n0OzN6KWQpBf8+QyavRm9FJL0
         gj+fQbM3o5dCkl7w5zNo9mb0UkjSC/58Bs3ejF4KSXrBn8+g2ZvRSyFJL/jzGTR7M3opJOkFfz6DZm9G
@@ -3388,7 +3388,7 @@
   <data name="boxFolder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAAd0SU1FB98FFQ8aKXlYCQ0AADRlSURBVHhe7dZBiiS7tgXRO/Qa2pvZ/yehmtZI
+        DAAACwwBP0AiyAAAAAd0SU1FB98FFQ8aKXlYCQ0AADRlSURBVHhe7dZBiiS7tgXRO/Qa2pvZ/yehmtZI
         80O5EG4Gq7uJSEJS/ldVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
         VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
         VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
@@ -3655,6 +3655,9 @@
         IwA0xAgADTECQEOMANAQIwAM9+uvvwEHwPOxV6lDAwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="ofd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAArwAAAINCAYAAADcLKyTAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS

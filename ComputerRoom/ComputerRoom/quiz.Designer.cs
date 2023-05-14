@@ -1,6 +1,6 @@
 ﻿namespace ComputerRoom
 {
-    partial class Comp_Room
+    partial class quiz
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnComputer = new Button();
-            SuspendLayout();
-            // 
-            // btnComputer
-            // 
-            btnComputer.Location = new Point(369, 64);
-            btnComputer.Name = "btnComputer";
-            btnComputer.Size = new Size(108, 83);
-            btnComputer.TabIndex = 0;
-            btnComputer.Text = "button1";
-            btnComputer.UseVisualStyleBackColor = true;
-            btnComputer.Click += btnComputer_Click;
-            // 
-            // Comp_Room
-            // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            components = new System.ComponentModel.Container();
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(882, 553);
-            Controls.Add(btnComputer);
-            Name = "Comp_Room";
+            ClientSize = new Size(800, 450);
             Text = "Form1";
-            ResumeLayout(false);
         }
 
         #endregion
-
-        private Button btnComputer;
     }
 }

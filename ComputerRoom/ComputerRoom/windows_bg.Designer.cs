@@ -37,6 +37,7 @@
             label1 = new Label();
             boxFolder = new PictureBox();
             lblFolder = new Label();
+            ofd = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)windowBg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxQuiz).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxInternet).BeginInit();
@@ -64,6 +65,7 @@
             boxQuiz.SizeMode = PictureBoxSizeMode.StretchImage;
             boxQuiz.TabIndex = 3;
             boxQuiz.TabStop = false;
+            boxQuiz.Click += boxQuiz_Click;
             // 
             // lbl_boxQuiz
             // 
@@ -118,7 +120,7 @@
             boxFolder.SizeMode = PictureBoxSizeMode.StretchImage;
             boxFolder.TabIndex = 9;
             boxFolder.TabStop = false;
-            boxFolder.Visible = false;
+            boxFolder.Click += boxFolder_Click;
             // 
             // lblFolder
             // 
@@ -130,9 +132,12 @@
             lblFolder.Size = new Size(70, 20);
             lblFolder.TabIndex = 10;
             lblFolder.Text = "Directory";
-            lblFolder.Visible = false;
             // 
-            // Form1
+            // ofd
+            // 
+            ofd.FileName = "openFileDialog1";
+            // 
+            // windows_bg
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -147,8 +152,8 @@
             Controls.Add(boxQuiz);
             Controls.Add(windowBg);
             IsMdiContainer = true;
-            Name = "Form1";
-            Text = "Form1";
+            Name = "windows_bg";
+            Text = "Window";
             ((System.ComponentModel.ISupportInitialize)windowBg).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxQuiz).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxInternet).EndInit();
@@ -167,5 +172,6 @@
         private Label label1;
         private PictureBox boxFolder;
         private Label lblFolder;
+        private OpenFileDialog ofd;
     }
 }
