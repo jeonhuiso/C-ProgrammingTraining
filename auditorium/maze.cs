@@ -24,15 +24,16 @@ namespace auditorium
             InitializeComponent();
             maze_init();
         }
-        public void maze_init()
+        
+        private void maze_array_setting()
         {
             maze_array = new int[16, 25] { { 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1 },
-                                           { 1, 0,  0,  0,  0,  1,  0,  1,  1,  0,  1,  6,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1 },
-                                           { 1, 0,  1,  1,  0,  0,  0,  0,  1,  0,  1,  1,  1,  0,  1,  0,  1,  0,  0,  1,  1,  0,  0,  1,  1 },
-                                           { 1, 7,  0,  1,  1,  0,  1,  0,  0,  0,  1,  0,  1,  0,  0,  0,  1,  1,  0,  0,  1,  2,  1,  0,  1 },
-                                           { 1, 1,  0,  0,  0,  0,  1,  1,  1,  0,  1,  0,  1,  1,  1,  1,  1,  0,  0,  0,  1,  1,  1,  0,  1 },
+                                           { 1, 0,  0,  0,  0,  1,  1,  0,  0,  0,  1,  6,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1 },
+                                           { 1, 0,  1,  1,  0,  0,  1,  0,  1,  0,  1,  1,  1,  0,  1,  0,  1,  0,  0,  1,  1,  0,  0,  1,  1 },
+                                           { 1, 7,  0,  1,  1,  0,  0,  0,  0,  0,  1,  0,  1,  0,  0,  0,  1,  1,  0,  0,  1,  2,  1,  0,  1 },
+                                           { 1, 1,  0,  0,  0,  0,  1,  1,  1,  0,  1,  0,  1,  1,  1,  1,  1,  0,  0,  0,  1,  0,  1,  0,  1 },
                                            { 1, 1,  1,  1,  0,  1,  1,  0,  0,  2,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1,  1,  0,  1,  0,  1 },
-                                           { 1, 5,  1,  0,  0,  1,  0,  0,  1,  1,  1,  0,  1,  1,  0,  0,  0,  1,  0,  0,  1,  0,  1,  0,  1 },
+                                           { 1, 5,  1,  0,  0,  1,  0,  0,  1,  1,  1,  0,  1,  1,  0,  0,  0,  0,  0,  0,  1,  0,  1,  0,  1 },
                                            { 1, 0,  1,  1,  0,  1,  0,  0,  1,  0,  1,  0,  0,  1,  0,  1,  0,  1,  1,  1,  1,  0,  1,  0,  1 },
                                            { 1, 0,  1,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  1 },
                                            { 1, 0,  1,  1,  1,  1,  0,  0,  0,  0,  1,  0,  1,  0,  1,  0,  1,  1,  1,  0,  1,  0,  1,  1,  1 },
@@ -42,6 +43,11 @@ namespace auditorium
                                            { 1, 0,  1,  0,  1,  0,  1,  0,  0,  0,  1,  4,  1,  0,  1,  0,  1,  0,  0,  0,  1,  0,  1,  1,  1 },
                                            { 1, 0,  0,  0,  0,  0,  1,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  1 },
                                            { 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1 } };
+        }
+
+        public void maze_init()
+        {
+            maze_array_setting();
             enemy_num = 0;
             for (int i = 0; i < 16; i++) // picturebox 설정 + enemy 초기 방향 설정
             {
@@ -52,8 +58,9 @@ namespace auditorium
                     pic[i, j].Height = 20;
                     pic[i, j].Left = 20 * j + 45;
                     pic[i, j].Top = 20 * i + 55;
+                    pic[i, j].BackColor = SystemColors.Control;
                     pic[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
-                    if (maze_array[i, j] == 0)
+                    if (maze_array[i, j] == 0 || maze_array[i, j] == 3)
                     {
                         pic[i, j].Image = maze_image.Images[0];
                     }
@@ -73,29 +80,25 @@ namespace auditorium
                             s = 1;
                         if (maze_array[i - 1, j] == 0)
                             n = 1;
-                        enemy_char[enemy_num].direction_init(e, w, s, n);
-                        pic[i, j].Image = maze_image.Images[2];
+                        enemy_char[enemy_num].direction_change(e, w, s, n);
+                        pic[i, j].Image = enemy_image.Images[enemy_char[enemy_num].return_direction_check()];
                         enemy_num++;
-                    }
-                    else if (maze_array[i, j] == 3)
-                    {
-                        pic[i, j].Image = maze_image.Images[3];
                     }
                     else if (maze_array[i, j] == 4)
                     {
-                        pic[i, j].Image = maze_image.Images[4];
+                        pic[i, j].Image = maze_image.Images[2];
                     }
                     else if (maze_array[i, j] == 5)
                     {
-                        pic[i, j].Image = maze_image.Images[5];
+                        pic[i, j].Image = maze_image.Images[2];
                     }
                     else if (maze_array[i, j] == 6)
                     {
-                        pic[i, j].Image = maze_image.Images[6];
+                        pic[i, j].Image = maze_image.Images[2];
                     }
                     else
                     {
-                        pic[i, j].Image = maze_image.Images[7];
+                        pic[i, j].Image = main_character_img.Images[0];
                     }
                     this.Controls.Add(pic[i, j]);
                 }
@@ -114,7 +117,7 @@ namespace auditorium
                         int check = pre_check(current_x - 1, current_y);
                         if (check == 0 || check == 4 || check == 5 || check == 6)
                         {
-                            move_My_Character(current_x, current_y, current_x - 1, current_y);
+                            move_My_Character(current_x, current_y, current_x - 1, current_y, 1);
                             current_x--;
                         }
                         else if (check == 3)
@@ -128,7 +131,7 @@ namespace auditorium
                         int check = pre_check(current_x + 1, current_y);
                         if (check == 0 || check == 4 || check == 5 || check == 6)
                         {
-                            move_My_Character(current_x, current_y, current_x + 1, current_y);
+                            move_My_Character(current_x, current_y, current_x + 1, current_y, 0);
                             current_x++;
                         }
                         else if (check == 3)
@@ -142,7 +145,7 @@ namespace auditorium
                         int check = pre_check(current_x, current_y - 1);
                         if (check == 0 || check == 4 || check == 5 || check == 6)
                         {
-                            move_My_Character(current_x, current_y, current_x, current_y - 1);
+                            move_My_Character(current_x, current_y, current_x, current_y - 1, 3);
                             current_y--;
                         }
                         else if (check == 3)
@@ -156,7 +159,7 @@ namespace auditorium
                         int check = pre_check(current_x, current_y + 1);
                         if (check == 0 || check == 4 || check == 5 || check == 6)
                         {
-                            move_My_Character(current_x, current_y, current_x, current_y + 1);
+                            move_My_Character(current_x, current_y, current_x, current_y + 1, 2);
                             current_y++;
                         }
                         else if (check == 3)
@@ -171,42 +174,10 @@ namespace auditorium
         {
             for (int i = 0; i < enemy_num; i++)
             {
-                int enemy_x = enemy_char[i].return_enemy_x();
-                int enemy_y = enemy_char[i].return_enemy_y();
-                int enemy_direction_x = enemy_char[i].return_direction_x();
-                int enemy_direction_y = enemy_char[i].return_direction_y();
-
-                if (enemy_x == current_x)
-                {
-                    if (enemy_y < current_y)
-                    {
-                        if (find_character(enemy_x, enemy_y, 0, 1))
-                            enemy_char[i].change_direction_xy(0, 1);
-                    }
-                    else
-                    {
-                        if (find_character(enemy_x, enemy_y, 0, -1))
-                            enemy_char[i].change_direction_xy(0, -1);
-                    }
-                }
-                else
-                {
-                    if (enemy_y == current_y)
-                    {
-                        if (enemy_x < current_x)
-                        {
-                            if (find_character(enemy_x, enemy_y, 1, 0))
-                                enemy_char[i].change_direction_xy(1, 0);
-                        }
-                        else
-                        {
-                            if (find_character(enemy_x, enemy_y, -1, 0))
-                                enemy_char[i].change_direction_xy(-1, 0);
-                        }
-                    }
-                }
+                change_enemy_direcition(i);
             }
         }
+
         private void maze_exit()
         {
             maze_timer.Stop();
@@ -226,11 +197,11 @@ namespace auditorium
             }
         }
 
-        private void move_My_Character(int pre_x, int pre_y, int cur_x, int cur_y) // 주인공이 움직임
+        private void move_My_Character(int pre_x, int pre_y, int cur_x, int cur_y, int dir) // 주인공이 움직임
         {
             pic[pre_y, pre_x].Image = maze_image.Images[0];
             maze_array[pre_y, pre_x] = 0;
-            pic[cur_y, cur_x].Image = maze_image.Images[7];
+            pic[cur_y, cur_x].Image = main_character_img.Images[dir];
             maze_array[cur_y, cur_x] = 7;
         }
 
@@ -243,7 +214,6 @@ namespace auditorium
             else if (maze_array[next_y, next_x] == 2) // enemy를 만나는 경우
             {
                 new_maze_init();
-                //MessageBox.Show("적을 만났습니다.\r\n처음부터 다시 시작합니다.");
                 return 2;
             }
             else if (maze_array[next_y, next_x] == 3) // 미로 탈출
@@ -255,6 +225,7 @@ namespace auditorium
                 nono nono_mad = new nono();
                 nono_mad.Owner = this;
                 nono_mad.Show();
+                nono_mad.FormClosed += new FormClosedEventHandler(puzzle_exit);
                 maze_timer.Stop();
                 return 4;
             }
@@ -263,6 +234,7 @@ namespace auditorium
                 clock clock_mad = new clock();
                 clock_mad.Owner = this;
                 clock_mad.Show();
+                clock_mad.FormClosed += new FormClosedEventHandler(puzzle_exit);
                 maze_timer.Stop();
                 return 5;
             }
@@ -279,22 +251,7 @@ namespace auditorium
 
         public void new_maze_init()
         {
-            maze_array = new int[16, 25] { { 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1 },
-                                           { 1, 0,  0,  0,  0,  1,  0,  1,  1,  0,  1,  6,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1 },
-                                           { 1, 0,  1,  1,  0,  0,  0,  0,  1,  0,  1,  1,  1,  0,  1,  0,  1,  0,  0,  1,  1,  0,  0,  1,  1 },
-                                           { 1, 7,  0,  1,  1,  0,  1,  0,  0,  0,  1,  0,  1,  0,  0,  0,  1,  1,  0,  0,  1,  2,  1,  0,  1 },
-                                           { 1, 1,  0,  0,  0,  0,  1,  1,  1,  0,  1,  0,  1,  1,  1,  1,  1,  0,  0,  0,  1,  1,  1,  0,  1 },
-                                           { 1, 1,  1,  1,  0,  1,  1,  0,  0,  2,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1,  1,  0,  1,  0,  1 },
-                                           { 1, 5,  1,  0,  0,  1,  0,  0,  1,  1,  1,  0,  1,  1,  0,  0,  0,  1,  0,  0,  1,  0,  1,  0,  1 },
-                                           { 1, 0,  1,  1,  0,  1,  0,  0,  1,  0,  1,  0,  0,  1,  0,  1,  0,  1,  1,  1,  1,  0,  1,  0,  1 },
-                                           { 1, 0,  1,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  1 },
-                                           { 1, 0,  1,  1,  1,  1,  0,  0,  0,  0,  1,  0,  1,  0,  1,  0,  1,  1,  1,  0,  1,  0,  1,  1,  1 },
-                                           { 1, 0,  0,  0,  1,  0,  2,  0,  1,  1,  1,  0,  1,  0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  1 },
-                                           { 1, 0,  1,  0,  0,  0,  1,  0,  1,  0,  0,  0,  0,  0,  1,  0,  2,  0,  0,  1,  1,  1,  1,  0,  1 },
-                                           { 1, 0,  1,  1,  1,  0,  0,  0,  1,  0,  1,  1,  1,  0,  0,  0,  1,  1,  0,  0,  1,  0,  1,  0,  3 },
-                                           { 1, 0,  1,  0,  1,  0,  1,  0,  0,  0,  1,  4,  1,  0,  1,  0,  1,  0,  0,  0,  1,  0,  1,  1,  1 },
-                                           { 1, 0,  0,  0,  0,  0,  1,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  1 },
-                                           { 1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1 } };
+            maze_array_setting();
             enemy_num = 0;
             for (int i = 0; i < 16; i++)
             {
@@ -304,7 +261,7 @@ namespace auditorium
                     pic[i, j].Height = 20;
                     pic[i, j].Left = 20 * j + 45;
                     pic[i, j].Top = 20 * i + 55;
-                    if (maze_array[i, j] == 0)
+                    if (maze_array[i, j] == 0 || maze_array[i, j] == 3) 
                     {
                         pic[i, j].Image = maze_image.Images[0];
                     }
@@ -324,82 +281,98 @@ namespace auditorium
                             s = 1;
                         if (maze_array[i - 1, j] == 0)
                             n = 1;
-                        enemy_char[enemy_num].direction_init(e, w, s, n);
-                        pic[i, j].Image = maze_image.Images[2];
+                        enemy_char[enemy_num].direction_change(e, w, s, n);
+                        pic[i, j].Image = enemy_image.Images[enemy_char[enemy_num].return_direction_check()];
                         enemy_num++;
-                    }
-                    else if (maze_array[i, j] == 3)
-                    {
-                        pic[i, j].Image = maze_image.Images[3];
                     }
                     else if (maze_array[i, j] == 4)
                     {
-                        pic[i, j].Image = maze_image.Images[4];
+                        pic[i, j].Image = maze_image.Images[2];
                     }
                     else if (maze_array[i, j] == 5)
                     {
-                        pic[i, j].Image = maze_image.Images[5];
+                        pic[i, j].Image = maze_image.Images[2];
                     }
                     else if (maze_array[i, j] == 6)
                     {
-                        pic[i, j].Image = maze_image.Images[6];
+                        pic[i, j].Image = maze_image.Images[2];
                     }
                     else
                     {
-                        pic[i, j].Image = maze_image.Images[7];
+                        pic[i, j].Image = main_character_img.Images[0];
                     }
                 }
             }
             current_x = 1;
             current_y = 3;
         }
-
-        private void maze_tick(object sender, EventArgs e)
+        
+        private void change_enemy_direcition(int i)
         {
-            check_timer.Text = (int.Parse(check_timer.Text) + 1).ToString();
-            for (int i = 0; i < enemy_num; i++)
-            {
-                int enemy_x = enemy_char[i].return_enemy_x();
-                int enemy_y = enemy_char[i].return_enemy_y();
-                int enemy_direction_x = enemy_char[i].return_direction_x();
-                int enemy_direction_y = enemy_char[i].return_direction_y();
+            int enemy_x = enemy_char[i].return_enemy_x();
+            int enemy_y = enemy_char[i].return_enemy_y();
+            int enemy_direction_x = enemy_char[i].return_direction_x();
+            int enemy_direction_y = enemy_char[i].return_direction_y();
 
-                if (enemy_x == current_x)
+            if (enemy_x == current_x)
+            {
+                if (enemy_y < current_y)
                 {
-                    if (enemy_y < current_y)
+                    if (find_character(enemy_x, enemy_y, 0, 1))
                     {
-                        if (find_character(enemy_x, enemy_y, 0, 1))
-                            enemy_char[i].change_direction_xy(0, 1);
-                    }
-                    else
-                    {
-                        if (find_character(enemy_x, enemy_y, 0, -1))
-                            enemy_char[i].change_direction_xy(0, -1);
+                        enemy_char[i].change_direction_xy(0, 1);
+                        pic[enemy_y, enemy_x].Image = enemy_image.Images[enemy_char[i].return_direction_check()];
                     }
                 }
                 else
                 {
-                    if (enemy_y == current_y)
+                    if (find_character(enemy_x, enemy_y, 0, -1))
                     {
-                        if (enemy_x < current_x)
+                        enemy_char[i].change_direction_xy(0, -1);
+                        pic[enemy_y, enemy_x].Image = enemy_image.Images[enemy_char[i].return_direction_check()];
+                    }
+                }
+            }
+            else
+            {
+                if (enemy_y == current_y)
+                {
+                    if (enemy_x < current_x)
+                    {
+                        if (find_character(enemy_x, enemy_y, 1, 0))
                         {
-                            if (find_character(enemy_x, enemy_y, 1, 0))
-                                enemy_char[i].change_direction_xy(1, 0);
+                            enemy_char[i].change_direction_xy(1, 0);
+                            pic[enemy_y, enemy_x].Image = enemy_image.Images[enemy_char[i].return_direction_check()];
                         }
-                        else
+                    }
+                    else
+                    {
+                        if (find_character(enemy_x, enemy_y, -1, 0))
                         {
-                            if (find_character(enemy_x, enemy_y, -1, 0))
-                                enemy_char[i].change_direction_xy(-1, 0);
+                            enemy_char[i].change_direction_xy(-1, 0);
+                            pic[enemy_y, enemy_x].Image = enemy_image.Images[enemy_char[i].return_direction_check()];
                         }
                     }
                 }
+            }
+        }
 
+        private void maze_tick(object sender, EventArgs e)
+        {
+            total_timer.Text = "600 / " + (int.Parse(total_timer.Text.Remove(0, 5)) + 1).ToString();
+            for (int i = 0; i < enemy_num; i++)
+            {
+                change_enemy_direcition(i);
+                int enemy_x = enemy_char[i].return_enemy_x();
+                int enemy_y = enemy_char[i].return_enemy_y();
+                int enemy_direction_x = enemy_char[i].return_direction_x();
+                int enemy_direction_y = enemy_char[i].return_direction_y();
                 enemy_direction_x = enemy_char[i].return_direction_x();
                 enemy_direction_y = enemy_char[i].return_direction_y();
                 if (maze_array[enemy_y + enemy_direction_y, enemy_x + enemy_direction_x] == 0)
                 {
                     enemy_char[i].change_enemy_xy(enemy_x + enemy_direction_x, enemy_y + enemy_direction_y);
-                    enemy_move(enemy_x, enemy_y, enemy_direction_x, enemy_direction_y);
+                    enemy_move(enemy_x, enemy_y, enemy_direction_x, enemy_direction_y, i);
                 }
                 else if (maze_array[enemy_y + enemy_direction_y, enemy_x + enemy_direction_x] == 7)
                 {
@@ -420,22 +393,23 @@ namespace auditorium
                     if (maze_array[enemy_y - 1, enemy_x] == 0)
                         n = 1;
                     enemy_char[i].direction_change(ee, w, s, n);
+                    pic[enemy_y, enemy_x].Image = enemy_image.Images[enemy_char[i].return_direction_check()];
                     enemy_direction_x = enemy_char[i].return_direction_x();
                     enemy_direction_y = enemy_char[i].return_direction_y();
                     if (maze_array[enemy_y + enemy_direction_y, enemy_x + enemy_direction_x] == 0)
                     {
                         enemy_char[i].change_enemy_xy(enemy_x + enemy_direction_x, enemy_y + enemy_direction_y);
-                        enemy_move(enemy_x, enemy_y, enemy_direction_x, enemy_direction_y);
+                        enemy_move(enemy_x, enemy_y, enemy_direction_x, enemy_direction_y, i);
                     }
                 }
             }
         }
 
-        private void enemy_move(int enemy_x, int enemy_y, int dir_x, int dir_y)
+        private void enemy_move(int enemy_x, int enemy_y, int dir_x, int dir_y, int i)
         {
             pic[enemy_y, enemy_x].Image = maze_image.Images[0];
             maze_array[enemy_y, enemy_x] = 0;
-            pic[enemy_y + dir_y, enemy_x + dir_x].Image = maze_image.Images[2];
+            pic[enemy_y + dir_y, enemy_x + dir_x].Image = enemy_image.Images[enemy_char[i].return_direction_check()];
             maze_array[enemy_y + dir_y, enemy_x + dir_x] = 2;
         }
 
@@ -465,10 +439,9 @@ namespace auditorium
             return find_char;
         }
 
-        private void maze_Activated(object sender, EventArgs e)
+        private void puzzle_exit(object sender, EventArgs e)
         {
             maze_timer.Start();
         }
-
     }
 }

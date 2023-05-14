@@ -33,8 +33,9 @@ namespace auditorium
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(maze));
             this.maze_timer = new System.Windows.Forms.Timer(this.components);
             this.maze_image = new System.Windows.Forms.ImageList(this.components);
-            this.check_timer = new System.Windows.Forms.Label();
             this.total_timer = new System.Windows.Forms.Label();
+            this.main_character_img = new System.Windows.Forms.ImageList(this.components);
+            this.enemy_image = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // maze_timer
@@ -49,34 +50,36 @@ namespace auditorium
             this.maze_image.TransparentColor = System.Drawing.Color.Transparent;
             this.maze_image.Images.SetKeyName(0, "road.png");
             this.maze_image.Images.SetKeyName(1, "wall.png");
-            this.maze_image.Images.SetKeyName(2, "enemy.png");
-            this.maze_image.Images.SetKeyName(3, "exit.png");
-            this.maze_image.Images.SetKeyName(4, "first_quiz.png");
-            this.maze_image.Images.SetKeyName(5, "second_quiz.png");
-            this.maze_image.Images.SetKeyName(6, "third_quiz.png");
-            this.maze_image.Images.SetKeyName(7, "me.png");
-            // 
-            // check_timer
-            // 
-            this.check_timer.AutoSize = true;
-            this.check_timer.BackColor = System.Drawing.Color.White;
-            this.check_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check_timer.Location = new System.Drawing.Point(143, 50);
-            this.check_timer.Name = "check_timer";
-            this.check_timer.Size = new System.Drawing.Size(26, 29);
-            this.check_timer.TabIndex = 5;
-            this.check_timer.Text = "0";
+            this.maze_image.Images.SetKeyName(2, "game.png");
             // 
             // total_timer
             // 
             this.total_timer.AutoSize = true;
             this.total_timer.BackColor = System.Drawing.Color.White;
             this.total_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_timer.Location = new System.Drawing.Point(70, 50);
+            this.total_timer.Location = new System.Drawing.Point(54, 40);
             this.total_timer.Name = "total_timer";
-            this.total_timer.Size = new System.Drawing.Size(65, 29);
+            this.total_timer.Size = new System.Drawing.Size(84, 29);
             this.total_timer.TabIndex = 4;
-            this.total_timer.Text = "600 /";
+            this.total_timer.Text = "600 / 0";
+            // 
+            // main_character_img
+            // 
+            this.main_character_img.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("main_character_img.ImageStream")));
+            this.main_character_img.TransparentColor = System.Drawing.Color.Transparent;
+            this.main_character_img.Images.SetKeyName(0, "me(e).png");
+            this.main_character_img.Images.SetKeyName(1, "me(w).png");
+            this.main_character_img.Images.SetKeyName(2, "me(s).png");
+            this.main_character_img.Images.SetKeyName(3, "me(n).png");
+            // 
+            // enemy_image
+            // 
+            this.enemy_image.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("enemy_image.ImageStream")));
+            this.enemy_image.TransparentColor = System.Drawing.Color.Transparent;
+            this.enemy_image.Images.SetKeyName(0, "enemy(e).png");
+            this.enemy_image.Images.SetKeyName(1, "enemy(w).png");
+            this.enemy_image.Images.SetKeyName(2, "enemy(s).png");
+            this.enemy_image.Images.SetKeyName(3, "enemy(n).png");
             // 
             // maze
             // 
@@ -86,7 +89,6 @@ namespace auditorium
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 600);
-            this.Controls.Add(this.check_timer);
             this.Controls.Add(this.total_timer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -94,7 +96,6 @@ namespace auditorium
             this.Name = "maze";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
-            this.Activated += new System.EventHandler(this.maze_Activated);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maze_keydown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,7 +106,8 @@ namespace auditorium
 
         private System.Windows.Forms.Timer maze_timer;
         private System.Windows.Forms.ImageList maze_image;
-        private System.Windows.Forms.Label check_timer;
         private System.Windows.Forms.Label total_timer;
+        private System.Windows.Forms.ImageList main_character_img;
+        private System.Windows.Forms.ImageList enemy_image;
     }
 }

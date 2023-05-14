@@ -25,8 +25,16 @@ namespace auditorium
         private void maze_Start_Click(object sender, EventArgs e)
         {
             maze maze_mad = new maze();
-            maze_mad.Owner = this;
             maze_mad.Show();
+            //maze_mad.ShowDialog();
+            maze_mad.FormClosed += new FormClosedEventHandler(auditorium_room_exit);
+            this.Enabled = false;
+        }
+
+        private void auditorium_room_exit(object sender, EventArgs e)
+        {
+            this.Enabled = true;
+            this.Close();
         }
     }
 }

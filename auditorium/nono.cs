@@ -16,7 +16,7 @@ namespace auditorium
         private int[,] nono_check_array;
         private int level = 0;
         private int s_location_x = 150;
-        private int s_location_y = 40;
+        private int s_location_y = 48;
 
         public nono()
         {
@@ -165,12 +165,21 @@ namespace auditorium
                     nono_btn = new Button[4 + level, 4 + level];
                     nono_check_array = new int[3 + level, 3 + level];
                     make_game(4 + level);
-                    lbl_nono_level.Text = "4 / " + (int.Parse(lbl_nono_level.Text.Remove(0, 3)) + 1).ToString();
+                    lbl_nono_level.Text = "Level : 4 / " + (int.Parse(lbl_nono_level.Text.Remove(0, 11)) + 1).ToString();
                 }
             }
             else
             {
-                MessageBox.Show("실패했습니다.", "Cpation", MessageBoxButtons.OK);
+                if (int.Parse(lbl_life.Text.Remove(0, 3)) == 1)
+                {
+                    MessageBox.Show("game over", "Cpation", MessageBoxButtons.OK);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("실패했습니다.", "Cpation", MessageBoxButtons.OK);
+                    lbl_life.Text = "♥ x  " + (int.Parse(lbl_life.Text.Remove(0, 3)) - 1).ToString();
+                }
             }
         }
 
@@ -241,6 +250,13 @@ namespace auditorium
                 }
             }
             return true;
+        }
+
+        private void btn_nono_explain_Click(object sender, EventArgs e)
+        {
+            btn_nono_explain.Visible = false;
+            txt_nono_explain.Visible = false;
+            pan_nono_explain.Visible = false;
         }
     }
 }

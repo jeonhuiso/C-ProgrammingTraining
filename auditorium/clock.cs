@@ -16,7 +16,7 @@ namespace auditorium
         Button[,] make_clock;
         private int level = 0;
         private int game_start_x = 43;
-        private int game_start_y = 80;
+        private int game_start_y = 90;
         private int time_or_color = 0;
 
         public clock()
@@ -268,7 +268,16 @@ namespace auditorium
                 }
                 else
                 {
-                    MessageBox.Show("실패했습니다.");
+                    if (int.Parse(lbl_clock_life.Text.Remove(0, 3)) == 1)
+                    {
+                        MessageBox.Show("game over", "Cpation", MessageBoxButtons.OK);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("실패했습니다.");
+                        lbl_clock_life.Text = "♥ x  " + (int.Parse(lbl_clock_life.Text.Remove(0, 3)) - 1).ToString();
+                    }
                 }
             }
             else
@@ -337,6 +346,13 @@ namespace auditorium
                     }
                 }
             }
+        }
+
+        private void btn_clock_explain_Click(object sender, EventArgs e)
+        {
+            btn_clock_explain.Visible = false;
+            txt_clock_explain.Visible = false;
+            pan_clock_explain.Visible = false;
         }
     }
 }
