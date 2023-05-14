@@ -41,7 +41,12 @@
             lblRemainLife = new Label();
             lblLife = new Label();
             lblLose = new Label();
+            btnOk = new Button();
+            boxCorrect = new PictureBox();
+            boxIncorrect = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)boxQuestion).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)boxCorrect).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)boxIncorrect).BeginInit();
             SuspendLayout();
             // 
             // txtAnswer
@@ -163,12 +168,48 @@
             lblLose.Text = "YOU LOSE!";
             lblLose.Visible = false;
             // 
+            // btnOk
+            // 
+            btnOk.Font = new Font("휴먼매직체", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnOk.Location = new Point(470, 266);
+            btnOk.Name = "btnOk";
+            btnOk.Size = new Size(94, 40);
+            btnOk.TabIndex = 10;
+            btnOk.Text = "정답 확인!";
+            btnOk.UseVisualStyleBackColor = true;
+            btnOk.Visible = false;
+            btnOk.Click += btnOk_Click;
+            // 
+            // boxCorrect
+            // 
+            boxCorrect.BackColor = Color.MediumTurquoise;
+            boxCorrect.Location = new Point(493, 142);
+            boxCorrect.Name = "boxCorrect";
+            boxCorrect.Size = new Size(129, 118);
+            boxCorrect.SizeMode = PictureBoxSizeMode.StretchImage;
+            boxCorrect.TabIndex = 11;
+            boxCorrect.TabStop = false;
+            boxCorrect.Visible = false;
+            // 
+            // boxIncorrect
+            // 
+            boxIncorrect.BackColor = Color.FromArgb(255, 128, 0);
+            boxIncorrect.Location = new Point(493, 142);
+            boxIncorrect.Name = "boxIncorrect";
+            boxIncorrect.Size = new Size(129, 118);
+            boxIncorrect.TabIndex = 12;
+            boxIncorrect.TabStop = false;
+            boxIncorrect.Visible = false;
+            // 
             // quiz
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(682, 353);
+            Controls.Add(boxIncorrect);
+            Controls.Add(boxCorrect);
+            Controls.Add(btnOk);
             Controls.Add(lblLose);
             Controls.Add(lblLife);
             Controls.Add(lblRemainLife);
@@ -182,6 +223,8 @@
             Name = "quiz";
             Text = "퀴즈 타임!";
             ((System.ComponentModel.ISupportInitialize)boxQuestion).EndInit();
+            ((System.ComponentModel.ISupportInitialize)boxCorrect).EndInit();
+            ((System.ComponentModel.ISupportInitialize)boxIncorrect).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,5 +242,8 @@
         private Label lblRemainLife;
         private Label lblLife;
         private Label lblLose;
+        private Button btnOk;
+        private PictureBox boxCorrect;
+        private PictureBox boxIncorrect;
     }
 }
