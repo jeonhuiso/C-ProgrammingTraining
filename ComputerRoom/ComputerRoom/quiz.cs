@@ -88,9 +88,9 @@ namespace ComputerRoom
         private void btnOk_Click(object sender, EventArgs e)
         {
             string input = txtAnswer.Text;
+
             if (input == answers[qNumber])
             {
-                qNumber++;
                 showQuestions();
                 lblTime.Text = "50";
                 // 사진 출력
@@ -103,6 +103,18 @@ namespace ComputerRoom
                         boxCorrect.Visible = false;
                     }));
                 });
+                if (qNumber == quizs.Count - 1)     // 퀴즈 다 풀었을 때
+                {
+                    gameEnd();
+                    lblLose.Text = "퀴즈를 성공!";
+                    lblLose.ForeColor = Color.Navy;
+                    this.Text = "성공!";
+
+                    this.BackColor = Color.Gold;
+
+                    willScore();
+                }
+                qNumber++;
             }
             else
             {
@@ -123,6 +135,29 @@ namespace ComputerRoom
                     gameEnd(); return;
                 }
             }
+            txtAnswer.Clear();
+        }
+
+        private void willScore()
+        {
+            Task.Run(() =>
+            {
+                Thread.Sleep(1500);
+                this.Invoke(new Action(() =>
+                {
+                    lblWillScore.Visible = true;
+                }));
+            });
+
+            Task.Run(() =>
+            {
+                Thread.Sleep(3000);
+                this.Invoke(new Action(() =>
+                {
+                    btnScoreYes.Visible = true;
+                    btnScoreNo.Visible = true;
+                }));
+            });
         }
 
         private void gameEnd()
@@ -145,5 +180,15 @@ namespace ComputerRoom
             lblLose.Visible = true;
             this.Text = "에구머니나!";
         }
+        private void btnScoreYes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnScoreNo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

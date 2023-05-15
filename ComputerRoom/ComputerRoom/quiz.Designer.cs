@@ -44,6 +44,9 @@
             btnOk = new Button();
             boxCorrect = new PictureBox();
             boxIncorrect = new PictureBox();
+            lblWillScore = new Label();
+            btnScoreYes = new Button();
+            btnScoreNo = new Button();
             ((System.ComponentModel.ISupportInitialize)boxQuestion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxCorrect).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxIncorrect).BeginInit();
@@ -201,12 +204,51 @@
             boxIncorrect.TabStop = false;
             boxIncorrect.Visible = false;
             // 
+            // lblWillScore
+            // 
+            lblWillScore.AutoSize = true;
+            lblWillScore.Font = new Font("휴먼매직체", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWillScore.ForeColor = Color.FromArgb(128, 64, 0);
+            lblWillScore.Location = new Point(251, 277);
+            lblWillScore.Name = "lblWillScore";
+            lblWillScore.Size = new Size(176, 18);
+            lblWillScore.TabIndex = 13;
+            lblWillScore.Text = "점수를 등록하시겠습니까?";
+            lblWillScore.Visible = false;
+            // 
+            // btnScoreYes
+            // 
+            btnScoreYes.Font = new Font("휴먼둥근헤드라인", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnScoreYes.Location = new Point(300, 175);
+            btnScoreYes.Name = "btnScoreYes";
+            btnScoreYes.Size = new Size(94, 29);
+            btnScoreYes.TabIndex = 14;
+            btnScoreYes.Text = "네";
+            btnScoreYes.UseVisualStyleBackColor = true;
+            btnScoreYes.Visible = false;
+            btnScoreYes.Click += btnScoreYes_Click;
+            // 
+            // btnScoreNo
+            // 
+            btnScoreNo.Font = new Font("휴먼둥근헤드라인", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnScoreNo.Location = new Point(300, 212);
+            btnScoreNo.Name = "btnScoreNo";
+            btnScoreNo.Size = new Size(94, 29);
+            btnScoreNo.TabIndex = 15;
+            btnScoreNo.Text = "아니요";
+            btnScoreNo.UseVisualStyleBackColor = true;
+            btnScoreNo.Visible = false;
+            btnScoreNo.Click += btnScoreNo_Click;
+            // 
             // quiz
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(682, 353);
+            Controls.Add(btnScoreNo);
+            Controls.Add(btnScoreYes);
+            Controls.Add(lblWillScore);
             Controls.Add(boxIncorrect);
             Controls.Add(boxCorrect);
             Controls.Add(btnOk);
@@ -245,5 +287,8 @@
         private Button btnOk;
         private PictureBox boxCorrect;
         private PictureBox boxIncorrect;
+        private Label lblWillScore;
+        private Button btnScoreYes;
+        private Button btnScoreNo;
     }
 }
