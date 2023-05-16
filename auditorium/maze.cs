@@ -240,6 +240,11 @@ namespace auditorium
             }
             else if (maze_array[next_y, next_x] == 6) // 3번 퍼즐
             {
+                make_shape make_shape_mad = new make_shape();
+                make_shape_mad.Owner = this;
+                make_shape_mad.Show();
+                make_shape_mad.FormClosed += new FormClosedEventHandler(puzzle_exit);
+                maze_timer.Stop();
                 return 6;
             }
             else // 지날 수 있는 길

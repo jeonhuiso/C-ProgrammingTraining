@@ -247,7 +247,7 @@ namespace auditorium
 
         private void make_check_btn(object sender, EventArgs e)
         {
-            if (level < 1)
+            if (level < 2)
             {
                 if (compelete_check())
                 {
@@ -264,7 +264,7 @@ namespace auditorium
                     user_clock[0, 0].Text = "시간";
                     user_clock[0, 0].Click += new EventHandler(user_check_btn);
                     make_clock_init(4 + level);
-                    lbl_clock_level.Text = "2 / " + (int.Parse(lbl_clock_level.Text.Remove(0, 3)) + 1).ToString();
+                    lbl_clock_level.Text = "2 / " + (int.Parse(lbl_clock_level.Text.Remove(0, 11)) + 1).ToString();
                 }
                 else
                 {

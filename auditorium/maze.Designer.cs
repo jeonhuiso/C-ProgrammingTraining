@@ -56,10 +56,10 @@ namespace auditorium
             // 
             this.total_timer.AutoSize = true;
             this.total_timer.BackColor = System.Drawing.Color.White;
-            this.total_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_timer.Location = new System.Drawing.Point(54, 40);
             this.total_timer.Name = "total_timer";
-            this.total_timer.Size = new System.Drawing.Size(84, 29);
+            this.total_timer.Size = new System.Drawing.Size(107, 36);
             this.total_timer.TabIndex = 4;
             this.total_timer.Text = "600 / 0";
             // 

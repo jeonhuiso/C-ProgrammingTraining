@@ -59,6 +59,13 @@
     <Compile Include="auditorium.Designer.cs">
       <DependentUpon>auditorium.cs</DependentUpon>
     </Compile>
+    <Compile Include="make_shape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="make_shape.Designer.cs">
+      <DependentUpon>make_shape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="make_shape_set.cs" />
     <Compile Include="maze.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="clock.resx">
       <DependentUpon>clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="make_shape.resx">
+      <DependentUpon>make_shape.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="maze.resx">
       <DependentUpon>maze.cs</DependentUpon>
