@@ -182,7 +182,10 @@ namespace ComputerRoom
         }
         private void btnScoreYes_Click(object sender, EventArgs e)
         {
-
+            btnScoreYes.Visible = false;
+            btnScoreNo.Visible = false;
+            txtName.Visible = true;
+            btnNameOk.Visible = true;
         }
 
         private void btnScoreNo_Click(object sender, EventArgs e)
@@ -190,5 +193,19 @@ namespace ComputerRoom
             this.Close();
         }
 
+        private void btnNameOk_Click(object sender, EventArgs e)
+        {
+            lblNameYour.Text = txtName.Text;
+
+            lblLose.Visible = false;
+            lblWillScore.Visible = false;
+            btnScoreYes.Visible = false;
+            btnScoreNo.Visible = false;
+
+            txtName.Visible = false;
+            btnNameOk.Visible = false;
+
+            pnlScore.Visible = true;
+        }
     }
 }

@@ -47,9 +47,23 @@
             lblWillScore = new Label();
             btnScoreYes = new Button();
             btnScoreNo = new Button();
+            pnlScore = new Panel();
+            btnNameOk = new Button();
+            txtName = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            lblNameYour = new Label();
+            lblName1 = new Label();
+            lblName2 = new Label();
+            lblName3 = new Label();
+            lblFreeman = new Label();
             ((System.ComponentModel.ISupportInitialize)boxQuestion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxCorrect).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxIncorrect).BeginInit();
+            pnlScore.SuspendLayout();
             SuspendLayout();
             // 
             // txtAnswer
@@ -240,13 +254,165 @@
             btnScoreNo.Visible = false;
             btnScoreNo.Click += btnScoreNo_Click;
             // 
+            // pnlScore
+            // 
+            pnlScore.Controls.Add(label5);
+            pnlScore.Controls.Add(label4);
+            pnlScore.Controls.Add(label3);
+            pnlScore.Controls.Add(label2);
+            pnlScore.Controls.Add(label1);
+            pnlScore.Controls.Add(lblNameYour);
+            pnlScore.Controls.Add(lblName1);
+            pnlScore.Controls.Add(lblName2);
+            pnlScore.Controls.Add(lblName3);
+            pnlScore.Controls.Add(lblFreeman);
+            pnlScore.Location = new Point(-4, 0);
+            pnlScore.Name = "pnlScore";
+            pnlScore.Size = new Size(688, 358);
+            pnlScore.TabIndex = 16;
+            pnlScore.Visible = false;
+            // 
+            // btnNameOk
+            // 
+            btnNameOk.Font = new Font("휴먼둥근헤드라인", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNameOk.Location = new Point(504, 192);
+            btnNameOk.Name = "btnNameOk";
+            btnNameOk.Size = new Size(71, 29);
+            btnNameOk.TabIndex = 18;
+            btnNameOk.Text = "등록";
+            btnNameOk.UseVisualStyleBackColor = true;
+            btnNameOk.Visible = false;
+            btnNameOk.Click += btnNameOk_Click;
+            // 
+            // txtName
+            // 
+            txtName.BackColor = SystemColors.Window;
+            txtName.Font = new Font("Sigmar One", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.Location = new Point(217, 188);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(257, 37);
+            txtName.TabIndex = 17;
+            txtName.Visible = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.Red;
+            label5.Location = new Point(397, 247);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 20);
+            label5.TabIndex = 9;
+            label5.Text = "48095";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.Red;
+            label4.Location = new Point(397, 59);
+            label4.Name = "label4";
+            label4.Size = new Size(59, 20);
+            label4.TabIndex = 8;
+            label4.Text = "50982";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.Red;
+            label3.Location = new Point(397, 103);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 20);
+            label3.TabIndex = 7;
+            label3.Text = "49093";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(397, 150);
+            label2.Name = "label2";
+            label2.Size = new Size(59, 20);
+            label2.TabIndex = 6;
+            label2.Text = "48991";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(397, 196);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 20);
+            label1.TabIndex = 5;
+            label1.Text = "48132";
+            // 
+            // lblNameYour
+            // 
+            lblNameYour.AutoSize = true;
+            lblNameYour.Font = new Font("Sigmar One", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNameYour.ForeColor = Color.Fuchsia;
+            lblNameYour.Location = new Point(148, 95);
+            lblNameYour.Name = "lblNameYour";
+            lblNameYour.Size = new Size(158, 38);
+            lblNameYour.TabIndex = 4;
+            lblNameYour.Text = "yourname";
+            // 
+            // lblName1
+            // 
+            lblName1.AutoSize = true;
+            lblName1.Font = new Font("Sigmar One", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblName1.ForeColor = SystemColors.ControlLightLight;
+            lblName1.Location = new Point(149, 142);
+            lblName1.Name = "lblName1";
+            lblName1.Size = new Size(164, 38);
+            lblName1.TabIndex = 3;
+            lblName1.Text = "abcabcabc";
+            // 
+            // lblName2
+            // 
+            lblName2.AutoSize = true;
+            lblName2.Font = new Font("Sigmar One", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblName2.ForeColor = SystemColors.ControlLightLight;
+            lblName2.Location = new Point(148, 189);
+            lblName2.Name = "lblName2";
+            lblName2.Size = new Size(169, 38);
+            lblName2.TabIndex = 2;
+            lblName2.Text = "jumpman23";
+            // 
+            // lblName3
+            // 
+            lblName3.AutoSize = true;
+            lblName3.Font = new Font("Sigmar One", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblName3.ForeColor = SystemColors.ControlLightLight;
+            lblName3.Location = new Point(148, 239);
+            lblName3.Name = "lblName3";
+            lblName3.Size = new Size(176, 38);
+            lblName3.TabIndex = 1;
+            lblName3.Text = "qwertyqwe";
+            // 
+            // lblFreeman
+            // 
+            lblFreeman.AutoSize = true;
+            lblFreeman.Font = new Font("Sigmar One", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFreeman.ForeColor = SystemColors.ControlLightLight;
+            lblFreeman.Location = new Point(148, 46);
+            lblFreeman.Name = "lblFreeman";
+            lblFreeman.Size = new Size(163, 38);
+            lblFreeman.TabIndex = 0;
+            lblFreeman.Text = "freeman75";
+            // 
             // quiz
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(682, 353);
+            Controls.Add(btnNameOk);
             Controls.Add(btnScoreNo);
+            Controls.Add(txtName);
             Controls.Add(btnScoreYes);
             Controls.Add(lblWillScore);
             Controls.Add(boxIncorrect);
@@ -262,11 +428,14 @@
             Controls.Add(lblQuestion);
             Controls.Add(txtAnswer);
             Controls.Add(boxQuestion);
+            Controls.Add(pnlScore);
             Name = "quiz";
             Text = "퀴즈 타임!";
             ((System.ComponentModel.ISupportInitialize)boxQuestion).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxCorrect).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxIncorrect).EndInit();
+            pnlScore.ResumeLayout(false);
+            pnlScore.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -290,5 +459,18 @@
         private Label lblWillScore;
         private Button btnScoreYes;
         private Button btnScoreNo;
+        private Panel pnlScore;
+        private Label lblFreeman;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Label lblNameYour;
+        private Label lblName1;
+        private Label lblName2;
+        private Label lblName3;
+        private Button btnNameOk;
+        private TextBox txtName;
     }
 }
