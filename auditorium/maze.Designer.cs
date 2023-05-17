@@ -36,6 +36,12 @@ namespace auditorium
             this.total_timer = new System.Windows.Forms.Label();
             this.main_character_img = new System.Windows.Forms.ImageList(this.components);
             this.enemy_image = new System.Windows.Forms.ImageList(this.components);
+            this.puzzle_timer = new System.Windows.Forms.Timer(this.components);
+            this.pan_maze = new System.Windows.Forms.Panel();
+            this.fail_maze = new System.Windows.Forms.Button();
+            this.maze_all_puzzle = new System.Windows.Forms.Button();
+            this.time_over = new System.Windows.Forms.Button();
+            this.pan_maze.SuspendLayout();
             this.SuspendLayout();
             // 
             // maze_timer
@@ -81,6 +87,58 @@ namespace auditorium
             this.enemy_image.Images.SetKeyName(2, "enemy(s).png");
             this.enemy_image.Images.SetKeyName(3, "enemy(n).png");
             // 
+            // puzzle_timer
+            // 
+            this.puzzle_timer.Enabled = true;
+            this.puzzle_timer.Interval = 1000;
+            this.puzzle_timer.Tick += new System.EventHandler(this.puzzle_timer_Tick);
+            // 
+            // pan_maze
+            // 
+            this.pan_maze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_maze.BackgroundImage")));
+            this.pan_maze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pan_maze.Controls.Add(this.time_over);
+            this.pan_maze.Controls.Add(this.maze_all_puzzle);
+            this.pan_maze.Controls.Add(this.fail_maze);
+            this.pan_maze.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pan_maze.Location = new System.Drawing.Point(0, 0);
+            this.pan_maze.Name = "pan_maze";
+            this.pan_maze.Size = new System.Drawing.Size(900, 600);
+            this.pan_maze.TabIndex = 57;
+            // 
+            // fail_maze
+            // 
+            this.fail_maze.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.fail_maze.Location = new System.Drawing.Point(122, 214);
+            this.fail_maze.Name = "fail_maze";
+            this.fail_maze.Size = new System.Drawing.Size(605, 133);
+            this.fail_maze.TabIndex = 57;
+            this.fail_maze.Text = "퍼즐을 모두 풀지 않았습니다.";
+            this.fail_maze.UseVisualStyleBackColor = true;
+            this.fail_maze.Click += new System.EventHandler(this.fail_maze_Click);
+            // 
+            // maze_all_puzzle
+            // 
+            this.maze_all_puzzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.maze_all_puzzle.Location = new System.Drawing.Point(110, 214);
+            this.maze_all_puzzle.Name = "maze_all_puzzle";
+            this.maze_all_puzzle.Size = new System.Drawing.Size(641, 133);
+            this.maze_all_puzzle.TabIndex = 58;
+            this.maze_all_puzzle.Text = "모든 퍼즐을 풀고 탈출했습니다.";
+            this.maze_all_puzzle.UseVisualStyleBackColor = true;
+            this.maze_all_puzzle.Click += new System.EventHandler(this.maze_all_puzzle_Click);
+            // 
+            // time_over
+            // 
+            this.time_over.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.time_over.Location = new System.Drawing.Point(110, 214);
+            this.time_over.Name = "time_over";
+            this.time_over.Size = new System.Drawing.Size(641, 133);
+            this.time_over.TabIndex = 59;
+            this.time_over.Text = "시간 초과";
+            this.time_over.UseVisualStyleBackColor = true;
+            this.time_over.Click += new System.EventHandler(this.time_over_Click);
+            // 
             // maze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -89,6 +147,7 @@ namespace auditorium
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.pan_maze);
             this.Controls.Add(this.total_timer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -97,6 +156,7 @@ namespace auditorium
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maze_keydown);
+            this.pan_maze.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +169,10 @@ namespace auditorium
         private System.Windows.Forms.Label total_timer;
         private System.Windows.Forms.ImageList main_character_img;
         private System.Windows.Forms.ImageList enemy_image;
+        private System.Windows.Forms.Timer puzzle_timer;
+        private System.Windows.Forms.Panel pan_maze;
+        private System.Windows.Forms.Button fail_maze;
+        private System.Windows.Forms.Button maze_all_puzzle;
+        private System.Windows.Forms.Button time_over;
     }
 }
