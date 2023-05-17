@@ -216,6 +216,7 @@ namespace StageLibrary
             this.Problem.Size = new System.Drawing.Size(896, 571);
             this.Problem.TabIndex = 3;
             this.Problem.Visible = false;
+            this.Problem.Paint += new System.Windows.Forms.PaintEventHandler(this.Problem_Paint);
             // 
             // btnStoryNext
             // 
@@ -321,6 +322,7 @@ namespace StageLibrary
             this.Text = "Level1";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.Level1_Load);
+            this.VisibleChanged += new System.EventHandler(this.Level1_VisibleChanged);
             this.bookShelf1.ResumeLayout(false);
             this.bookShelf2.ResumeLayout(false);
             this.bookShelf3.ResumeLayout(false);

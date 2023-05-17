@@ -61,6 +61,12 @@
     <Compile Include="Level1.Designer.cs">
       <DependentUpon>Level1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Level2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level2.Designer.cs">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibraryStage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level2.resx">
+      <DependentUpon>Level2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibraryStage.resx">
       <DependentUpon>LibraryStage.cs</DependentUpon>

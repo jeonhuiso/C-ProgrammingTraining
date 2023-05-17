@@ -48,6 +48,8 @@ namespace StageLibrary
         }
 
         public void ScriptParse(string jsonName,string token) {
+            if (txtSpeaker.Text != "" && txtComment.Text != "")
+                return;
             try
             {
                 string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\..\scriptList") + "\\" + jsonName + ".json");
@@ -90,11 +92,11 @@ namespace StageLibrary
                     txtSpeaker.Text = "";
                     txtComment.Text = "";
                     CharactoPicture.Image = null;
-                    EndCommentEvent();
                     SpeakerList.Clear();
                     CommentList.Clear();
                     ImageList.Clear();
-                    
+                    EndCommentEvent();
+
 
                 }
             }

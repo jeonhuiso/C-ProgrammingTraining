@@ -1,7 +1,7 @@
 ﻿
 namespace StageLibrary
 {
-    partial class MDIContainer
+    partial class LibraryStage
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -31,13 +31,13 @@ namespace StageLibrary
         {
             this.SuspendLayout();
             // 
-            // MDIContainer
+            // LibraryStage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(900, 800);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Name = "MDIContainer";
+            this.Name = "LibraryStage";
             this.Load += new System.EventHandler(this.MDIContainer_Load);
             this.ResumeLayout(false);
 

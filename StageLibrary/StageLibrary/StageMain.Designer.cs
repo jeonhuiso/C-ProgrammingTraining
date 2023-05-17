@@ -30,7 +30,7 @@ namespace StageLibrary
         private void InitializeComponent()
         {
             this.btnLevel1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLevel2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLevel1
@@ -43,14 +43,15 @@ namespace StageLibrary
             this.btnLevel1.UseVisualStyleBackColor = true;
             this.btnLevel1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnLevel2
             // 
-            this.button2.Location = new System.Drawing.Point(659, 230);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 33);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "풀기";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLevel2.Location = new System.Drawing.Point(659, 230);
+            this.btnLevel2.Name = "btnLevel2";
+            this.btnLevel2.Size = new System.Drawing.Size(104, 33);
+            this.btnLevel2.TabIndex = 0;
+            this.btnLevel2.Text = "풀기";
+            this.btnLevel2.UseVisualStyleBackColor = true;
+            this.btnLevel2.Click += new System.EventHandler(this.button2_Click);
             // 
             // StageMain
             // 
@@ -59,7 +60,7 @@ namespace StageLibrary
             this.BackgroundImage = global::StageLibrary.Properties.Resources._3f6e9bf4137799e2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 590);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnLevel2);
             this.Controls.Add(this.btnLevel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -73,6 +74,6 @@ namespace StageLibrary
         #endregion
 
         private System.Windows.Forms.Button btnLevel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLevel2;
     }
 }

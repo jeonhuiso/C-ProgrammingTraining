@@ -16,6 +16,8 @@ namespace StageLibrary
         
         public delegate void SendStage1Clear(bool isClear);
         public event SendStage1Clear SendStage1Event;
+        public delegate void Level1Load();
+        public event Level1Load Level1LoadEvent;
         public Level1()
         {
             InitializeComponent();
@@ -30,26 +32,26 @@ namespace StageLibrary
             Book_Of_Truth.Location = new System.Drawing.Point(135, 300);
             Book_Of_Dumb.Location = new System.Drawing.Point(375, 300);
             Book_Of_Lie.Location = new System.Drawing.Point(625, 300);
+            
+                PrivateFontCollection fontCollection = new PrivateFontCollection();
+                fontCollection.AddFontFile("강원교육현옥샘.ttf");
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(fontCollection.Families[0], 13f);
+                    if (c is GroupBox)
+                        foreach (Control c_1 in ((GroupBox)c).Controls)
+                            c_1.Font = new Font(fontCollection.Families[0], 13f);
 
-            PrivateFontCollection fontCollection = new PrivateFontCollection();
-            fontCollection.AddFontFile("강원교육현옥샘.ttf");
-
-            foreach (Control c in this.Controls) {
-                c.Font = new Font(fontCollection.Families[0], 13f);
-                if (c is GroupBox) 
-                    foreach (Control c_1 in ((GroupBox)c).Controls) 
-                        c_1.Font = new Font(fontCollection.Families[0], 13f);
-
-                if (c is Panel) 
-                    foreach (Control c_1 in ((Panel)c).Controls)
-                        c_1.Font = new Font(fontCollection.Families[0], 13f);
-            }
+                    if (c is Panel)
+                        foreach (Control c_1 in ((Panel)c).Controls)
+                            c_1.Font = new Font(fontCollection.Families[0], 13f);
+                }
             storyPageList = new Label[3] { storyPage1, storyPage2, storyPage3 };
             storyPage1.BackColor = Color.FromArgb(0, 0, 0, 0);
             storyPage2.BackColor = Color.FromArgb(0, 0, 0, 0);
             storyPage3.BackColor = Color.FromArgb(0, 0, 0, 0);
             Problem.BackColor = Color.FromArgb(0, 0, 0, 0);
-            
+            Level1LoadEvent();
             storyPage3.Visible = false;
         }
         System.Drawing.Point point;
@@ -242,7 +244,7 @@ namespace StageLibrary
             {
                 SendStage1Event(false);
             }
-            this.Visible = false;
+            this.Close();
         }
 
         private void btnStoryNext_Click(object sender, EventArgs e)
@@ -288,6 +290,54 @@ namespace StageLibrary
         private void storyPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Problem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Level1_VisibleChanged(object sender, EventArgs e)
+        {
+                for (int i = 0; i < bookShelf1.Controls.Count; i++)
+                {
+                    if (bookShelf1.Controls[i].Tag == "book")
+                    {
+                        bookShelf1.Controls[i].Parent = this;
+                    }
+                }
+                for (int i = 0; i < bookShelf2.Controls.Count; i++)
+                {
+                    if (bookShelf2.Controls[i].Tag == "book")
+                    {
+                        bookShelf2.Controls[i].Parent = this;
+                    }
+                }
+                for (int i = 0; i < bookShelf3.Controls.Count; i++)
+                {
+                    if (bookShelf3.Controls[i].Tag == "book")
+                    {
+                        bookShelf3.Controls[i].Parent = this;
+                    }
+                }
+                if (Book_Of_Truth.Parent == this)
+                {
+                    Book_Of_Truth.Location = new System.Drawing.Point(135, 300);
+                }
+                if (Book_Of_Lie.Parent == this)
+                {
+                    Book_Of_Lie.Location = new System.Drawing.Point(625, 300);
+                }
+                if (Book_Of_Dumb.Parent == this)
+                {
+                    Book_Of_Dumb.Location = new System.Drawing.Point(375, 300);
+                }
+            
         }
     }
 }
