@@ -23,8 +23,15 @@ namespace ComputerRoom
         private void boxQuiz_Click(object sender, EventArgs e)
         {
             quiz qz = new quiz();
-            qz.Owner = this;          
+            qz.Owner = this;
             qz.Show();
+        }
+
+        private void Mail_Click(object sender, EventArgs e)
+        {
+            Mail ml = new Mail();
+            ml.Owner = this;
+            ml.Show();
         }
     }
 }
