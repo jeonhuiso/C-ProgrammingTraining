@@ -29,7 +29,7 @@ namespace ComputerRoom
 
         private void Mail_Click(object sender, EventArgs e)
         {
-            Mail ml = new Mail();
+            mail ml = new mail();
             ml.Owner = this;
             ml.Show();
         }

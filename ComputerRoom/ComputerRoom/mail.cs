@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ComputerRoom
 {
-    public partial class Mail : Form
+    public partial class mail : Form
     {
-        public Mail()
+        public mail()
         {
             InitializeComponent();
         }

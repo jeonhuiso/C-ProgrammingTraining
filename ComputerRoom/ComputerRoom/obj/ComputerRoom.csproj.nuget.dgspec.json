@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\me\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj": {}
+    "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj": {}
   },
   "projects": {
-    "C:\\Users\\me\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj": {
+    "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\me\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
+        "projectUniqueName": "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
         "projectName": "ComputerRoom",
-        "projectPath": "C:\\Users\\me\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
-        "packagesPath": "C:\\Users\\me\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\me\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\obj\\",
+        "projectPath": "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
+        "packagesPath": "C:\\Users\\js\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\me\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\js\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -18,3 +18,4 @@ C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.windows_bg.resources
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.Comp_Room.resources
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.quiz.resources
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.mail.resources
