@@ -43,8 +43,7 @@
             // 
             // Comp_Room
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(882, 553);
             Controls.Add(btnComputer);
             Name = "Comp_Room";

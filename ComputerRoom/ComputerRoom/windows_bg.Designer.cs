@@ -51,10 +51,9 @@
             boxQuiz.BackColor = Color.Transparent;
             boxQuiz.BackgroundImage = (Image)resources.GetObject("boxQuiz.BackgroundImage");
             boxQuiz.Image = (Image)resources.GetObject("boxQuiz.Image");
-            boxQuiz.Location = new Point(296, 109);
-            boxQuiz.Margin = new Padding(2, 2, 2, 2);
+            boxQuiz.Location = new Point(381, 145);
             boxQuiz.Name = "boxQuiz";
-            boxQuiz.Size = new Size(63, 52);
+            boxQuiz.Size = new Size(81, 69);
             boxQuiz.SizeMode = PictureBoxSizeMode.StretchImage;
             boxQuiz.TabIndex = 3;
             boxQuiz.TabStop = false;
@@ -66,20 +65,18 @@
             lbl_boxQuiz.BackColor = SystemColors.Control;
             lbl_boxQuiz.ForeColor = SystemColors.ControlLightLight;
             lbl_boxQuiz.Image = (Image)resources.GetObject("lbl_boxQuiz.Image");
-            lbl_boxQuiz.Location = new Point(296, 163);
-            lbl_boxQuiz.Margin = new Padding(2, 0, 2, 0);
+            lbl_boxQuiz.Location = new Point(381, 217);
             lbl_boxQuiz.Name = "lbl_boxQuiz";
-            lbl_boxQuiz.Size = new Size(67, 15);
+            lbl_boxQuiz.Size = new Size(84, 20);
             lbl_boxQuiz.TabIndex = 5;
             lbl_boxQuiz.Text = "Don't Click";
             // 
             // txtTime
             // 
             txtTime.BackColor = SystemColors.ScrollBar;
-            txtTime.Location = new Point(591, 394);
-            txtTime.Margin = new Padding(2, 2, 2, 2);
+            txtTime.Location = new Point(760, 525);
             txtTime.Name = "txtTime";
-            txtTime.Size = new Size(98, 23);
+            txtTime.Size = new Size(125, 27);
             txtTime.TabIndex = 6;
             txtTime.Text = "what time?";
             // 
@@ -87,10 +84,9 @@
             // 
             boxInternet.BackgroundImage = (Image)resources.GetObject("boxInternet.BackgroundImage");
             boxInternet.Image = (Image)resources.GetObject("boxInternet.Image");
-            boxInternet.Location = new Point(-19, 0);
-            boxInternet.Margin = new Padding(2, 2, 2, 2);
+            boxInternet.Location = new Point(-24, 0);
             boxInternet.Name = "boxInternet";
-            boxInternet.Size = new Size(110, 58);
+            boxInternet.Size = new Size(141, 77);
             boxInternet.SizeMode = PictureBoxSizeMode.StretchImage;
             boxInternet.TabIndex = 7;
             boxInternet.TabStop = false;
@@ -100,10 +96,9 @@
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(16, 53);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(21, 71);
             label1.Name = "label1";
-            label1.Size = new Size(48, 15);
+            label1.Size = new Size(62, 20);
             label1.TabIndex = 8;
             label1.Text = "Internet";
             // 
@@ -111,10 +106,9 @@
             // 
             boxFolder.BackgroundImage = (Image)resources.GetObject("boxFolder.BackgroundImage");
             boxFolder.Image = (Image)resources.GetObject("boxFolder.Image");
-            boxFolder.Location = new Point(71, 163);
-            boxFolder.Margin = new Padding(2, 2, 2, 2);
+            boxFolder.Location = new Point(91, 217);
             boxFolder.Name = "boxFolder";
-            boxFolder.Size = new Size(70, 62);
+            boxFolder.Size = new Size(90, 83);
             boxFolder.SizeMode = PictureBoxSizeMode.StretchImage;
             boxFolder.TabIndex = 9;
             boxFolder.TabStop = false;
@@ -125,10 +119,9 @@
             lblFolder.AutoSize = true;
             lblFolder.ForeColor = SystemColors.ControlLightLight;
             lblFolder.Image = (Image)resources.GetObject("lblFolder.Image");
-            lblFolder.Location = new Point(79, 227);
-            lblFolder.Margin = new Padding(2, 0, 2, 0);
+            lblFolder.Location = new Point(102, 303);
             lblFolder.Name = "lblFolder";
-            lblFolder.Size = new Size(56, 15);
+            lblFolder.Size = new Size(70, 20);
             lblFolder.TabIndex = 10;
             lblFolder.Text = "Directory";
             // 
@@ -138,9 +131,10 @@
             // 
             // Mail
             // 
-            Mail.Location = new Point(2, 99);
+            Mail.Location = new Point(3, 132);
+            Mail.Margin = new Padding(4, 4, 4, 4);
             Mail.Name = "Mail";
-            Mail.Size = new Size(89, 50);
+            Mail.Size = new Size(114, 67);
             Mail.TabIndex = 12;
             Mail.TabStop = false;
             Mail.Click += Mail_Click;
@@ -148,28 +142,29 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 152);
+            label2.Location = new Point(32, 203);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(0, 15);
+            label2.Size = new Size(0, 20);
             label2.TabIndex = 13;
             // 
             // lblMail
             // 
             lblMail.AutoSize = true;
             lblMail.ForeColor = SystemColors.ControlLightLight;
-            lblMail.Location = new Point(25, 152);
+            lblMail.Location = new Point(32, 203);
+            lblMail.Margin = new Padding(4, 0, 4, 0);
             lblMail.Name = "lblMail";
-            lblMail.Size = new Size(30, 15);
+            lblMail.Size = new Size(39, 20);
             lblMail.TabIndex = 14;
             lblMail.Text = "Mail";
             // 
             // windows_bg
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(686, 415);
+            ClientSize = new Size(882, 553);
             Controls.Add(lblMail);
             Controls.Add(label2);
             Controls.Add(Mail);
@@ -182,7 +177,6 @@
             Controls.Add(boxInternet);
             DoubleBuffered = true;
             IsMdiContainer = true;
-            Margin = new Padding(2, 2, 2, 2);
             Name = "windows_bg";
             Text = "Window";
             ((System.ComponentModel.ISupportInitialize)boxQuiz).EndInit();

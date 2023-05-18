@@ -1,0 +1,15 @@
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\bin\Debug\net6.0\5_18_Lambda.exe
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\bin\Debug\net6.0\5_18_Lambda.deps.json
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\bin\Debug\net6.0\5_18_Lambda.runtimeconfig.json
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\bin\Debug\net6.0\5_18_Lambda.dll
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\bin\Debug\net6.0\5_18_Lambda.pdb
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.csproj.AssemblyReference.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.AssemblyInfoInputs.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.AssemblyInfo.cs
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.csproj.CoreCompileInputs.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.dll
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\refint\5_18_Lambda.dll
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.pdb
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\5_18_Lambda.genruntimeconfig.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18_2\5_18_Lambda\obj\Debug\net6.0\ref\5_18_Lambda.dll

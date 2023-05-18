@@ -48,8 +48,6 @@
             btnScoreYes = new Button();
             btnScoreNo = new Button();
             pnlScore = new Panel();
-            btnNameOk = new Button();
-            txtName = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -60,6 +58,8 @@
             lblName2 = new Label();
             lblName3 = new Label();
             lblFreeman = new Label();
+            btnNameOk = new Button();
+            txtName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)boxQuestion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxCorrect).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxIncorrect).BeginInit();
@@ -272,28 +272,6 @@
             pnlScore.TabIndex = 16;
             pnlScore.Visible = false;
             // 
-            // btnNameOk
-            // 
-            btnNameOk.Font = new Font("휴먼둥근헤드라인", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnNameOk.Location = new Point(504, 192);
-            btnNameOk.Name = "btnNameOk";
-            btnNameOk.Size = new Size(71, 29);
-            btnNameOk.TabIndex = 18;
-            btnNameOk.Text = "등록";
-            btnNameOk.UseVisualStyleBackColor = true;
-            btnNameOk.Visible = false;
-            btnNameOk.Click += btnNameOk_Click;
-            // 
-            // txtName
-            // 
-            txtName.BackColor = SystemColors.Window;
-            txtName.Font = new Font("Sigmar One", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(217, 188);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(257, 37);
-            txtName.TabIndex = 17;
-            txtName.Visible = false;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -404,10 +382,31 @@
             lblFreeman.TabIndex = 0;
             lblFreeman.Text = "freeman75";
             // 
+            // btnNameOk
+            // 
+            btnNameOk.Font = new Font("휴먼둥근헤드라인", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNameOk.Location = new Point(504, 192);
+            btnNameOk.Name = "btnNameOk";
+            btnNameOk.Size = new Size(71, 29);
+            btnNameOk.TabIndex = 18;
+            btnNameOk.Text = "등록";
+            btnNameOk.UseVisualStyleBackColor = true;
+            btnNameOk.Visible = false;
+            btnNameOk.Click += btnNameOk_Click;
+            // 
+            // txtName
+            // 
+            txtName.BackColor = SystemColors.Window;
+            txtName.Font = new Font("Sigmar One", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.Location = new Point(217, 188);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(257, 37);
+            txtName.TabIndex = 17;
+            txtName.Visible = false;
+            // 
             // quiz
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Navy;
             ClientSize = new Size(682, 353);
             Controls.Add(btnNameOk);

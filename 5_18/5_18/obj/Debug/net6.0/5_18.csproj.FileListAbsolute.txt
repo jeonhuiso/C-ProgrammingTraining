@@ -1,0 +1,15 @@
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\bin\Debug\net6.0\5_18.exe
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\bin\Debug\net6.0\5_18.deps.json
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\bin\Debug\net6.0\5_18.runtimeconfig.json
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\bin\Debug\net6.0\5_18.dll
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\bin\Debug\net6.0\5_18.pdb
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.csproj.AssemblyReference.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.AssemblyInfoInputs.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.AssemblyInfo.cs
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.csproj.CoreCompileInputs.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.dll
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\refint\5_18.dll
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.pdb
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\5_18.genruntimeconfig.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\5_18\5_18\obj\Debug\net6.0\ref\5_18.dll
