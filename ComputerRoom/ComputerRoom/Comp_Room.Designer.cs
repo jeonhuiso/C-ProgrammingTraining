@@ -46,6 +46,7 @@
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(882, 553);
             Controls.Add(btnComputer);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Comp_Room";
             Text = "Computer Room";
             ResumeLayout(false);

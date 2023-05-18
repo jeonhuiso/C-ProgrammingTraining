@@ -4,6 +4,9 @@
     <Compile Update="Comp_Room.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FileOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="mail.cs">
       <SubType>Form</SubType>
     </Compile>

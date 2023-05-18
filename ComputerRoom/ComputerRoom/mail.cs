@@ -122,9 +122,10 @@ namespace ComputerRoom
         {
             // 인물 정보나 히든 엔딩 작성
             // 파일에서 오픈하면 정보 텍스트 창 띄워줌
-            string path = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\..\\..\\Downloads\\test");
-            File.Create(path);
-            MessageBox.Show("다운로드 완료!\nDownloads\\test");
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\..\\..\\Downloads\\noname");
+            var fileNoname = File.Create(path);
+            fileNoname.Close();
+            MessageBox.Show("다운로드 완료!\nDownloads\\noname");
         }
     }
 }

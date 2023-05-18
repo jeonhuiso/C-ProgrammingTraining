@@ -40,10 +40,12 @@
             Mail = new PictureBox();
             label2 = new Label();
             lblMail = new Label();
+            boxStartMenu = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)boxQuiz).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxInternet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxFolder).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Mail).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)boxStartMenu).BeginInit();
             SuspendLayout();
             // 
             // boxQuiz
@@ -163,12 +165,24 @@
             lblMail.TabIndex = 14;
             lblMail.Text = "Mail";
             // 
+            // boxStartMenu
+            // 
+            boxStartMenu.Image = (Image)resources.GetObject("boxStartMenu.Image");
+            boxStartMenu.Location = new Point(-1, 525);
+            boxStartMenu.Name = "boxStartMenu";
+            boxStartMenu.Size = new Size(84, 27);
+            boxStartMenu.SizeMode = PictureBoxSizeMode.StretchImage;
+            boxStartMenu.TabIndex = 18;
+            boxStartMenu.TabStop = false;
+            boxStartMenu.Click += boxStartMenu_Click;
+            // 
             // windows_bg
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(882, 553);
+            Controls.Add(boxStartMenu);
             Controls.Add(lblMail);
             Controls.Add(label2);
             Controls.Add(Mail);
@@ -180,6 +194,7 @@
             Controls.Add(label1);
             Controls.Add(boxInternet);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             Name = "windows_bg";
             Text = "Window";
@@ -187,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)boxInternet).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxFolder).EndInit();
             ((System.ComponentModel.ISupportInitialize)Mail).EndInit();
+            ((System.ComponentModel.ISupportInitialize)boxStartMenu).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -203,5 +219,6 @@
         private PictureBox Mail;
         private Label label2;
         private Label lblMail;
+        private PictureBox boxStartMenu;
     }
 }
