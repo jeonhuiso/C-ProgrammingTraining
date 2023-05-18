@@ -33,16 +33,22 @@ namespace ComputerRoom
             lblDate.Text = "";
             lblTo.Text = "";
             txtSubject.Text = "";
+
+            lblAtt.Text = "";
+            lblAtt.Enabled = false;
         }
 
         private void lblMail2_Click(object sender, EventArgs e)
         {
-            pnlMailIn.Visible = true; 
+            pnlMailIn.Visible = true;
             pnlMailIn.BringToFront();
             lblFrom.Text = "";
             lblDate.Text = "";
             lblTo.Text = "";
             txtSubject.Text = "";
+
+            lblAtt.Text = "";
+            lblAtt.Enabled = false;
 
         }
 
@@ -55,6 +61,9 @@ namespace ComputerRoom
             lblTo.Text = "";
             txtSubject.Text = "";
 
+            lblAtt.Text = "";
+            lblAtt.Enabled = false;
+
         }
 
         private void lblMail4_Click(object sender, EventArgs e)
@@ -65,6 +74,9 @@ namespace ComputerRoom
             lblDate.Text = "";
             lblTo.Text = "";
             txtSubject.Text = "";
+
+            lblAtt.Text = "";
+            lblAtt.Enabled = false;
 
         }
 

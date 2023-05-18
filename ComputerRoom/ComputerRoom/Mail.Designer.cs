@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             pnlBanner = new Panel();
+            pnlNothing = new Panel();
+            label5 = new Label();
             pnlMailList = new Panel();
             pnlUser = new Panel();
             lblMailId = new Label();
@@ -42,8 +44,8 @@
             pnlMailIn = new Panel();
             txtMailContext = new TextBox();
             pnlMailInfo = new Panel();
-            pnlNothing = new Panel();
-            label5 = new Label();
+            lblAtt = new Label();
+            label6 = new Label();
             txtSubject = new TextBox();
             lblDate = new Label();
             lblTo = new Label();
@@ -63,13 +65,13 @@
             lblMail4Date = new Label();
             splitter1 = new Splitter();
             pnlBanner.SuspendLayout();
+            pnlNothing.SuspendLayout();
             pnlMailList.SuspendLayout();
             pnlUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)boxProfile).BeginInit();
             pnlReceive.SuspendLayout();
             pnlMailIn.SuspendLayout();
             pnlMailInfo.SuspendLayout();
-            pnlNothing.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,8 +83,27 @@
             pnlBanner.Dock = DockStyle.Top;
             pnlBanner.Location = new Point(0, 0);
             pnlBanner.Name = "pnlBanner";
-            pnlBanner.Size = new Size(735, 66);
+            pnlBanner.Size = new Size(732, 66);
             pnlBanner.TabIndex = 0;
+            // 
+            // pnlNothing
+            // 
+            pnlNothing.BackColor = SystemColors.Control;
+            pnlNothing.Controls.Add(label5);
+            pnlNothing.Location = new Point(125, 61);
+            pnlNothing.Name = "pnlNothing";
+            pnlNothing.Size = new Size(605, 337);
+            pnlNothing.TabIndex = 2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = SystemColors.ControlText;
+            label5.Location = new Point(199, 12);
+            label5.Name = "label5";
+            label5.Size = new Size(167, 20);
+            label5.TabIndex = 0;
+            label5.Text = "메일함이 비어있습니다.";
             // 
             // pnlMailList
             // 
@@ -190,7 +211,7 @@
             pnlReceive.ForeColor = Color.Blue;
             pnlReceive.Location = new Point(126, 66);
             pnlReceive.Name = "pnlReceive";
-            pnlReceive.Size = new Size(609, 337);
+            pnlReceive.Size = new Size(606, 337);
             pnlReceive.TabIndex = 0;
             pnlReceive.Visible = false;
             // 
@@ -201,23 +222,25 @@
             pnlMailIn.Dock = DockStyle.Fill;
             pnlMailIn.Location = new Point(4, 0);
             pnlMailIn.Name = "pnlMailIn";
-            pnlMailIn.Size = new Size(603, 335);
+            pnlMailIn.Size = new Size(600, 335);
             pnlMailIn.TabIndex = 2;
             // 
             // txtMailContext
             // 
             txtMailContext.Enabled = false;
-            txtMailContext.Location = new Point(0, 147);
+            txtMailContext.Location = new Point(0, 153);
             txtMailContext.Multiline = true;
             txtMailContext.Name = "txtMailContext";
             txtMailContext.ScrollBars = ScrollBars.Both;
-            txtMailContext.Size = new Size(600, 188);
+            txtMailContext.Size = new Size(600, 182);
             txtMailContext.TabIndex = 1;
             // 
             // pnlMailInfo
             // 
             pnlMailInfo.BackColor = SystemColors.ControlDark;
             pnlMailInfo.BorderStyle = BorderStyle.FixedSingle;
+            pnlMailInfo.Controls.Add(lblAtt);
+            pnlMailInfo.Controls.Add(label6);
             pnlMailInfo.Controls.Add(txtSubject);
             pnlMailInfo.Controls.Add(lblDate);
             pnlMailInfo.Controls.Add(lblTo);
@@ -229,27 +252,28 @@
             pnlMailInfo.Dock = DockStyle.Top;
             pnlMailInfo.Location = new Point(0, 0);
             pnlMailInfo.Name = "pnlMailInfo";
-            pnlMailInfo.Size = new Size(603, 125);
+            pnlMailInfo.Size = new Size(600, 160);
             pnlMailInfo.TabIndex = 0;
             // 
-            // pnlNothing
+            // lblAtt
             // 
-            pnlNothing.BackColor = SystemColors.Control;
-            pnlNothing.Controls.Add(label5);
-            pnlNothing.Location = new Point(125, 61);
-            pnlNothing.Name = "pnlNothing";
-            pnlNothing.Size = new Size(605, 337);
-            pnlNothing.TabIndex = 2;
+            lblAtt.AutoSize = true;
+            lblAtt.Location = new Point(131, 117);
+            lblAtt.Name = "lblAtt";
+            lblAtt.Size = new Size(60, 25);
+            lblAtt.TabIndex = 10;
+            lblAtt.Text = "label7";
             // 
-            // label5
+            // label6
             // 
-            label5.AutoSize = true;
-            label5.ForeColor = SystemColors.ControlText;
-            label5.Location = new Point(199, 12);
-            label5.Name = "label5";
-            label5.Size = new Size(167, 20);
-            label5.TabIndex = 0;
-            label5.Text = "메일함이 비어있습니다.";
+            label6.AutoSize = true;
+            label6.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlText;
+            label6.Location = new Point(9, 120);
+            label6.Name = "label6";
+            label6.Size = new Size(109, 23);
+            label6.TabIndex = 9;
+            label6.Text = "Attachment:";
             // 
             // txtSubject
             // 
@@ -481,6 +505,8 @@
             Name = "mail";
             Text = "mail";
             pnlBanner.ResumeLayout(false);
+            pnlNothing.ResumeLayout(false);
+            pnlNothing.PerformLayout();
             pnlMailList.ResumeLayout(false);
             pnlMailList.PerformLayout();
             pnlUser.ResumeLayout(false);
@@ -491,8 +517,6 @@
             pnlMailIn.PerformLayout();
             pnlMailInfo.ResumeLayout(false);
             pnlMailInfo.PerformLayout();
-            pnlNothing.ResumeLayout(false);
-            pnlNothing.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -534,5 +558,7 @@
         private Label lblMail3Date;
         private Label lblMail4;
         private Label lblMail4Date;
+        private Label lblAtt;
+        private Label label6;
     }
 }
