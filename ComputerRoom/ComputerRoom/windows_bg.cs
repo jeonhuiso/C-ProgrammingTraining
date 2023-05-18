@@ -39,9 +39,12 @@ namespace ComputerRoom
 
         private void Mail_Click(object sender, EventArgs e)
         {
-            mail ml = new mail();
-            ml.Owner = this;
-            ml.Show();
+            //mail ml = new mail();
+            //ml.Owner = this;
+            //ml.Show();
+            MailLogin mailLogin = new MailLogin();
+            mailLogin.Owner = this;
+            mailLogin.Show();
         }
 
         private void boxStartMenu_Click(object sender, EventArgs e)

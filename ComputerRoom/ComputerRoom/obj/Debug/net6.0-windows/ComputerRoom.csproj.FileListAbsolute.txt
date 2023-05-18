@@ -20,3 +20,4 @@ C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.quiz.resources
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.mail.resources
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.FileOpen.resources
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net6.0-windows\ComputerRoom.MailLogin.resources

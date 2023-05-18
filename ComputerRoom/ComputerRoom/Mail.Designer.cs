@@ -42,7 +42,6 @@
             lblRecieve = new Label();
             pnlReceive = new Panel();
             pnlMailIn = new Panel();
-            txtMailContext = new TextBox();
             pnlMailInfo = new Panel();
             lblAtt = new Label();
             label6 = new Label();
@@ -54,6 +53,7 @@
             label2 = new Label();
             label1 = new Label();
             label3 = new Label();
+            txtMailContext = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             lblMail1 = new Label();
             lblMail1Date = new Label();
@@ -217,23 +217,13 @@
             // 
             // pnlMailIn
             // 
-            pnlMailIn.Controls.Add(txtMailContext);
             pnlMailIn.Controls.Add(pnlMailInfo);
+            pnlMailIn.Controls.Add(txtMailContext);
             pnlMailIn.Dock = DockStyle.Fill;
             pnlMailIn.Location = new Point(4, 0);
             pnlMailIn.Name = "pnlMailIn";
             pnlMailIn.Size = new Size(600, 335);
             pnlMailIn.TabIndex = 2;
-            // 
-            // txtMailContext
-            // 
-            txtMailContext.Enabled = false;
-            txtMailContext.Location = new Point(0, 153);
-            txtMailContext.Multiline = true;
-            txtMailContext.Name = "txtMailContext";
-            txtMailContext.ScrollBars = ScrollBars.Both;
-            txtMailContext.Size = new Size(600, 182);
-            txtMailContext.TabIndex = 1;
             // 
             // pnlMailInfo
             // 
@@ -360,6 +350,16 @@
             label3.Size = new Size(57, 23);
             label3.TabIndex = 0;
             label3.Text = "From:";
+            // 
+            // txtMailContext
+            // 
+            txtMailContext.Enabled = false;
+            txtMailContext.Location = new Point(0, 153);
+            txtMailContext.Multiline = true;
+            txtMailContext.Name = "txtMailContext";
+            txtMailContext.ScrollBars = ScrollBars.Both;
+            txtMailContext.Size = new Size(600, 182);
+            txtMailContext.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 

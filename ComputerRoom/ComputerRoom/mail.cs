@@ -17,10 +17,16 @@ namespace ComputerRoom
             InitializeComponent();
             pnlReceive.Visible = true;
             pnlMailIn.Visible = false;
+            pnlBanner.Visible = true;
+            pnlMailList.Visible = true;
 
             pnlReceive.Parent = this;
             pnlMailIn.Parent = this;
-            pnlNothing.Parent = this;
+            pnlNothing.Parent = this;            
+            
+            pnlMailIn.Visible = false;
+            pnlNothing.Visible = false;
+
         }
 
 

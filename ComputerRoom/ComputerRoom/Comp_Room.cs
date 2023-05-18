@@ -22,5 +22,10 @@ namespace ComputerRoom
         {
             wbg.ShowDialog();
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

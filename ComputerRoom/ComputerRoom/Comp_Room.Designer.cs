@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnComputer = new Button();
+            btnGoBack = new Button();
             SuspendLayout();
             // 
             // btnComputer
@@ -41,10 +42,21 @@
             btnComputer.UseVisualStyleBackColor = true;
             btnComputer.Click += btnComputer_Click;
             // 
+            // btnGoBack
+            // 
+            btnGoBack.Location = new Point(369, 419);
+            btnGoBack.Name = "btnGoBack";
+            btnGoBack.Size = new Size(108, 52);
+            btnGoBack.TabIndex = 1;
+            btnGoBack.Text = "Go Back";
+            btnGoBack.UseVisualStyleBackColor = true;
+            btnGoBack.Click += btnGoBack_Click;
+            // 
             // Comp_Room
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(882, 553);
+            Controls.Add(btnGoBack);
             Controls.Add(btnComputer);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Comp_Room";
@@ -55,5 +67,6 @@
         #endregion
 
         private Button btnComputer;
+        private Button btnGoBack;
     }
 }
