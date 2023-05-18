@@ -65,11 +65,11 @@
             lbl_boxQuiz.BackColor = SystemColors.Control;
             lbl_boxQuiz.ForeColor = SystemColors.ControlLightLight;
             lbl_boxQuiz.Image = (Image)resources.GetObject("lbl_boxQuiz.Image");
-            lbl_boxQuiz.Location = new Point(381, 217);
+            lbl_boxQuiz.Location = new Point(396, 217);
             lbl_boxQuiz.Name = "lbl_boxQuiz";
-            lbl_boxQuiz.Size = new Size(84, 20);
+            lbl_boxQuiz.Size = new Size(45, 20);
             lbl_boxQuiz.TabIndex = 5;
-            lbl_boxQuiz.Text = "Don't Click";
+            lbl_boxQuiz.Text = "QUIZ";
             // 
             // txtTime
             // 
@@ -106,7 +106,7 @@
             // 
             boxFolder.BackgroundImage = (Image)resources.GetObject("boxFolder.BackgroundImage");
             boxFolder.Image = (Image)resources.GetObject("boxFolder.Image");
-            boxFolder.Location = new Point(91, 217);
+            boxFolder.Location = new Point(8, 250);
             boxFolder.Name = "boxFolder";
             boxFolder.Size = new Size(90, 83);
             boxFolder.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -119,7 +119,7 @@
             lblFolder.AutoSize = true;
             lblFolder.ForeColor = SystemColors.ControlLightLight;
             lblFolder.Image = (Image)resources.GetObject("lblFolder.Image");
-            lblFolder.Location = new Point(102, 303);
+            lblFolder.Location = new Point(19, 336);
             lblFolder.Name = "lblFolder";
             lblFolder.Size = new Size(70, 20);
             lblFolder.TabIndex = 10;
@@ -131,10 +131,13 @@
             // 
             // Mail
             // 
-            Mail.Location = new Point(3, 132);
-            Mail.Margin = new Padding(4, 4, 4, 4);
+            Mail.BackgroundImage = (Image)resources.GetObject("Mail.BackgroundImage");
+            Mail.Image = (Image)resources.GetObject("Mail.Image");
+            Mail.Location = new Point(-7, 105);
+            Mail.Margin = new Padding(4);
             Mail.Name = "Mail";
-            Mail.Size = new Size(114, 67);
+            Mail.Size = new Size(114, 94);
+            Mail.SizeMode = PictureBoxSizeMode.StretchImage;
             Mail.TabIndex = 12;
             Mail.TabStop = false;
             Mail.Click += Mail_Click;
@@ -152,7 +155,8 @@
             // 
             lblMail.AutoSize = true;
             lblMail.ForeColor = SystemColors.ControlLightLight;
-            lblMail.Location = new Point(32, 203);
+            lblMail.Image = (Image)resources.GetObject("lblMail.Image");
+            lblMail.Location = new Point(29, 194);
             lblMail.Margin = new Padding(4, 0, 4, 0);
             lblMail.Name = "lblMail";
             lblMail.Size = new Size(39, 20);

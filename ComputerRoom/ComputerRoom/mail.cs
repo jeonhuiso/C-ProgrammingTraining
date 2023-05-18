@@ -35,7 +35,10 @@ namespace ComputerRoom
             txtSubject.Text = "";
 
             lblAtt.Text = "";
-            lblAtt.Enabled = false;
+            lblAtt.Enabled = true;
+            lblAtt.Text = "test";
+            lblAtt.ForeColor = Color.Blue;
+            lblAtt.Visible = true;
         }
 
         private void lblMail2_Click(object sender, EventArgs e)
@@ -113,6 +116,15 @@ namespace ComputerRoom
             pnlNothing.Visible = true;
             pnlNothing.BringToFront();
 
+        }
+
+        private void lblAtt_Click(object sender, EventArgs e)
+        {
+            // 인물 정보나 히든 엔딩 작성
+            // 파일에서 오픈하면 정보 텍스트 창 띄워줌
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\..\\..\\Downloads\\test");
+            File.Create(path);
+            MessageBox.Show("다운로드 완료!\nDownloads\\test");
         }
     }
 }

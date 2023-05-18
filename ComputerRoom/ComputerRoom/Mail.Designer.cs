@@ -162,7 +162,7 @@
             // lblTrash
             // 
             lblTrash.AutoSize = true;
-            lblTrash.Location = new Point(66, 124);
+            lblTrash.Location = new Point(39, 124);
             lblTrash.Name = "lblTrash";
             lblTrash.Size = new Size(54, 20);
             lblTrash.TabIndex = 3;
@@ -172,7 +172,7 @@
             // lblSpam
             // 
             lblSpam.AutoSize = true;
-            lblSpam.Location = new Point(66, 90);
+            lblSpam.Location = new Point(39, 90);
             lblSpam.Name = "lblSpam";
             lblSpam.Size = new Size(54, 20);
             lblSpam.TabIndex = 2;
@@ -182,7 +182,7 @@
             // lblSend
             // 
             lblSend.AutoSize = true;
-            lblSend.Location = new Point(46, 57);
+            lblSend.Location = new Point(19, 57);
             lblSend.Name = "lblSend";
             lblSend.Size = new Size(74, 20);
             lblSend.TabIndex = 1;
@@ -192,7 +192,7 @@
             // lblRecieve
             // 
             lblRecieve.AutoSize = true;
-            lblRecieve.Location = new Point(46, 24);
+            lblRecieve.Location = new Point(19, 24);
             lblRecieve.Name = "lblRecieve";
             lblRecieve.Size = new Size(74, 20);
             lblRecieve.TabIndex = 0;
@@ -258,11 +258,12 @@
             // lblAtt
             // 
             lblAtt.AutoSize = true;
-            lblAtt.Location = new Point(131, 117);
+            lblAtt.Location = new Point(131, 120);
             lblAtt.Name = "lblAtt";
             lblAtt.Size = new Size(60, 25);
             lblAtt.TabIndex = 10;
             lblAtt.Text = "label7";
+            lblAtt.Click += lblAtt_Click;
             // 
             // label6
             // 
