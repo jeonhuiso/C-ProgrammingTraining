@@ -31,11 +31,27 @@
             pnlBanner = new Panel();
             pnlMailList = new Panel();
             pnlUser = new Panel();
+            lblMailId = new Label();
+            lblId = new Label();
+            boxProfile = new PictureBox();
             lblTrash = new Label();
             lblSpam = new Label();
             lblSend = new Label();
             lblRecieve = new Label();
             pnlReceive = new Panel();
+            pnlMailIn = new Panel();
+            txtMailContext = new TextBox();
+            pnlMailInfo = new Panel();
+            pnlNothing = new Panel();
+            label5 = new Label();
+            txtSubject = new TextBox();
+            lblDate = new Label();
+            lblTo = new Label();
+            lblFrom = new Label();
+            label4 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            label3 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             lblMail1 = new Label();
             lblMail1Date = new Label();
@@ -46,24 +62,26 @@
             lblMail4 = new Label();
             lblMail4Date = new Label();
             splitter1 = new Splitter();
-            boxProfile = new PictureBox();
-            lblId = new Label();
-            lblMailId = new Label();
+            pnlBanner.SuspendLayout();
             pnlMailList.SuspendLayout();
             pnlUser.SuspendLayout();
-            pnlReceive.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)boxProfile).BeginInit();
+            pnlReceive.SuspendLayout();
+            pnlMailIn.SuspendLayout();
+            pnlMailInfo.SuspendLayout();
+            pnlNothing.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // pnlBanner
             // 
             pnlBanner.BackColor = SystemColors.ControlDark;
             pnlBanner.BorderStyle = BorderStyle.FixedSingle;
+            pnlBanner.Controls.Add(pnlNothing);
             pnlBanner.Dock = DockStyle.Top;
             pnlBanner.Location = new Point(0, 0);
             pnlBanner.Name = "pnlBanner";
-            pnlBanner.Size = new Size(732, 66);
+            pnlBanner.Size = new Size(735, 66);
             pnlBanner.TabIndex = 0;
             // 
             // pnlMailList
@@ -93,6 +111,33 @@
             pnlUser.Size = new Size(126, 152);
             pnlUser.TabIndex = 4;
             // 
+            // lblMailId
+            // 
+            lblMailId.AutoSize = true;
+            lblMailId.Font = new Font("맑은 고딕", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMailId.Location = new Point(48, 99);
+            lblMailId.Name = "lblMailId";
+            lblMailId.Size = new Size(71, 34);
+            lblMailId.TabIndex = 4;
+            lblMailId.Text = "freeman75\r\n@hmail.cs";
+            // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Location = new Point(38, 64);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(81, 20);
+            lblId.TabIndex = 3;
+            lblId.Text = "freeman75";
+            // 
+            // boxProfile
+            // 
+            boxProfile.Location = new Point(0, -1);
+            boxProfile.Name = "boxProfile";
+            boxProfile.Size = new Size(125, 62);
+            boxProfile.TabIndex = 2;
+            boxProfile.TabStop = false;
+            // 
             // lblTrash
             // 
             lblTrash.AutoSize = true;
@@ -101,6 +146,7 @@
             lblTrash.Size = new Size(54, 20);
             lblTrash.TabIndex = 3;
             lblTrash.Text = "휴지통";
+            lblTrash.Click += lblTrash_Click;
             // 
             // lblSpam
             // 
@@ -110,6 +156,7 @@
             lblSpam.Size = new Size(54, 20);
             lblSpam.TabIndex = 2;
             lblSpam.Text = "스팸함";
+            lblSpam.Click += lblSpam_Click;
             // 
             // lblSend
             // 
@@ -119,6 +166,7 @@
             lblSend.Size = new Size(74, 20);
             lblSend.TabIndex = 1;
             lblSend.Text = "보낸 편지";
+            lblSend.Click += lblSend_Click;
             // 
             // lblRecieve
             // 
@@ -134,6 +182,7 @@
             // 
             pnlReceive.BackColor = SystemColors.Control;
             pnlReceive.BorderStyle = BorderStyle.FixedSingle;
+            pnlReceive.Controls.Add(pnlMailIn);
             pnlReceive.Controls.Add(tableLayoutPanel1);
             pnlReceive.Controls.Add(splitter1);
             pnlReceive.Dock = DockStyle.Fill;
@@ -141,8 +190,151 @@
             pnlReceive.ForeColor = Color.Blue;
             pnlReceive.Location = new Point(126, 66);
             pnlReceive.Name = "pnlReceive";
-            pnlReceive.Size = new Size(606, 337);
+            pnlReceive.Size = new Size(609, 337);
             pnlReceive.TabIndex = 0;
+            pnlReceive.Visible = false;
+            // 
+            // pnlMailIn
+            // 
+            pnlMailIn.Controls.Add(txtMailContext);
+            pnlMailIn.Controls.Add(pnlMailInfo);
+            pnlMailIn.Dock = DockStyle.Fill;
+            pnlMailIn.Location = new Point(4, 0);
+            pnlMailIn.Name = "pnlMailIn";
+            pnlMailIn.Size = new Size(603, 335);
+            pnlMailIn.TabIndex = 2;
+            // 
+            // txtMailContext
+            // 
+            txtMailContext.Enabled = false;
+            txtMailContext.Location = new Point(0, 147);
+            txtMailContext.Multiline = true;
+            txtMailContext.Name = "txtMailContext";
+            txtMailContext.ScrollBars = ScrollBars.Both;
+            txtMailContext.Size = new Size(600, 188);
+            txtMailContext.TabIndex = 1;
+            // 
+            // pnlMailInfo
+            // 
+            pnlMailInfo.BackColor = SystemColors.ControlDark;
+            pnlMailInfo.BorderStyle = BorderStyle.FixedSingle;
+            pnlMailInfo.Controls.Add(txtSubject);
+            pnlMailInfo.Controls.Add(lblDate);
+            pnlMailInfo.Controls.Add(lblTo);
+            pnlMailInfo.Controls.Add(lblFrom);
+            pnlMailInfo.Controls.Add(label4);
+            pnlMailInfo.Controls.Add(label2);
+            pnlMailInfo.Controls.Add(label1);
+            pnlMailInfo.Controls.Add(label3);
+            pnlMailInfo.Dock = DockStyle.Top;
+            pnlMailInfo.Location = new Point(0, 0);
+            pnlMailInfo.Name = "pnlMailInfo";
+            pnlMailInfo.Size = new Size(603, 125);
+            pnlMailInfo.TabIndex = 0;
+            // 
+            // pnlNothing
+            // 
+            pnlNothing.BackColor = SystemColors.Control;
+            pnlNothing.Controls.Add(label5);
+            pnlNothing.Location = new Point(125, 61);
+            pnlNothing.Name = "pnlNothing";
+            pnlNothing.Size = new Size(605, 337);
+            pnlNothing.TabIndex = 2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = SystemColors.ControlText;
+            label5.Location = new Point(199, 12);
+            label5.Name = "label5";
+            label5.Size = new Size(167, 20);
+            label5.TabIndex = 0;
+            label5.Text = "메일함이 비어있습니다.";
+            // 
+            // txtSubject
+            // 
+            txtSubject.Enabled = false;
+            txtSubject.Location = new Point(131, 84);
+            txtSubject.Name = "txtSubject";
+            txtSubject.Size = new Size(445, 31);
+            txtSubject.TabIndex = 8;
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDate.ForeColor = SystemColors.ControlText;
+            lblDate.Location = new Point(131, 29);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(57, 23);
+            lblDate.TabIndex = 7;
+            lblDate.Text = "From:";
+            // 
+            // lblTo
+            // 
+            lblTo.AutoSize = true;
+            lblTo.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTo.ForeColor = SystemColors.ControlText;
+            lblTo.Location = new Point(131, 58);
+            lblTo.Name = "lblTo";
+            lblTo.Size = new Size(57, 23);
+            lblTo.TabIndex = 6;
+            lblTo.Text = "From:";
+            // 
+            // lblFrom
+            // 
+            lblFrom.AutoSize = true;
+            lblFrom.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFrom.ForeColor = SystemColors.ControlText;
+            lblFrom.Location = new Point(131, 4);
+            lblFrom.Name = "lblFrom";
+            lblFrom.Size = new Size(57, 23);
+            lblFrom.TabIndex = 3;
+            lblFrom.Text = "From:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlText;
+            label4.Location = new Point(9, 86);
+            label4.Name = "label4";
+            label4.Size = new Size(74, 23);
+            label4.TabIndex = 1;
+            label4.Text = "Subject:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ControlText;
+            label2.Location = new Point(9, 29);
+            label2.Name = "label2";
+            label2.Size = new Size(52, 23);
+            label2.TabIndex = 2;
+            label2.Text = "Date:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlText;
+            label1.Location = new Point(9, 58);
+            label1.Name = "label1";
+            label1.Size = new Size(35, 23);
+            label1.TabIndex = 1;
+            label1.Text = "To:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlText;
+            label3.Location = new Point(9, 1);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 23);
+            label3.TabIndex = 0;
+            label3.Text = "From:";
             // 
             // tableLayoutPanel1
             // 
@@ -279,33 +471,6 @@
             splitter1.TabIndex = 0;
             splitter1.TabStop = false;
             // 
-            // boxProfile
-            // 
-            boxProfile.Location = new Point(0, -1);
-            boxProfile.Name = "boxProfile";
-            boxProfile.Size = new Size(125, 62);
-            boxProfile.TabIndex = 2;
-            boxProfile.TabStop = false;
-            // 
-            // lblId
-            // 
-            lblId.AutoSize = true;
-            lblId.Location = new Point(38, 64);
-            lblId.Name = "lblId";
-            lblId.Size = new Size(81, 20);
-            lblId.TabIndex = 3;
-            lblId.Text = "freeman75";
-            // 
-            // lblMailId
-            // 
-            lblMailId.AutoSize = true;
-            lblMailId.Font = new Font("맑은 고딕", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMailId.Location = new Point(48, 99);
-            lblMailId.Name = "lblMailId";
-            lblMailId.Size = new Size(71, 34);
-            lblMailId.TabIndex = 4;
-            lblMailId.Text = "freeman75\r\n@hmail.cs";
-            // 
             // mail
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -315,14 +480,21 @@
             Controls.Add(pnlBanner);
             Name = "mail";
             Text = "mail";
+            pnlBanner.ResumeLayout(false);
             pnlMailList.ResumeLayout(false);
             pnlMailList.PerformLayout();
             pnlUser.ResumeLayout(false);
             pnlUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)boxProfile).EndInit();
             pnlReceive.ResumeLayout(false);
+            pnlMailIn.ResumeLayout(false);
+            pnlMailIn.PerformLayout();
+            pnlMailInfo.ResumeLayout(false);
+            pnlMailInfo.PerformLayout();
+            pnlNothing.ResumeLayout(false);
+            pnlNothing.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)boxProfile).EndInit();
             ResumeLayout(false);
         }
 
@@ -337,6 +509,22 @@
         private Label lblRecieve;
         private Panel pnlReceive;
         private Splitter splitter1;
+        private Label lblId;
+        private PictureBox boxProfile;
+        private Label lblMailId;
+        private Panel pnlMailIn;
+        private Panel pnlMailInfo;
+        private TextBox txtMailContext;
+        private TextBox txtSubject;
+        private Label lblDate;
+        private Label lblTo;
+        private Label lblFrom;
+        private Label label4;
+        private Label label2;
+        private Label label1;
+        private Label label3;
+        private Panel pnlNothing;
+        private Label label5;
         private TableLayoutPanel tableLayoutPanel1;
         private Label lblMail1;
         private Label lblMail1Date;
@@ -346,8 +534,5 @@
         private Label lblMail3Date;
         private Label lblMail4;
         private Label lblMail4Date;
-        private Label lblId;
-        private PictureBox boxProfile;
-        private Label lblMailId;
     }
 }

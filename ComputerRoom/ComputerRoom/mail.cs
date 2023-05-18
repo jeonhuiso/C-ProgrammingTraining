@@ -15,31 +15,92 @@ namespace ComputerRoom
         public mail()
         {
             InitializeComponent();
+            pnlReceive.Visible = true;
+            pnlMailIn.Visible = false;
+
+            pnlReceive.Parent = this;
+            pnlMailIn.Parent = this;
+            pnlNothing.Parent = this;
         }
 
+
+        // Mail Context
         private void lblMail1_Click(object sender, EventArgs e)
         {
-
+            pnlMailIn.Visible = true;
+            pnlMailIn.BringToFront();
+            lblFrom.Text = "";
+            lblDate.Text = "";
+            lblTo.Text = "";
+            txtSubject.Text = "";
         }
 
         private void lblMail2_Click(object sender, EventArgs e)
         {
+            pnlMailIn.Visible = true; 
+            pnlMailIn.BringToFront();
+            lblFrom.Text = "";
+            lblDate.Text = "";
+            lblTo.Text = "";
+            txtSubject.Text = "";
 
         }
 
         private void lblMail3_Click(object sender, EventArgs e)
         {
+            pnlMailIn.Visible = true;
+            pnlMailIn.BringToFront();
+            lblFrom.Text = "";
+            lblDate.Text = "";
+            lblTo.Text = "";
+            txtSubject.Text = "";
 
         }
 
         private void lblMail4_Click(object sender, EventArgs e)
         {
+            pnlMailIn.Visible = true;
+            pnlMailIn.BringToFront();
+            lblFrom.Text = "";
+            lblDate.Text = "";
+            lblTo.Text = "";
+            txtSubject.Text = "";
 
         }
 
+        // Mail List
         private void lblRecieve_Click(object sender, EventArgs e)
         {
             pnlReceive.Visible = true;
+            pnlMailIn.Visible = false;
+            pnlNothing.Visible = false;
+            pnlReceive.BringToFront();
+        }
+
+        private void lblSend_Click(object sender, EventArgs e)
+        {
+            pnlReceive.Visible = false;
+            pnlMailIn.Visible = false;
+            pnlNothing.Visible = true;
+            pnlNothing.BringToFront();
+        }
+
+        private void lblSpam_Click(object sender, EventArgs e)
+        {
+            pnlReceive.Visible = false;
+            pnlMailIn.Visible = false;
+            pnlNothing.Visible = true;
+            pnlNothing.BringToFront();
+
+        }
+
+        private void lblTrash_Click(object sender, EventArgs e)
+        {
+            pnlReceive.Visible = false;
+            pnlMailIn.Visible = false;
+            pnlNothing.Visible = true;
+            pnlNothing.BringToFront();
+
         }
     }
 }
