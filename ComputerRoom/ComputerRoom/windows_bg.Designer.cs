@@ -32,8 +32,6 @@
             boxQuiz = new PictureBox();
             lbl_boxQuiz = new Label();
             txtTime = new TextBox();
-            boxInternet = new PictureBox();
-            label1 = new Label();
             boxFolder = new PictureBox();
             lblFolder = new Label();
             ofd = new OpenFileDialog();
@@ -42,7 +40,6 @@
             lblMail = new Label();
             boxStartMenu = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)boxQuiz).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)boxInternet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxFolder).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Mail).BeginInit();
             ((System.ComponentModel.ISupportInitialize)boxStartMenu).BeginInit();
@@ -81,28 +78,6 @@
             txtTime.Size = new Size(125, 27);
             txtTime.TabIndex = 6;
             txtTime.Text = "what time?";
-            // 
-            // boxInternet
-            // 
-            boxInternet.BackgroundImage = (Image)resources.GetObject("boxInternet.BackgroundImage");
-            boxInternet.Image = (Image)resources.GetObject("boxInternet.Image");
-            boxInternet.Location = new Point(-24, 0);
-            boxInternet.Name = "boxInternet";
-            boxInternet.Size = new Size(141, 77);
-            boxInternet.SizeMode = PictureBoxSizeMode.StretchImage;
-            boxInternet.TabIndex = 7;
-            boxInternet.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(21, 71);
-            label1.Name = "label1";
-            label1.Size = new Size(62, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Internet";
             // 
             // boxFolder
             // 
@@ -191,15 +166,12 @@
             Controls.Add(boxQuiz);
             Controls.Add(lblFolder);
             Controls.Add(boxFolder);
-            Controls.Add(label1);
-            Controls.Add(boxInternet);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             Name = "windows_bg";
             Text = "Window";
             ((System.ComponentModel.ISupportInitialize)boxQuiz).EndInit();
-            ((System.ComponentModel.ISupportInitialize)boxInternet).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxFolder).EndInit();
             ((System.ComponentModel.ISupportInitialize)Mail).EndInit();
             ((System.ComponentModel.ISupportInitialize)boxStartMenu).EndInit();
@@ -211,8 +183,6 @@
         private PictureBox boxQuiz;
         private Label lbl_boxQuiz;
         private TextBox txtTime;
-        private PictureBox boxInternet;
-        private Label label1;
         private PictureBox boxFolder;
         private Label lblFolder;
         private OpenFileDialog ofd;

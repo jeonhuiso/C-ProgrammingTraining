@@ -21,10 +21,14 @@ namespace ComputerRoom
             InitializeComponent();
             quizs.Add("대한민국의 수도는?");
             answers.Add("서울");
-            quizs.Add("중국의 수도는?");
-            answers.Add("베이징");
-            quizs.Add("일본의 수도는?");
-            answers.Add("도쿄");
+            quizs.Add("2 + 2 x 2 = ?");
+            answers.Add("6");
+            quizs.Add("포크가 비가 되어 내리면?");
+            answers.Add("포크레인");
+            quizs.Add("어린이날을 만든 사람은?");
+            answers.Add("방정환");
+            quizs.Add("e-mail의 e는 무슨 약자인가?");
+            answers.Add("electronic");
         }
 
         private void timer_Tick(object sender, EventArgs e)
