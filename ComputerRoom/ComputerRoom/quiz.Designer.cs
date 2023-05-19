@@ -200,6 +200,7 @@
             // boxCorrect
             // 
             boxCorrect.BackColor = Color.MediumTurquoise;
+            boxCorrect.Image = (Image)resources.GetObject("boxCorrect.Image");
             boxCorrect.Location = new Point(493, 142);
             boxCorrect.Name = "boxCorrect";
             boxCorrect.Size = new Size(129, 118);
@@ -211,9 +212,11 @@
             // boxIncorrect
             // 
             boxIncorrect.BackColor = Color.FromArgb(255, 128, 0);
+            boxIncorrect.Image = (Image)resources.GetObject("boxIncorrect.Image");
             boxIncorrect.Location = new Point(493, 142);
             boxIncorrect.Name = "boxIncorrect";
             boxIncorrect.Size = new Size(129, 118);
+            boxIncorrect.SizeMode = PictureBoxSizeMode.StretchImage;
             boxIncorrect.TabIndex = 12;
             boxIncorrect.TabStop = false;
             boxIncorrect.Visible = false;
