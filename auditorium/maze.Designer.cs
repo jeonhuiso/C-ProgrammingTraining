@@ -38,9 +38,10 @@ namespace auditorium
             this.enemy_image = new System.Windows.Forms.ImageList(this.components);
             this.puzzle_timer = new System.Windows.Forms.Timer(this.components);
             this.pan_maze = new System.Windows.Forms.Panel();
-            this.fail_maze = new System.Windows.Forms.Button();
-            this.maze_all_puzzle = new System.Windows.Forms.Button();
+            this.maze_no_all_puzzle = new System.Windows.Forms.Button();
             this.time_over = new System.Windows.Forms.Button();
+            this.maze_all_puzzle = new System.Windows.Forms.Button();
+            this.fail_maze = new System.Windows.Forms.Button();
             this.pan_maze.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +98,7 @@ namespace auditorium
             // 
             this.pan_maze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_maze.BackgroundImage")));
             this.pan_maze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pan_maze.Controls.Add(this.maze_no_all_puzzle);
             this.pan_maze.Controls.Add(this.time_over);
             this.pan_maze.Controls.Add(this.maze_all_puzzle);
             this.pan_maze.Controls.Add(this.fail_maze);
@@ -106,16 +108,27 @@ namespace auditorium
             this.pan_maze.Size = new System.Drawing.Size(900, 600);
             this.pan_maze.TabIndex = 57;
             // 
-            // fail_maze
+            // maze_no_all_puzzle
             // 
-            this.fail_maze.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.fail_maze.Location = new System.Drawing.Point(122, 214);
-            this.fail_maze.Name = "fail_maze";
-            this.fail_maze.Size = new System.Drawing.Size(605, 133);
-            this.fail_maze.TabIndex = 57;
-            this.fail_maze.Text = "퍼즐을 모두 풀지 않았습니다.";
-            this.fail_maze.UseVisualStyleBackColor = true;
-            this.fail_maze.Click += new System.EventHandler(this.fail_maze_Click);
+            this.maze_no_all_puzzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.maze_no_all_puzzle.Location = new System.Drawing.Point(87, 214);
+            this.maze_no_all_puzzle.Name = "maze_no_all_puzzle";
+            this.maze_no_all_puzzle.Size = new System.Drawing.Size(674, 133);
+            this.maze_no_all_puzzle.TabIndex = 60;
+            this.maze_no_all_puzzle.Text = "퍼즐을 모두 성공하지 못 했습니다.";
+            this.maze_no_all_puzzle.UseVisualStyleBackColor = true;
+            this.maze_no_all_puzzle.Click += new System.EventHandler(this.maze_no_all_puzzle_Click);
+            // 
+            // time_over
+            // 
+            this.time_over.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.time_over.Location = new System.Drawing.Point(110, 214);
+            this.time_over.Name = "time_over";
+            this.time_over.Size = new System.Drawing.Size(641, 133);
+            this.time_over.TabIndex = 59;
+            this.time_over.Text = "시간 초과";
+            this.time_over.UseVisualStyleBackColor = true;
+            this.time_over.Click += new System.EventHandler(this.time_over_Click);
             // 
             // maze_all_puzzle
             // 
@@ -128,16 +141,16 @@ namespace auditorium
             this.maze_all_puzzle.UseVisualStyleBackColor = true;
             this.maze_all_puzzle.Click += new System.EventHandler(this.maze_all_puzzle_Click);
             // 
-            // time_over
+            // fail_maze
             // 
-            this.time_over.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.time_over.Location = new System.Drawing.Point(110, 214);
-            this.time_over.Name = "time_over";
-            this.time_over.Size = new System.Drawing.Size(641, 133);
-            this.time_over.TabIndex = 59;
-            this.time_over.Text = "시간 초과";
-            this.time_over.UseVisualStyleBackColor = true;
-            this.time_over.Click += new System.EventHandler(this.time_over_Click);
+            this.fail_maze.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.fail_maze.Location = new System.Drawing.Point(122, 214);
+            this.fail_maze.Name = "fail_maze";
+            this.fail_maze.Size = new System.Drawing.Size(605, 133);
+            this.fail_maze.TabIndex = 57;
+            this.fail_maze.Text = "퍼즐을 모두 풀지 않았습니다.";
+            this.fail_maze.UseVisualStyleBackColor = true;
+            this.fail_maze.Click += new System.EventHandler(this.fail_maze_Click);
             // 
             // maze
             // 
@@ -174,5 +187,6 @@ namespace auditorium
         private System.Windows.Forms.Button fail_maze;
         private System.Windows.Forms.Button maze_all_puzzle;
         private System.Windows.Forms.Button time_over;
+        private System.Windows.Forms.Button maze_no_all_puzzle;
     }
 }

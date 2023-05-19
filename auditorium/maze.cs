@@ -220,7 +220,10 @@ namespace auditorium
                     game_ch++;
                 maze_timer.Stop();
                 pan_maze.Visible = true;
-                maze_all_puzzle.Visible = true;
+                if (game_ch == 3)
+                    maze_all_puzzle.Visible = true;
+                else
+                    maze_no_all_puzzle.Visible = true;
             }
         }
 
@@ -460,6 +463,11 @@ namespace auditorium
         }
 
         private void time_over_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void maze_no_all_puzzle_Click(object sender, EventArgs e)
         {
             this.Close();
         }

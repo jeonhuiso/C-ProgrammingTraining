@@ -47,6 +47,7 @@ namespace auditorium
             this.txt_game_ex_4_1 = new System.Windows.Forms.TextBox();
             this.pic_game_ex_4_2 = new System.Windows.Forms.PictureBox();
             this.pic_game_ex_4_1 = new System.Windows.Forms.PictureBox();
+            this.txt_game_ex_3 = new System.Windows.Forms.TextBox();
             this.txt_game_ex_3_2 = new System.Windows.Forms.TextBox();
             this.txt_game_ex_3_1 = new System.Windows.Forms.TextBox();
             this.pic_game_ex_3_3 = new System.Windows.Forms.PictureBox();
@@ -60,7 +61,6 @@ namespace auditorium
             this.btn_right_ex = new System.Windows.Forms.Button();
             this.txt_game_ex = new System.Windows.Forms.TextBox();
             this.btn_shape_explain = new System.Windows.Forms.Button();
-            this.txt_game_ex_3 = new System.Windows.Forms.TextBox();
             this.pan_shape_explain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_1)).BeginInit();
@@ -266,6 +266,19 @@ namespace auditorium
             this.pic_game_ex_4_1.TabIndex = 29;
             this.pic_game_ex_4_1.TabStop = false;
             // 
+            // txt_game_ex_3
+            // 
+            this.txt_game_ex_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txt_game_ex_3.Location = new System.Drawing.Point(56, 338);
+            this.txt_game_ex_3.Multiline = true;
+            this.txt_game_ex_3.Name = "txt_game_ex_3";
+            this.txt_game_ex_3.ReadOnly = true;
+            this.txt_game_ex_3.Size = new System.Drawing.Size(734, 147);
+            this.txt_game_ex_3.TabIndex = 28;
+            this.txt_game_ex_3.Text = "블록을 잡으면 넣을 수 있는 위치가 표시가 됩니다.\r\n오른쪽 블록을 이동시켜 표시된 블록에 넣으면 색상을 바꿀 수 있습니다.\r\n또한 이미 넣은 색" +
+    "상도 바꾸는 것이 가능합니다. \r\n(단 보라색 버튼은 변경 불가)";
+            this.txt_game_ex_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txt_game_ex_3_2
             // 
             this.txt_game_ex_3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -410,19 +423,6 @@ namespace auditorium
             this.btn_shape_explain.Text = "게임 시작";
             this.btn_shape_explain.UseVisualStyleBackColor = true;
             this.btn_shape_explain.Click += new System.EventHandler(this.btn_shape_explain_Click);
-            // 
-            // txt_game_ex_3
-            // 
-            this.txt_game_ex_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_3.Location = new System.Drawing.Point(56, 338);
-            this.txt_game_ex_3.Multiline = true;
-            this.txt_game_ex_3.Name = "txt_game_ex_3";
-            this.txt_game_ex_3.ReadOnly = true;
-            this.txt_game_ex_3.Size = new System.Drawing.Size(734, 147);
-            this.txt_game_ex_3.TabIndex = 28;
-            this.txt_game_ex_3.Text = "블록을 잡으면 넣을 수 있는 위치가 표시가 됩니다.\r\n오른쪽 블록을 이동시켜 표시된 블록에 넣으면 색상을 바꿀 수 있습니다.\r\n또한 이미 넣은 색" +
-    "상도 바꾸는 것이 가능합니다. \r\n(단 보라색 버튼은 변경 불가)";
-            this.txt_game_ex_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // make_shape
             // 

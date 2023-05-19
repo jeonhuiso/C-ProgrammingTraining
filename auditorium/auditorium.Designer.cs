@@ -73,7 +73,7 @@ namespace auditorium
             this.maze_Start.Name = "maze_Start";
             this.maze_Start.Size = new System.Drawing.Size(450, 600);
             this.maze_Start.TabIndex = 14;
-            this.maze_Start.Text = "\r\n미로 탈출을 한다\r\n";
+            this.maze_Start.Text = "\r\n들어간다.\r\n";
             this.maze_Start.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.maze_Start.UseVisualStyleBackColor = true;
             this.maze_Start.Click += new System.EventHandler(this.maze_Start_Click);
@@ -88,7 +88,7 @@ namespace auditorium
             this.maze_no_start.Name = "maze_no_start";
             this.maze_no_start.Size = new System.Drawing.Size(450, 600);
             this.maze_no_start.TabIndex = 13;
-            this.maze_no_start.Text = "\r\n문을 닫는다";
+            this.maze_no_start.Text = "\r\n들어가지 않는다.";
             this.maze_no_start.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.maze_no_start.UseVisualStyleBackColor = true;
             this.maze_no_start.Click += new System.EventHandler(this.maze_no_start_Click);
