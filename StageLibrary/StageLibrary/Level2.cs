@@ -24,12 +24,17 @@ namespace StageLibrary
         public event Level2Load level2LoadEvent;
         List<PictureBox> bookList = new List<PictureBox>(new PictureBox[6]);
         List<bool> bookchecked = new List<bool>(6){true,false,false,true,false,false};
+        
         private void Level2_Load(object sender, EventArgs e)
         {
-            foreach (PictureBox c in this.Controls) {
+            PrivateFontCollection fontCollection = new PrivateFontCollection();
+            fontCollection.AddFontFile("강원교육현옥샘.ttf");
+           
+            foreach (Control c in this.Controls) {
+                c.Font = new Font(fontCollection.Families[0], 13f);
                 if (c.Tag == "book")
                 {
-                    c.BackgroundImage = imageList1.Images[1];
+                    ((PictureBox)c).BackgroundImage = imageList1.Images[1];
                 }
             }
             bookList[0] = book1;
@@ -79,7 +84,6 @@ namespace StageLibrary
             if(bookchecked[0]&& bookchecked[1] && bookchecked[2] && bookchecked[3] && bookchecked[4] && bookchecked[5])
             {
                 sendStage2Event(true);
-                this.Close();
             }
         }
 
@@ -90,6 +94,21 @@ namespace StageLibrary
                 bookchecked = new List<bool>(6) { true, false, false, true, false, false };
                 level2LoadEvent();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+        }
+
+        private void btnBookExit_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

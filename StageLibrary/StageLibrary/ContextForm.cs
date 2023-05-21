@@ -46,7 +46,7 @@ namespace StageLibrary
                 c.Font = new Font(fontCollection.Families[0], 17f);
             }
         }
-
+        // 대사 시작 순간 사용하세요
         public void ScriptParse(string jsonName,string token) {
             if (txtSpeaker.Text != "" && txtComment.Text != "")
                 return;

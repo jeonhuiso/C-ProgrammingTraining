@@ -38,6 +38,7 @@ namespace StageLibrary
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "LibraryStage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.MDIContainer_Load);
             this.ResumeLayout(false);
 

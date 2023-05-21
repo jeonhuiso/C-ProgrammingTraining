@@ -66,7 +66,6 @@ namespace StageLibrary
             this.Book_Of_Truth.Size = new System.Drawing.Size(100, 125);
             this.Book_Of_Truth.TabIndex = 0;
             this.Book_Of_Truth.Tag = "book";
-            this.Book_Of_Truth.Text = "Truth";
             this.Book_Of_Truth.UseVisualStyleBackColor = false;
             this.Book_Of_Truth.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BookMouseDown);
             this.Book_Of_Truth.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BookMouseMove);
@@ -84,7 +83,6 @@ namespace StageLibrary
             this.Book_Of_Lie.Size = new System.Drawing.Size(100, 125);
             this.Book_Of_Lie.TabIndex = 0;
             this.Book_Of_Lie.Tag = "book";
-            this.Book_Of_Lie.Text = "Lie";
             this.Book_Of_Lie.UseVisualStyleBackColor = false;
             this.Book_Of_Lie.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BookMouseDown);
             this.Book_Of_Lie.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BookMouseMove);
@@ -102,7 +100,6 @@ namespace StageLibrary
             this.Book_Of_Dumb.Size = new System.Drawing.Size(100, 125);
             this.Book_Of_Dumb.TabIndex = 0;
             this.Book_Of_Dumb.Tag = "book";
-            this.Book_Of_Dumb.Text = "Dumb";
             this.Book_Of_Dumb.UseVisualStyleBackColor = false;
             this.Book_Of_Dumb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BookMouseDown);
             this.Book_Of_Dumb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BookMouseMove);
@@ -252,7 +249,6 @@ namespace StageLibrary
             this.storyPage2.Size = new System.Drawing.Size(482, 180);
             this.storyPage2.TabIndex = 2;
             this.storyPage2.Text = resources.GetString("storyPage2.Text");
-            this.storyPage2.Click += new System.EventHandler(this.storyPage2_Click);
             // 
             // storyPage3
             // 

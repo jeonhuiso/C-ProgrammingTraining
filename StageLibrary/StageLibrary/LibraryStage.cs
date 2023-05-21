@@ -33,6 +33,7 @@ namespace StageLibrary
         }
          void CheckProblem1Solve(bool isClear)
         {
+            level1.Dispose();
             if (isClear)
             {
                 problemsolve[0] = true;
@@ -47,11 +48,12 @@ namespace StageLibrary
                 }
             }
             else {
-                
+                MainReload();
             }
         }
         void CheckProblem2Solve(bool isClear)
         {
+            level2.Dispose();
             if (isClear)
             {
                 problemsolve[1] = true;
@@ -68,17 +70,18 @@ namespace StageLibrary
             }
             else
             {
-
+                MainReload();
             }
         }
+        //문제 시작 시 대사 출력
         void ShowLevel2StartComment() {
             contextform.ScriptParse("stageLibrary_level2_start", "start");
         }
         void ShowLevel1StartComment() {
             contextform.ScriptParse("stageLibrary_level1_start", "start");
         }
+        //대사 출력시 이벤트
         void CommentStart() {
-           // this.stageMain.Enabled = false;
             foreach(Form a in this.MdiChildren)
             {
                 if (a == contextform)
@@ -86,9 +89,10 @@ namespace StageLibrary
                 a.Enabled = false;
             }
         }
+        //모든 대사 출력 후 이벤트
+        //문제 풀이 확인 후 풀었으면 종료대사 출력 후 종료
         void CommentEnd()
         {
-            //this.stageMain.Enabled = true;
             foreach (Form a in this.MdiChildren)
             {
                 a.Enabled = true;
@@ -123,8 +127,9 @@ namespace StageLibrary
             level2.Show();
             level2.Location = new System.Drawing.Point(0, 0);
         }
-        private void MDIContainer_Load(object sender, EventArgs e)
-        {
+        private void MainReload() {
+            stageMain.Dispose();
+            contextform.Dispose();
             //메인화면
             stageMain = new StageMain();
             stageMain.MdiParent = this;
@@ -133,7 +138,7 @@ namespace StageLibrary
             stageMain.Location = new System.Drawing.Point(0, 0);
             stageMain.Level1ShowEvent += new StageMain.Level1Show(Level1Show);
             stageMain.Level2ShowEvent += new StageMain.Level2Show(Level2Show);
-            levelClear = new bool[2] {false,false };
+            levelClear = new bool[2] { false, false };
             //대화창
             contextform = new ContextForm();
             contextform.MdiParent = this;
@@ -143,10 +148,8 @@ namespace StageLibrary
             contextform.StartCommentEvent += new ContextForm.StartComment(CommentStart);
             contextform.EndCommentEvent += new ContextForm.EndComment(CommentEnd);
             contextform.ScriptParse("stage2_enter", "stage2");
-      
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void MDIContainer_Load(object sender, EventArgs e)
         {
             //메인화면
             stageMain = new StageMain();
@@ -166,8 +169,11 @@ namespace StageLibrary
             contextform.StartCommentEvent += new ContextForm.StartComment(CommentStart);
             contextform.EndCommentEvent += new ContextForm.EndComment(CommentEnd);
             contextform.ScriptParse("stage2_enter", "stage2");
-            ((Button)sender).Location = Point.Empty;
-            ((Button)sender).Size = Size.Empty;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainReload();
         }
     }
 }
