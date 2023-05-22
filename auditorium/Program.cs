@@ -16,7 +16,7 @@ namespace auditorium
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new auditorium());
+            Application.Run(new auditorium_MDI());
         }
     }
 }

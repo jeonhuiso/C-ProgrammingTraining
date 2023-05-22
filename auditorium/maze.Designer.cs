@@ -42,6 +42,13 @@ namespace auditorium
             this.time_over = new System.Windows.Forms.Button();
             this.maze_all_puzzle = new System.Windows.Forms.Button();
             this.fail_maze = new System.Windows.Forms.Button();
+            this.enemy_deteching = new System.Windows.Forms.Timer(this.components);
+            this.txt_result_1 = new System.Windows.Forms.TextBox();
+            this.txt_result_2 = new System.Windows.Forms.TextBox();
+            this.txt_result_3 = new System.Windows.Forms.TextBox();
+            this.lbl_result_1 = new System.Windows.Forms.Label();
+            this.lbl_result_2 = new System.Windows.Forms.Label();
+            this.lbl_result_3 = new System.Windows.Forms.Label();
             this.pan_maze.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +65,8 @@ namespace auditorium
             this.maze_image.Images.SetKeyName(0, "road.png");
             this.maze_image.Images.SetKeyName(1, "wall.png");
             this.maze_image.Images.SetKeyName(2, "game.png");
+            this.maze_image.Images.SetKeyName(3, "check_open.png");
+            this.maze_image.Images.SetKeyName(4, "check_close.png");
             // 
             // total_timer
             // 
@@ -98,6 +107,12 @@ namespace auditorium
             // 
             this.pan_maze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_maze.BackgroundImage")));
             this.pan_maze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pan_maze.Controls.Add(this.lbl_result_3);
+            this.pan_maze.Controls.Add(this.lbl_result_2);
+            this.pan_maze.Controls.Add(this.lbl_result_1);
+            this.pan_maze.Controls.Add(this.txt_result_3);
+            this.pan_maze.Controls.Add(this.txt_result_2);
+            this.pan_maze.Controls.Add(this.txt_result_1);
             this.pan_maze.Controls.Add(this.maze_no_all_puzzle);
             this.pan_maze.Controls.Add(this.time_over);
             this.pan_maze.Controls.Add(this.maze_all_puzzle);
@@ -111,7 +126,7 @@ namespace auditorium
             // maze_no_all_puzzle
             // 
             this.maze_no_all_puzzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.maze_no_all_puzzle.Location = new System.Drawing.Point(87, 214);
+            this.maze_no_all_puzzle.Location = new System.Drawing.Point(92, 214);
             this.maze_no_all_puzzle.Name = "maze_no_all_puzzle";
             this.maze_no_all_puzzle.Size = new System.Drawing.Size(674, 133);
             this.maze_no_all_puzzle.TabIndex = 60;
@@ -133,11 +148,11 @@ namespace auditorium
             // maze_all_puzzle
             // 
             this.maze_all_puzzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.maze_all_puzzle.Location = new System.Drawing.Point(110, 214);
+            this.maze_all_puzzle.Location = new System.Drawing.Point(110, 156);
             this.maze_all_puzzle.Name = "maze_all_puzzle";
-            this.maze_all_puzzle.Size = new System.Drawing.Size(641, 133);
+            this.maze_all_puzzle.Size = new System.Drawing.Size(641, 203);
             this.maze_all_puzzle.TabIndex = 58;
-            this.maze_all_puzzle.Text = "모든 퍼즐을 풀고 탈출했습니다.";
+            this.maze_all_puzzle.Text = "모든 퍼즐을 풀었습니다.\r\n암호를 입력하시오.";
             this.maze_all_puzzle.UseVisualStyleBackColor = true;
             this.maze_all_puzzle.Click += new System.EventHandler(this.maze_all_puzzle_Click);
             // 
@@ -152,6 +167,75 @@ namespace auditorium
             this.fail_maze.UseVisualStyleBackColor = true;
             this.fail_maze.Click += new System.EventHandler(this.fail_maze_Click);
             // 
+            // enemy_deteching
+            // 
+            this.enemy_deteching.Enabled = true;
+            this.enemy_deteching.Tick += new System.EventHandler(this.enemy_deteching_Tick);
+            // 
+            // txt_result_1
+            // 
+            this.txt_result_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.txt_result_1.Location = new System.Drawing.Point(158, 423);
+            this.txt_result_1.Name = "txt_result_1";
+            this.txt_result_1.Size = new System.Drawing.Size(100, 53);
+            this.txt_result_1.TabIndex = 61;
+            this.txt_result_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_result_1.Visible = false;
+            // 
+            // txt_result_2
+            // 
+            this.txt_result_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.txt_result_2.Location = new System.Drawing.Point(368, 423);
+            this.txt_result_2.Name = "txt_result_2";
+            this.txt_result_2.Size = new System.Drawing.Size(100, 53);
+            this.txt_result_2.TabIndex = 62;
+            this.txt_result_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_result_2.Visible = false;
+            // 
+            // txt_result_3
+            // 
+            this.txt_result_3.AcceptsReturn = true;
+            this.txt_result_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.txt_result_3.Location = new System.Drawing.Point(576, 423);
+            this.txt_result_3.Name = "txt_result_3";
+            this.txt_result_3.Size = new System.Drawing.Size(100, 53);
+            this.txt_result_3.TabIndex = 63;
+            this.txt_result_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_result_3.Visible = false;
+            // 
+            // lbl_result_1
+            // 
+            this.lbl_result_1.AutoSize = true;
+            this.lbl_result_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_result_1.Location = new System.Drawing.Point(177, 388);
+            this.lbl_result_1.Name = "lbl_result_1";
+            this.lbl_result_1.Size = new System.Drawing.Size(61, 32);
+            this.lbl_result_1.TabIndex = 64;
+            this.lbl_result_1.Text = "first";
+            this.lbl_result_1.Visible = false;
+            // 
+            // lbl_result_2
+            // 
+            this.lbl_result_2.AutoSize = true;
+            this.lbl_result_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_result_2.Location = new System.Drawing.Point(363, 388);
+            this.lbl_result_2.Name = "lbl_result_2";
+            this.lbl_result_2.Size = new System.Drawing.Size(107, 32);
+            this.lbl_result_2.TabIndex = 65;
+            this.lbl_result_2.Text = "second";
+            this.lbl_result_2.Visible = false;
+            // 
+            // lbl_result_3
+            // 
+            this.lbl_result_3.AutoSize = true;
+            this.lbl_result_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_result_3.Location = new System.Drawing.Point(591, 388);
+            this.lbl_result_3.Name = "lbl_result_3";
+            this.lbl_result_3.Size = new System.Drawing.Size(71, 32);
+            this.lbl_result_3.TabIndex = 66;
+            this.lbl_result_3.Text = "third";
+            this.lbl_result_3.Visible = false;
+            // 
             // maze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -164,12 +248,13 @@ namespace auditorium
             this.Controls.Add(this.total_timer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "maze";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.maze_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maze_keydown);
             this.pan_maze.ResumeLayout(false);
+            this.pan_maze.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +273,12 @@ namespace auditorium
         private System.Windows.Forms.Button maze_all_puzzle;
         private System.Windows.Forms.Button time_over;
         private System.Windows.Forms.Button maze_no_all_puzzle;
+        private System.Windows.Forms.Timer enemy_deteching;
+        private System.Windows.Forms.TextBox txt_result_3;
+        private System.Windows.Forms.TextBox txt_result_2;
+        private System.Windows.Forms.TextBox txt_result_1;
+        private System.Windows.Forms.Label lbl_result_3;
+        private System.Windows.Forms.Label lbl_result_2;
+        private System.Windows.Forms.Label lbl_result_1;
     }
 }

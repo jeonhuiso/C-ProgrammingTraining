@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="auditorium_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auditorium_MDI.Designer.cs">
+      <DependentUpon>auditorium_MDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="clock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="clock.Designer.cs">
       <DependentUpon>clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Context.Designer.cs">
+      <DependentUpon>Context.cs</DependentUpon>
     </Compile>
     <Compile Include="enemy.cs" />
     <Compile Include="auditorium.cs">
@@ -83,8 +98,14 @@
     <EmbeddedResource Include="auditorium.resx">
       <DependentUpon>auditorium.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="auditorium_MDI.resx">
+      <DependentUpon>auditorium_MDI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clock.resx">
       <DependentUpon>clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Context.resx">
+      <DependentUpon>Context.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="make_shape.resx">
       <DependentUpon>make_shape.cs</DependentUpon>
@@ -104,6 +125,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

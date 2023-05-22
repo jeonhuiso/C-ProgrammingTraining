@@ -12,3 +12,8 @@ C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.exe
 C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.pdb
 C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.clock.resources
 C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.make_shape.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.auditorium_MDI.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.Context.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.CopyComplete

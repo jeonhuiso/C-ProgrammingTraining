@@ -97,7 +97,7 @@ namespace auditorium
             for (int i = 1; i < num; i++) // 랜덤하게 시계를 초기화함
             {
                 use_remove = rand.Next(3 * (row.Count - 1)) % row.Count;
-                make_clock_add(0, rand.Next(12), row[use_remove], num); // 
+                make_clock_add(0, rand.Next(12), row[use_remove], num); 
                 row.RemoveAt(use_remove);
                 use_remove = rand.Next(3 * (col.Count - 1)) % col.Count;
                 make_clock_add(1, rand.Next(12), col[use_remove], num);
@@ -464,14 +464,24 @@ namespace auditorium
 
         private void btn_left_right_check() // 버튼이 더이상 넘어가지 않게 boundary 설정
         {
-            if (game_ex_num == 0)
-                btn_left_ex.Enabled = false;
-            else
-                btn_left_ex.Enabled = true;
             if (game_ex_num == 4)
+            {
                 btn_right_ex.Enabled = false;
+                btn_left_ex.Enabled = true;
+                btn_clock_explain.Visible = true;
+                cur_explain.Visible = false;
+            }
             else
+            {
+                cur_explain.Text = "5 / " + (game_ex_num + 1).ToString();
+                cur_explain.Visible = true;
+                btn_clock_explain.Visible = false;
                 btn_right_ex.Enabled = true;
+                if (game_ex_num == 0)
+                {
+                    btn_left_ex.Enabled = false;
+                }
+            }
         }
 
         private void btn_clock_explain_Click(object sender, EventArgs e) // 게임 시작 버튼
@@ -498,6 +508,7 @@ namespace auditorium
             pic_game_ex_4.Visible = false;
             pic_game_ex_5_1.Visible = false;
             pic_game_ex_5_2.Visible = false;
+            cur_explain.Visible = false;
             clock_timer.Start();
             clock_time.BringToFront();
         }

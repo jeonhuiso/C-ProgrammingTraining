@@ -170,7 +170,6 @@ namespace auditorium
                 {
                     pan_nono_explain.Visible = true;
                     nono_game_success.Visible = true;
-                    nono_game_success.Text = "성공했습니다!!!";
                     ((maze)(this.Owner)).first_game_clear = 1;
                 }
                 else // 다음 단계 실행
@@ -339,14 +338,25 @@ namespace auditorium
         }
         private void btn_left_right_check() // 버튼이 더이상 넘어가지 않게 boundary 설정
         {
-            if (game_ex_num == 0)
-                btn_left_ex.Enabled = false;
-            else
-                btn_left_ex.Enabled = true;
             if (game_ex_num == 2)
+            {
                 btn_right_ex.Enabled = false;
+                btn_left_ex.Enabled = true;
+                btn_nono_explain.Visible = true;
+                cur_explain.Visible = false;
+            }
             else
+            {
+                cur_explain.Text = "3 / " + (game_ex_num + 1).ToString();
+                cur_explain.Visible = true;
+                btn_nono_explain.Visible = false;
                 btn_right_ex.Enabled = true;
+                btn_left_ex.Enabled = true;
+                if (game_ex_num == 0)
+                {
+                    btn_left_ex.Enabled = false;
+                }
+            }
         }
 
         private void nono_timer_Tick(object sender, EventArgs e) // 미로 탈출의 시간을 줄이기 위한 timer

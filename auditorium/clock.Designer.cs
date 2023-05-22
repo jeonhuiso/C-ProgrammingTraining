@@ -36,6 +36,7 @@ namespace auditorium
             this.clock_timer = new System.Windows.Forms.Timer(this.components);
             this.clock_time = new System.Windows.Forms.Label();
             this.pan_clock_explain = new System.Windows.Forms.Panel();
+            this.cur_explain = new System.Windows.Forms.Label();
             this.fail_txt = new System.Windows.Forms.Button();
             this.clock_game_success = new System.Windows.Forms.Button();
             this.txt_game_ex_5 = new System.Windows.Forms.TextBox();
@@ -109,6 +110,7 @@ namespace auditorium
             // 
             this.pan_clock_explain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_clock_explain.BackgroundImage")));
             this.pan_clock_explain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pan_clock_explain.Controls.Add(this.cur_explain);
             this.pan_clock_explain.Controls.Add(this.fail_txt);
             this.pan_clock_explain.Controls.Add(this.clock_game_success);
             this.pan_clock_explain.Controls.Add(this.txt_game_ex_5);
@@ -137,10 +139,20 @@ namespace auditorium
             this.pan_clock_explain.Size = new System.Drawing.Size(900, 600);
             this.pan_clock_explain.TabIndex = 19;
             // 
+            // cur_explain
+            // 
+            this.cur_explain.AutoSize = true;
+            this.cur_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.cur_explain.Location = new System.Drawing.Point(376, 504);
+            this.cur_explain.Name = "cur_explain";
+            this.cur_explain.Size = new System.Drawing.Size(97, 46);
+            this.cur_explain.TabIndex = 56;
+            this.cur_explain.Text = "5 / 1";
+            // 
             // fail_txt
             // 
             this.fail_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.fail_txt.Location = new System.Drawing.Point(122, 212);
+            this.fail_txt.Location = new System.Drawing.Point(122, 214);
             this.fail_txt.Name = "fail_txt";
             this.fail_txt.Size = new System.Drawing.Size(605, 133);
             this.fail_txt.TabIndex = 55;
@@ -151,16 +163,18 @@ namespace auditorium
             // clock_game_success
             // 
             this.clock_game_success.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.clock_game_success.Location = new System.Drawing.Point(121, 214);
+            this.clock_game_success.Location = new System.Drawing.Point(120, 166);
             this.clock_game_success.Name = "clock_game_success";
-            this.clock_game_success.Size = new System.Drawing.Size(605, 133);
+            this.clock_game_success.Size = new System.Drawing.Size(605, 229);
             this.clock_game_success.TabIndex = 54;
-            this.clock_game_success.Text = "성공했습니다!!!";
+            this.clock_game_success.Text = "성공했습니다!!!\r\nsecond = 4";
             this.clock_game_success.UseVisualStyleBackColor = true;
             this.clock_game_success.Click += new System.EventHandler(this.clock_game_success_Click);
             // 
             // txt_game_ex_5
             // 
+            this.txt_game_ex_5.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_5.Location = new System.Drawing.Point(79, 356);
             this.txt_game_ex_5.Multiline = true;
@@ -168,8 +182,8 @@ namespace auditorium
             this.txt_game_ex_5.ReadOnly = true;
             this.txt_game_ex_5.Size = new System.Drawing.Size(690, 136);
             this.txt_game_ex_5.TabIndex = 53;
-            this.txt_game_ex_5.Text = "퍼즐은 총 2단계로 이루어져 있습니다.\r\n♥는 4개가 주어지고, 모두 소진시 게임은 종료됩니다.\r\n퍼즐을 푸는 동안에도 시간은 지나가니 시간에 유" +
-    "의해 주시기 바랍니다.";
+            this.txt_game_ex_5.Text = "퍼즐은 총 2단계로 이루어져 있다.\r\n♥는 4개가 주어지고, 모두 소진시 게임은 종료된다.\r\n퍼즐을 푸는 동안에도 시간은 지나가니 시간에 유의해라" +
+    ".";
             this.txt_game_ex_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pic_game_ex_5_2
@@ -194,6 +208,8 @@ namespace auditorium
             // 
             // txt_game_ex_4
             // 
+            this.txt_game_ex_4.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_4.Location = new System.Drawing.Point(122, 372);
             this.txt_game_ex_4.Multiline = true;
@@ -201,7 +217,7 @@ namespace auditorium
             this.txt_game_ex_4.ReadOnly = true;
             this.txt_game_ex_4.Size = new System.Drawing.Size(603, 117);
             this.txt_game_ex_4.TabIndex = 50;
-            this.txt_game_ex_4.Text = "결론적으로 왼쪽과 모양과 시간을 똑같이 만들면 됩니다.\r\n똑같이 만들었다면 왼쪽의 확인버튼을 누릅니다.\r\n실패시 ♥가 차감됩니다.";
+            this.txt_game_ex_4.Text = "왼쪽과 오른쪽을 같은 모양으로 만들면 된다.\r\n똑같이 만들었다면 왼쪽의 확인버튼을 눌러라.\r\n실패시 ♥가 차감된다.";
             this.txt_game_ex_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pic_game_ex_4
@@ -216,6 +232,8 @@ namespace auditorium
             // 
             // txt_game_ex_3_2
             // 
+            this.txt_game_ex_3_2.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_3_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_3_2.Location = new System.Drawing.Point(197, 393);
             this.txt_game_ex_3_2.Multiline = true;
@@ -223,11 +241,13 @@ namespace auditorium
             this.txt_game_ex_3_2.ReadOnly = true;
             this.txt_game_ex_3_2.Size = new System.Drawing.Size(434, 81);
             this.txt_game_ex_3_2.TabIndex = 48;
-            this.txt_game_ex_3_2.Text = "시간을 누르면 색상으로\r\n색상을 누르면 시간으로 변경할 수 있습니다.";
+            this.txt_game_ex_3_2.Text = "시간을 누르면 색상으로\r\n색상을 누르면 시간으로 변경할 수 있다.";
             this.txt_game_ex_3_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_game_ex_3_1
             // 
+            this.txt_game_ex_3_1.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_3_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_3_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_3_1.Location = new System.Drawing.Point(399, 243);
             this.txt_game_ex_3_1.Multiline = true;
@@ -260,6 +280,8 @@ namespace auditorium
             // 
             // txt_game_ex_2
             // 
+            this.txt_game_ex_2.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_2.Location = new System.Drawing.Point(232, 408);
             this.txt_game_ex_2.Multiline = true;
@@ -267,7 +289,7 @@ namespace auditorium
             this.txt_game_ex_2.ReadOnly = true;
             this.txt_game_ex_2.Size = new System.Drawing.Size(386, 81);
             this.txt_game_ex_2.TabIndex = 43;
-            this.txt_game_ex_2.Text = "색상인 상태에서 버튼을 누르게 되면\r\n해당 버튼의 색으로 변경되게 됩니다.";
+            this.txt_game_ex_2.Text = "색상인 상태에서 버튼을 누르게 되면\r\n해당 버튼의 색으로 변경되게 된다.";
             this.txt_game_ex_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pic_game_ex_2_2
@@ -292,6 +314,8 @@ namespace auditorium
             // 
             // txt_game_ex_12
             // 
+            this.txt_game_ex_12.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_12.Location = new System.Drawing.Point(399, 243);
             this.txt_game_ex_12.Multiline = true;
@@ -314,6 +338,8 @@ namespace auditorium
             // 
             // txt_game_ex_1
             // 
+            this.txt_game_ex_1.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_1.Location = new System.Drawing.Point(228, 408);
             this.txt_game_ex_1.Multiline = true;
@@ -321,7 +347,7 @@ namespace auditorium
             this.txt_game_ex_1.ReadOnly = true;
             this.txt_game_ex_1.Size = new System.Drawing.Size(386, 81);
             this.txt_game_ex_1.TabIndex = 38;
-            this.txt_game_ex_1.Text = "시간인 상태에서 버튼을 누르게 되면, \r\n해당 줄에 1:00을 더하게 됩니다.";
+            this.txt_game_ex_1.Text = "시간인 상태에서 버튼을 누르게 되면, \r\n해당 줄에 1:00을 더하게 된다.";
             this.txt_game_ex_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pic_game_ex_1_1
@@ -338,7 +364,7 @@ namespace auditorium
             // 
             this.btn_left_ex.FlatAppearance.BorderSize = 0;
             this.btn_left_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_left_ex.Location = new System.Drawing.Point(60, 265);
+            this.btn_left_ex.Location = new System.Drawing.Point(122, 500);
             this.btn_left_ex.Name = "btn_left_ex";
             this.btn_left_ex.Size = new System.Drawing.Size(50, 50);
             this.btn_left_ex.TabIndex = 17;
@@ -350,7 +376,7 @@ namespace auditorium
             // 
             this.btn_right_ex.FlatAppearance.BorderSize = 0;
             this.btn_right_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_right_ex.Location = new System.Drawing.Point(737, 265);
+            this.btn_right_ex.Location = new System.Drawing.Point(675, 500);
             this.btn_right_ex.Name = "btn_right_ex";
             this.btn_right_ex.Size = new System.Drawing.Size(50, 50);
             this.btn_right_ex.TabIndex = 16;
@@ -361,24 +387,26 @@ namespace auditorium
             // txt_game_ex
             // 
             this.txt_game_ex.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_game_ex.Location = new System.Drawing.Point(349, 50);
+            this.txt_game_ex.Location = new System.Drawing.Point(348, 53);
             this.txt_game_ex.Name = "txt_game_ex";
             this.txt_game_ex.ReadOnly = true;
-            this.txt_game_ex.Size = new System.Drawing.Size(150, 53);
+            this.txt_game_ex.Size = new System.Drawing.Size(150, 46);
             this.txt_game_ex.TabIndex = 5;
             this.txt_game_ex.Text = "퍼즐 설명";
             this.txt_game_ex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_clock_explain
             // 
-            this.btn_clock_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btn_clock_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clock_explain.Location = new System.Drawing.Point(354, 495);
             this.btn_clock_explain.Name = "btn_clock_explain";
             this.btn_clock_explain.Size = new System.Drawing.Size(140, 60);
             this.btn_clock_explain.TabIndex = 1;
             this.btn_clock_explain.Text = "게임 시작";
             this.btn_clock_explain.UseVisualStyleBackColor = true;
+            this.btn_clock_explain.Visible = false;
             this.btn_clock_explain.Click += new System.EventHandler(this.btn_clock_explain_Click);
             // 
             // clock
@@ -424,11 +452,16 @@ namespace auditorium
         private System.Windows.Forms.Panel pan_clock_explain;
         private System.Windows.Forms.Button fail_txt;
         private System.Windows.Forms.Button clock_game_success;
+        private System.Windows.Forms.PictureBox pic_game_ex_4;
+        private System.Windows.Forms.TextBox txt_game_ex_1;
+        private System.Windows.Forms.Button btn_left_ex;
+        private System.Windows.Forms.Button btn_right_ex;
+        private System.Windows.Forms.TextBox txt_game_ex;
+        private System.Windows.Forms.Button btn_clock_explain;
         private System.Windows.Forms.TextBox txt_game_ex_5;
         private System.Windows.Forms.PictureBox pic_game_ex_5_2;
         private System.Windows.Forms.PictureBox pic_game_ex_5_1;
         private System.Windows.Forms.TextBox txt_game_ex_4;
-        private System.Windows.Forms.PictureBox pic_game_ex_4;
         private System.Windows.Forms.TextBox txt_game_ex_3_2;
         private System.Windows.Forms.TextBox txt_game_ex_3_1;
         private System.Windows.Forms.PictureBox pic_game_ex_3_1;
@@ -438,11 +471,7 @@ namespace auditorium
         private System.Windows.Forms.PictureBox pic_game_ex_2_1;
         private System.Windows.Forms.TextBox txt_game_ex_12;
         private System.Windows.Forms.PictureBox pic_game_ex_1_2;
-        private System.Windows.Forms.TextBox txt_game_ex_1;
         private System.Windows.Forms.PictureBox pic_game_ex_1_1;
-        private System.Windows.Forms.Button btn_left_ex;
-        private System.Windows.Forms.Button btn_right_ex;
-        private System.Windows.Forms.TextBox txt_game_ex;
-        private System.Windows.Forms.Button btn_clock_explain;
+        private System.Windows.Forms.Label cur_explain;
     }
 }

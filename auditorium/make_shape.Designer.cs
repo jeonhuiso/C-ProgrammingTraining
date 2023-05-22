@@ -61,6 +61,7 @@ namespace auditorium
             this.btn_right_ex = new System.Windows.Forms.Button();
             this.txt_game_ex = new System.Windows.Forms.TextBox();
             this.btn_shape_explain = new System.Windows.Forms.Button();
+            this.cur_explain = new System.Windows.Forms.Label();
             this.pan_shape_explain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_1)).BeginInit();
@@ -138,6 +139,7 @@ namespace auditorium
             // 
             this.pan_shape_explain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_shape_explain.BackgroundImage")));
             this.pan_shape_explain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pan_shape_explain.Controls.Add(this.cur_explain);
             this.pan_shape_explain.Controls.Add(this.fail_txt);
             this.pan_shape_explain.Controls.Add(this.shape_game_success);
             this.pan_shape_explain.Controls.Add(this.pic_game_ex_5_2);
@@ -181,11 +183,11 @@ namespace auditorium
             // shape_game_success
             // 
             this.shape_game_success.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.shape_game_success.Location = new System.Drawing.Point(122, 214);
+            this.shape_game_success.Location = new System.Drawing.Point(122, 171);
             this.shape_game_success.Name = "shape_game_success";
-            this.shape_game_success.Size = new System.Drawing.Size(605, 133);
+            this.shape_game_success.Size = new System.Drawing.Size(605, 220);
             this.shape_game_success.TabIndex = 56;
-            this.shape_game_success.Text = "성공했습니다!!!";
+            this.shape_game_success.Text = "성공했습니다!!!\r\nthird = 9\r\n";
             this.shape_game_success.UseVisualStyleBackColor = true;
             this.shape_game_success.Click += new System.EventHandler(this.shape_game_success_Click);
             // 
@@ -201,15 +203,17 @@ namespace auditorium
             // 
             // txt_game_ex_5
             // 
+            this.txt_game_ex_5.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_5.Location = new System.Drawing.Point(175, 283);
+            this.txt_game_ex_5.Location = new System.Drawing.Point(175, 300);
             this.txt_game_ex_5.Multiline = true;
             this.txt_game_ex_5.Name = "txt_game_ex_5";
             this.txt_game_ex_5.ReadOnly = true;
-            this.txt_game_ex_5.Size = new System.Drawing.Size(492, 207);
+            this.txt_game_ex_5.Size = new System.Drawing.Size(492, 185);
             this.txt_game_ex_5.TabIndex = 34;
-            this.txt_game_ex_5.Text = "블록을 똑같이 만들었다면, 확인 버튼을 누릅니다.\r\n실패시 ♥를 소모합니다.\r\n남아있는 블록의 개수가 모자르면 ♥를 눌러 게임을 다시 시작합니다." +
-    "\r\n♥를 하나 소모합니다.\r\n♥를 모두 소진하면 게임은 종료됩니다.\r\n";
+            this.txt_game_ex_5.Text = "블록을 똑같이 만들었다면, 확인 버튼을 눌러라.\r\n실패시 ♥를 소모한다.\r\n남아있는 블록의 개수가 모자르면 ♥를 눌러 게임을 다시 시작한다.\r\n(" +
+    "게임을 다시 시작 시, ♥를 하나 소모)\r\n";
             this.txt_game_ex_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pic_game_ex_5_1
@@ -224,6 +228,8 @@ namespace auditorium
             // 
             // txt_game_ex_4_2
             // 
+            this.txt_game_ex_4_2.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_4_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_4_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_4_2.Location = new System.Drawing.Point(175, 375);
             this.txt_game_ex_4_2.Multiline = true;
@@ -231,11 +237,13 @@ namespace auditorium
             this.txt_game_ex_4_2.ReadOnly = true;
             this.txt_game_ex_4_2.Size = new System.Drawing.Size(492, 78);
             this.txt_game_ex_4_2.TabIndex = 32;
-            this.txt_game_ex_4_2.Text = "이미 넣은 블록을 선택하면 블록이 삭제됩니다.\r\n(단, 보라색 블록은 삭제 불가)";
+            this.txt_game_ex_4_2.Text = "이미 넣은 블록을 선택하면 블록이 삭제된다.\r\n(단, 보라색 블록은 삭제 불가)";
             this.txt_game_ex_4_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_game_ex_4_1
             // 
+            this.txt_game_ex_4_1.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_4_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_4_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_4_1.Location = new System.Drawing.Point(396, 186);
             this.txt_game_ex_4_1.Multiline = true;
@@ -268,6 +276,8 @@ namespace auditorium
             // 
             // txt_game_ex_3
             // 
+            this.txt_game_ex_3.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_3.Location = new System.Drawing.Point(56, 338);
             this.txt_game_ex_3.Multiline = true;
@@ -275,12 +285,14 @@ namespace auditorium
             this.txt_game_ex_3.ReadOnly = true;
             this.txt_game_ex_3.Size = new System.Drawing.Size(734, 147);
             this.txt_game_ex_3.TabIndex = 28;
-            this.txt_game_ex_3.Text = "블록을 잡으면 넣을 수 있는 위치가 표시가 됩니다.\r\n오른쪽 블록을 이동시켜 표시된 블록에 넣으면 색상을 바꿀 수 있습니다.\r\n또한 이미 넣은 색" +
-    "상도 바꾸는 것이 가능합니다. \r\n(단 보라색 버튼은 변경 불가)";
+            this.txt_game_ex_3.Text = "블록을 잡으면 넣을 수 있는 위치가 표시가 된다.\r\n오른쪽 블록을 이동시켜 표시된 블록에 넣으면 색상을 바꿀 수 있다.\r\n또한 이미 넣은 색상도 " +
+    "바꾸는 것이 가능하다.\r\n(단, 보라색 버튼은 변경 불가)";
             this.txt_game_ex_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_game_ex_3_2
             // 
+            this.txt_game_ex_3_2.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_3_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_3_2.Location = new System.Drawing.Point(511, 199);
             this.txt_game_ex_3_2.Multiline = true;
@@ -293,6 +305,8 @@ namespace auditorium
             // 
             // txt_game_ex_3_1
             // 
+            this.txt_game_ex_3_1.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_3_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_3_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_3_1.Location = new System.Drawing.Point(279, 199);
             this.txt_game_ex_3_1.Multiline = true;
@@ -335,6 +349,8 @@ namespace auditorium
             // 
             // txt_game_ex_2
             // 
+            this.txt_game_ex_2.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_2.Location = new System.Drawing.Point(90, 410);
             this.txt_game_ex_2.Multiline = true;
@@ -342,7 +358,7 @@ namespace auditorium
             this.txt_game_ex_2.ReadOnly = true;
             this.txt_game_ex_2.Size = new System.Drawing.Size(658, 71);
             this.txt_game_ex_2.TabIndex = 22;
-            this.txt_game_ex_2.Text = "왼쪽은 블록의 개수이고, 오른쪽 블록을 클릭해 이동할 수 있습니다.\r\n게임에서는 좌측 하단에 위치해 있습니다.";
+            this.txt_game_ex_2.Text = "왼쪽은 블록의 개수이고, 오른쪽 블록을 클릭해 이동할 수 있다.\r\n게임에서는 좌측 하단에 위치해 있다";
             this.txt_game_ex_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pic_game_ex_2
@@ -367,6 +383,8 @@ namespace auditorium
             // 
             // txt_game_ex_1
             // 
+            this.txt_game_ex_1.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txt_game_ex_1.Location = new System.Drawing.Point(198, 410);
             this.txt_game_ex_1.Multiline = true;
@@ -374,14 +392,14 @@ namespace auditorium
             this.txt_game_ex_1.ReadOnly = true;
             this.txt_game_ex_1.Size = new System.Drawing.Size(450, 71);
             this.txt_game_ex_1.TabIndex = 19;
-            this.txt_game_ex_1.Text = "위의 모형과 같은 모형을 만드는 게임입니다.\r\n게임에서는 좌측 상단에 위치해 있습니다.";
+            this.txt_game_ex_1.Text = "위의 모형과 같은 모형을 만드는 게임이다.\r\n게임에서는 좌측 상단에 위치해 있다.";
             this.txt_game_ex_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_left_ex
             // 
             this.btn_left_ex.FlatAppearance.BorderSize = 0;
             this.btn_left_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_left_ex.Location = new System.Drawing.Point(60, 265);
+            this.btn_left_ex.Location = new System.Drawing.Point(122, 500);
             this.btn_left_ex.Name = "btn_left_ex";
             this.btn_left_ex.Size = new System.Drawing.Size(50, 50);
             this.btn_left_ex.TabIndex = 17;
@@ -393,7 +411,7 @@ namespace auditorium
             // 
             this.btn_right_ex.FlatAppearance.BorderSize = 0;
             this.btn_right_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_right_ex.Location = new System.Drawing.Point(737, 265);
+            this.btn_right_ex.Location = new System.Drawing.Point(675, 500);
             this.btn_right_ex.Name = "btn_right_ex";
             this.btn_right_ex.Size = new System.Drawing.Size(50, 50);
             this.btn_right_ex.TabIndex = 16;
@@ -404,25 +422,37 @@ namespace auditorium
             // txt_game_ex
             // 
             this.txt_game_ex.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_game_ex.Location = new System.Drawing.Point(344, 50);
             this.txt_game_ex.Name = "txt_game_ex";
             this.txt_game_ex.ReadOnly = true;
-            this.txt_game_ex.Size = new System.Drawing.Size(150, 53);
+            this.txt_game_ex.Size = new System.Drawing.Size(150, 46);
             this.txt_game_ex.TabIndex = 5;
-            this.txt_game_ex.Text = "게임 설명";
+            this.txt_game_ex.Text = "퍼즐 설명";
             this.txt_game_ex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_shape_explain
             // 
-            this.btn_shape_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btn_shape_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_shape_explain.Location = new System.Drawing.Point(350, 495);
             this.btn_shape_explain.Name = "btn_shape_explain";
             this.btn_shape_explain.Size = new System.Drawing.Size(140, 60);
             this.btn_shape_explain.TabIndex = 1;
             this.btn_shape_explain.Text = "게임 시작";
             this.btn_shape_explain.UseVisualStyleBackColor = true;
+            this.btn_shape_explain.Visible = false;
             this.btn_shape_explain.Click += new System.EventHandler(this.btn_shape_explain_Click);
+            // 
+            // cur_explain
+            // 
+            this.cur_explain.AutoSize = true;
+            this.cur_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.cur_explain.Location = new System.Drawing.Point(372, 503);
+            this.cur_explain.Name = "cur_explain";
+            this.cur_explain.Size = new System.Drawing.Size(97, 46);
+            this.cur_explain.TabIndex = 59;
+            this.cur_explain.Text = "5 / 1";
             // 
             // make_shape
             // 
@@ -492,5 +522,6 @@ namespace auditorium
         private System.Windows.Forms.TextBox txt_game_ex;
         private System.Windows.Forms.Button btn_shape_explain;
         private System.Windows.Forms.TextBox txt_game_ex_3;
+        private System.Windows.Forms.Label cur_explain;
     }
 }

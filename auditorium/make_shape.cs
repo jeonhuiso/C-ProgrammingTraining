@@ -380,14 +380,25 @@ namespace auditorium
 
         private void btn_left_right_check()  // 버튼이 더이상 넘어가지 않게 boundary 설정
         {
-            if (game_ex_num == 0)
-                btn_left_ex.Enabled = false;
-            else
-                btn_left_ex.Enabled = true;
             if (game_ex_num == 4)
+            {
                 btn_right_ex.Enabled = false;
+                btn_left_ex.Enabled = true;
+                btn_shape_explain.Visible = true;
+                cur_explain.Visible = false;
+            }
             else
+            {
+                cur_explain.Text = "5 / " + (game_ex_num + 1).ToString();
+                cur_explain.Visible = true;
+                btn_shape_explain.Visible = false;
                 btn_right_ex.Enabled = true;
+                btn_left_ex.Enabled = true;
+                if (game_ex_num == 0)
+                {
+                    btn_left_ex.Enabled = false;
+                }
+            }
         }
 
         private void visible_game_ex()  // 퍼즐 설명 페이지를 구현하기 위해 사용

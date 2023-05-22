@@ -35,32 +35,18 @@ namespace auditorium
             this.maze_Start = new System.Windows.Forms.Button();
             this.maze_no_start = new System.Windows.Forms.Button();
             this.pic_maze_game = new System.Windows.Forms.PictureBox();
-            this.btn_left_ex = new System.Windows.Forms.Button();
-            this.btn_right_ex = new System.Windows.Forms.Button();
             this.txt_game_ex = new System.Windows.Forms.TextBox();
             this.btn_maze_explain = new System.Windows.Forms.Button();
             this.pic_game_ex_1_1 = new System.Windows.Forms.PictureBox();
+            this.txt_game_ex_1 = new System.Windows.Forms.TextBox();
             this.pic_game_ex_1_2 = new System.Windows.Forms.PictureBox();
-            this.txt_game_ex_1_1 = new System.Windows.Forms.TextBox();
-            this.txt_game_ex_1_2 = new System.Windows.Forms.TextBox();
-            this.pic_game_ex_1_3 = new System.Windows.Forms.PictureBox();
-            this.txt_game_ex_1_3 = new System.Windows.Forms.TextBox();
             this.pic_game_ex_2_1 = new System.Windows.Forms.PictureBox();
-            this.txt_game_ex_2_1 = new System.Windows.Forms.TextBox();
-            this.pic_game_ex_2_2 = new System.Windows.Forms.PictureBox();
-            this.txt_game_ex_2_2 = new System.Windows.Forms.TextBox();
-            this.pic_game_ex_2_3 = new System.Windows.Forms.PictureBox();
-            this.txt_game_ex_2_3 = new System.Windows.Forms.TextBox();
+            this.txt_game_ex_2 = new System.Windows.Forms.TextBox();
             this.txt_game_ex_3 = new System.Windows.Forms.TextBox();
-            this.pic_game_ex_3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_maze_game)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_1_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_1_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_1_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_3)).BeginInit();
             this.SuspendLayout();
             // 
             // maze_Start
@@ -105,40 +91,15 @@ namespace auditorium
             this.pic_maze_game.TabStop = false;
             this.pic_maze_game.Visible = false;
             // 
-            // btn_left_ex
-            // 
-            this.btn_left_ex.FlatAppearance.BorderSize = 0;
-            this.btn_left_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_left_ex.Location = new System.Drawing.Point(60, 250);
-            this.btn_left_ex.Name = "btn_left_ex";
-            this.btn_left_ex.Size = new System.Drawing.Size(50, 50);
-            this.btn_left_ex.TabIndex = 20;
-            this.btn_left_ex.Text = "◀";
-            this.btn_left_ex.UseVisualStyleBackColor = true;
-            this.btn_left_ex.Visible = false;
-            this.btn_left_ex.Click += new System.EventHandler(this.btn_left_ex_Click);
-            // 
-            // btn_right_ex
-            // 
-            this.btn_right_ex.FlatAppearance.BorderSize = 0;
-            this.btn_right_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_right_ex.Location = new System.Drawing.Point(737, 250);
-            this.btn_right_ex.Name = "btn_right_ex";
-            this.btn_right_ex.Size = new System.Drawing.Size(50, 50);
-            this.btn_right_ex.TabIndex = 19;
-            this.btn_right_ex.Text = "▶";
-            this.btn_right_ex.UseVisualStyleBackColor = true;
-            this.btn_right_ex.Visible = false;
-            this.btn_right_ex.Click += new System.EventHandler(this.btn_right_ex_Click);
-            // 
             // txt_game_ex
             // 
             this.txt_game_ex.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_game_ex.Location = new System.Drawing.Point(340, 44);
+            this.txt_game_ex.Location = new System.Drawing.Point(351, 41);
             this.txt_game_ex.Name = "txt_game_ex";
             this.txt_game_ex.ReadOnly = true;
-            this.txt_game_ex.Size = new System.Drawing.Size(150, 53);
+            this.txt_game_ex.Size = new System.Drawing.Size(150, 46);
             this.txt_game_ex.TabIndex = 18;
             this.txt_game_ex.Text = "미로 탈출";
             this.txt_game_ex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -147,8 +108,8 @@ namespace auditorium
             // btn_maze_explain
             // 
             this.btn_maze_explain.BackColor = System.Drawing.Color.White;
-            this.btn_maze_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btn_maze_explain.Location = new System.Drawing.Point(350, 493);
+            this.btn_maze_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_maze_explain.Location = new System.Drawing.Point(358, 496);
             this.btn_maze_explain.Name = "btn_maze_explain";
             this.btn_maze_explain.Size = new System.Drawing.Size(140, 60);
             this.btn_maze_explain.TabIndex = 17;
@@ -162,170 +123,78 @@ namespace auditorium
             this.pic_game_ex_1_1.BackColor = System.Drawing.Color.White;
             this.pic_game_ex_1_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_1.BackgroundImage")));
             this.pic_game_ex_1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_1_1.Location = new System.Drawing.Point(119, 168);
+            this.pic_game_ex_1_1.Location = new System.Drawing.Point(196, 129);
             this.pic_game_ex_1_1.Name = "pic_game_ex_1_1";
             this.pic_game_ex_1_1.Size = new System.Drawing.Size(60, 60);
             this.pic_game_ex_1_1.TabIndex = 21;
             this.pic_game_ex_1_1.TabStop = false;
             this.pic_game_ex_1_1.Visible = false;
             // 
+            // txt_game_ex_1
+            // 
+            this.txt_game_ex_1.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_game_ex_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txt_game_ex_1.Location = new System.Drawing.Point(283, 141);
+            this.txt_game_ex_1.Multiline = true;
+            this.txt_game_ex_1.Name = "txt_game_ex_1";
+            this.txt_game_ex_1.ReadOnly = true;
+            this.txt_game_ex_1.Size = new System.Drawing.Size(406, 39);
+            this.txt_game_ex_1.TabIndex = 34;
+            this.txt_game_ex_1.Text = "적을 피해 퍼즐을 풀고, 미로를 탈출해라.";
+            this.txt_game_ex_1.Visible = false;
+            // 
             // pic_game_ex_1_2
             // 
             this.pic_game_ex_1_2.BackColor = System.Drawing.Color.White;
             this.pic_game_ex_1_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_2.BackgroundImage")));
             this.pic_game_ex_1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_1_2.InitialImage = null;
-            this.pic_game_ex_1_2.Location = new System.Drawing.Point(119, 281);
+            this.pic_game_ex_1_2.Location = new System.Drawing.Point(196, 251);
             this.pic_game_ex_1_2.Name = "pic_game_ex_1_2";
             this.pic_game_ex_1_2.Size = new System.Drawing.Size(60, 60);
-            this.pic_game_ex_1_2.TabIndex = 22;
+            this.pic_game_ex_1_2.TabIndex = 35;
             this.pic_game_ex_1_2.TabStop = false;
             this.pic_game_ex_1_2.Visible = false;
-            // 
-            // txt_game_ex_1_1
-            // 
-            this.txt_game_ex_1_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_1_1.Location = new System.Drawing.Point(207, 143);
-            this.txt_game_ex_1_1.Multiline = true;
-            this.txt_game_ex_1_1.Name = "txt_game_ex_1_1";
-            this.txt_game_ex_1_1.ReadOnly = true;
-            this.txt_game_ex_1_1.Size = new System.Drawing.Size(500, 107);
-            this.txt_game_ex_1_1.TabIndex = 33;
-            this.txt_game_ex_1_1.Text = "주인공입니다. \r\n주인공을 방향키를 이용해 미로를 탈줄하면 됩니다.\r\n미로 탈출은 뚫려있는 부분으로 탈출을 하면됩니다.";
-            this.txt_game_ex_1_1.Visible = false;
-            // 
-            // txt_game_ex_1_2
-            // 
-            this.txt_game_ex_1_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_1_2.Location = new System.Drawing.Point(202, 273);
-            this.txt_game_ex_1_2.Multiline = true;
-            this.txt_game_ex_1_2.Name = "txt_game_ex_1_2";
-            this.txt_game_ex_1_2.ReadOnly = true;
-            this.txt_game_ex_1_2.Size = new System.Drawing.Size(531, 78);
-            this.txt_game_ex_1_2.TabIndex = 34;
-            this.txt_game_ex_1_2.Text = "적입니다.\r\n주인공이 적에게 잡히게 되면, 처음 위치로 이동합니다.";
-            this.txt_game_ex_1_2.Visible = false;
-            // 
-            // pic_game_ex_1_3
-            // 
-            this.pic_game_ex_1_3.BackColor = System.Drawing.Color.White;
-            this.pic_game_ex_1_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_3.BackgroundImage")));
-            this.pic_game_ex_1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_1_3.InitialImage = null;
-            this.pic_game_ex_1_3.Location = new System.Drawing.Point(119, 407);
-            this.pic_game_ex_1_3.Name = "pic_game_ex_1_3";
-            this.pic_game_ex_1_3.Size = new System.Drawing.Size(60, 60);
-            this.pic_game_ex_1_3.TabIndex = 35;
-            this.pic_game_ex_1_3.TabStop = false;
-            this.pic_game_ex_1_3.Visible = false;
-            // 
-            // txt_game_ex_1_3
-            // 
-            this.txt_game_ex_1_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_1_3.Location = new System.Drawing.Point(198, 415);
-            this.txt_game_ex_1_3.Multiline = true;
-            this.txt_game_ex_1_3.Name = "txt_game_ex_1_3";
-            this.txt_game_ex_1_3.ReadOnly = true;
-            this.txt_game_ex_1_3.Size = new System.Drawing.Size(532, 43);
-            this.txt_game_ex_1_3.TabIndex = 36;
-            this.txt_game_ex_1_3.Text = "주인공은 뚫려있는 부분으로 미로를 탈출하면 됩니다.";
-            this.txt_game_ex_1_3.Visible = false;
             // 
             // pic_game_ex_2_1
             // 
             this.pic_game_ex_2_1.BackColor = System.Drawing.Color.White;
             this.pic_game_ex_2_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_1.BackgroundImage")));
             this.pic_game_ex_2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_2_1.Location = new System.Drawing.Point(119, 168);
+            this.pic_game_ex_2_1.Location = new System.Drawing.Point(196, 382);
             this.pic_game_ex_2_1.Name = "pic_game_ex_2_1";
             this.pic_game_ex_2_1.Size = new System.Drawing.Size(60, 60);
             this.pic_game_ex_2_1.TabIndex = 37;
             this.pic_game_ex_2_1.TabStop = false;
             this.pic_game_ex_2_1.Visible = false;
             // 
-            // txt_game_ex_2_1
+            // txt_game_ex_2
             // 
-            this.txt_game_ex_2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_2_1.Location = new System.Drawing.Point(197, 161);
-            this.txt_game_ex_2_1.Multiline = true;
-            this.txt_game_ex_2_1.Name = "txt_game_ex_2_1";
-            this.txt_game_ex_2_1.ReadOnly = true;
-            this.txt_game_ex_2_1.Size = new System.Drawing.Size(532, 74);
-            this.txt_game_ex_2_1.TabIndex = 38;
-            this.txt_game_ex_2_1.Text = "미로를 탈출하면서 테블릿으로 가서 퍼즐을 풀면됩니다.\r\n모든 퍼즐을 한 번씩 해야 탈출이 가능합니다.";
-            this.txt_game_ex_2_1.Visible = false;
-            // 
-            // pic_game_ex_2_2
-            // 
-            this.pic_game_ex_2_2.BackColor = System.Drawing.Color.White;
-            this.pic_game_ex_2_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_2.BackgroundImage")));
-            this.pic_game_ex_2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_2_2.Location = new System.Drawing.Point(119, 281);
-            this.pic_game_ex_2_2.Name = "pic_game_ex_2_2";
-            this.pic_game_ex_2_2.Size = new System.Drawing.Size(60, 60);
-            this.pic_game_ex_2_2.TabIndex = 39;
-            this.pic_game_ex_2_2.TabStop = false;
-            this.pic_game_ex_2_2.Visible = false;
-            // 
-            // txt_game_ex_2_2
-            // 
-            this.txt_game_ex_2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_2_2.Location = new System.Drawing.Point(198, 273);
-            this.txt_game_ex_2_2.Multiline = true;
-            this.txt_game_ex_2_2.Name = "txt_game_ex_2_2";
-            this.txt_game_ex_2_2.ReadOnly = true;
-            this.txt_game_ex_2_2.Size = new System.Drawing.Size(482, 74);
-            this.txt_game_ex_2_2.TabIndex = 40;
-            this.txt_game_ex_2_2.Text = "길입니다. \r\n주인공과 적은 길을 통해서만 이동이 가능합니다.";
-            this.txt_game_ex_2_2.Visible = false;
-            // 
-            // pic_game_ex_2_3
-            // 
-            this.pic_game_ex_2_3.BackColor = System.Drawing.Color.White;
-            this.pic_game_ex_2_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_3.BackgroundImage")));
-            this.pic_game_ex_2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_2_3.Location = new System.Drawing.Point(119, 407);
-            this.pic_game_ex_2_3.Name = "pic_game_ex_2_3";
-            this.pic_game_ex_2_3.Size = new System.Drawing.Size(60, 60);
-            this.pic_game_ex_2_3.TabIndex = 41;
-            this.pic_game_ex_2_3.TabStop = false;
-            this.pic_game_ex_2_3.Visible = false;
-            // 
-            // txt_game_ex_2_3
-            // 
-            this.txt_game_ex_2_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_2_3.Location = new System.Drawing.Point(198, 396);
-            this.txt_game_ex_2_3.Multiline = true;
-            this.txt_game_ex_2_3.Name = "txt_game_ex_2_3";
-            this.txt_game_ex_2_3.ReadOnly = true;
-            this.txt_game_ex_2_3.Size = new System.Drawing.Size(482, 77);
-            this.txt_game_ex_2_3.TabIndex = 42;
-            this.txt_game_ex_2_3.Text = "벽입니다.\r\n주인공과 적은 벽을 통과해서 이동할 수 없습니다.";
-            this.txt_game_ex_2_3.Visible = false;
+            this.txt_game_ex_2.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_game_ex_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txt_game_ex_2.Location = new System.Drawing.Point(283, 251);
+            this.txt_game_ex_2.Multiline = true;
+            this.txt_game_ex_2.Name = "txt_game_ex_2";
+            this.txt_game_ex_2.ReadOnly = true;
+            this.txt_game_ex_2.Size = new System.Drawing.Size(430, 87);
+            this.txt_game_ex_2.TabIndex = 38;
+            this.txt_game_ex_2.Text = "퍼즐은 왼쪽에서 풀 수 있고,  \r\n3개의 퍼즐을 모두 풀어야 탈출이 가능하다.\r\n";
+            this.txt_game_ex_2.Visible = false;
             // 
             // txt_game_ex_3
             // 
+            this.txt_game_ex_3.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex_3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_3.Location = new System.Drawing.Point(194, 292);
+            this.txt_game_ex_3.Location = new System.Drawing.Point(283, 395);
             this.txt_game_ex_3.Multiline = true;
             this.txt_game_ex_3.Name = "txt_game_ex_3";
             this.txt_game_ex_3.ReadOnly = true;
-            this.txt_game_ex_3.Size = new System.Drawing.Size(486, 78);
-            this.txt_game_ex_3.TabIndex = 44;
-            this.txt_game_ex_3.Text = "시간이 600이 되면 미로 탈출에 실패하게 됩니다.\r\n시간이 모두 지나기 전에 탈출하세요.";
+            this.txt_game_ex_3.Size = new System.Drawing.Size(418, 50);
+            this.txt_game_ex_3.TabIndex = 39;
+            this.txt_game_ex_3.Text = "주인공은 방향키를 이용해 이동할 수 있다.";
             this.txt_game_ex_3.Visible = false;
-            // 
-            // pic_game_ex_3
-            // 
-            this.pic_game_ex_3.BackColor = System.Drawing.Color.White;
-            this.pic_game_ex_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_3.BackgroundImage")));
-            this.pic_game_ex_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_3.Location = new System.Drawing.Point(340, 207);
-            this.pic_game_ex_3.Name = "pic_game_ex_3";
-            this.pic_game_ex_3.Size = new System.Drawing.Size(139, 60);
-            this.pic_game_ex_3.TabIndex = 43;
-            this.pic_game_ex_3.TabStop = false;
-            this.pic_game_ex_3.Visible = false;
             // 
             // auditorium
             // 
@@ -333,21 +202,11 @@ namespace auditorium
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.txt_game_ex_3);
-            this.Controls.Add(this.pic_game_ex_3);
-            this.Controls.Add(this.txt_game_ex_2_3);
-            this.Controls.Add(this.pic_game_ex_2_3);
-            this.Controls.Add(this.txt_game_ex_2_2);
-            this.Controls.Add(this.pic_game_ex_2_2);
-            this.Controls.Add(this.txt_game_ex_2_1);
+            this.Controls.Add(this.txt_game_ex_2);
             this.Controls.Add(this.pic_game_ex_2_1);
-            this.Controls.Add(this.txt_game_ex_1_3);
-            this.Controls.Add(this.pic_game_ex_1_3);
-            this.Controls.Add(this.txt_game_ex_1_2);
-            this.Controls.Add(this.txt_game_ex_1_1);
             this.Controls.Add(this.pic_game_ex_1_2);
             this.Controls.Add(this.pic_game_ex_1_1);
-            this.Controls.Add(this.btn_left_ex);
-            this.Controls.Add(this.btn_right_ex);
+            this.Controls.Add(this.txt_game_ex_1);
             this.Controls.Add(this.txt_game_ex);
             this.Controls.Add(this.btn_maze_explain);
             this.Controls.Add(this.pic_maze_game);
@@ -361,11 +220,7 @@ namespace auditorium
             ((System.ComponentModel.ISupportInitialize)(this.pic_maze_game)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_1_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_1_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_1_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,24 +231,14 @@ namespace auditorium
         private System.Windows.Forms.Button maze_Start;
         private System.Windows.Forms.Button maze_no_start;
         private System.Windows.Forms.PictureBox pic_maze_game;
-        private System.Windows.Forms.Button btn_left_ex;
-        private System.Windows.Forms.Button btn_right_ex;
         private System.Windows.Forms.TextBox txt_game_ex;
         private System.Windows.Forms.Button btn_maze_explain;
         private System.Windows.Forms.PictureBox pic_game_ex_1_1;
+        private System.Windows.Forms.TextBox txt_game_ex_1;
         private System.Windows.Forms.PictureBox pic_game_ex_1_2;
-        private System.Windows.Forms.TextBox txt_game_ex_1_1;
-        private System.Windows.Forms.TextBox txt_game_ex_1_2;
-        private System.Windows.Forms.PictureBox pic_game_ex_1_3;
-        private System.Windows.Forms.TextBox txt_game_ex_1_3;
         private System.Windows.Forms.PictureBox pic_game_ex_2_1;
-        private System.Windows.Forms.TextBox txt_game_ex_2_1;
-        private System.Windows.Forms.PictureBox pic_game_ex_2_2;
-        private System.Windows.Forms.TextBox txt_game_ex_2_2;
-        private System.Windows.Forms.PictureBox pic_game_ex_2_3;
-        private System.Windows.Forms.TextBox txt_game_ex_2_3;
+        private System.Windows.Forms.TextBox txt_game_ex_2;
         private System.Windows.Forms.TextBox txt_game_ex_3;
-        private System.Windows.Forms.PictureBox pic_game_ex_3;
     }
 }
 
