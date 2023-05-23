@@ -55,22 +55,34 @@
     <Compile Include="ContextForm.designer.cs">
       <DependentUpon>ContextForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Level1.cs">
+    <Compile Include="Ending\EndingMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Level1.designer.cs">
+    <Compile Include="Ending\EndingMain.Designer.cs">
+      <DependentUpon>EndingMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ending\EndingMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ending\EndingMDI.Designer.cs">
+      <DependentUpon>EndingMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageLibrary\Level1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageLibrary\Level1.designer.cs">
       <DependentUpon>Level1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Level2.cs">
+    <Compile Include="StageLibrary\Level2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Level2.designer.cs">
+    <Compile Include="StageLibrary\Level2.designer.cs">
       <DependentUpon>Level2.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibraryStage.cs">
+    <Compile Include="StageLibrary\LibraryStage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LibraryStage.designer.cs">
+    <Compile Include="StageLibrary\LibraryStage.designer.cs">
       <DependentUpon>LibraryStage.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIparent.cs">
@@ -80,35 +92,41 @@
       <DependentUpon>MDIparent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="PrologueMDI.cs">
+    <Compile Include="prologue\PrologueMDI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrologueMDI.designer.cs">
+    <Compile Include="prologue\PrologueMDI.designer.cs">
       <DependentUpon>PrologueMDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StageMain.cs">
+    <Compile Include="StageLibrary\StageMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StageMain.designer.cs">
+    <Compile Include="StageLibrary\StageMain.designer.cs">
       <DependentUpon>StageMain.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ContextForm.resx">
       <DependentUpon>ContextForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Level1.resx">
+    <EmbeddedResource Include="Ending\EndingMain.resx">
+      <DependentUpon>EndingMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ending\EndingMDI.resx">
+      <DependentUpon>EndingMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageLibrary\Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Level2.resx">
+    <EmbeddedResource Include="StageLibrary\Level2.resx">
       <DependentUpon>Level2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibraryStage.resx">
+    <EmbeddedResource Include="StageLibrary\LibraryStage.resx">
       <DependentUpon>LibraryStage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIparent.resx">
       <DependentUpon>MDIparent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrologueMDI.resx">
+    <EmbeddedResource Include="prologue\PrologueMDI.resx">
       <DependentUpon>PrologueMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -120,7 +138,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StageMain.resx">
+    <EmbeddedResource Include="StageLibrary\StageMain.resx">
       <DependentUpon>StageMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

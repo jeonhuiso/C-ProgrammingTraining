@@ -16,7 +16,7 @@ namespace EscapeFromHighschool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIparent());
+            Application.Run(new /*EndingMDI()*/MDIparent());
         }
     }
 }

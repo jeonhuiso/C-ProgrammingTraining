@@ -18,3 +18,5 @@ C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\progra
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\EscapeFromHighschool\EscapeFromHighschool\obj\Debug\EscapeFromHighschool.Level2.resources
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\EscapeFromHighschool\EscapeFromHighschool\obj\Debug\EscapeFromHighschool.LibraryStage.resources
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\EscapeFromHighschool\EscapeFromHighschool\obj\Debug\EscapeFromHighschool.StageMain.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\EscapeFromHighschool\EscapeFromHighschool\obj\Debug\EscapeFromHighschool.EndingMain.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\EscapeFromHighschool\EscapeFromHighschool\obj\Debug\EscapeFromHighschool.EndingMDI.resources
