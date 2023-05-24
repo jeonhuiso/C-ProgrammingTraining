@@ -38,6 +38,7 @@ namespace auditorium
             this.shape_timer = new System.Windows.Forms.Timer(this.components);
             this.shape_time = new System.Windows.Forms.Label();
             this.pan_shape_explain = new System.Windows.Forms.Panel();
+            this.cur_explain = new System.Windows.Forms.Label();
             this.fail_txt = new System.Windows.Forms.Button();
             this.shape_game_success = new System.Windows.Forms.Button();
             this.pic_game_ex_5_2 = new System.Windows.Forms.PictureBox();
@@ -61,7 +62,6 @@ namespace auditorium
             this.btn_right_ex = new System.Windows.Forms.Button();
             this.txt_game_ex = new System.Windows.Forms.TextBox();
             this.btn_shape_explain = new System.Windows.Forms.Button();
-            this.cur_explain = new System.Windows.Forms.Label();
             this.pan_shape_explain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_1)).BeginInit();
@@ -137,7 +137,7 @@ namespace auditorium
             // 
             // pan_shape_explain
             // 
-            this.pan_shape_explain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_shape_explain.BackgroundImage")));
+            this.pan_shape_explain.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.pan_shape_explain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pan_shape_explain.Controls.Add(this.cur_explain);
             this.pan_shape_explain.Controls.Add(this.fail_txt);
@@ -168,6 +168,16 @@ namespace auditorium
             this.pan_shape_explain.Name = "pan_shape_explain";
             this.pan_shape_explain.Size = new System.Drawing.Size(900, 600);
             this.pan_shape_explain.TabIndex = 19;
+            // 
+            // cur_explain
+            // 
+            this.cur_explain.AutoSize = true;
+            this.cur_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.cur_explain.Location = new System.Drawing.Point(372, 503);
+            this.cur_explain.Name = "cur_explain";
+            this.cur_explain.Size = new System.Drawing.Size(97, 46);
+            this.cur_explain.TabIndex = 59;
+            this.cur_explain.Text = "5 / 1";
             // 
             // fail_txt
             // 
@@ -218,7 +228,7 @@ namespace auditorium
             // 
             // pic_game_ex_5_1
             // 
-            this.pic_game_ex_5_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_5_1.BackgroundImage")));
+            this.pic_game_ex_5_1.BackgroundImage = global::auditorium.Properties.Resources.shape7;
             this.pic_game_ex_5_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_5_1.Location = new System.Drawing.Point(198, 127);
             this.pic_game_ex_5_1.Name = "pic_game_ex_5_1";
@@ -256,7 +266,7 @@ namespace auditorium
             // 
             // pic_game_ex_4_2
             // 
-            this.pic_game_ex_4_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_4_2.BackgroundImage")));
+            this.pic_game_ex_4_2.BackgroundImage = global::auditorium.Properties.Resources.shape9;
             this.pic_game_ex_4_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_4_2.Location = new System.Drawing.Point(500, 145);
             this.pic_game_ex_4_2.Name = "pic_game_ex_4_2";
@@ -266,7 +276,7 @@ namespace auditorium
             // 
             // pic_game_ex_4_1
             // 
-            this.pic_game_ex_4_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_4_1.BackgroundImage")));
+            this.pic_game_ex_4_1.BackgroundImage = global::auditorium.Properties.Resources.shape6;
             this.pic_game_ex_4_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_4_1.Location = new System.Drawing.Point(138, 145);
             this.pic_game_ex_4_1.Name = "pic_game_ex_4_1";
@@ -319,7 +329,7 @@ namespace auditorium
             // 
             // pic_game_ex_3_3
             // 
-            this.pic_game_ex_3_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_3_3.BackgroundImage")));
+            this.pic_game_ex_3_3.BackgroundImage = global::auditorium.Properties.Resources.shape5;
             this.pic_game_ex_3_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_3_3.Location = new System.Drawing.Point(581, 145);
             this.pic_game_ex_3_3.Name = "pic_game_ex_3_3";
@@ -329,7 +339,7 @@ namespace auditorium
             // 
             // pic_game_ex_3_2
             // 
-            this.pic_game_ex_3_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_3_2.BackgroundImage")));
+            this.pic_game_ex_3_2.BackgroundImage = global::auditorium.Properties.Resources.shape4;
             this.pic_game_ex_3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_3_2.Location = new System.Drawing.Point(344, 145);
             this.pic_game_ex_3_2.Name = "pic_game_ex_3_2";
@@ -339,7 +349,7 @@ namespace auditorium
             // 
             // pic_game_ex_3_1
             // 
-            this.pic_game_ex_3_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_3_1.BackgroundImage")));
+            this.pic_game_ex_3_1.BackgroundImage = global::auditorium.Properties.Resources.shape3;
             this.pic_game_ex_3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_3_1.Location = new System.Drawing.Point(116, 145);
             this.pic_game_ex_3_1.Name = "pic_game_ex_3_1";
@@ -363,7 +373,7 @@ namespace auditorium
             // 
             // pic_game_ex_2
             // 
-            this.pic_game_ex_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2.BackgroundImage")));
+            this.pic_game_ex_2.BackgroundImage = global::auditorium.Properties.Resources.shape2;
             this.pic_game_ex_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_2.Location = new System.Drawing.Point(323, 145);
             this.pic_game_ex_2.Name = "pic_game_ex_2";
@@ -373,7 +383,7 @@ namespace auditorium
             // 
             // pic_game_ex_1
             // 
-            this.pic_game_ex_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1.BackgroundImage")));
+            this.pic_game_ex_1.BackgroundImage = global::auditorium.Properties.Resources.shape1;
             this.pic_game_ex_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_1.Location = new System.Drawing.Point(296, 145);
             this.pic_game_ex_1.Name = "pic_game_ex_1";
@@ -444,22 +454,12 @@ namespace auditorium
             this.btn_shape_explain.Visible = false;
             this.btn_shape_explain.Click += new System.EventHandler(this.btn_shape_explain_Click);
             // 
-            // cur_explain
-            // 
-            this.cur_explain.AutoSize = true;
-            this.cur_explain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.cur_explain.Location = new System.Drawing.Point(372, 503);
-            this.cur_explain.Name = "cur_explain";
-            this.cur_explain.Size = new System.Drawing.Size(97, 46);
-            this.cur_explain.TabIndex = 59;
-            this.cur_explain.Text = "5 / 1";
-            // 
             // make_shape
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.pan_shape_explain);
@@ -474,6 +474,7 @@ namespace auditorium
             this.Name = "make_shape";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "make_shape";
+            this.TopMost = true;
             this.pan_shape_explain.ResumeLayout(false);
             this.pan_shape_explain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_2)).EndInit();

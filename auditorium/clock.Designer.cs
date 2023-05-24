@@ -30,7 +30,6 @@ namespace auditorium
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clock));
             this.lbl_clock_level = new System.Windows.Forms.Label();
             this.lbl_clock_life = new System.Windows.Forms.Label();
             this.clock_timer = new System.Windows.Forms.Timer(this.components);
@@ -41,7 +40,6 @@ namespace auditorium
             this.clock_game_success = new System.Windows.Forms.Button();
             this.txt_game_ex_5 = new System.Windows.Forms.TextBox();
             this.pic_game_ex_5_2 = new System.Windows.Forms.PictureBox();
-            this.pic_game_ex_5_1 = new System.Windows.Forms.PictureBox();
             this.txt_game_ex_4 = new System.Windows.Forms.TextBox();
             this.pic_game_ex_4 = new System.Windows.Forms.PictureBox();
             this.txt_game_ex_3_2 = new System.Windows.Forms.TextBox();
@@ -61,7 +59,6 @@ namespace auditorium
             this.btn_clock_explain = new System.Windows.Forms.Button();
             this.pan_clock_explain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_3_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_3_2)).BeginInit();
@@ -108,14 +105,13 @@ namespace auditorium
             // 
             // pan_clock_explain
             // 
-            this.pan_clock_explain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_clock_explain.BackgroundImage")));
+            this.pan_clock_explain.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.pan_clock_explain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pan_clock_explain.Controls.Add(this.cur_explain);
             this.pan_clock_explain.Controls.Add(this.fail_txt);
             this.pan_clock_explain.Controls.Add(this.clock_game_success);
             this.pan_clock_explain.Controls.Add(this.txt_game_ex_5);
             this.pan_clock_explain.Controls.Add(this.pic_game_ex_5_2);
-            this.pan_clock_explain.Controls.Add(this.pic_game_ex_5_1);
             this.pan_clock_explain.Controls.Add(this.txt_game_ex_4);
             this.pan_clock_explain.Controls.Add(this.pic_game_ex_4);
             this.pan_clock_explain.Controls.Add(this.txt_game_ex_3_2);
@@ -182,29 +178,18 @@ namespace auditorium
             this.txt_game_ex_5.ReadOnly = true;
             this.txt_game_ex_5.Size = new System.Drawing.Size(690, 136);
             this.txt_game_ex_5.TabIndex = 53;
-            this.txt_game_ex_5.Text = "퍼즐은 총 2단계로 이루어져 있다.\r\n♥는 4개가 주어지고, 모두 소진시 게임은 종료된다.\r\n퍼즐을 푸는 동안에도 시간은 지나가니 시간에 유의해라" +
-    ".";
+            this.txt_game_ex_5.Text = "퍼즐은 총 2단계로 이루어져 있다.\r\n♥는 4개가 주어지고, 모두 소진시 게임은 종료된다.\r\n";
             this.txt_game_ex_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pic_game_ex_5_2
             // 
-            this.pic_game_ex_5_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_5_2.BackgroundImage")));
+            this.pic_game_ex_5_2.BackgroundImage = global::auditorium.Properties.Resources.clock8;
             this.pic_game_ex_5_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_5_2.Location = new System.Drawing.Point(300, 153);
             this.pic_game_ex_5_2.Name = "pic_game_ex_5_2";
             this.pic_game_ex_5_2.Size = new System.Drawing.Size(250, 100);
             this.pic_game_ex_5_2.TabIndex = 52;
             this.pic_game_ex_5_2.TabStop = false;
-            // 
-            // pic_game_ex_5_1
-            // 
-            this.pic_game_ex_5_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_5_1.BackgroundImage")));
-            this.pic_game_ex_5_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_5_1.Location = new System.Drawing.Point(362, 276);
-            this.pic_game_ex_5_1.Name = "pic_game_ex_5_1";
-            this.pic_game_ex_5_1.Size = new System.Drawing.Size(125, 50);
-            this.pic_game_ex_5_1.TabIndex = 51;
-            this.pic_game_ex_5_1.TabStop = false;
             // 
             // txt_game_ex_4
             // 
@@ -222,7 +207,7 @@ namespace auditorium
             // 
             // pic_game_ex_4
             // 
-            this.pic_game_ex_4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_4.BackgroundImage")));
+            this.pic_game_ex_4.BackgroundImage = global::auditorium.Properties.Resources.clock5;
             this.pic_game_ex_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_4.Location = new System.Drawing.Point(174, 117);
             this.pic_game_ex_4.Name = "pic_game_ex_4";
@@ -260,7 +245,7 @@ namespace auditorium
             // 
             // pic_game_ex_3_1
             // 
-            this.pic_game_ex_3_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_3_1.BackgroundImage")));
+            this.pic_game_ex_3_1.BackgroundImage = global::auditorium.Properties.Resources.clock6;
             this.pic_game_ex_3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_3_1.Location = new System.Drawing.Point(216, 195);
             this.pic_game_ex_3_1.Name = "pic_game_ex_3_1";
@@ -270,7 +255,7 @@ namespace auditorium
             // 
             // pic_game_ex_3_2
             // 
-            this.pic_game_ex_3_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_3_2.BackgroundImage")));
+            this.pic_game_ex_3_2.BackgroundImage = global::auditorium.Properties.Resources.clock7;
             this.pic_game_ex_3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_3_2.Location = new System.Drawing.Point(481, 195);
             this.pic_game_ex_3_2.Name = "pic_game_ex_3_2";
@@ -294,7 +279,7 @@ namespace auditorium
             // 
             // pic_game_ex_2_2
             // 
-            this.pic_game_ex_2_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_2.BackgroundImage")));
+            this.pic_game_ex_2_2.BackgroundImage = global::auditorium.Properties.Resources.clock4;
             this.pic_game_ex_2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_2_2.Location = new System.Drawing.Point(481, 137);
             this.pic_game_ex_2_2.Name = "pic_game_ex_2_2";
@@ -304,7 +289,7 @@ namespace auditorium
             // 
             // pic_game_ex_2_1
             // 
-            this.pic_game_ex_2_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_1.BackgroundImage")));
+            this.pic_game_ex_2_1.BackgroundImage = global::auditorium.Properties.Resources.clock3;
             this.pic_game_ex_2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_2_1.Location = new System.Drawing.Point(116, 137);
             this.pic_game_ex_2_1.Name = "pic_game_ex_2_1";
@@ -328,7 +313,7 @@ namespace auditorium
             // 
             // pic_game_ex_1_2
             // 
-            this.pic_game_ex_1_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_2.BackgroundImage")));
+            this.pic_game_ex_1_2.BackgroundImage = global::auditorium.Properties.Resources.clock2;
             this.pic_game_ex_1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_1_2.Location = new System.Drawing.Point(481, 137);
             this.pic_game_ex_1_2.Name = "pic_game_ex_1_2";
@@ -352,7 +337,7 @@ namespace auditorium
             // 
             // pic_game_ex_1_1
             // 
-            this.pic_game_ex_1_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_1.BackgroundImage")));
+            this.pic_game_ex_1_1.BackgroundImage = global::auditorium.Properties.Resources.clock1;
             this.pic_game_ex_1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_1_1.Location = new System.Drawing.Point(116, 137);
             this.pic_game_ex_1_1.Name = "pic_game_ex_1_1";
@@ -414,7 +399,7 @@ namespace auditorium
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.pan_clock_explain);
@@ -427,10 +412,10 @@ namespace auditorium
             this.Name = "clock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "clock";
+            this.TopMost = true;
             this.pan_clock_explain.ResumeLayout(false);
             this.pan_clock_explain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_5_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_3_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_3_2)).EndInit();
@@ -460,7 +445,6 @@ namespace auditorium
         private System.Windows.Forms.Button btn_clock_explain;
         private System.Windows.Forms.TextBox txt_game_ex_5;
         private System.Windows.Forms.PictureBox pic_game_ex_5_2;
-        private System.Windows.Forms.PictureBox pic_game_ex_5_1;
         private System.Windows.Forms.TextBox txt_game_ex_4;
         private System.Windows.Forms.TextBox txt_game_ex_3_2;
         private System.Windows.Forms.TextBox txt_game_ex_3_1;

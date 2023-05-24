@@ -30,7 +30,6 @@ namespace auditorium
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(auditorium));
             this.maze_timer = new System.Windows.Forms.Timer(this.components);
             this.maze_Start = new System.Windows.Forms.Button();
             this.maze_no_start = new System.Windows.Forms.Button();
@@ -51,7 +50,7 @@ namespace auditorium
             // 
             // maze_Start
             // 
-            this.maze_Start.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("maze_Start.BackgroundImage")));
+            this.maze_Start.BackgroundImage = global::auditorium.Properties.Resources.open_door;
             this.maze_Start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.maze_Start.Dock = System.Windows.Forms.DockStyle.Left;
             this.maze_Start.Font = new System.Drawing.Font("맑은 고딕", 24F);
@@ -66,7 +65,7 @@ namespace auditorium
             // 
             // maze_no_start
             // 
-            this.maze_no_start.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("maze_no_start.BackgroundImage")));
+            this.maze_no_start.BackgroundImage = global::auditorium.Properties.Resources.close_door;
             this.maze_no_start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.maze_no_start.Dock = System.Windows.Forms.DockStyle.Right;
             this.maze_no_start.Font = new System.Drawing.Font("맑은 고딕", 24F);
@@ -82,7 +81,7 @@ namespace auditorium
             // pic_maze_game
             // 
             this.pic_maze_game.BackColor = System.Drawing.Color.White;
-            this.pic_maze_game.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_maze_game.BackgroundImage")));
+            this.pic_maze_game.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.pic_maze_game.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_maze_game.Location = new System.Drawing.Point(0, 0);
             this.pic_maze_game.Name = "pic_maze_game";
@@ -121,7 +120,7 @@ namespace auditorium
             // pic_game_ex_1_1
             // 
             this.pic_game_ex_1_1.BackColor = System.Drawing.Color.White;
-            this.pic_game_ex_1_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_1.BackgroundImage")));
+            this.pic_game_ex_1_1.BackgroundImage = global::auditorium.Properties.Resources.enemy_s_;
             this.pic_game_ex_1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_1_1.Location = new System.Drawing.Point(196, 129);
             this.pic_game_ex_1_1.Name = "pic_game_ex_1_1";
@@ -147,9 +146,9 @@ namespace auditorium
             // pic_game_ex_1_2
             // 
             this.pic_game_ex_1_2.BackColor = System.Drawing.Color.White;
-            this.pic_game_ex_1_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_2.BackgroundImage")));
+            this.pic_game_ex_1_2.BackgroundImage = global::auditorium.Properties.Resources.game;
             this.pic_game_ex_1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_game_ex_1_2.Location = new System.Drawing.Point(196, 251);
+            this.pic_game_ex_1_2.Location = new System.Drawing.Point(196, 253);
             this.pic_game_ex_1_2.Name = "pic_game_ex_1_2";
             this.pic_game_ex_1_2.Size = new System.Drawing.Size(60, 60);
             this.pic_game_ex_1_2.TabIndex = 35;
@@ -159,7 +158,7 @@ namespace auditorium
             // pic_game_ex_2_1
             // 
             this.pic_game_ex_2_1.BackColor = System.Drawing.Color.White;
-            this.pic_game_ex_2_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_1.BackgroundImage")));
+            this.pic_game_ex_2_1.BackgroundImage = global::auditorium.Properties.Resources.me_s_;
             this.pic_game_ex_2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_2_1.Location = new System.Drawing.Point(196, 382);
             this.pic_game_ex_2_1.Name = "pic_game_ex_2_1";
@@ -173,13 +172,13 @@ namespace auditorium
             this.txt_game_ex_2.BackColor = System.Drawing.Color.White;
             this.txt_game_ex_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_game_ex_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex_2.Location = new System.Drawing.Point(283, 251);
+            this.txt_game_ex_2.Location = new System.Drawing.Point(283, 253);
             this.txt_game_ex_2.Multiline = true;
             this.txt_game_ex_2.Name = "txt_game_ex_2";
             this.txt_game_ex_2.ReadOnly = true;
-            this.txt_game_ex_2.Size = new System.Drawing.Size(430, 87);
+            this.txt_game_ex_2.Size = new System.Drawing.Size(430, 76);
             this.txt_game_ex_2.TabIndex = 38;
-            this.txt_game_ex_2.Text = "퍼즐은 왼쪽에서 풀 수 있고,  \r\n3개의 퍼즐을 모두 풀어야 탈출이 가능하다.\r\n";
+            this.txt_game_ex_2.Text = "3개의 퍼즐을 모두 풀어야 탈출이 가능하다.\r\n푸는 동안에도 시간은 지나간다.\r\n";
             this.txt_game_ex_2.Visible = false;
             // 
             // txt_game_ex_3

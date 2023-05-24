@@ -23,7 +23,6 @@ namespace auditorium
         private int use_button_num = 0; // 현재 size
         private int last_current_i = 0; // 드래그한 버튼의 마지막 x축
         private int last_current_j = 0; // 드래그한 버튼의 마지막 y축
-        private int save_color = 0; // 현재 색상을 구분하기 위한 변수
         private int first_num = 0; // 오랜지 색상의 버튼
         private int second_num = 0; // 초록 색상의 버튼
         private int third_num = 0; // 핑크 색상의 버튼
@@ -115,10 +114,36 @@ namespace auditorium
             btn_second_num.Text = second_num.ToString();
             btn_third_num.Text = third_num.ToString();
 
+            first_make_other_btn(btn_first_num, use_size, 200, 100, 0);
+            first_make_other_btn(btn_second_num, use_size, 200, 100, 1);
+            first_make_other_btn(btn_third_num, use_size, 200, 100, 2);
+
             use_button = new Button[first_num + second_num + third_num];
             make_other_btn(use_size, 200, 100, 0, 0, first_num);
             make_other_btn(use_size, 200, 100, 1, first_num, first_num + second_num);
             make_other_btn(use_size, 200, 100, 2, first_num + second_num, first_num + second_num + third_num);
+        }
+
+        private void first_make_other_btn(Button btn, int size, int location_i, int location_j, int color)
+        {
+            if (color == 0)
+            {
+                make_btn_number_num(btn, location_i + color * size, location_j, size);
+                btn.BackColor = Color.Orange;
+                btn.ForeColor = Color.Orange;
+            }
+            else if (color == 1)
+            {
+                make_btn_number_num(btn, location_i + color * size, location_j, size);
+                btn.BackColor = Color.SeaGreen;
+                btn.ForeColor = Color.SeaGreen;
+            }
+            else
+            {
+                make_btn_number_num(btn, location_i + color * size, location_j, size);
+                btn.BackColor = Color.LightPink;
+                btn.ForeColor = Color.LightPink;
+            }
         }
 
         private void make_other_btn(int size, int location_i, int location_j, int color, int start, int last) // 드래그 가능한 버튼 생성
@@ -131,26 +156,11 @@ namespace auditorium
                 use_button[i].Top = location_i + color * size;
                 use_button[i].Left = location_j;
                 if (color == 0)
-                {
                     use_button[i].BackColor = Color.Orange;
-                    make_btn_number_num(btn_first_num, location_i + color * size, location_j, size);
-                    btn_first_num.BackColor = Color.Orange;
-                    btn_first_num.ForeColor = Color.Orange;
-                }
                 else if (color == 1)
-                {
                     use_button[i].BackColor = Color.SeaGreen;
-                    make_btn_number_num(btn_second_num, location_i + color * size, location_j, size);
-                    btn_second_num.BackColor = Color.SeaGreen;
-                    btn_second_num.ForeColor = Color.SeaGreen;
-                }
                 else
-                {
                     use_button[i].BackColor = Color.LightPink;
-                    make_btn_number_num(btn_third_num, location_i + color * size, location_j, size);
-                    btn_third_num.BackColor = Color.LightPink;
-                    btn_third_num.ForeColor = Color.LightPink;
-                }
                 setting_event(i);
                 this.Controls.Add(use_button[i]);
             }
@@ -253,19 +263,16 @@ namespace auditorium
                                 last_current_j = j;
                                 if (use_button[use_num].BackColor == Color.Orange)
                                 {
-                                    save_color = 0;
                                     btn_first_num.Text = (int.Parse(btn_first_num.Text) - 1).ToString();
                                     root_button[i, j].BackColor = Color.Orange;
                                 }
                                 else if (use_button[use_num].BackColor == Color.SeaGreen)
                                 {
-                                    save_color = 1;
                                     btn_second_num.Text = (int.Parse(btn_second_num.Text) - 1).ToString();
                                     root_button[i, j].BackColor = Color.SeaGreen;
                                 }
                                 else if (use_button[use_num].BackColor == Color.LightPink)
                                 {
-                                    save_color = 2;
                                     btn_third_num.Text = (int.Parse(btn_third_num.Text) - 1).ToString();
                                     root_button[i, j].BackColor = Color.LightPink;
                                 }
@@ -296,7 +303,6 @@ namespace auditorium
             {
                 pan_shape_explain.Visible = true;
                 shape_game_success.Visible = true;
-                shape_game_success.Text = "성공했습니다!!!";
                 ((maze)(this.Owner)).third_game_clear = 1;
             }
             else

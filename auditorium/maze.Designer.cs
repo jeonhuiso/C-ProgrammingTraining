@@ -38,17 +38,25 @@ namespace auditorium
             this.enemy_image = new System.Windows.Forms.ImageList(this.components);
             this.puzzle_timer = new System.Windows.Forms.Timer(this.components);
             this.pan_maze = new System.Windows.Forms.Panel();
+            this.maze_all_puzzle = new System.Windows.Forms.Button();
+            this.key_btn_9 = new System.Windows.Forms.Button();
+            this.key_btn_8 = new System.Windows.Forms.Button();
+            this.key_btn_7 = new System.Windows.Forms.Button();
+            this.key_btn_6 = new System.Windows.Forms.Button();
+            this.key_btn_5 = new System.Windows.Forms.Button();
+            this.key_btn_4 = new System.Windows.Forms.Button();
+            this.key_btn_3 = new System.Windows.Forms.Button();
+            this.key_btn_2 = new System.Windows.Forms.Button();
+            this.key_btn_1 = new System.Windows.Forms.Button();
+            this.btn_key_third = new System.Windows.Forms.Button();
+            this.btn_key_second = new System.Windows.Forms.Button();
+            this.btn_key_first = new System.Windows.Forms.Button();
+            this.puzzle_key = new System.Windows.Forms.Button();
             this.maze_no_all_puzzle = new System.Windows.Forms.Button();
             this.time_over = new System.Windows.Forms.Button();
-            this.maze_all_puzzle = new System.Windows.Forms.Button();
             this.fail_maze = new System.Windows.Forms.Button();
             this.enemy_deteching = new System.Windows.Forms.Timer(this.components);
-            this.txt_result_1 = new System.Windows.Forms.TextBox();
-            this.txt_result_2 = new System.Windows.Forms.TextBox();
-            this.txt_result_3 = new System.Windows.Forms.TextBox();
-            this.lbl_result_1 = new System.Windows.Forms.Label();
-            this.lbl_result_2 = new System.Windows.Forms.Label();
-            this.lbl_result_3 = new System.Windows.Forms.Label();
+            this.open_door_timer = new System.Windows.Forms.Timer(this.components);
             this.pan_maze.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,33 +113,221 @@ namespace auditorium
             // 
             // pan_maze
             // 
-            this.pan_maze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_maze.BackgroundImage")));
+            this.pan_maze.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.pan_maze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pan_maze.Controls.Add(this.lbl_result_3);
-            this.pan_maze.Controls.Add(this.lbl_result_2);
-            this.pan_maze.Controls.Add(this.lbl_result_1);
-            this.pan_maze.Controls.Add(this.txt_result_3);
-            this.pan_maze.Controls.Add(this.txt_result_2);
-            this.pan_maze.Controls.Add(this.txt_result_1);
+            this.pan_maze.Controls.Add(this.maze_all_puzzle);
+            this.pan_maze.Controls.Add(this.key_btn_9);
+            this.pan_maze.Controls.Add(this.key_btn_8);
+            this.pan_maze.Controls.Add(this.key_btn_7);
+            this.pan_maze.Controls.Add(this.key_btn_6);
+            this.pan_maze.Controls.Add(this.key_btn_5);
+            this.pan_maze.Controls.Add(this.key_btn_4);
+            this.pan_maze.Controls.Add(this.key_btn_3);
+            this.pan_maze.Controls.Add(this.key_btn_2);
+            this.pan_maze.Controls.Add(this.key_btn_1);
+            this.pan_maze.Controls.Add(this.btn_key_third);
+            this.pan_maze.Controls.Add(this.btn_key_second);
+            this.pan_maze.Controls.Add(this.btn_key_first);
+            this.pan_maze.Controls.Add(this.puzzle_key);
             this.pan_maze.Controls.Add(this.maze_no_all_puzzle);
             this.pan_maze.Controls.Add(this.time_over);
-            this.pan_maze.Controls.Add(this.maze_all_puzzle);
             this.pan_maze.Controls.Add(this.fail_maze);
             this.pan_maze.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pan_maze.Location = new System.Drawing.Point(0, 0);
             this.pan_maze.Name = "pan_maze";
             this.pan_maze.Size = new System.Drawing.Size(900, 600);
             this.pan_maze.TabIndex = 57;
+            this.pan_maze.Visible = false;
+            // 
+            // maze_all_puzzle
+            // 
+            this.maze_all_puzzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.maze_all_puzzle.Location = new System.Drawing.Point(110, 49);
+            this.maze_all_puzzle.Name = "maze_all_puzzle";
+            this.maze_all_puzzle.Size = new System.Drawing.Size(641, 159);
+            this.maze_all_puzzle.TabIndex = 58;
+            this.maze_all_puzzle.Text = "모든 퍼즐을 풀었습니다.\r\n암호를 입력하시오.";
+            this.maze_all_puzzle.UseVisualStyleBackColor = true;
+            this.maze_all_puzzle.Visible = false;
+            this.maze_all_puzzle.Click += new System.EventHandler(this.maze_all_puzzle_Click);
+            // 
+            // key_btn_9
+            // 
+            this.key_btn_9.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_9.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_9.Location = new System.Drawing.Point(480, 485);
+            this.key_btn_9.Name = "key_btn_9";
+            this.key_btn_9.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_9.TabIndex = 79;
+            this.key_btn_9.Text = "9";
+            this.key_btn_9.UseVisualStyleBackColor = false;
+            this.key_btn_9.Visible = false;
+            this.key_btn_9.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_8
+            // 
+            this.key_btn_8.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_8.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_8.Location = new System.Drawing.Point(380, 485);
+            this.key_btn_8.Name = "key_btn_8";
+            this.key_btn_8.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_8.TabIndex = 78;
+            this.key_btn_8.Text = "8";
+            this.key_btn_8.UseVisualStyleBackColor = false;
+            this.key_btn_8.Visible = false;
+            this.key_btn_8.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_7
+            // 
+            this.key_btn_7.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_7.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_7.Location = new System.Drawing.Point(280, 485);
+            this.key_btn_7.Name = "key_btn_7";
+            this.key_btn_7.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_7.TabIndex = 77;
+            this.key_btn_7.Text = "7";
+            this.key_btn_7.UseVisualStyleBackColor = false;
+            this.key_btn_7.Visible = false;
+            this.key_btn_7.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_6
+            // 
+            this.key_btn_6.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_6.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_6.Location = new System.Drawing.Point(480, 400);
+            this.key_btn_6.Name = "key_btn_6";
+            this.key_btn_6.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_6.TabIndex = 76;
+            this.key_btn_6.Text = "6";
+            this.key_btn_6.UseVisualStyleBackColor = false;
+            this.key_btn_6.Visible = false;
+            this.key_btn_6.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_5
+            // 
+            this.key_btn_5.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_5.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_5.Location = new System.Drawing.Point(380, 400);
+            this.key_btn_5.Name = "key_btn_5";
+            this.key_btn_5.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_5.TabIndex = 75;
+            this.key_btn_5.Text = "5";
+            this.key_btn_5.UseVisualStyleBackColor = false;
+            this.key_btn_5.Visible = false;
+            this.key_btn_5.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_4
+            // 
+            this.key_btn_4.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_4.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_4.Location = new System.Drawing.Point(280, 400);
+            this.key_btn_4.Name = "key_btn_4";
+            this.key_btn_4.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_4.TabIndex = 74;
+            this.key_btn_4.Text = "4";
+            this.key_btn_4.UseVisualStyleBackColor = false;
+            this.key_btn_4.Visible = false;
+            this.key_btn_4.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_3
+            // 
+            this.key_btn_3.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_3.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_3.Location = new System.Drawing.Point(480, 310);
+            this.key_btn_3.Name = "key_btn_3";
+            this.key_btn_3.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_3.TabIndex = 73;
+            this.key_btn_3.Text = "3";
+            this.key_btn_3.UseVisualStyleBackColor = false;
+            this.key_btn_3.Visible = false;
+            this.key_btn_3.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_2
+            // 
+            this.key_btn_2.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_2.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_2.Location = new System.Drawing.Point(380, 310);
+            this.key_btn_2.Name = "key_btn_2";
+            this.key_btn_2.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_2.TabIndex = 72;
+            this.key_btn_2.Text = "2";
+            this.key_btn_2.UseVisualStyleBackColor = false;
+            this.key_btn_2.Visible = false;
+            this.key_btn_2.Click += new System.EventHandler(this.key_insert);
+            // 
+            // key_btn_1
+            // 
+            this.key_btn_1.BackColor = System.Drawing.SystemColors.Control;
+            this.key_btn_1.Font = new System.Drawing.Font("맑은 고딕", 20F);
+            this.key_btn_1.Location = new System.Drawing.Point(280, 310);
+            this.key_btn_1.Name = "key_btn_1";
+            this.key_btn_1.Size = new System.Drawing.Size(70, 70);
+            this.key_btn_1.TabIndex = 71;
+            this.key_btn_1.Text = "1";
+            this.key_btn_1.UseVisualStyleBackColor = false;
+            this.key_btn_1.Visible = false;
+            this.key_btn_1.Click += new System.EventHandler(this.key_insert);
+            // 
+            // btn_key_third
+            // 
+            this.btn_key_third.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_key_third.Font = new System.Drawing.Font("맑은 고딕", 16F);
+            this.btn_key_third.Location = new System.Drawing.Point(530, 230);
+            this.btn_key_third.Name = "btn_key_third";
+            this.btn_key_third.Size = new System.Drawing.Size(140, 60);
+            this.btn_key_third.TabIndex = 70;
+            this.btn_key_third.Text = "third";
+            this.btn_key_third.UseVisualStyleBackColor = false;
+            this.btn_key_third.Visible = false;
+            this.btn_key_third.Click += new System.EventHandler(this.key_btn_click);
+            // 
+            // btn_key_second
+            // 
+            this.btn_key_second.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_key_second.Font = new System.Drawing.Font("맑은 고딕", 16F);
+            this.btn_key_second.Location = new System.Drawing.Point(345, 230);
+            this.btn_key_second.Name = "btn_key_second";
+            this.btn_key_second.Size = new System.Drawing.Size(140, 60);
+            this.btn_key_second.TabIndex = 69;
+            this.btn_key_second.Text = "second";
+            this.btn_key_second.UseVisualStyleBackColor = false;
+            this.btn_key_second.Visible = false;
+            this.btn_key_second.Click += new System.EventHandler(this.key_btn_click);
+            // 
+            // btn_key_first
+            // 
+            this.btn_key_first.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_key_first.Font = new System.Drawing.Font("맑은 고딕", 16F);
+            this.btn_key_first.Location = new System.Drawing.Point(170, 230);
+            this.btn_key_first.Name = "btn_key_first";
+            this.btn_key_first.Size = new System.Drawing.Size(140, 60);
+            this.btn_key_first.TabIndex = 68;
+            this.btn_key_first.Text = "first";
+            this.btn_key_first.UseVisualStyleBackColor = false;
+            this.btn_key_first.Visible = false;
+            this.btn_key_first.Click += new System.EventHandler(this.key_btn_click);
+            // 
+            // puzzle_key
+            // 
+            this.puzzle_key.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.puzzle_key.Location = new System.Drawing.Point(110, 158);
+            this.puzzle_key.Name = "puzzle_key";
+            this.puzzle_key.Size = new System.Drawing.Size(641, 253);
+            this.puzzle_key.TabIndex = 67;
+            this.puzzle_key.UseVisualStyleBackColor = true;
+            this.puzzle_key.Visible = false;
+            this.puzzle_key.Click += new System.EventHandler(this.puzzle_key_Click);
             // 
             // maze_no_all_puzzle
             // 
             this.maze_no_all_puzzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.maze_no_all_puzzle.Location = new System.Drawing.Point(92, 214);
+            this.maze_no_all_puzzle.Location = new System.Drawing.Point(92, 158);
             this.maze_no_all_puzzle.Name = "maze_no_all_puzzle";
-            this.maze_no_all_puzzle.Size = new System.Drawing.Size(674, 133);
+            this.maze_no_all_puzzle.Size = new System.Drawing.Size(674, 203);
             this.maze_no_all_puzzle.TabIndex = 60;
-            this.maze_no_all_puzzle.Text = "퍼즐을 모두 성공하지 못 했습니다.";
+            this.maze_no_all_puzzle.Text = "퍼즐을 모두 성공하지 못 했습니다.\r\nSin : xx9x";
             this.maze_no_all_puzzle.UseVisualStyleBackColor = true;
+            this.maze_no_all_puzzle.Visible = false;
             this.maze_no_all_puzzle.Click += new System.EventHandler(this.maze_no_all_puzzle_Click);
             // 
             // time_over
@@ -144,17 +340,6 @@ namespace auditorium
             this.time_over.Text = "시간 초과";
             this.time_over.UseVisualStyleBackColor = true;
             this.time_over.Click += new System.EventHandler(this.time_over_Click);
-            // 
-            // maze_all_puzzle
-            // 
-            this.maze_all_puzzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.maze_all_puzzle.Location = new System.Drawing.Point(110, 156);
-            this.maze_all_puzzle.Name = "maze_all_puzzle";
-            this.maze_all_puzzle.Size = new System.Drawing.Size(641, 203);
-            this.maze_all_puzzle.TabIndex = 58;
-            this.maze_all_puzzle.Text = "모든 퍼즐을 풀었습니다.\r\n암호를 입력하시오.";
-            this.maze_all_puzzle.UseVisualStyleBackColor = true;
-            this.maze_all_puzzle.Click += new System.EventHandler(this.maze_all_puzzle_Click);
             // 
             // fail_maze
             // 
@@ -172,76 +357,18 @@ namespace auditorium
             this.enemy_deteching.Enabled = true;
             this.enemy_deteching.Tick += new System.EventHandler(this.enemy_deteching_Tick);
             // 
-            // txt_result_1
+            // open_door_timer
             // 
-            this.txt_result_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.txt_result_1.Location = new System.Drawing.Point(158, 423);
-            this.txt_result_1.Name = "txt_result_1";
-            this.txt_result_1.Size = new System.Drawing.Size(100, 53);
-            this.txt_result_1.TabIndex = 61;
-            this.txt_result_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_result_1.Visible = false;
-            // 
-            // txt_result_2
-            // 
-            this.txt_result_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.txt_result_2.Location = new System.Drawing.Point(368, 423);
-            this.txt_result_2.Name = "txt_result_2";
-            this.txt_result_2.Size = new System.Drawing.Size(100, 53);
-            this.txt_result_2.TabIndex = 62;
-            this.txt_result_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_result_2.Visible = false;
-            // 
-            // txt_result_3
-            // 
-            this.txt_result_3.AcceptsReturn = true;
-            this.txt_result_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.txt_result_3.Location = new System.Drawing.Point(576, 423);
-            this.txt_result_3.Name = "txt_result_3";
-            this.txt_result_3.Size = new System.Drawing.Size(100, 53);
-            this.txt_result_3.TabIndex = 63;
-            this.txt_result_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_result_3.Visible = false;
-            // 
-            // lbl_result_1
-            // 
-            this.lbl_result_1.AutoSize = true;
-            this.lbl_result_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result_1.Location = new System.Drawing.Point(177, 388);
-            this.lbl_result_1.Name = "lbl_result_1";
-            this.lbl_result_1.Size = new System.Drawing.Size(61, 32);
-            this.lbl_result_1.TabIndex = 64;
-            this.lbl_result_1.Text = "first";
-            this.lbl_result_1.Visible = false;
-            // 
-            // lbl_result_2
-            // 
-            this.lbl_result_2.AutoSize = true;
-            this.lbl_result_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result_2.Location = new System.Drawing.Point(363, 388);
-            this.lbl_result_2.Name = "lbl_result_2";
-            this.lbl_result_2.Size = new System.Drawing.Size(107, 32);
-            this.lbl_result_2.TabIndex = 65;
-            this.lbl_result_2.Text = "second";
-            this.lbl_result_2.Visible = false;
-            // 
-            // lbl_result_3
-            // 
-            this.lbl_result_3.AutoSize = true;
-            this.lbl_result_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result_3.Location = new System.Drawing.Point(591, 388);
-            this.lbl_result_3.Name = "lbl_result_3";
-            this.lbl_result_3.Size = new System.Drawing.Size(71, 32);
-            this.lbl_result_3.TabIndex = 66;
-            this.lbl_result_3.Text = "third";
-            this.lbl_result_3.Visible = false;
+            this.open_door_timer.Enabled = true;
+            this.open_door_timer.Interval = 1000;
+            this.open_door_timer.Tick += new System.EventHandler(this.open_door_timer_Tick);
             // 
             // maze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.pan_maze);
@@ -251,10 +378,10 @@ namespace auditorium
             this.Name = "maze";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.maze_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maze_keydown);
             this.pan_maze.ResumeLayout(false);
-            this.pan_maze.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,11 +401,19 @@ namespace auditorium
         private System.Windows.Forms.Button time_over;
         private System.Windows.Forms.Button maze_no_all_puzzle;
         private System.Windows.Forms.Timer enemy_deteching;
-        private System.Windows.Forms.TextBox txt_result_3;
-        private System.Windows.Forms.TextBox txt_result_2;
-        private System.Windows.Forms.TextBox txt_result_1;
-        private System.Windows.Forms.Label lbl_result_3;
-        private System.Windows.Forms.Label lbl_result_2;
-        private System.Windows.Forms.Label lbl_result_1;
+        private System.Windows.Forms.Button puzzle_key;
+        private System.Windows.Forms.Timer open_door_timer;
+        private System.Windows.Forms.Button btn_key_third;
+        private System.Windows.Forms.Button btn_key_second;
+        private System.Windows.Forms.Button btn_key_first;
+        private System.Windows.Forms.Button key_btn_9;
+        private System.Windows.Forms.Button key_btn_8;
+        private System.Windows.Forms.Button key_btn_7;
+        private System.Windows.Forms.Button key_btn_6;
+        private System.Windows.Forms.Button key_btn_5;
+        private System.Windows.Forms.Button key_btn_4;
+        private System.Windows.Forms.Button key_btn_3;
+        private System.Windows.Forms.Button key_btn_2;
+        private System.Windows.Forms.Button key_btn_1;
     }
 }

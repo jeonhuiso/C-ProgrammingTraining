@@ -30,7 +30,6 @@ namespace auditorium
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nono));
             this.lbl_nono_level = new System.Windows.Forms.Label();
             this.lbl_life = new System.Windows.Forms.Label();
             this.nono_time = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@ namespace auditorium
             this.nono_game_success = new System.Windows.Forms.Button();
             this.btn_left_ex = new System.Windows.Forms.Button();
             this.btn_right_ex = new System.Windows.Forms.Button();
+            this.txt_game_ex1 = new System.Windows.Forms.TextBox();
             this.txt_game_ex2 = new System.Windows.Forms.TextBox();
             this.pic_game_ex_2_2 = new System.Windows.Forms.PictureBox();
             this.pic_game_ex_2_1 = new System.Windows.Forms.PictureBox();
@@ -50,7 +50,6 @@ namespace auditorium
             this.pic_game_ex_1_1 = new System.Windows.Forms.PictureBox();
             this.btn_nono_explain = new System.Windows.Forms.Button();
             this.nono_timer = new System.Windows.Forms.Timer(this.components);
-            this.txt_game_ex1 = new System.Windows.Forms.TextBox();
             this.pan_nono_explain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_1)).BeginInit();
@@ -91,7 +90,7 @@ namespace auditorium
             // 
             // pan_nono_explain
             // 
-            this.pan_nono_explain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_nono_explain.BackgroundImage")));
+            this.pan_nono_explain.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.pan_nono_explain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pan_nono_explain.Controls.Add(this.cur_explain);
             this.pan_nono_explain.Controls.Add(this.fail_txt);
@@ -170,6 +169,21 @@ namespace auditorium
             this.btn_right_ex.UseVisualStyleBackColor = true;
             this.btn_right_ex.Click += new System.EventHandler(this.btn_right_ex_Click);
             // 
+            // txt_game_ex1
+            // 
+            this.txt_game_ex1.BackColor = System.Drawing.Color.White;
+            this.txt_game_ex1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_game_ex1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txt_game_ex1.Location = new System.Drawing.Point(70, 381);
+            this.txt_game_ex1.Multiline = true;
+            this.txt_game_ex1.Name = "txt_game_ex1";
+            this.txt_game_ex1.ReadOnly = true;
+            this.txt_game_ex1.Size = new System.Drawing.Size(698, 113);
+            this.txt_game_ex1.TabIndex = 10;
+            this.txt_game_ex1.Text = "각 버튼에 적힌 숫자들 만큼 연속된 박스를 만드는 게임이다.\r\n가로의 경우,  왼쪽부터 순서대로 연속된 박스를 표현한다.\r\n세로의 경우, 위쪽부터" +
+    " 순서대로 연속된 박스를 표현한다.";
+            this.txt_game_ex1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txt_game_ex2
             // 
             this.txt_game_ex2.BackColor = System.Drawing.Color.White;
@@ -186,7 +200,7 @@ namespace auditorium
             // 
             // pic_game_ex_2_2
             // 
-            this.pic_game_ex_2_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_2.BackgroundImage")));
+            this.pic_game_ex_2_2.BackgroundImage = global::auditorium.Properties.Resources.nono3;
             this.pic_game_ex_2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_2_2.Location = new System.Drawing.Point(349, 244);
             this.pic_game_ex_2_2.Name = "pic_game_ex_2_2";
@@ -196,7 +210,7 @@ namespace auditorium
             // 
             // pic_game_ex_2_1
             // 
-            this.pic_game_ex_2_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_2_1.BackgroundImage")));
+            this.pic_game_ex_2_1.BackgroundImage = global::auditorium.Properties.Resources.nono4;
             this.pic_game_ex_2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_2_1.Location = new System.Drawing.Point(305, 159);
             this.pic_game_ex_2_1.Name = "pic_game_ex_2_1";
@@ -219,7 +233,7 @@ namespace auditorium
             // 
             // pic_game_ex_3
             // 
-            this.pic_game_ex_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_3.BackgroundImage")));
+            this.pic_game_ex_3.BackgroundImage = global::auditorium.Properties.Resources.nono5;
             this.pic_game_ex_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_3.Location = new System.Drawing.Point(240, 107);
             this.pic_game_ex_3.Name = "pic_game_ex_3";
@@ -242,7 +256,7 @@ namespace auditorium
             // 
             // pic_game_ex_1_2
             // 
-            this.pic_game_ex_1_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_2.BackgroundImage")));
+            this.pic_game_ex_1_2.BackgroundImage = global::auditorium.Properties.Resources.nono2;
             this.pic_game_ex_1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_1_2.Location = new System.Drawing.Point(618, 121);
             this.pic_game_ex_1_2.Name = "pic_game_ex_1_2";
@@ -252,7 +266,7 @@ namespace auditorium
             // 
             // pic_game_ex_1_1
             // 
-            this.pic_game_ex_1_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_game_ex_1_1.BackgroundImage")));
+            this.pic_game_ex_1_1.BackgroundImage = global::auditorium.Properties.Resources.nono1;
             this.pic_game_ex_1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_game_ex_1_1.Location = new System.Drawing.Point(170, 214);
             this.pic_game_ex_1_1.Name = "pic_game_ex_1_1";
@@ -277,27 +291,12 @@ namespace auditorium
             this.nono_timer.Interval = 1000;
             this.nono_timer.Tick += new System.EventHandler(this.nono_timer_Tick);
             // 
-            // txt_game_ex1
-            // 
-            this.txt_game_ex1.BackColor = System.Drawing.Color.White;
-            this.txt_game_ex1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_game_ex1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txt_game_ex1.Location = new System.Drawing.Point(70, 381);
-            this.txt_game_ex1.Multiline = true;
-            this.txt_game_ex1.Name = "txt_game_ex1";
-            this.txt_game_ex1.ReadOnly = true;
-            this.txt_game_ex1.Size = new System.Drawing.Size(698, 113);
-            this.txt_game_ex1.TabIndex = 10;
-            this.txt_game_ex1.Text = "각 버튼에 적힌 숫자들 만큼 연속된 박스를 만드는 게임이다.\r\n가로의 경우,  오른쪽부터 가까운 순서대로 연속된 박스를 표현한다.\r\n세로의 경우," +
-    " 아래부터 아까운 순서대로 연속된 박스를 표현한다.";
-            this.txt_game_ex1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // nono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.pan_nono_explain);
@@ -310,6 +309,7 @@ namespace auditorium
             this.Name = "nono";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form3";
+            this.TopMost = true;
             this.pan_nono_explain.ResumeLayout(false);
             this.pan_nono_explain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_game_ex_2_2)).EndInit();

@@ -124,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -138,6 +139,123 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\check_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\check_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\enemy%28e%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\enemy%28n%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\enemy%28s%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\enemy%28w%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\me%28e%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\me%28n%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\me%28s%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\me%28w%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\road.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\maze\wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\close_door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\open_door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\tablet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\clock gmae explain\clock9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\nono game explain\nono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\nono game explain\nono2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\nono game explain\nono3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\nono game explain\nono4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\nono game explain\nono5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="auditorium_image\shape game explain\shape9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

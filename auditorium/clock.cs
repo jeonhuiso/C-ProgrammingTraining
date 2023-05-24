@@ -298,7 +298,6 @@ namespace auditorium
                 {
                     pan_clock_explain.Visible = true;
                     clock_game_success.Visible = true;
-                    clock_game_success.Text = "성공했습니다!!!";
                     ((maze)(this.Owner)).second_game_clear = 1;
                 }
                 else
@@ -399,7 +398,6 @@ namespace auditorium
             pic_game_ex_3_1.Visible = false;
             pic_game_ex_3_2.Visible = false;
             pic_game_ex_4.Visible = false;
-            pic_game_ex_5_1.Visible = false;
             pic_game_ex_5_2.Visible = false;
 
             if (game_ex_num == 0)
@@ -431,7 +429,6 @@ namespace auditorium
             else if(game_ex_num == 4)
             {
                 txt_game_ex_5.Visible = true;
-                pic_game_ex_5_1.Visible = true;
                 pic_game_ex_5_2.Visible = true;
             }
 
@@ -506,7 +503,6 @@ namespace auditorium
             pic_game_ex_3_1.Visible = false;
             pic_game_ex_3_2.Visible = false;
             pic_game_ex_4.Visible = false;
-            pic_game_ex_5_1.Visible = false;
             pic_game_ex_5_2.Visible = false;
             cur_explain.Visible = false;
             clock_timer.Start();

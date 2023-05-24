@@ -21,7 +21,6 @@ namespace auditorium
         List<string> CommentList = new List<string>();
         List<string> ImageList = new List<string>();
 
-        int script_num;
         string ImageLink;
 
 
@@ -30,7 +29,7 @@ namespace auditorium
             InitializeComponent();
         }
 
-        public void print()
+        public void print() // 여기부분은 조금 변형해서 사용했습니다.
         {
             txtSpeaker.Text = SpeakerList[0];
             txtComment.Text = CommentList[0];
@@ -41,13 +40,13 @@ namespace auditorium
             ImageList.Clear();
         }
 
-        public void ScriptParse(string jsonName, string token)
+        public void ScriptParse(string jsonName, string token) // 여기부분은 전휘소 조원의 코드를 재사용
         {
-            script_num = 0;
             try
             {
                 string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\scriptList") + "\\" + jsonName + ".json");
                 ImageLink = Path.GetFullPath(@"..\..\..\Image");
+
                 job = JObject.Parse(@jsonData);
                 jtkn = job[token];
                 foreach (JToken data in jtkn)
@@ -62,7 +61,6 @@ namespace auditorium
                     txtSpeaker.Text = SpeakerList[0];
                     string link = ImageLink + "\\" + ImageList[0] + ".png";
                     CharactoPicture.Image = Image.FromFile(@link);
-                    script_num = 1;
                 }
             }
             catch (Exception e)

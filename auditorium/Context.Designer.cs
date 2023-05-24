@@ -47,6 +47,7 @@ namespace auditorium
             this.txtComment.ReadOnly = true;
             this.txtComment.Size = new System.Drawing.Size(709, 168);
             this.txtComment.TabIndex = 6;
+            this.txtComment.WordWrap = false;
             // 
             // txtSpeaker
             // 

@@ -12,25 +12,28 @@ namespace auditorium
 {
     public partial class auditorium_MDI : Form
     {
+        Context con;
+        auditorium aud;
         public auditorium_MDI()
         {
             InitializeComponent();
-            Context con = new Context();
-            con.MdiParent = this;
+            con = new Context();
             con.Show();
+            con.MdiParent = this;
             con.Location = new System.Drawing.Point(0, 400);
-            //con.Enabled = false;
 
-            auditorium aud = new auditorium(con);
+            aud = new auditorium(con);
             aud.MdiParent = this;
             aud.Show();
             aud.Location = new System.Drawing.Point(0, 0);
             aud.FormClosing += new FormClosingEventHandler(close_maze);
+
         }
 
         private void close_maze(object sender, EventArgs e) // 퍼즐 종료시 멈췄던 시간 다시 돌림
         {
             this.Close();
+            con.Close();
         }
 
         private void auditorium_MDI_MouseClick(object sender, MouseEventArgs e)
@@ -40,7 +43,6 @@ namespace auditorium
 
         private void auditorium_MDI_Load(object sender, EventArgs e)
         {
-            this.SendToBack();
         }
     }
 }

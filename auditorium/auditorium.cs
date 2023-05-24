@@ -12,7 +12,6 @@ namespace auditorium
 {
     public partial class auditorium : Form
     {
-        private int game_ex_num = 0; // 화면 페이지를 표시하기 위한 정수
         Context con;
 
         public auditorium(Context co)
@@ -35,10 +34,12 @@ namespace auditorium
 
         private void btn_maze_explain_Click(object sender, EventArgs e) // 게임 시작 버튼, 미로 탈출을 시작함
         {
+            con.TopMost = true;
             maze maze_mad = new maze(con);
             maze_mad.Show();
-            maze_mad.Location = new System.Drawing.Point(this.MdiParent.Location.X, this.MdiParent.Location.X);
+            maze_mad.Location = new System.Drawing.Point(this.MdiParent.Left, this.MdiParent.Top);
             maze_mad.FormClosed += new FormClosedEventHandler(auditorium_room_exit);
+            
             this.Enabled = false;
         }
 

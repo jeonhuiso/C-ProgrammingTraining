@@ -102,14 +102,14 @@ namespace auditorium
                     {
                         if (btn_check_num != 0)
                         {
-                            nono_btn[i, 0].Text = (btn_check_num + "\r\n" + nono_btn[i, 0].Text).ToString(); // 제일 위에 저장
+                            nono_btn[i, 0].Text = (nono_btn[i, 0].Text + "\r\n" + btn_check_num).ToString(); // 제일 위에 저장
                             btn_check_num = 0;
                         }
                     }
                 }
                 if (btn_check_num != 0)
                 {
-                    nono_btn[i, 0].Text = (btn_check_num + "\r\n" + nono_btn[i, 0].Text).ToString(); // 제일 위에 저장
+                    nono_btn[i, 0].Text = (nono_btn[i, 0].Text + "\r\n" + btn_check_num).ToString(); // 제일 위에 저장
                 }
 
                 btn_check_num = 0;
@@ -123,14 +123,14 @@ namespace auditorium
                     {
                         if (btn_check_num != 0)
                         {
-                            nono_btn[0, i].Text = (btn_check_num + " " + nono_btn[0, i].Text).ToString(); // 제일 왼쪽에 저장
+                            nono_btn[0, i].Text = (nono_btn[0, i].Text + " "  + btn_check_num).ToString(); // 제일 왼쪽에 저장
                             btn_check_num = 0;
                         }
                     }
                 }
                 if (btn_check_num != 0)
                 {
-                    nono_btn[0, i].Text = (btn_check_num + " " + nono_btn[0, i].Text).ToString(); // 제일 왼쪽에 저장
+                    nono_btn[0, i].Text = (nono_btn[0, i].Text + " "  + btn_check_num).ToString(); // 제일 왼쪽에 저장
                 }
             }
         }
@@ -221,14 +221,14 @@ namespace auditorium
                     {
                         if (btn_check_num != 0)
                         {
-                            compare_com_check = (btn_check_num + compare_com_check).ToString();
+                            compare_com_check = (compare_com_check + btn_check_num).ToString();
                             btn_check_num = 0;
                         }
                     }
                 }
                 if (btn_check_num != 0)
                 {
-                    compare_com_check = (btn_check_num + compare_com_check).ToString();
+                    compare_com_check = (compare_com_check + btn_check_num).ToString();
                 }
                 if (!complete_use_btn.Equals(compare_com_check))
                 {
@@ -250,14 +250,14 @@ namespace auditorium
                     {
                         if (btn_check_num != 0)
                         {
-                            compare_com_check = (btn_check_num + compare_com_check).ToString();
+                            compare_com_check = (compare_com_check + btn_check_num).ToString();
                             btn_check_num = 0;
                         }
                     }
                 }
                 if (btn_check_num != 0)
                 {
-                    compare_com_check = (btn_check_num + compare_com_check).ToString();
+                    compare_com_check = (compare_com_check + btn_check_num).ToString();
                 }
                 if (!complete_use_btn.Equals(compare_com_check))
                 {

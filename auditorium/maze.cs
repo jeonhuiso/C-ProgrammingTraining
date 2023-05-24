@@ -23,11 +23,15 @@ namespace auditorium
         public int third_game_clear = 0; // 세번째 퍼즐 클리어 확인
         public int puzzle_game_time = 0;
         Context con;
+        private int open_check = 0;
+        private int open_ch = 0;
+        Button key_button;
 
         public maze(Context co)
         {
             InitializeComponent();
             maze_init();
+            open_door_timer.Stop();
             pan_maze.Visible = false;
             fail_maze.Visible = false;
             maze_all_puzzle.Visible = false;
@@ -81,76 +85,85 @@ namespace auditorium
         {
             if (char_move_enemy_check()) // 적이 나를 바라보고 있으면 적의 방향을 주인공 쪽으로 돌림 
             {
-                con.ScriptParse("discovery_enemy", "discovery");
-                con.print();
+                if (open_ch == 0)
+                {
+                    con.ScriptParse("maze_discovery_enemy", "discovery");
+                    con.print();
+                }
             }
             else
             {
-                con.ScriptParse("nomal", "nomal");
-                con.print();
+                if (open_ch == 0)
+                {
+                    con.ScriptParse("maze_nomal", "nomal");
+                    con.print();
+                }
             }
         }
 
         private void maze_keydown(object sender, KeyEventArgs e) // 키보드 입력 받기 (주인공의 움직임을 표현)
         {
-            switch (e.KeyCode)
+            if (open_ch == 0)
             {
-                case Keys.Left:
-                    if (current_x - 1 >= 0)
-                    {
-                        int check = pre_check(current_x - 1, current_y);
-                        if (check == 0 || check == 4 || check == 5 || check == 6) // 벽이나 퍼즐을 만나면 이동
+                switch (e.KeyCode)
+                {
+                    case Keys.Left:
+                        if (current_x - 1 >= 0)
                         {
-                            move_My_Character(current_x, current_y, current_x - 1, current_y, 1);
-                            current_x--;
+                            int check = pre_check(current_x - 1, current_y);
+                            if (check == 0 || check == 4 || check == 5 || check == 6) // 벽이나 퍼즐을 만나면 이동
+                            {
+                                move_My_Character(current_x, current_y, current_x - 1, current_y, 1);
+                                current_x--;
+                            }
+                            else if (check == 3) // 탈출구를 만나면 미로 탈출 or 미로를 계속 탐험
+                                maze_exit();
                         }
-                        else if (check == 3) // 탈출구를 만나면 미로 탈출 or 미로를 계속 탐험
-                            maze_exit();
-                    }
-                    char_move_print();
-                    break;
-                case Keys.Right:  // 위의 Left와 동일
-                    if (current_x + 1 <= 25)
-                    {
-                        int check = pre_check(current_x + 1, current_y);
-                        if (check == 0 || check == 4 || check == 5 || check == 6)
+                        char_move_print();
+                        break;
+                    case Keys.Right:  // 위의 Left와 동일
+                        if (current_x + 1 <= 25)
                         {
-                            move_My_Character(current_x, current_y, current_x + 1, current_y, 0);
-                            current_x++;
+                            int check = pre_check(current_x + 1, current_y);
+                            if (check == 0 || check == 4 || check == 5 || check == 6)
+                            {
+                                move_My_Character(current_x, current_y, current_x + 1, current_y, 0);
+                                current_x++;
+                            }
+                            else if (check == 3)
+                                maze_exit();
                         }
-                        else if (check == 3)
-                            maze_exit();
-                    }
-                    char_move_print();
-                    break;
-                case Keys.Up: // 위의 Left와 동일
-                    if (current_y - 1 >= 0)
-                    {
-                        int check = pre_check(current_x, current_y - 1);
-                        if (check == 0 || check == 4 || check == 5 || check == 6)
+                        char_move_print();
+                        break;
+                    case Keys.Up: // 위의 Left와 동일
+                        if (current_y - 1 >= 0)
                         {
-                            move_My_Character(current_x, current_y, current_x, current_y - 1, 3);
-                            current_y--;
+                            int check = pre_check(current_x, current_y - 1);
+                            if (check == 0 || check == 4 || check == 5 || check == 6)
+                            {
+                                move_My_Character(current_x, current_y, current_x, current_y - 1, 3);
+                                current_y--;
+                            }
+                            else if (check == 3)
+                                maze_exit();
                         }
-                        else if (check == 3)
-                            maze_exit();
-                    }
-                    char_move_print();
-                    break;
-                case Keys.Down: // 위의 Left와 동일
-                    if (current_y + 1 <= 16)
-                    {
-                        int check = pre_check(current_x, current_y + 1);
-                        if (check == 0 || check == 4 || check == 5 || check == 6)
+                        char_move_print();
+                        break;
+                    case Keys.Down: // 위의 Left와 동일
+                        if (current_y + 1 <= 16)
                         {
-                            move_My_Character(current_x, current_y, current_x, current_y + 1, 2);
-                            current_y++;
+                            int check = pre_check(current_x, current_y + 1);
+                            if (check == 0 || check == 4 || check == 5 || check == 6)
+                            {
+                                move_My_Character(current_x, current_y, current_x, current_y + 1, 2);
+                                current_y++;
+                            }
+                            else if (check == 3)
+                                maze_exit();
                         }
-                        else if (check == 3)
-                            maze_exit();
-                    }
-                    char_move_print();
-                    break;
+                        char_move_print();
+                        break;
+                }
             }
         }
 
@@ -229,15 +242,23 @@ namespace auditorium
             else
             {
                 maze_timer.Stop();
+                puzzle_timer.Stop();
                 pan_maze.Visible = true;
+                con.Visible = false;
                 if (first_game_clear == 1 && second_game_clear == 1 && third_game_clear == 1)
                 {
-                    lbl_result_1.Visible = true;
-                    lbl_result_2.Visible = true;
-                    lbl_result_3.Visible = true;
-                    txt_result_1.Visible = true;
-                    txt_result_2.Visible = true;
-                    txt_result_3.Visible = true;
+                    btn_key_first.Visible = true;
+                    btn_key_second.Visible = true;
+                    btn_key_third.Visible = true;
+                    key_btn_1.Visible = true;
+                    key_btn_2.Visible = true;
+                    key_btn_3.Visible = true;
+                    key_btn_4.Visible = true;
+                    key_btn_5.Visible = true;
+                    key_btn_6.Visible = true;
+                    key_btn_7.Visible = true;
+                    key_btn_8.Visible = true;
+                    key_btn_9.Visible = true;
                     maze_all_puzzle.Visible = true;
                 }
                 else
@@ -274,7 +295,7 @@ namespace auditorium
                 puzzle_timer.Stop();
                 nono nono_mad = new nono(puzzle_game_time);
                 nono_mad.Owner = this;
-                nono_mad.Location = new System.Drawing.Point(this.Location.X, this.Location.X);
+                nono_mad.Location = new System.Drawing.Point(this.Left, this.Top);
                 nono_mad.Show();
                 nono_mad.FormClosing += new FormClosingEventHandler(puzzle_exit);
                 return 4;
@@ -285,7 +306,7 @@ namespace auditorium
                 puzzle_timer.Stop();
                 clock clock_mad = new clock(puzzle_game_time);
                 clock_mad.Owner = this;
-                clock_mad.Location = new System.Drawing.Point(this.Location.X, this.Location.X);
+                clock_mad.Location = new System.Drawing.Point(this.Left, this.Top);
                 clock_mad.Show();
                 clock_mad.FormClosed += new FormClosedEventHandler(puzzle_exit);
                 return 5;
@@ -296,7 +317,7 @@ namespace auditorium
                 puzzle_timer.Stop();
                 make_shape make_shape_mad = new make_shape(puzzle_game_time);
                 make_shape_mad.Owner = this;
-                make_shape_mad.Location = new System.Drawing.Point(this.Location.X, this.Location.X);
+                make_shape_mad.Location = new System.Drawing.Point(this.Left, this.Top);
                 make_shape_mad.Show();
                 make_shape_mad.FormClosed += new FormClosedEventHandler(puzzle_exit);
                 return 6;
@@ -468,8 +489,15 @@ namespace auditorium
             puzzle_timer.Start();
             maze_timer.Start();
             total_timer.Text = "600 / " + puzzle_game_time.ToString();
-            if(first_game_clear != 0 && second_game_clear != 0 && third_game_clear != 0)
+            if (first_game_clear != 0 && second_game_clear != 0 && third_game_clear != 0)
+            {
                 pic[12, 24].Image = maze_image.Images[3];
+                puzzle_timer.Stop();
+                maze_timer.Stop();
+                open_check = 0;
+                open_ch = 1;
+                open_door_timer.Start();
+            }
         }
 
         private void puzzle_timer_Tick(object sender, EventArgs e)
@@ -490,16 +518,24 @@ namespace auditorium
 
         private void maze_all_puzzle_Click(object sender, EventArgs e)
         {
-            if(txt_result_1.Text == "6" && txt_result_2.Text == "4" && txt_result_3.Text == "9")
-            {
-                MessageBox.Show("성공");
-                this.Close();
-            }
+            puzzle_key.Visible = true;
+            btn_key_first.Visible = false;
+            btn_key_second.Visible = false;
+            btn_key_third.Visible = false;
+            key_btn_1.Visible = false;
+            key_btn_2.Visible = false;
+            key_btn_3.Visible = false;
+            key_btn_4.Visible = false;
+            key_btn_5.Visible = false;
+            key_btn_6.Visible = false;
+            key_btn_7.Visible = false;
+            key_btn_8.Visible = false;
+            key_btn_9.Visible = false;
+            maze_all_puzzle.Visible = false;
+            if (btn_key_first.Text != "6" || btn_key_second.Text != "4" || btn_key_third.Text != "9")
+                puzzle_key.Text = "암호가 틀렸습니다.\r\nSin : xx9x";
             else
-            {
-                MessageBox.Show("실패");
-                this.Close();
-            }
+                puzzle_key.Text = "Clear\r\nMat : xx6x\r\nSin : xx9x";
         }
 
         private void time_over_Click(object sender, EventArgs e)
@@ -520,6 +556,43 @@ namespace auditorium
         private void maze_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
+        }
+
+        private void puzzle_key_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void open_door_timer_Tick(object sender, EventArgs e)
+        {
+            if (open_check < 2)
+            {
+                con.ScriptParse("maze_open_door1", "open");
+                con.print();
+            }
+            else if (open_check <= 2 && open_check < 6)
+            {
+                con.ScriptParse("maze_open_door2", "open");
+                con.print();
+            }
+            else
+            {
+                open_door_timer.Stop(); 
+                puzzle_timer.Start();
+                maze_timer.Start();
+                open_ch = 0;
+            }
+            open_check++;
+        }
+
+        private void key_btn_click(object sender, EventArgs e)
+        {
+            key_button = ((Button)sender);
+        }
+
+        private void key_insert(object sender, EventArgs e)
+        {
+            key_button.Text = ((Button)sender).Text;
         }
     }
 }
