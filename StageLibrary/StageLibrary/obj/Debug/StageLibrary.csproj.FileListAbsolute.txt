@@ -1,5 +1,4 @@
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.csproj.AssemblyReference.cache
-C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.MDIContainer.resources
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.Properties.Resources.resources
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.csproj.GenerateResource.cache
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.csproj.CoreCompileInputs.cache
@@ -13,3 +12,7 @@ C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\progra
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.pdb
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.ContextForm.resources
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.Level1.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\bin\Debug\강원교육현옥샘.ttf
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.StageMain.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.Level2.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\C-ProgrammingTraining\StageLibrary\StageLibrary\obj\Debug\StageLibrary.LibraryStage.resources

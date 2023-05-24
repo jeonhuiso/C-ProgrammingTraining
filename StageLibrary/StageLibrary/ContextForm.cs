@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,12 +31,25 @@ namespace StageLibrary
             InitializeComponent();
         }
 
+        public delegate void EndComment();
+        public event EndComment EndCommentEvent;
+        public delegate void StartComment();
+        public event StartComment StartCommentEvent;
         private void ContextForm_Load(object sender, EventArgs e)
         {
+          
             i = 0;
+            PrivateFontCollection fontCollection = new PrivateFontCollection();
+            fontCollection.AddFontFile("강원교육현옥샘.ttf");
+            foreach(Control c in this.Controls)
+            {
+                c.Font = new Font(fontCollection.Families[0], 17f);
+            }
         }
-
+        // 대사 시작 순간 사용하세요
         public void ScriptParse(string jsonName,string token) {
+            if (txtSpeaker.Text != "" && txtComment.Text != "")
+                return;
             try
             {
                 string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\..\scriptList") + "\\" + jsonName + ".json");
@@ -54,6 +68,7 @@ namespace StageLibrary
                     CharactoPicture.Image = Image.FromFile(@link);
                     i = 1;
                 }
+                StartCommentEvent();
             }
             catch (Exception e) {
                 MessageBox.Show("대사파일 읽기 실패!!!"+e);
@@ -80,6 +95,8 @@ namespace StageLibrary
                     SpeakerList.Clear();
                     CommentList.Clear();
                     ImageList.Clear();
+                    EndCommentEvent();
+
 
                 }
             }
@@ -88,6 +105,11 @@ namespace StageLibrary
         private void txtScript_KeyDown(object sender, KeyEventArgs e)
         {
             ShowComment(e);
+
+        }
+
+        private void txtComment_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

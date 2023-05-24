@@ -21,7 +21,10 @@ namespace scriptShower
         List<string> SpeakerList = new List<string>();
         List<string> CommentList = new List<string>();
         List<string> ImageList = new List<string>();
-        
+        public delegate void EndComment();
+        public event EndComment EndCommentEvent;
+        public delegate void StartComment();
+        public event StartComment StartCommentEvent;
         int i;
         string ImageLink;
         public ContextForm()
@@ -54,6 +57,7 @@ namespace scriptShower
                     CharactoPicture.Image = Image.FromFile(@link);
                     i = 1;
                 }
+                StartCommentEvent();
             }
             catch (Exception e) {
                 MessageBox.Show("대사파일 읽기 실패!!!"+e);
@@ -77,6 +81,7 @@ namespace scriptShower
                     txtSpeaker.Text = "";
                     txtComment.Text = "";
                     CharactoPicture.Image = null;
+                    EndCommentEvent();
                     SpeakerList.Clear();
                     CommentList.Clear();
                     ImageList.Clear();

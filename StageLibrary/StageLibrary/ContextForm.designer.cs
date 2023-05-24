@@ -37,10 +37,11 @@ namespace StageLibrary
             // 
             // CharactoPicture
             // 
+            this.CharactoPicture.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.CharactoPicture.Dock = System.Windows.Forms.DockStyle.Left;
             this.CharactoPicture.Location = new System.Drawing.Point(0, 0);
             this.CharactoPicture.Name = "CharactoPicture";
-            this.CharactoPicture.Size = new System.Drawing.Size(153, 183);
+            this.CharactoPicture.Size = new System.Drawing.Size(153, 200);
             this.CharactoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CharactoPicture.TabIndex = 0;
             this.CharactoPicture.TabStop = false;
@@ -54,7 +55,7 @@ namespace StageLibrary
             this.txtSpeaker.Location = new System.Drawing.Point(153, 0);
             this.txtSpeaker.Name = "txtSpeaker";
             this.txtSpeaker.ReadOnly = true;
-            this.txtSpeaker.Size = new System.Drawing.Size(729, 28);
+            this.txtSpeaker.Size = new System.Drawing.Size(742, 28);
             this.txtSpeaker.TabIndex = 2;
             this.txtSpeaker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtScript_KeyDown);
             // 
@@ -67,20 +68,20 @@ namespace StageLibrary
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
             this.txtComment.ReadOnly = true;
-            this.txtComment.Size = new System.Drawing.Size(729, 155);
+            this.txtComment.Size = new System.Drawing.Size(742, 172);
             this.txtComment.TabIndex = 3;
+            this.txtComment.TextChanged += new System.EventHandler(this.txtComment_TextChanged);
             this.txtComment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtScript_KeyDown);
             // 
             // ContextForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 183);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(895, 200);
             this.ControlBox = false;
             this.Controls.Add(this.txtComment);
             this.Controls.Add(this.txtSpeaker);
             this.Controls.Add(this.CharactoPicture);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContextForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ContextForm_Load);
