@@ -22,11 +22,22 @@ namespace ComputerRoom
 
             pnlReceive.Parent = this;
             pnlMailIn.Parent = this;
-            pnlNothing.Parent = this;            
-            
+            pnlNothing.Parent = this;
+
             pnlMailIn.Visible = false;
             pnlNothing.Visible = false;
 
+            lblMail1.Text = "님 확인좀";
+            lblMail1Date.Text = "20XX.XX.XX";
+            lblMail2.Text = "계정 해지 요청";
+            lblMail2Date.Text = "20XX.XX.XX";
+            lblMail3.Text = "이메일 소유권 확인 필요";
+            lblMail3Date.Text = "20XX.XX.X1";
+            lblMail4.Text = "가입을 축하합니다!";
+            lblMail4Date.Text = "20XX.XX.XX";
+
+            lblDate.Text = "20XX.XX.XX";
+            lblTo.Text = "freeman75@hmail.net";
         }
 
 
@@ -35,14 +46,14 @@ namespace ComputerRoom
         {
             pnlMailIn.Visible = true;
             pnlMailIn.BringToFront();
-            lblFrom.Text = "";
-            lblDate.Text = "";
-            lblTo.Text = "";
-            txtSubject.Text = "";
+            lblFrom.Text = "kingwang21@hmail.net";
+            lblDate.Text = "20XX.XX.XX";
+            lblTo.Text = "freeman75@hmail.net";
+            txtSubject.Text = "님 확인좀";
+            txtMailContext.Text = "퀴즈 1등 했다면서? ㅊㅊ";
 
-            lblAtt.Text = "";
             lblAtt.Enabled = true;
-            lblAtt.Text = "test";
+            lblAtt.Text = "noname";
             lblAtt.ForeColor = Color.Blue;
             lblAtt.Visible = true;
         }
@@ -51,10 +62,11 @@ namespace ComputerRoom
         {
             pnlMailIn.Visible = true;
             pnlMailIn.BringToFront();
-            lblFrom.Text = "";
-            lblDate.Text = "";
-            lblTo.Text = "";
-            txtSubject.Text = "";
+            lblFrom.Text = "realadmin231434@iklwx.com";
+            lblDate.Text = "20XX.XX.XX";
+            lblTo.Text = "freeman75@hmail.net";
+            txtSubject.Text = "계정 해지 요청";
+            txtMailContext.Text = "반갑다, freeman75.\n\n당신의 계정이 곧 해지 예정입니다.\n\n아래 Link를 누르십시오.\n\nnotscamsite.ls.xwq";
 
             lblAtt.Text = "";
             lblAtt.Enabled = false;
@@ -65,10 +77,11 @@ namespace ComputerRoom
         {
             pnlMailIn.Visible = true;
             pnlMailIn.BringToFront();
-            lblFrom.Text = "";
-            lblDate.Text = "";
-            lblTo.Text = "";
-            txtSubject.Text = "";
+            lblFrom.Text = "qwkdxpa@3k2d.cxz";
+            lblDate.Text = "20XX.XX.X1";
+            lblTo.Text = "freeman75@hmail.net";
+            txtSubject.Text = "이메일 소유권 확인 필요";
+            txtMailContext.Text = "주의! 당신의 계정이 위협받고 있는것 같습니다!\n이를 해결하기 위해 33$/월 이 필요!\n지금 당장 결제하세요!";
 
             lblAtt.Text = "";
             lblAtt.Enabled = false;
@@ -79,10 +92,12 @@ namespace ComputerRoom
         {
             pnlMailIn.Visible = true;
             pnlMailIn.BringToFront();
-            lblFrom.Text = "";
-            lblDate.Text = "";
-            lblTo.Text = "";
-            txtSubject.Text = "";
+            lblFrom.Text = "admin@hmail.net";
+            lblDate.Text = "20XX.XX.XX";
+            lblTo.Text = "freeman75@hmail.net";
+            txtSubject.Text = "가입을 축하합니다!";
+            txtMailContext.Text = "안녕하세요 freeman75님,\n\nHmail에 가입하신 것을 진심으로 축하합니다.\n\n항상 더 나은 서비스를 위해 노력하는 Hmail이 되겠습니다.\n\n" +
+                "감사합니다.\n\nHmail 운영자로부터";
 
             lblAtt.Text = "";
             lblAtt.Enabled = false;

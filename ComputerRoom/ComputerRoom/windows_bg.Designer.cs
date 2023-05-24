@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(windows_bg));
             boxQuiz = new PictureBox();
             lbl_boxQuiz = new Label();
-            txtTime = new TextBox();
             boxFolder = new PictureBox();
             lblFolder = new Label();
             ofd = new OpenFileDialog();
@@ -69,15 +68,6 @@
             lbl_boxQuiz.Size = new Size(45, 20);
             lbl_boxQuiz.TabIndex = 5;
             lbl_boxQuiz.Text = "QUIZ";
-            // 
-            // txtTime
-            // 
-            txtTime.BackColor = SystemColors.ScrollBar;
-            txtTime.Location = new Point(760, 525);
-            txtTime.Name = "txtTime";
-            txtTime.Size = new Size(125, 27);
-            txtTime.TabIndex = 6;
-            txtTime.Text = "what time?";
             // 
             // boxFolder
             // 
@@ -161,7 +151,6 @@
             Controls.Add(lblMail);
             Controls.Add(label2);
             Controls.Add(Mail);
-            Controls.Add(txtTime);
             Controls.Add(lbl_boxQuiz);
             Controls.Add(boxQuiz);
             Controls.Add(lblFolder);
@@ -182,7 +171,6 @@
         #endregion
         private PictureBox boxQuiz;
         private Label lbl_boxQuiz;
-        private TextBox txtTime;
         private PictureBox boxFolder;
         private Label lblFolder;
         private OpenFileDialog ofd;

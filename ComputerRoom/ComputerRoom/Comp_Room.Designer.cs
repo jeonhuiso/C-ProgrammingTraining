@@ -28,33 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comp_Room));
             btnComputer = new Button();
             btnGoBack = new Button();
             SuspendLayout();
             // 
             // btnComputer
             // 
-            btnComputer.Location = new Point(369, 64);
+            btnComputer.BackgroundImage = (Image)resources.GetObject("btnComputer.BackgroundImage");
+            btnComputer.FlatStyle = FlatStyle.Flat;
+            btnComputer.Image = (Image)resources.GetObject("btnComputer.Image");
+            btnComputer.Location = new Point(248, 208);
             btnComputer.Name = "btnComputer";
-            btnComputer.Size = new Size(108, 83);
+            btnComputer.Size = new Size(135, 82);
             btnComputer.TabIndex = 0;
-            btnComputer.Text = "button1";
             btnComputer.UseVisualStyleBackColor = true;
             btnComputer.Click += btnComputer_Click;
             // 
             // btnGoBack
             // 
-            btnGoBack.Location = new Point(369, 419);
+            btnGoBack.Location = new Point(273, 502);
             btnGoBack.Name = "btnGoBack";
-            btnGoBack.Size = new Size(108, 52);
+            btnGoBack.Size = new Size(94, 39);
             btnGoBack.TabIndex = 1;
-            btnGoBack.Text = "Go Back";
+            btnGoBack.Text = "나가기";
             btnGoBack.UseVisualStyleBackColor = true;
             btnGoBack.Click += btnGoBack_Click;
             // 
             // Comp_Room
             // 
             AutoScaleMode = AutoScaleMode.None;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(882, 553);
             Controls.Add(btnGoBack);
             Controls.Add(btnComputer);

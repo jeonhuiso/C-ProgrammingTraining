@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mail));
             pnlBanner = new Panel();
             pnlNothing = new Panel();
             label5 = new Label();
@@ -64,6 +65,7 @@
             lblMail4 = new Label();
             lblMail4Date = new Label();
             splitter1 = new Splitter();
+            pictureBox1 = new PictureBox();
             pnlBanner.SuspendLayout();
             pnlNothing.SuspendLayout();
             pnlMailList.SuspendLayout();
@@ -73,12 +75,14 @@
             pnlMailIn.SuspendLayout();
             pnlMailInfo.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnlBanner
             // 
             pnlBanner.BackColor = SystemColors.ControlDark;
             pnlBanner.BorderStyle = BorderStyle.FixedSingle;
+            pnlBanner.Controls.Add(pictureBox1);
             pnlBanner.Controls.Add(pnlNothing);
             pnlBanner.Dock = DockStyle.Top;
             pnlBanner.Location = new Point(0, 0);
@@ -496,6 +500,16 @@
             splitter1.TabIndex = 0;
             splitter1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 62);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
             // mail
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -520,6 +534,7 @@
             pnlMailInfo.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -561,5 +576,6 @@
         private Label lblMail4Date;
         private Label lblAtt;
         private Label label6;
+        private PictureBox pictureBox1;
     }
 }

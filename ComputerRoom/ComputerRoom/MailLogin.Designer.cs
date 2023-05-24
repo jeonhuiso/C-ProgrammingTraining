@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailLogin));
             panel1 = new Panel();
             lblHint = new Label();
             lblLogin = new Label();
@@ -81,9 +82,11 @@
             // 
             // boxLoginLogo
             // 
+            boxLoginLogo.Image = (Image)resources.GetObject("boxLoginLogo.Image");
             boxLoginLogo.Location = new Point(120, 3);
             boxLoginLogo.Name = "boxLoginLogo";
             boxLoginLogo.Size = new Size(125, 62);
+            boxLoginLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             boxLoginLogo.TabIndex = 5;
             boxLoginLogo.TabStop = false;
             // 
