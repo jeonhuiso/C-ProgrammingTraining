@@ -4,11 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace EscapeFromHighschool
 {
     public partial class PrologueMDI : Form
@@ -20,7 +21,8 @@ namespace EscapeFromHighschool
         {
             InitializeComponent();
         }
-
+        StreamReader sr;
+        const string address = "..\\..\\..\\..\\Image\\";
         ContextForm contextForm;
         int page = 0;
         void StartCommentMain() {
@@ -39,6 +41,8 @@ namespace EscapeFromHighschool
                     contextForm.ScriptParse("prologue3", "prologue");
                     break;
                 case 3:
+
+                    PrologueMain.BackgroundImage = Image.FromFile(address + "교실.png");
                     contextForm.ScriptParse("prologue4", "prologue");
                     break;
                 case 4:

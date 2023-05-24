@@ -31,7 +31,6 @@ namespace EscapeFromHighschool
         {
             this.components = new System.ComponentModel.Container();
             this.StartMain = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.PrologueMain = new System.Windows.Forms.Panel();
@@ -41,6 +40,7 @@ namespace EscapeFromHighschool
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLibrary = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.StartMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -55,16 +55,6 @@ namespace EscapeFromHighschool
             this.StartMain.Size = new System.Drawing.Size(900, 800);
             this.StartMain.TabIndex = 3;
             this.StartMain.Paint += new System.Windows.Forms.PaintEventHandler(this.StartMain_Paint);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(370, 553);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(160, 60);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnStart
             // 
@@ -90,6 +80,7 @@ namespace EscapeFromHighschool
             // PrologueMain
             // 
             this.PrologueMain.BackColor = System.Drawing.Color.MidnightBlue;
+            this.PrologueMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PrologueMain.Location = new System.Drawing.Point(0, 0);
             this.PrologueMain.Name = "PrologueMain";
             this.PrologueMain.Size = new System.Drawing.Size(900, 600);
@@ -97,8 +88,6 @@ namespace EscapeFromHighschool
             // 
             // PrologueImage
             // 
-            this.PrologueImage.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.PrologueImage.ImageSize = new System.Drawing.Size(256, 256);
             this.PrologueImage.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // MainMenu
@@ -153,6 +142,16 @@ namespace EscapeFromHighschool
             this.btnLibrary.UseVisualStyleBackColor = true;
             this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(370, 553);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(160, 60);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // PrologueMDI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -177,7 +176,6 @@ namespace EscapeFromHighschool
 
         private System.Windows.Forms.Panel StartMain;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Panel PrologueMain;
         private System.Windows.Forms.ImageList PrologueImage;
@@ -186,6 +184,7 @@ namespace EscapeFromHighschool
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLibrary;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
