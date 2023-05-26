@@ -20,3 +20,4 @@ C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.Gen
 C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.CoreCompileInputs.cache
 C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.exe
 C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.pdb
+C:\Users\최지원\Desktop\jumble\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.SuggestedBindingRedirects.cache

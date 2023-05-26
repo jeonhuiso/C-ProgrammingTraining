@@ -1,5 +1,7 @@
 ﻿namespace SWGame
 {
+
+
     partial class science
     {
         /// <summary>
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(science));
             this.sci_1 = new System.Windows.Forms.Button();
             this.sci_laptop = new System.Windows.Forms.Button();
             this.sci_locker = new System.Windows.Forms.Button();
@@ -42,168 +45,359 @@
             this.sci_9 = new System.Windows.Forms.Button();
             this.sci_lighter = new System.Windows.Forms.CheckBox();
             this.sci_phenol = new System.Windows.Forms.CheckBox();
-            this.Na = new System.Windows.Forms.CheckBox();
             this.sci_lock = new System.Windows.Forms.Button();
+            this.locked_locker = new System.Windows.Forms.PictureBox();
+            this.locker_open = new System.Windows.Forms.PictureBox();
+            this.broken_locker = new System.Windows.Forms.PictureBox();
+            this.Na = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.locked_locker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locker_open)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.broken_locker)).BeginInit();
             this.SuspendLayout();
             // 
             // sci_1
             // 
-            this.sci_1.Location = new System.Drawing.Point(399, 372);
+            this.sci_1.BackColor = System.Drawing.Color.Transparent;
+            this.sci_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_1.BackgroundImage")));
+            this.sci_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_1.FlatAppearance.BorderSize = 0;
+            this.sci_1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_1.Location = new System.Drawing.Point(409, 459);
             this.sci_1.Name = "sci_1";
-            this.sci_1.Size = new System.Drawing.Size(62, 23);
+            this.sci_1.Size = new System.Drawing.Size(80, 80);
             this.sci_1.TabIndex = 0;
-            this.sci_1.Text = "1.c";
-            this.sci_1.UseVisualStyleBackColor = true;
+            this.sci_1.Tag = "invisible";
+            this.sci_1.Text = "\r\nc";
+            this.sci_1.UseVisualStyleBackColor = false;
             this.sci_1.Click += new System.EventHandler(this.sci_1_Click);
             // 
             // sci_laptop
             // 
-            this.sci_laptop.Location = new System.Drawing.Point(44, 277);
+            this.sci_laptop.BackColor = System.Drawing.Color.Transparent;
+            this.sci_laptop.FlatAppearance.BorderSize = 0;
+            this.sci_laptop.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_laptop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_laptop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_laptop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_laptop.Location = new System.Drawing.Point(238, 161);
             this.sci_laptop.Name = "sci_laptop";
-            this.sci_laptop.Size = new System.Drawing.Size(75, 23);
+            this.sci_laptop.Size = new System.Drawing.Size(93, 98);
             this.sci_laptop.TabIndex = 1;
-            this.sci_laptop.Text = "노트북";
-            this.sci_laptop.UseVisualStyleBackColor = true;
+            this.sci_laptop.Tag = "invisible";
+            this.sci_laptop.UseVisualStyleBackColor = false;
             this.sci_laptop.Click += new System.EventHandler(this.sci_laptop_Click);
             // 
             // sci_locker
             // 
-            this.sci_locker.Location = new System.Drawing.Point(731, 105);
+            this.sci_locker.BackColor = System.Drawing.Color.Transparent;
+            this.sci_locker.FlatAppearance.BorderSize = 0;
+            this.sci_locker.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_locker.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_locker.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_locker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_locker.Location = new System.Drawing.Point(724, 2);
             this.sci_locker.Name = "sci_locker";
-            this.sci_locker.Size = new System.Drawing.Size(75, 23);
+            this.sci_locker.Size = new System.Drawing.Size(113, 269);
             this.sci_locker.TabIndex = 2;
-            this.sci_locker.Text = "락커";
-            this.sci_locker.UseVisualStyleBackColor = true;
+            this.sci_locker.Tag = "invisible";
+            this.sci_locker.UseVisualStyleBackColor = false;
             this.sci_locker.Click += new System.EventHandler(this.sci_locker_Click);
             // 
             // sci_2
             // 
-            this.sci_2.Location = new System.Drawing.Point(570, 327);
+            this.sci_2.BackColor = System.Drawing.Color.Transparent;
+            this.sci_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_2.BackgroundImage")));
+            this.sci_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_2.FlatAppearance.BorderSize = 0;
+            this.sci_2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_2.Location = new System.Drawing.Point(585, 383);
             this.sci_2.Name = "sci_2";
-            this.sci_2.Size = new System.Drawing.Size(62, 23);
+            this.sci_2.Size = new System.Drawing.Size(70, 70);
             this.sci_2.TabIndex = 3;
-            this.sci_2.Text = "2.r";
-            this.sci_2.UseVisualStyleBackColor = true;
+            this.sci_2.Tag = "invisible";
+            this.sci_2.Text = "\r\nr";
+            this.sci_2.UseVisualStyleBackColor = false;
             // 
             // sci_3
             // 
-            this.sci_3.Location = new System.Drawing.Point(570, 372);
+            this.sci_3.BackColor = System.Drawing.Color.Transparent;
+            this.sci_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_3.BackgroundImage")));
+            this.sci_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_3.FlatAppearance.BorderSize = 0;
+            this.sci_3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_3.Location = new System.Drawing.Point(580, 459);
             this.sci_3.Name = "sci_3";
-            this.sci_3.Size = new System.Drawing.Size(62, 23);
+            this.sci_3.Size = new System.Drawing.Size(80, 80);
             this.sci_3.TabIndex = 4;
-            this.sci_3.Text = "3.9";
-            this.sci_3.UseVisualStyleBackColor = true;
+            this.sci_3.Tag = "invisible";
+            this.sci_3.Text = "\r\n9";
+            this.sci_3.UseVisualStyleBackColor = false;
             // 
             // sci_4
             // 
-            this.sci_4.Location = new System.Drawing.Point(223, 372);
+            this.sci_4.BackColor = System.Drawing.Color.Transparent;
+            this.sci_4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_4.BackgroundImage")));
+            this.sci_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_4.FlatAppearance.BorderSize = 0;
+            this.sci_4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_4.Location = new System.Drawing.Point(233, 459);
             this.sci_4.Name = "sci_4";
-            this.sci_4.Size = new System.Drawing.Size(62, 23);
+            this.sci_4.Size = new System.Drawing.Size(80, 80);
             this.sci_4.TabIndex = 5;
-            this.sci_4.Text = "4.7";
-            this.sci_4.UseVisualStyleBackColor = true;
+            this.sci_4.Tag = "invisible";
+            this.sci_4.Text = "\r\n7";
+            this.sci_4.UseVisualStyleBackColor = false;
             // 
             // sci_8
             // 
-            this.sci_8.Location = new System.Drawing.Point(399, 327);
+            this.sci_8.BackColor = System.Drawing.Color.Transparent;
+            this.sci_8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_8.BackgroundImage")));
+            this.sci_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_8.FlatAppearance.BorderSize = 0;
+            this.sci_8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_8.Location = new System.Drawing.Point(414, 383);
             this.sci_8.Name = "sci_8";
-            this.sci_8.Size = new System.Drawing.Size(62, 23);
+            this.sci_8.Size = new System.Drawing.Size(70, 70);
             this.sci_8.TabIndex = 9;
-            this.sci_8.Text = "8.j";
-            this.sci_8.UseVisualStyleBackColor = true;
+            this.sci_8.Tag = "invisible";
+            this.sci_8.Text = "\r\nj";
+            this.sci_8.UseVisualStyleBackColor = false;
             // 
             // sci_7
             // 
-            this.sci_7.Location = new System.Drawing.Point(487, 327);
+            this.sci_7.BackColor = System.Drawing.Color.Transparent;
+            this.sci_7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_7.BackgroundImage")));
+            this.sci_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_7.FlatAppearance.BorderSize = 0;
+            this.sci_7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_7.Location = new System.Drawing.Point(502, 383);
             this.sci_7.Name = "sci_7";
-            this.sci_7.Size = new System.Drawing.Size(62, 23);
+            this.sci_7.Size = new System.Drawing.Size(70, 70);
             this.sci_7.TabIndex = 8;
-            this.sci_7.Text = "7.f";
-            this.sci_7.UseVisualStyleBackColor = true;
+            this.sci_7.Tag = "invisible";
+            this.sci_7.Text = "\r\nf";
+            this.sci_7.UseVisualStyleBackColor = false;
             // 
             // sci_6
             // 
-            this.sci_6.Location = new System.Drawing.Point(487, 372);
+            this.sci_6.BackColor = System.Drawing.Color.Transparent;
+            this.sci_6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_6.BackgroundImage")));
+            this.sci_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_6.FlatAppearance.BorderSize = 0;
+            this.sci_6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_6.Location = new System.Drawing.Point(497, 459);
             this.sci_6.Name = "sci_6";
-            this.sci_6.Size = new System.Drawing.Size(62, 23);
+            this.sci_6.Size = new System.Drawing.Size(80, 80);
             this.sci_6.TabIndex = 7;
-            this.sci_6.Text = "6.13";
-            this.sci_6.UseVisualStyleBackColor = true;
+            this.sci_6.Tag = "invisible";
+            this.sci_6.Text = "\r\n13";
+            this.sci_6.UseVisualStyleBackColor = false;
             // 
             // sci_5
             // 
-            this.sci_5.Location = new System.Drawing.Point(315, 327);
+            this.sci_5.BackColor = System.Drawing.Color.Transparent;
+            this.sci_5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_5.BackgroundImage")));
+            this.sci_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_5.FlatAppearance.BorderSize = 0;
+            this.sci_5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_5.Location = new System.Drawing.Point(330, 383);
             this.sci_5.Name = "sci_5";
-            this.sci_5.Size = new System.Drawing.Size(62, 23);
+            this.sci_5.Size = new System.Drawing.Size(70, 70);
             this.sci_5.TabIndex = 6;
-            this.sci_5.Text = "5.z";
-            this.sci_5.UseVisualStyleBackColor = true;
+            this.sci_5.Tag = "invisible";
+            this.sci_5.Text = "\r\nz";
+            this.sci_5.UseVisualStyleBackColor = false;
             // 
             // sci_10
             // 
-            this.sci_10.Location = new System.Drawing.Point(223, 327);
+            this.sci_10.BackColor = System.Drawing.Color.Transparent;
+            this.sci_10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_10.BackgroundImage")));
+            this.sci_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_10.FlatAppearance.BorderSize = 0;
+            this.sci_10.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_10.Location = new System.Drawing.Point(238, 383);
             this.sci_10.Name = "sci_10";
-            this.sci_10.Size = new System.Drawing.Size(62, 23);
+            this.sci_10.Size = new System.Drawing.Size(70, 70);
             this.sci_10.TabIndex = 11;
-            this.sci_10.Text = "10.d";
-            this.sci_10.UseVisualStyleBackColor = true;
+            this.sci_10.Tag = "invisible";
+            this.sci_10.Text = "\r\nd";
+            this.sci_10.UseVisualStyleBackColor = false;
             // 
             // sci_9
             // 
-            this.sci_9.Location = new System.Drawing.Point(315, 372);
+            this.sci_9.BackColor = System.Drawing.Color.Transparent;
+            this.sci_9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sci_9.BackgroundImage")));
+            this.sci_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_9.FlatAppearance.BorderSize = 0;
+            this.sci_9.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_9.Location = new System.Drawing.Point(325, 459);
             this.sci_9.Name = "sci_9";
-            this.sci_9.Size = new System.Drawing.Size(62, 23);
+            this.sci_9.Size = new System.Drawing.Size(80, 80);
             this.sci_9.TabIndex = 10;
-            this.sci_9.Text = "9.t";
-            this.sci_9.UseVisualStyleBackColor = true;
+            this.sci_9.Tag = "invisible";
+            this.sci_9.Text = "\r\nt";
+            this.sci_9.UseVisualStyleBackColor = false;
             // 
             // sci_lighter
             // 
-            this.sci_lighter.AutoSize = true;
-            this.sci_lighter.Location = new System.Drawing.Point(721, 263);
+            this.sci_lighter.Appearance = System.Windows.Forms.Appearance.Button;
+            this.sci_lighter.BackColor = System.Drawing.Color.Transparent;
+            this.sci_lighter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sci_lighter.FlatAppearance.BorderSize = 0;
+            this.sci_lighter.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_lighter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_lighter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_lighter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_lighter.ForeColor = System.Drawing.Color.Transparent;
+            this.sci_lighter.Location = new System.Drawing.Point(441, 200);
             this.sci_lighter.Name = "sci_lighter";
-            this.sci_lighter.Size = new System.Drawing.Size(60, 16);
+            this.sci_lighter.Size = new System.Drawing.Size(49, 69);
             this.sci_lighter.TabIndex = 14;
-            this.sci_lighter.Text = "라이터";
-            this.sci_lighter.UseVisualStyleBackColor = true;
+            this.sci_lighter.Text = "      \r\n     \r\n  ";
+            this.sci_lighter.UseVisualStyleBackColor = false;
+            this.sci_lighter.CheckedChanged += new System.EventHandler(this.sci_lighter_CheckChanged);
             // 
             // sci_phenol
             // 
+            this.sci_phenol.Appearance = System.Windows.Forms.Appearance.Button;
             this.sci_phenol.AutoSize = true;
-            this.sci_phenol.Location = new System.Drawing.Point(721, 297);
+            this.sci_phenol.BackColor = System.Drawing.Color.Transparent;
+            this.sci_phenol.FlatAppearance.BorderSize = 0;
+            this.sci_phenol.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_phenol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_phenol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_phenol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_phenol.ForeColor = System.Drawing.Color.Transparent;
+            this.sci_phenol.Location = new System.Drawing.Point(587, 191);
             this.sci_phenol.Name = "sci_phenol";
-            this.sci_phenol.Size = new System.Drawing.Size(120, 16);
+            this.sci_phenol.Size = new System.Drawing.Size(39, 82);
             this.sci_phenol.TabIndex = 15;
-            this.sci_phenol.Text = "페놀프탈레인용액";
-            this.sci_phenol.UseVisualStyleBackColor = true;
-            // 
-            // Na
-            // 
-            this.Na.AutoSize = true;
-            this.Na.Location = new System.Drawing.Point(721, 333);
-            this.Na.Name = "Na";
-            this.Na.Size = new System.Drawing.Size(60, 16);
-            this.Na.TabIndex = 16;
-            this.Na.Text = "나트륨";
-            this.Na.UseVisualStyleBackColor = true;
+            this.sci_phenol.Text = "      \r\n  \r\n  \r\n  \r\n  \r\n ";
+            this.sci_phenol.UseVisualStyleBackColor = false;
+            this.sci_phenol.CheckedChanged += new System.EventHandler(this.sci_phenol_CheckedChanged);
             // 
             // sci_lock
             // 
-            this.sci_lock.Location = new System.Drawing.Point(124, 521);
+            this.sci_lock.BackColor = System.Drawing.Color.Transparent;
+            this.sci_lock.FlatAppearance.BorderSize = 0;
+            this.sci_lock.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sci_lock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sci_lock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sci_lock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sci_lock.Location = new System.Drawing.Point(21, 20);
             this.sci_lock.Name = "sci_lock";
-            this.sci_lock.Size = new System.Drawing.Size(75, 23);
+            this.sci_lock.Size = new System.Drawing.Size(147, 211);
             this.sci_lock.TabIndex = 17;
-            this.sci_lock.Text = "자물쇠";
-            this.sci_lock.UseVisualStyleBackColor = true;
+            this.sci_lock.Tag = "invisible";
+            this.sci_lock.UseVisualStyleBackColor = false;
             this.sci_lock.Click += new System.EventHandler(this.sci_lock_Click);
+            // 
+            // locked_locker
+            // 
+            this.locked_locker.BackColor = System.Drawing.Color.Transparent;
+            this.locked_locker.BackgroundImage = global::SWGame.Properties.Resources.닫힌_락커;
+            this.locked_locker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.locked_locker.Location = new System.Drawing.Point(198, 20);
+            this.locked_locker.Name = "locked_locker";
+            this.locked_locker.Size = new System.Drawing.Size(500, 500);
+            this.locked_locker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.locked_locker.TabIndex = 18;
+            this.locked_locker.TabStop = false;
+            this.locked_locker.Visible = false;
+            this.locked_locker.Click += new System.EventHandler(this.locked_locker_Click);
+            // 
+            // locker_open
+            // 
+            this.locker_open.BackColor = System.Drawing.Color.Transparent;
+            this.locker_open.BackgroundImage = global::SWGame.Properties.Resources.락커_열림;
+            this.locker_open.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.locker_open.Location = new System.Drawing.Point(198, 20);
+            this.locker_open.Name = "locker_open";
+            this.locker_open.Size = new System.Drawing.Size(500, 500);
+            this.locker_open.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.locker_open.TabIndex = 19;
+            this.locker_open.TabStop = false;
+            this.locker_open.Visible = false;
+            this.locker_open.Click += new System.EventHandler(this.locker_open_Click);
+            // 
+            // broken_locker
+            // 
+            this.broken_locker.BackColor = System.Drawing.Color.Transparent;
+            this.broken_locker.BackgroundImage = global::SWGame.Properties.Resources.락커_깨짐;
+            this.broken_locker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.broken_locker.Location = new System.Drawing.Point(198, 20);
+            this.broken_locker.Name = "broken_locker";
+            this.broken_locker.Size = new System.Drawing.Size(500, 500);
+            this.broken_locker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.broken_locker.TabIndex = 20;
+            this.broken_locker.TabStop = false;
+            this.broken_locker.Visible = false;
+            this.broken_locker.Click += new System.EventHandler(this.broken_locker_Click);
+            // 
+            // Na
+            // 
+            this.Na.BackColor = System.Drawing.Color.Transparent;
+            this.Na.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Na.BackgroundImage")));
+            this.Na.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Na.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Na.FlatAppearance.BorderSize = 0;
+            this.Na.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.Na.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Na.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Na.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Na.Location = new System.Drawing.Point(409, 459);
+            this.Na.Name = "Na";
+            this.Na.Size = new System.Drawing.Size(80, 80);
+            this.Na.TabIndex = 21;
+            this.Na.Tag = "invisible";
+            this.Na.Text = "\r\nc";
+            this.Na.UseVisualStyleBackColor = false;
+            this.Na.Visible = false;
+            this.Na.Click += new System.EventHandler(this.Na_Click);
+            this.Na.MouseEnter += new System.EventHandler(this.Na_MouseEnter);
+            this.Na.MouseLeave += new System.EventHandler(this.Na_MouseLeave);
             // 
             // science
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::SWGame.Properties.Resources.과학실;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.sci_lock);
+            this.Controls.Add(this.broken_locker);
+            this.Controls.Add(this.locked_locker);
+            this.Controls.Add(this.locker_open);
             this.Controls.Add(this.Na);
+            this.Controls.Add(this.sci_1);
+            this.Controls.Add(this.sci_lock);
             this.Controls.Add(this.sci_phenol);
             this.Controls.Add(this.sci_lighter);
             this.Controls.Add(this.sci_10);
@@ -217,9 +411,12 @@
             this.Controls.Add(this.sci_2);
             this.Controls.Add(this.sci_locker);
             this.Controls.Add(this.sci_laptop);
-            this.Controls.Add(this.sci_1);
             this.Name = "science";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.science_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.locked_locker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locker_open)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.broken_locker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,8 +438,11 @@
         private System.Windows.Forms.Button sci_9;
         private System.Windows.Forms.CheckBox sci_lighter;
         private System.Windows.Forms.CheckBox sci_phenol;
-        private System.Windows.Forms.CheckBox Na;
         private System.Windows.Forms.Button sci_lock;
+        private System.Windows.Forms.PictureBox locked_locker;
+        private System.Windows.Forms.PictureBox locker_open;
+        private System.Windows.Forms.PictureBox broken_locker;
+        private System.Windows.Forms.Button Na;
     }
 }
 

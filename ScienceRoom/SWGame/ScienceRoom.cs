@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Drawing.Drawing2D;
+
 namespace SWGame
 {
     public partial class science : Form
@@ -16,8 +18,8 @@ namespace SWGame
         {
             InitializeComponent();
 
-            bool lighter = sci_lighter.Enabled;
-            bool phenol = sci_phenol.Enabled;
+            bool lighter = sci_lighter.Checked;
+            bool phenol = sci_phenol.Checked;
             lock_open = false;
             lock_event = 0; //0=이벤트 전, 1=이벤트 후, 2=열쇠 획득
             sci_ans = 0;    //0이면 오답, 1이면 노말, 2이면 히든 정답을 입력한 상태
@@ -170,52 +172,60 @@ namespace SWGame
         //노트북 열기
         private void sci_laptop_Click(object sender, EventArgs e)
         {
-            sci_screen screen= new sci_screen(sci_ans);
+            sci_screen screen = new sci_screen(sci_ans);
             screen.Owner = this;
             //정답 여부 전달받기
-            if (screen.ShowDialog() == DialogResult.OK) 
-            {
+            if (screen.ShowDialog() == DialogResult.OK) {
                 screen.sci_ans = sci_ans;
             }
 
-            //정답을 맞췄으면 락커가 열림
-            if (sci_ans != 0 && lock_open == false)
-            {
+            //정답이면 사물함 열림
+            if (sci_ans == 1 || sci_ans == 2) {
                 lock_open = true;
-                MessageBox.Show("락커가 열렸다.");
-                //락커 이미지 변경시키기
+
+                //나트륨 사용 가능
+                sci_1.Visible = false;
+                Na.Visible = true;
+                Na.SendToBack();
+
+                MessageBox.Show("이제 사물함을 열 수 있다.");
             }
         }
 
-        public int lock_event;  //0=이벤트 전, 1=이벤트 후, 2=열쇠 획득
+        public int lock_event=0;  //0=이벤트 전, 1=이벤트 후, 2=열쇠 획득
         //락커 열기
         private void sci_locker_Click(object sender, EventArgs e)
         {
             if (lock_open == false)
-                MessageBox.Show("락커가 잠겨있다. 밖에서 잠금장치는 보이지 않는다.");
+                locked_locker.Visible = true;
             else
             {
-                if (Na.Enabled == false && lock_event == 0)
+                if (Na_check == false && lock_event == 0)
                 {
-                    //수조이벤트
+                    //수조이벤트, 수조에 열쇠를 보고 손을 살짝 담갔다가 놀라는 대사
+                    locker_open.Visible = true;
                     lock_event = 1;
                 }
-                else if (Na.Enabled == false && lock_event == 1)
+                else if (Na_check == false && lock_event == 1)
                 {
+                    locker_open.Visible = true;
                     MessageBox.Show("산성 수조에서 열쇠를 꺼내야한다.");
                 }
-                else if (Na.Enabled == true && lock_event == 1)
+                else if (Na_check == true && lock_event == 1)
                 {
                     //수조가 터지고 열쇠를 획득
+                    broken_locker.Visible = true;
                     lock_event = 2;
                 }
-                else if (Na.Enabled == true && lock_event == 0)
+                else if (Na_check == true && lock_event == 0)
                 {
                     //그냥 나트륨을 수조에 던져버리고 열쇠 획득, 조금 황당해함
+                    broken_locker.Visible = true;
                     lock_event = 2;
                 }
                 else if (lock_event == 2)
                 {
+                    broken_locker.Visible = true;
                     MessageBox.Show("터진 수조다.");
                 }
             }
@@ -223,15 +233,94 @@ namespace SWGame
 
         private void sci_lock_Click(object sender, EventArgs e)
         {
-            if(lock_event != 2)
+            if (lock_event != 2)
             {
                 MessageBox.Show("문이 잠겼다. 이걸 열지 못하면 방에서 나가지 못한다.");
             }
             else
             {
                 //열쇠 사용 후 밖으로 이동
-                MessageBox.Show("밖으로 이동");
+                if (lock_event == 2)
+                {
+                    MessageBox.Show("밖으로 이동");
+                }
+            }
+        }
+
+        private void science_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sci_lighter_CheckChanged(object sender, EventArgs e)
+        {
+            if (sci_lighter.Checked == true)
+            {
+                sci_lighter.FlatAppearance.BorderColor = Color.White;
+                sci_lighter.FlatAppearance.BorderSize = 2;
+            }
+            else if (sci_lighter.Checked == false)
+            {
+                sci_lighter.FlatAppearance.BorderSize = 0;
+            }
+        }
+
+        private void broken_locker_Click(object sender, EventArgs e)
+        {
+            broken_locker.Visible = false;
+        }
+
+        private void locker_open_Click(object sender, EventArgs e)
+        {
+            locker_open.Visible = false;
+        }
+
+        private void locked_locker_Click(object sender, EventArgs e)
+        {
+            locked_locker.Visible = false;
+        }
+
+        private void sci_phenol_CheckedChanged(object sender, EventArgs e)
+        {
+            if(sci_phenol.Checked == true)
+            {
+                sci_phenol.FlatAppearance.BorderColor = Color.White;
+                sci_phenol.FlatAppearance.BorderSize = 2;
+            }
+            else if(sci_phenol.Checked == false)
+            {
+                sci_phenol.FlatAppearance.BorderSize = 0;
+            }
+        }
+
+        bool Na_check = false;
+        private void Na_Click(object sender, EventArgs e)
+        {
+            if(Na_check == false)
+            {
+                Na_check = true;
+                Na.FlatAppearance.BorderSize = 2;
+            }
+            else 
+            { 
+                Na_check = false;
+                Na.FlatAppearance.BorderSize = 0;
+            }
+        }
+
+        private void Na_MouseEnter(object sender, EventArgs e)
+        {
+            Na.FlatAppearance.BorderSize = 2;
+        }
+
+        private void Na_MouseLeave(object sender, EventArgs e)
+        {
+            if (Na_check == false)
+            {
+                Na.FlatAppearance.BorderSize = 0;
             }
         }
     }
 }
+
+//체크 이미지 출처: <a href="https://www.flaticon.com/kr/free-icons/" title="옳은 아이콘">옳은 아이콘  제작자: Octopocto - Flaticon</a>

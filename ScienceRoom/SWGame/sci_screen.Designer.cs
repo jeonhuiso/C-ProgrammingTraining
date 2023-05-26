@@ -37,22 +37,24 @@
             // sci_hint
             // 
             this.sci_hint.AutoSize = true;
-            this.sci_hint.Location = new System.Drawing.Point(265, 144);
+            this.sci_hint.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold);
+            this.sci_hint.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.sci_hint.Location = new System.Drawing.Point(347, 217);
             this.sci_hint.Name = "sci_hint";
-            this.sci_hint.Size = new System.Drawing.Size(97, 12);
+            this.sci_hint.Size = new System.Drawing.Size(193, 20);
             this.sci_hint.TabIndex = 0;
             this.sci_hint.Text = "7, 4, 10, 11, 3, 6 ";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(262, 195);
+            this.textBox1.Location = new System.Drawing.Point(388, 281);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 1;
             // 
             // aply_btn
             // 
-            this.aply_btn.Location = new System.Drawing.Point(267, 242);
+            this.aply_btn.Location = new System.Drawing.Point(403, 341);
             this.aply_btn.Name = "aply_btn";
             this.aply_btn.Size = new System.Drawing.Size(75, 23);
             this.aply_btn.TabIndex = 2;
@@ -62,15 +64,16 @@
             // 
             // sci_screen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.aply_btn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.sci_hint);
             this.Name = "sci_screen";
             this.Text = "sci_screen";
             this.Activated += new System.EventHandler(this.sci_screen_Activated);
+            this.Load += new System.EventHandler(this.sci_screen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

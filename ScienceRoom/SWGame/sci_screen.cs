@@ -46,14 +46,14 @@ namespace SWGame
                 {
                     msg = "normal";
                     //노말 정답 표시 기능 임시
-                    MessageBox.Show("노말정답");
+                    MessageBox.Show("노말정답\n락커 비밀번호");
                     sci_ans = 1;
                 }
                 else if (code == "ffd11t13")
                 {
                     msg = "hidden";
                     //히든 정답 표시 기능 임시
-                    MessageBox.Show("히든정답");
+                    MessageBox.Show("히든정답\n락커 비밀번호");
                     sci_ans = 2;
                 }
                 else
@@ -74,6 +74,11 @@ namespace SWGame
         {
             if (sci_ans != 0)
                 this.Close();
+        }
+
+        private void sci_screen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

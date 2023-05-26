@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ScienceRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,13 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="sci_screen.resx">
       <DependentUpon>sci_screen.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +89,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\과학실.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\금속보관통.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\금속통 시료.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\노트.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\노트북.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\닫힌 락커.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\라이터.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\락커 깨짐.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\락커 열림.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\로고.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\비커.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\페놀용액.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
