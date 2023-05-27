@@ -1,0 +1,38 @@
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\bin\Debug\auditorium.exe.config
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\bin\Debug\auditorium.exe
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\bin\Debug\auditorium.pdb
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.AssemblyReference.cache
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.auditorium.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.maze.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.nono.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.Properties.Resources.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.GenerateResource.cache
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.CoreCompileInputs.cache
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.exe
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.pdb
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.clock.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.make_shape.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.auditorium_MDI.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.Context.resources
+C:\Users\gkscj\Desktop\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.CopyComplete
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\bin\Debug\auditorium.exe.config
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\bin\Debug\auditorium.exe
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\bin\Debug\auditorium.pdb
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\bin\Debug\Newtonsoft.Json.dll
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\bin\Debug\Newtonsoft.Json.xml
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.AssemblyReference.cache
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.auditorium.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.auditorium_MDI.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.clock.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.Context.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.make_shape.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.maze.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.nono.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.Properties.Resources.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.GenerateResource.cache
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.CoreCompileInputs.cache
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.CopyComplete
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.exe
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.pdb

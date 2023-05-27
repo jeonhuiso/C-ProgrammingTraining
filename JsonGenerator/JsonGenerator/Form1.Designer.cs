@@ -41,9 +41,12 @@ namespace JsonGenerator
             this.btnObjectCheck = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtSpeaker = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtImage = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtObject
@@ -51,8 +54,7 @@ namespace JsonGenerator
             this.txtObject.Location = new System.Drawing.Point(6, 24);
             this.txtObject.Name = "txtObject";
             this.txtObject.Size = new System.Drawing.Size(308, 25);
-            this.txtObject.TabIndex = 0;
-            this.txtObject.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownCheck2);
+            this.txtObject.TabIndex = 3;
             // 
             // txtComment
             // 
@@ -60,7 +62,7 @@ namespace JsonGenerator
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
             this.txtComment.Size = new System.Drawing.Size(647, 86);
-            this.txtComment.TabIndex = 0;
+            this.txtComment.TabIndex = 4;
             // 
             // txtScript
             // 
@@ -69,7 +71,7 @@ namespace JsonGenerator
             this.txtScript.Name = "txtScript";
             this.txtScript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtScript.Size = new System.Drawing.Size(647, 174);
-            this.txtScript.TabIndex = 0;
+            this.txtScript.TabIndex = 5;
             // 
             // button1
             // 
@@ -86,9 +88,8 @@ namespace JsonGenerator
             this.txtJson.Location = new System.Drawing.Point(6, 24);
             this.txtJson.Name = "txtJson";
             this.txtJson.Size = new System.Drawing.Size(126, 25);
-            this.txtJson.TabIndex = 0;
+            this.txtJson.TabIndex = 2;
             this.txtJson.TextChanged += new System.EventHandler(this.txtJson_TextChanged);
-            this.txtJson.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownCheck);
             // 
             // btnMakeJson
             // 
@@ -113,7 +114,7 @@ namespace JsonGenerator
             // 
             this.groupBox1.Controls.Add(this.txtJson);
             this.groupBox1.Controls.Add(this.btnJsonCheck);
-            this.groupBox1.Location = new System.Drawing.Point(392, 13);
+            this.groupBox1.Location = new System.Drawing.Point(446, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 2;
@@ -124,7 +125,7 @@ namespace JsonGenerator
             // 
             this.groupBox2.Controls.Add(this.txtObject);
             this.groupBox2.Controls.Add(this.btnObjectCheck);
-            this.groupBox2.Location = new System.Drawing.Point(598, 13);
+            this.groupBox2.Location = new System.Drawing.Point(646, 14);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(320, 99);
             this.groupBox2.TabIndex = 3;
@@ -143,7 +144,7 @@ namespace JsonGenerator
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtSpeaker);
-            this.groupBox3.Location = new System.Drawing.Point(123, 37);
+            this.groupBox3.Location = new System.Drawing.Point(240, 36);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 68);
             this.groupBox3.TabIndex = 4;
@@ -155,15 +156,33 @@ namespace JsonGenerator
             this.txtSpeaker.Location = new System.Drawing.Point(6, 24);
             this.txtSpeaker.Name = "txtSpeaker";
             this.txtSpeaker.Size = new System.Drawing.Size(126, 25);
-            this.txtSpeaker.TabIndex = 0;
+            this.txtSpeaker.TabIndex = 1;
             this.txtSpeaker.TextChanged += new System.EventHandler(this.txtJson_TextChanged);
-            this.txtSpeaker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownCheck3);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtImage);
+            this.groupBox4.Location = new System.Drawing.Point(34, 34);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 68);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "이미지 파일 이름";
+            // 
+            // txtImage
+            // 
+            this.txtImage.Location = new System.Drawing.Point(6, 24);
+            this.txtImage.Name = "txtImage";
+            this.txtImage.Size = new System.Drawing.Size(126, 25);
+            this.txtImage.TabIndex = 0;
+            this.txtImage.TextChanged += new System.EventHandler(this.txtJson_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 389);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -180,6 +199,8 @@ namespace JsonGenerator
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +220,8 @@ namespace JsonGenerator
         private System.Windows.Forms.Button btnObjectCheck;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtSpeaker;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txtImage;
     }
 }
 
