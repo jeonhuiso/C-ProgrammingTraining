@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Drawing.Drawing2D;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SWGame
 {
@@ -17,14 +18,14 @@ namespace SWGame
         public science()
         {
             InitializeComponent();
-
             bool lighter = sci_lighter.Checked;
             bool phenol = sci_phenol.Checked;
             lock_open = false;
             lock_event = 0; //0=이벤트 전, 1=이벤트 후, 2=열쇠 획득
             sci_ans = 0;    //0이면 오답, 1이면 노말, 2이면 히든 정답을 입력한 상태
         }
-
+        public delegate void scienceRoomClear(string n);
+        public event scienceRoomClear scienceRoomclearEvent;
         public string PrintResult(bool lighter, bool phenol, int num)
         {
             string msg = "";
@@ -243,6 +244,8 @@ namespace SWGame
                 if (lock_event == 2)
                 {
                     MessageBox.Show("열쇠로 문을 열고 밖으로 나갔다.");
+                    scienceRoomclearEvent("science");
+                    //clear
                 }
             }
         }

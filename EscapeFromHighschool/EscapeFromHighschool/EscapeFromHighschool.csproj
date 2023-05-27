@@ -137,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="StageLibrary\StageMain.resx">
       <DependentUpon>StageMain.cs</DependentUpon>
@@ -160,6 +161,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="StageComputer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\마지막문닫힘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\auditorium\auditorium.csproj">
+      <Project>{77266c2b-45e5-4a74-a445-a8727430747d}</Project>
+      <Name>auditorium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ScienceRoom\SWGame\SWGame.csproj">
+      <Project>{b7e65ca4-eb55-48f0-a8c8-7a154b218047}</Project>
+      <Name>SWGame</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

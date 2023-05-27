@@ -20,11 +20,11 @@ namespace EscapeFromHighschool
         ContextForm contextForm;
 
         public void commentStart() {
-            this.Enabled = false;
+            endingMain.Enabled = false; 
             contextForm.Enabled = true;
         }
         public void CommentEnd() {
-            this.Enabled = true;
+            endingMain.Enabled = true;
         }
         private void EndingMDI_Load(object sender, EventArgs e)
         {
@@ -38,6 +38,7 @@ namespace EscapeFromHighschool
             contextForm.Location = new Point(0, 595);
             contextForm.StartCommentEvent += new ContextForm.StartComment(commentStart);
             contextForm.EndCommentEvent += new ContextForm.EndComment(CommentEnd);
+            contextForm.ScriptParse("EndingStart", "ending");
         }
     }
 }

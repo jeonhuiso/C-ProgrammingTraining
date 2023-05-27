@@ -12,6 +12,8 @@ namespace auditorium
 {
     public partial class auditorium_MDI : Form
     {
+        public delegate void AuditoriumClear(string n);
+        public event AuditoriumClear AuditoriumClearEvent;
         Context con;
         auditorium aud;
         public auditorium_MDI()
@@ -27,13 +29,17 @@ namespace auditorium
             aud.Show();
             aud.Location = new System.Drawing.Point(0, 0);
             aud.FormClosing += new FormClosingEventHandler(close_maze);
+            aud.AuditoriumClearEvent += new auditorium.AuditoriumClear(AuditoriumClearME) ;
 
         }
-
+        void AuditoriumClearME()
+        {
+            AuditoriumClearEvent("auditorium");
+        }
         private void close_maze(object sender, EventArgs e) // 퍼즐 종료시 멈췄던 시간 다시 돌림
         {
-            this.Close();
-            con.Close();
+            this.Dispose();
+            con.Dispose();
         }
 
         private void auditorium_MDI_MouseClick(object sender, MouseEventArgs e)

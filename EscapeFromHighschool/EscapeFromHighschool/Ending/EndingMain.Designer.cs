@@ -53,39 +53,42 @@ namespace EscapeFromHighschool
             this.btnSinClose = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.EndingPanel = new System.Windows.Forms.Panel();
+            this.FinalExitButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbdoor)).BeginInit();
             this.pnPassword.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.EndingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbMat
             // 
-            this.pbMat.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pbMat.Location = new System.Drawing.Point(682, 280);
+            this.pbMat.BackColor = System.Drawing.Color.Transparent;
+            this.pbMat.Location = new System.Drawing.Point(648, 316);
             this.pbMat.Name = "pbMat";
-            this.pbMat.Size = new System.Drawing.Size(160, 153);
+            this.pbMat.Size = new System.Drawing.Size(165, 196);
             this.pbMat.TabIndex = 0;
             this.pbMat.TabStop = false;
             this.pbMat.Click += new System.EventHandler(this.pbMat_Click);
             // 
             // pbSin
             // 
-            this.pbSin.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbSin.Location = new System.Drawing.Point(35, 280);
+            this.pbSin.BackColor = System.Drawing.Color.Transparent;
+            this.pbSin.Location = new System.Drawing.Point(99, 316);
             this.pbSin.Name = "pbSin";
-            this.pbSin.Size = new System.Drawing.Size(160, 153);
+            this.pbSin.Size = new System.Drawing.Size(158, 185);
             this.pbSin.TabIndex = 0;
             this.pbSin.TabStop = false;
             this.pbSin.Click += new System.EventHandler(this.pbSin_Click);
             // 
             // pbdoor
             // 
-            this.pbdoor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pbdoor.BackColor = System.Drawing.Color.Transparent;
             this.pbdoor.Location = new System.Drawing.Point(311, 120);
             this.pbdoor.Name = "pbdoor";
-            this.pbdoor.Size = new System.Drawing.Size(248, 313);
+            this.pbdoor.Size = new System.Drawing.Size(285, 359);
             this.pbdoor.TabIndex = 1;
             this.pbdoor.TabStop = false;
             this.pbdoor.Click += new System.EventHandler(this.pbdoor_Click);
@@ -96,7 +99,7 @@ namespace EscapeFromHighschool
             this.pnPassword.Controls.Add(this.lblBoxName);
             this.pnPassword.Controls.Add(this.panel1);
             this.pnPassword.Controls.Add(this.btnSinClose);
-            this.pnPassword.Location = new System.Drawing.Point(92, 100);
+            this.pnPassword.Location = new System.Drawing.Point(113, 140);
             this.pnPassword.Name = "pnPassword";
             this.pnPassword.Size = new System.Drawing.Size(682, 402);
             this.pnPassword.TabIndex = 2;
@@ -285,22 +288,51 @@ namespace EscapeFromHighschool
             // 
             // EndingPanel
             // 
+            this.EndingPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EndingPanel.BackgroundImage")));
             this.EndingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EndingPanel.Controls.Add(this.label1);
+            this.EndingPanel.Controls.Add(this.FinalExitButton);
             this.EndingPanel.Location = new System.Drawing.Point(0, 0);
             this.EndingPanel.Name = "EndingPanel";
             this.EndingPanel.Size = new System.Drawing.Size(900, 600);
             this.EndingPanel.TabIndex = 3;
             this.EndingPanel.Visible = false;
             // 
+            // FinalExitButton
+            // 
+            this.FinalExitButton.Location = new System.Drawing.Point(352, 416);
+            this.FinalExitButton.Name = "FinalExitButton";
+            this.FinalExitButton.Size = new System.Drawing.Size(211, 85);
+            this.FinalExitButton.TabIndex = 0;
+            this.FinalExitButton.Text = "종료";
+            this.FinalExitButton.UseVisualStyleBackColor = true;
+            this.FinalExitButton.Click += new System.EventHandler(this.FinalExitButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("휴먼둥근헤드라인", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(344, 228);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(235, 46);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "The End";
+            this.label1.Visible = false;
+            // 
             // EndingMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::EscapeFromHighschool.Properties.Resources.마지막문닫힘;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 590);
             this.Controls.Add(this.EndingPanel);
             this.Controls.Add(this.pnPassword);
             this.Controls.Add(this.pbdoor);
             this.Controls.Add(this.pbSin);
             this.Controls.Add(this.pbMat);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EndingMain";
             this.Text = "EndingMain";
@@ -312,6 +344,8 @@ namespace EscapeFromHighschool
             this.pnPassword.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.EndingPanel.ResumeLayout(false);
+            this.EndingPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +374,7 @@ namespace EscapeFromHighschool
         private System.Windows.Forms.Label lblBoxName;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel EndingPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button FinalExitButton;
     }
 }
