@@ -8,23 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\전휘소\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\js\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\전휘소\\Desktop\\3학년1학기\\응용프로그래밍 실습\\c#\\programming\\test 1\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
+      "projectUniqueName": "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
       "projectName": "ComputerRoom",
-      "projectPath": "C:\\Users\\전휘소\\Desktop\\3학년1학기\\응용프로그래밍 실습\\c#\\programming\\test 1\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
-      "packagesPath": "C:\\Users\\전휘소\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\전휘소\\Desktop\\3학년1학기\\응용프로그래밍 실습\\c#\\programming\\test 1\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\obj\\",
+      "projectPath": "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
+      "packagesPath": "C:\\Users\\js\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\전휘소\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\js\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -69,7 +71,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
