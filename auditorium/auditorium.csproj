@@ -49,71 +49,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="auditorium_MDI.cs">
+    <Compile Include="Auditorium\auditorium_MDI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="auditorium_MDI.Designer.cs">
+    <Compile Include="Auditorium\auditorium_MDI.Designer.cs">
       <DependentUpon>auditorium_MDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="clock.cs">
+    <Compile Include="Auditorium\clock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="clock.Designer.cs">
+    <Compile Include="Auditorium\clock.Designer.cs">
       <DependentUpon>clock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Context.cs">
+    <Compile Include="Auditorium\Context.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Context.Designer.cs">
+    <Compile Include="Auditorium\Context.Designer.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>
-    <Compile Include="enemy.cs" />
-    <Compile Include="auditorium.cs">
+    <Compile Include="Auditorium\enemy.cs" />
+    <Compile Include="Auditorium\auditorium.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="auditorium.Designer.cs">
+    <Compile Include="Auditorium\auditorium.Designer.cs">
       <DependentUpon>auditorium.cs</DependentUpon>
     </Compile>
-    <Compile Include="make_shape.cs">
+    <Compile Include="Auditorium\make_shape.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="make_shape.Designer.cs">
+    <Compile Include="Auditorium\make_shape.Designer.cs">
       <DependentUpon>make_shape.cs</DependentUpon>
     </Compile>
-    <Compile Include="make_shape_set.cs" />
-    <Compile Include="maze.cs">
+    <Compile Include="Auditorium\make_shape_set.cs" />
+    <Compile Include="Auditorium\maze.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="maze.Designer.cs">
+    <Compile Include="Auditorium\maze.Designer.cs">
       <DependentUpon>maze.cs</DependentUpon>
     </Compile>
-    <Compile Include="nono.cs">
+    <Compile Include="Auditorium\nono.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="nono.Designer.cs">
+    <Compile Include="Auditorium\nono.Designer.cs">
       <DependentUpon>nono.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="auditorium.resx">
+    <EmbeddedResource Include="Auditorium\auditorium.resx">
       <DependentUpon>auditorium.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="auditorium_MDI.resx">
+    <EmbeddedResource Include="Auditorium\auditorium_MDI.resx">
       <DependentUpon>auditorium_MDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="clock.resx">
+    <EmbeddedResource Include="Auditorium\clock.resx">
       <DependentUpon>clock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Context.resx">
+    <EmbeddedResource Include="Auditorium\Context.resx">
       <DependentUpon>Context.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="make_shape.resx">
+    <EmbeddedResource Include="Auditorium\make_shape.resx">
       <DependentUpon>make_shape.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="maze.resx">
+    <EmbeddedResource Include="Auditorium\maze.resx">
       <DependentUpon>maze.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="nono.resx">
+    <EmbeddedResource Include="Auditorium\nono.resx">
       <DependentUpon>nono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -126,7 +126,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <None Include="Auditorium\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
