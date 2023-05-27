@@ -35,13 +35,14 @@ namespace EscapeFromHighschool
         {
             switch (++page) {
                 case 1:
+                    PrologueMain.BackgroundImage = Image.FromFile(address + "미술실.png");
                     contextForm.ScriptParse("prologue2", "prologue");
                     break;
                 case 2:
+                    PrologueMain.BackgroundImage = Image.FromFile(address + "밤길.png");
                     contextForm.ScriptParse("prologue3", "prologue");
                     break;
                 case 3:
-
                     PrologueMain.BackgroundImage = Image.FromFile(address + "교실.png");
                     contextForm.ScriptParse("prologue4", "prologue");
                     break;
@@ -51,6 +52,7 @@ namespace EscapeFromHighschool
                 default:
                     MainMenuLoad();
                     PrologueMain.Visible = false;
+                    MainMenu.BackgroundImage = Image.FromFile(address + "칠판.png");
                     MainMenu.Visible = true;
                     break;
             }
@@ -98,7 +100,6 @@ namespace EscapeFromHighschool
 
         private void MainMenu_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }
