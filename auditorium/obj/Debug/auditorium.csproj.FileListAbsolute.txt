@@ -36,3 +36,4 @@ C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\progra
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.CopyComplete
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.exe
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.pdb
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\auditorium\obj\Debug\auditorium.csproj.SuggestedBindingRedirects.cache

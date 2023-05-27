@@ -142,20 +142,23 @@ namespace EscapeFromHighschool
             passwordShowChange(tbPassword);
 
         }
-
+        void TrueEndingStart() { 
+            
+        }
+        void HiddenEndingStart() { 
+        
+        }
         private void lockEnter_Click(object sender, EventArgs e)
         {
             if (isSin && password == sin)
             {
                 EndingPanel.Visible = true;
                 pnPassword.Visible = false;
-                EndingPanel.BackgroundImage = imageList1.Images[0];
             }
             else if (isMat && password == mat)
             {
                 pnPassword.Visible = false;
                 EndingPanel.Visible = true;
-                EndingPanel.BackgroundImage = imageList1.Images[1];
             }
             else {
                // MessageBox.Show("nope");
@@ -167,6 +170,9 @@ namespace EscapeFromHighschool
 
         }
 
-     
+        private void FinalExitButton_Click(object sender, EventArgs e)
+        {
+            this.Parent.Parent.Dispose();
+        }
     }
 }

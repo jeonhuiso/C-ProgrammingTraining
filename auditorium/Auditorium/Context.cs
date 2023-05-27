@@ -44,8 +44,8 @@ namespace auditorium
         {
             try
             {
-                string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\scriptList") + "\\" + jsonName + ".json");
-                ImageLink = Path.GetFullPath(@"..\..\..\Image");
+                string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\..\scriptList") + "\\" + jsonName + ".json");
+                ImageLink = Path.GetFullPath(@"..\..\..\..\Image");
 
                 job = JObject.Parse(@jsonData);
                 jtkn = job[token];

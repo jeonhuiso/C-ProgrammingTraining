@@ -95,8 +95,8 @@ namespace auditorium
             {
                 if (open_ch == 0)
                 {
-                    con.ScriptParse("maze_nomal", "nomal");
-                    con.print();
+                   // con.ScriptParse("maze_nomal", "nomal");
+                   // con.print();
                 }
             }
         }
@@ -535,17 +535,21 @@ namespace auditorium
             if (btn_key_first.Text != "6" || btn_key_second.Text != "4" || btn_key_third.Text != "9")
                 puzzle_key.Text = "암호가 틀렸습니다.\r\nSin : xx9x";
             else
-                puzzle_key.Text = "Clear\r\nMat : xx6x\r\nSin : xx9x";
+                puzzle_key.Text = "Clear\r\nMat : xx6x\r\nSin : xx9x";     
         }
 
         private void time_over_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        public delegate void AuditoriumClear();
+        public event AuditoriumClear AuditoriumClearEvent;
         private void maze_no_all_puzzle_Click(object sender, EventArgs e)
         {
+            AuditoriumClearEvent();
             this.Close();
+            //clear
+
         }
 
         private void enemy_deteching_Tick(object sender, EventArgs e)
@@ -560,7 +564,10 @@ namespace auditorium
 
         private void puzzle_key_Click(object sender, EventArgs e)
         {
+            AuditoriumClearEvent();
             this.Close();
+            //clear
+
         }
 
         private void open_door_timer_Tick(object sender, EventArgs e)
