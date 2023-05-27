@@ -37,11 +37,11 @@
             // sci_hint
             // 
             this.sci_hint.AutoSize = true;
-            this.sci_hint.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold);
+            this.sci_hint.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold);
             this.sci_hint.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sci_hint.Location = new System.Drawing.Point(347, 217);
+            this.sci_hint.Location = new System.Drawing.Point(285, 205);
             this.sci_hint.Name = "sci_hint";
-            this.sci_hint.Size = new System.Drawing.Size(193, 20);
+            this.sci_hint.Size = new System.Drawing.Size(315, 34);
             this.sci_hint.TabIndex = 0;
             this.sci_hint.Text = "7, 4, 10, 11, 3, 6 ";
             // 

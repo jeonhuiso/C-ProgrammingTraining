@@ -413,7 +413,6 @@
             this.Controls.Add(this.sci_laptop);
             this.Name = "science";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.science_Load);
             ((System.ComponentModel.ISupportInitialize)(this.locked_locker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locker_open)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.broken_locker)).EndInit();

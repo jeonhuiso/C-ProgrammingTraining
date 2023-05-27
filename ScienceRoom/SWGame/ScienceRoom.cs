@@ -235,25 +235,27 @@ namespace SWGame
         {
             if (lock_event != 2)
             {
-                MessageBox.Show("문이 잠겼다. 이걸 열지 못하면 방에서 나가지 못한다.");
+                MessageBox.Show("문이 잠겼다. 열쇠로 이걸 열지 못하면 방에서 나가지 못한다.");
             }
             else
             {
                 //열쇠 사용 후 밖으로 이동
                 if (lock_event == 2)
                 {
-                    MessageBox.Show("밖으로 이동");
+                    MessageBox.Show("열쇠로 문을 열고 밖으로 나갔다.");
                 }
             }
         }
 
-        private void science_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        bool lighter_event = false;
         private void sci_lighter_CheckChanged(object sender, EventArgs e)
         {
+            if(lighter_event == false)
+            {
+                MessageBox.Show("기름이 조금밖에 없는 라이터다. 많이 쓰지는 못할 것 같다.");
+                lighter_event = true;
+            }
+
             if (sci_lighter.Checked == true)
             {
                 sci_lighter.FlatAppearance.BorderColor = Color.White;
@@ -280,8 +282,15 @@ namespace SWGame
             locked_locker.Visible = false;
         }
 
+        bool phenol_event = false;
         private void sci_phenol_CheckedChanged(object sender, EventArgs e)
         {
+            if(phenol_event == false)
+            {
+                MessageBox.Show("페놀프탈레인 용액이다. 대충 처음 봤을때 이벤트 대사");
+                phenol_event = true;
+            }
+
             if(sci_phenol.Checked == true)
             {
                 sci_phenol.FlatAppearance.BorderColor = Color.White;
@@ -294,8 +303,15 @@ namespace SWGame
         }
 
         bool Na_check = false;
+        bool Na_event = false;
         private void Na_Click(object sender, EventArgs e)
         {
+            if(Na_event == false)
+            {
+                MessageBox.Show("페놀프탈레인 용액이 반응하고 불꽃색을 생각하면 아마 나트륨 덩어리인 것 같다.");
+                Na_event = true;
+            }
+
             if(Na_check == false)
             {
                 Na_check = true;
@@ -322,5 +338,3 @@ namespace SWGame
         }
     }
 }
-
-//체크 이미지 출처: <a href="https://www.flaticon.com/kr/free-icons/" title="옳은 아이콘">옳은 아이콘  제작자: Octopocto - Flaticon</a>
