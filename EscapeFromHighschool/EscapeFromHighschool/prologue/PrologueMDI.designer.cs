@@ -30,17 +30,18 @@ namespace EscapeFromHighschool
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrologueMDI));
             this.StartMain = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.PrologueMain = new System.Windows.Forms.Panel();
             this.PrologueImage = new System.Windows.Forms.ImageList(this.components);
             this.MainMenu = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAuditorium = new System.Windows.Forms.Button();
+            this.btnComputer = new System.Windows.Forms.Button();
+            this.btnScience = new System.Windows.Forms.Button();
             this.btnLibrary = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.StartMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +56,16 @@ namespace EscapeFromHighschool
             this.StartMain.Size = new System.Drawing.Size(900, 800);
             this.StartMain.TabIndex = 3;
             this.StartMain.Paint += new System.Windows.Forms.PaintEventHandler(this.StartMain_Paint);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(370, 553);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(160, 60);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnStart
             // 
@@ -88,14 +99,18 @@ namespace EscapeFromHighschool
             // 
             // PrologueImage
             // 
+            this.PrologueImage.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.PrologueImage.ImageSize = new System.Drawing.Size(16, 16);
             this.PrologueImage.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MainMenu.Controls.Add(this.button4);
-            this.MainMenu.Controls.Add(this.button3);
-            this.MainMenu.Controls.Add(this.button2);
+            this.MainMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainMenu.BackgroundImage")));
+            this.MainMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainMenu.Controls.Add(this.btnAuditorium);
+            this.MainMenu.Controls.Add(this.btnComputer);
+            this.MainMenu.Controls.Add(this.btnScience);
             this.MainMenu.Controls.Add(this.btnLibrary);
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
@@ -104,53 +119,51 @@ namespace EscapeFromHighschool
             this.MainMenu.Visible = false;
             this.MainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.MainMenu_Paint);
             // 
-            // button4
+            // btnAuditorium
             // 
-            this.button4.Location = new System.Drawing.Point(658, 259);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 38);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button1";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAuditorium.BackColor = System.Drawing.Color.Transparent;
+            this.btnAuditorium.FlatAppearance.BorderSize = 0;
+            this.btnAuditorium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuditorium.Location = new System.Drawing.Point(697, 324);
+            this.btnAuditorium.Name = "btnAuditorium";
+            this.btnAuditorium.Size = new System.Drawing.Size(181, 175);
+            this.btnAuditorium.TabIndex = 0;
+            this.btnAuditorium.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnComputer
             // 
-            this.button3.Location = new System.Drawing.Point(162, 259);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 38);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnComputer.BackColor = System.Drawing.Color.Transparent;
+            this.btnComputer.FlatAppearance.BorderSize = 0;
+            this.btnComputer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComputer.Location = new System.Drawing.Point(22, 348);
+            this.btnComputer.Name = "btnComputer";
+            this.btnComputer.Size = new System.Drawing.Size(158, 73);
+            this.btnComputer.TabIndex = 0;
+            this.btnComputer.UseVisualStyleBackColor = false;
+            this.btnComputer.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnScience
             // 
-            this.button2.Location = new System.Drawing.Point(445, 259);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnScience.BackColor = System.Drawing.Color.Transparent;
+            this.btnScience.FlatAppearance.BorderSize = 0;
+            this.btnScience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScience.Location = new System.Drawing.Point(424, 306);
+            this.btnScience.Name = "btnScience";
+            this.btnScience.Size = new System.Drawing.Size(134, 102);
+            this.btnScience.TabIndex = 0;
+            this.btnScience.UseVisualStyleBackColor = false;
             // 
             // btnLibrary
             // 
-            this.btnLibrary.Location = new System.Drawing.Point(162, 93);
+            this.btnLibrary.BackColor = System.Drawing.Color.Transparent;
+            this.btnLibrary.FlatAppearance.BorderSize = 0;
+            this.btnLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibrary.Location = new System.Drawing.Point(31, 206);
             this.btnLibrary.Name = "btnLibrary";
-            this.btnLibrary.Size = new System.Drawing.Size(75, 23);
+            this.btnLibrary.Size = new System.Drawing.Size(149, 83);
             this.btnLibrary.TabIndex = 0;
-            this.btnLibrary.Text = "button1";
-            this.btnLibrary.UseVisualStyleBackColor = true;
+            this.btnLibrary.UseVisualStyleBackColor = false;
             this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(370, 553);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(160, 60);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // PrologueMDI
             // 
@@ -180,9 +193,9 @@ namespace EscapeFromHighschool
         private System.Windows.Forms.Panel PrologueMain;
         private System.Windows.Forms.ImageList PrologueImage;
         private System.Windows.Forms.Panel MainMenu;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAuditorium;
+        private System.Windows.Forms.Button btnComputer;
+        private System.Windows.Forms.Button btnScience;
         private System.Windows.Forms.Button btnLibrary;
         private System.Windows.Forms.Button btnExit;
     }
