@@ -129,6 +129,7 @@ namespace EscapeFromHighschool
             this.btnAuditorium.Size = new System.Drawing.Size(181, 175);
             this.btnAuditorium.TabIndex = 0;
             this.btnAuditorium.UseVisualStyleBackColor = false;
+            this.btnAuditorium.Click += new System.EventHandler(this.btnAuditorium_Click);
             // 
             // btnComputer
             // 
@@ -152,6 +153,7 @@ namespace EscapeFromHighschool
             this.btnScience.Size = new System.Drawing.Size(134, 102);
             this.btnScience.TabIndex = 0;
             this.btnScience.UseVisualStyleBackColor = false;
+            this.btnScience.Click += new System.EventHandler(this.btnScience_Click);
             // 
             // btnLibrary
             // 

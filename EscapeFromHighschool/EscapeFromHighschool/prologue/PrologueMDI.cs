@@ -16,12 +16,16 @@ namespace EscapeFromHighschool
     {
         public delegate void LibraryStageOpen();
         public event LibraryStageOpen LibraryStageOpenEvent;
-       
+        public delegate void AuditoriumStageOpen();
+        public event AuditoriumStageOpen AuditoriumStageOpenEvent;
+        public delegate void ComputerStageOpen();
+        public event ComputerStageOpen ComputerStageOpenEvent;
+        public delegate void ScienceStageOpen();
+        public event ScienceStageOpen ScienceStageOpenEvent;
         public PrologueMDI()
         {
             InitializeComponent();
         }
-        StreamReader sr;
         const string address = "..\\..\\..\\..\\Image\\";
         ContextForm contextForm;
         int page = 0;
@@ -61,7 +65,6 @@ namespace EscapeFromHighschool
         {
             PrivateFontCollection fontCollection = new PrivateFontCollection();
             fontCollection.AddFontFile("강원교육현옥샘.ttf");
-
             this.Font = new Font(fontCollection.Families[0], 17f);
             label1.Font = new Font(fontCollection.Families[0], 30f);
             contextForm = new ContextForm();
@@ -72,6 +75,7 @@ namespace EscapeFromHighschool
             contextForm.EndCommentEvent += new ContextForm.EndComment(EndCommentMain);
 
         }
+
         private void btnStart_Click(object sender, EventArgs e)
         {
             StartMain.Visible = false;
@@ -95,11 +99,21 @@ namespace EscapeFromHighschool
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            ComputerStageOpenEvent();
         }
 
         private void MainMenu_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void btnAuditorium_Click(object sender, EventArgs e)
+        {
+            AuditoriumStageOpenEvent();
+        }
+
+        private void btnScience_Click(object sender, EventArgs e)
+        {
+            ScienceStageOpenEvent();
         }
     }
 }

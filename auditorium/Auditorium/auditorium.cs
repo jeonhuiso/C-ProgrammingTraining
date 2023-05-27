@@ -12,8 +12,10 @@ namespace auditorium
 {
     public partial class auditorium : Form
     {
+        public delegate void AuditoriumClear();
+        public event AuditoriumClear AuditoriumClearEvent;
+        maze maze_mad;
         Context con;
-
         public auditorium(Context co)
         {
             InitializeComponent();
@@ -35,14 +37,17 @@ namespace auditorium
         private void btn_maze_explain_Click(object sender, EventArgs e) // 게임 시작 버튼, 미로 탈출을 시작함
         {
             con.TopMost = true;
-            maze maze_mad = new maze(con);
+            maze_mad = new maze(con);
             maze_mad.Show();
             maze_mad.Location = new System.Drawing.Point(this.MdiParent.Left, this.MdiParent.Top);
             maze_mad.FormClosed += new FormClosedEventHandler(auditorium_room_exit);
-            
+            maze_mad.AuditoriumClearEvent += new maze.AuditoriumClear(auditoriumClearMe);
             this.Enabled = false;
         }
-
+        void auditoriumClearMe()
+        {
+            AuditoriumClearEvent();
+        }
 
         private void auditorium_room_exit(object sender, EventArgs e) // 미로 탈출이 끝나면 해당 폼 종료
         {
