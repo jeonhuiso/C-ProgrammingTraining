@@ -10,10 +10,14 @@ using System.Windows.Forms;
 
 namespace ComputerRoom
 {
+    
     public partial class FileOpen : Form
     {
+        public delegate void CompClear();
+        public event CompClear ComClearEvent;
         public FileOpen()
         {
+
             InitializeComponent();
             Task.Run(() =>
             {
@@ -26,6 +30,7 @@ namespace ComputerRoom
                         var res = MessageBox.Show("XX2X", "SOMETHING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         if (res == DialogResult.OK)
                         {
+                            ComClearEvent();
                             Close();
                         }
                         Close();

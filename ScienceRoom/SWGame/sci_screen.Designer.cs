@@ -41,7 +41,7 @@
             this.sci_hint.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.sci_hint.Location = new System.Drawing.Point(285, 205);
             this.sci_hint.Name = "sci_hint";
-            this.sci_hint.Size = new System.Drawing.Size(315, 34);
+            this.sci_hint.Size = new System.Drawing.Size(383, 42);
             this.sci_hint.TabIndex = 0;
             this.sci_hint.Text = "7, 4, 10, 11, 3, 6 ";
             // 
@@ -49,7 +49,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(388, 281);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(100, 25);
             this.textBox1.TabIndex = 1;
             // 
             // aply_btn
@@ -71,6 +71,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.sci_hint);
             this.Name = "sci_screen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sci_screen";
             this.Activated += new System.EventHandler(this.sci_screen_Activated);
             this.Load += new System.EventHandler(this.sci_screen_Load);

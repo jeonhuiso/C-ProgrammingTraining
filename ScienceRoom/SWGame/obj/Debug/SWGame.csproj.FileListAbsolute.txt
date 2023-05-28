@@ -33,3 +33,15 @@ C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\progra
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.CoreCompileInputs.cache
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.exe
 C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.pdb
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\bin\Debug\SWGame.exe.config
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\bin\Debug\SWGame.exe
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\bin\Debug\SWGame.pdb
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.AssemblyReference.cache
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.science.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.Properties.Resources.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.sci_screen.resources
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.GenerateResource.cache
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.csproj.CoreCompileInputs.cache
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.exe
+C:\Users\전휘소\Desktop\3학년1학기\응용프로그래밍 실습\c#\programming\test 1\새 폴더\C-ProgrammingTraining\ScienceRoom\SWGame\obj\Debug\SWGame.pdb
