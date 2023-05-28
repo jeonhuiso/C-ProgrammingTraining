@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace ComputerRoom
+﻿namespace ComputerRoom
 {
     partial class MailLogin
     {
@@ -64,7 +62,7 @@ namespace ComputerRoom
             // 
             lblHint.AutoSize = true;
             lblHint.ForeColor = Color.Red;
-            lblHint.Location = new Point(30, 155);
+            lblHint.Location = new Point(30, 150);
             lblHint.Name = "lblHint";
             lblHint.Size = new Size(82, 20);
             lblHint.TabIndex = 7;
@@ -79,7 +77,7 @@ namespace ComputerRoom
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(64, 20);
             lblLogin.TabIndex = 6;
-            lblLogin.Text = "Login";
+            lblLogin.Text = "lblLogin";
             lblLogin.Visible = false;
             // 
             // boxLoginLogo
@@ -94,9 +92,9 @@ namespace ComputerRoom
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(224, 145);
+            btnLogin.Location = new Point(224, 141);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(100, 35);
+            btnLogin.Size = new Size(94, 29);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Log In";
             btnLogin.UseVisualStyleBackColor = true;

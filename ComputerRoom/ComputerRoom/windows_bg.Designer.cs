@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace ComputerRoom
+﻿namespace ComputerRoom
 {
     partial class windows_bg
     {
