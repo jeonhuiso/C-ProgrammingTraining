@@ -12,3 +12,8 @@ C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net48\ComputerRoom.AssemblyInfo.cs
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net48\ComputerRoom.csproj.CoreCompileInputs.cache
 C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net48\ComputerRoom.csproj.SuggestedBindingRedirects.cache
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\bin\Debug\net48\ComputerRoom.exe.config
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\bin\Debug\net48\ComputerRoom.exe
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\bin\Debug\net48\ComputerRoom.pdb
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net48\ComputerRoom.exe
+C:\Users\js\Documents\GitHub\C-ProgrammingTraining\ComputerRoom\ComputerRoom\obj\Debug\net48\ComputerRoom.pdb

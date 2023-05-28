@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ai0G8B6JRES+MY3bBgu3ojX09LuRBT467Eo+iAe/njG4LKTdwP5GMLWe7CegmfYS8wsQTlDxroOnBmnvx+EulA==",
+  "dgSpecHash": "9t7telIzkL+Rw7wkWzaGN9M/QoTyyvGVG5k1/n1fOcmhfPsycmiK7XRjnIFQL5T5Po5HYOT4P7BfZYenGz/Otg==",
   "success": true,
   "projectFilePath": "C:\\Users\\js\\Documents\\GitHub\\C-ProgrammingTraining\\ComputerRoom\\ComputerRoom\\ComputerRoom.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\js\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\js\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\js\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\js\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
