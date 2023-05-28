@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace ComputerRoom
+﻿namespace ComputerRoom
 {
     partial class mail
     {
@@ -360,7 +358,7 @@ namespace ComputerRoom
             // txtMailContext
             // 
             txtMailContext.Enabled = false;
-            txtMailContext.Location = new Point(0, 160);
+            txtMailContext.Location = new Point(0, 153);
             txtMailContext.Multiline = true;
             txtMailContext.Name = "txtMailContext";
             txtMailContext.ScrollBars = ScrollBars.Both;
