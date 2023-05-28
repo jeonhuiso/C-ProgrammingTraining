@@ -1,4 +1,6 @@
-﻿namespace ComputerRoom
+﻿using System.Drawing;
+
+namespace ComputerRoom
 {
     partial class quiz
     {
@@ -155,7 +157,7 @@
             lblRemainLife.AutoSize = true;
             lblRemainLife.Font = new Font("휴먼매직체", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             lblRemainLife.ForeColor = Color.Gold;
-            lblRemainLife.Location = new Point(452, 103);
+            lblRemainLife.Location = new Point(482, 103);
             lblRemainLife.Name = "lblRemainLife";
             lblRemainLife.Size = new Size(85, 17);
             lblRemainLife.TabIndex = 7;
@@ -166,7 +168,7 @@
             // 
             lblLife.AutoSize = true;
             lblLife.ForeColor = Color.Gold;
-            lblLife.Location = new Point(539, 100);
+            lblLife.Location = new Point(569, 100);
             lblLife.Name = "lblLife";
             lblLife.Size = new Size(50, 20);
             lblLife.TabIndex = 8;
