@@ -14,6 +14,7 @@ namespace ComputerRoom
             Application.SetCompatibleTextRenderingDefault(false);
             //ApplicationConfiguration.Initialize();
             Application.Run(new Comp_Room());
+            //
         }
     }
 }
