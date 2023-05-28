@@ -10,9 +10,7 @@ namespace ComputerRoom
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //ApplicationConfiguration.Initialize();
+            ApplicationConfiguration.Initialize();
             Application.Run(new Comp_Room());
         }
     }
