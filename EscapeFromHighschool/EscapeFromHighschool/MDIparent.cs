@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using auditorium;
 using SWGame;
 using ComputerRoom;
+using System.Runtime.Remoting.Channels;
+using System.Collections.Specialized;
+
 namespace EscapeFromHighschool
 {
     public partial class MDIparent : Form
@@ -43,7 +46,8 @@ namespace EscapeFromHighschool
                 if (n == stageMain[i])
                 {
                     stageClearCheck[i] = true;
-                    MessageBox.Show(stageMain[i] + "clear");
+                    
+                   // MessageBox.Show(stageMain[i] + "clear");
                 }
             }
             if (AllClearCheck()) {
@@ -51,19 +55,33 @@ namespace EscapeFromHighschool
                 endingMDI = new EndingMDI();
                 endingMDI.Show();
             }
+            MessageBox.Show("clear :"+ stageClearCheck[0].ToString()+ stageClearCheck[1].ToString()+stageClearCheck[2].ToString()+stageClearCheck[3].ToString());
 
+        }
+        void contextFormClosing(object sender, FormClosedEventArgs e) {
+            contextform.Dispose();
         }
         void CompOpen()
         {
             CompRoom =new Comp_Room();
+            CompRoom.Location = prologueMDI.DesktopLocation;
             CompRoom.Show();
             CompRoom.ComClearEvent += new Comp_Room.CompClear(RoomClearCheck);
+            CompRoom.FormClosed += new FormClosedEventHandler(contextFormClosing);
+            contextform = new ContextForm();
+            contextform.Location = new Point(CompRoom.DesktopLocation.X, CompRoom.DesktopLocation.Y + 550);
+            contextform.Show();
         }
         void ScienceOpen()
         {
             sciencRoom = new science();
             sciencRoom.Show();
+            sciencRoom.Location = prologueMDI.DesktopLocation;
             sciencRoom.scienceRoomclearEvent += new science.scienceRoomClear(RoomClearCheck);
+            sciencRoom.FormClosed += new FormClosedEventHandler(contextFormClosing);
+            contextform = new ContextForm();
+            contextform.Location = new Point(sciencRoom.DesktopLocation.X, sciencRoom.DesktopLocation.Y + 550);
+            contextform.Show();
         }
         void libraryStageOpen()
         {
@@ -75,7 +93,12 @@ namespace EscapeFromHighschool
         {
             auditorium = new auditorium.auditorium_MDI();
             auditorium.Show();
+            auditorium.Location = prologueMDI.DesktopLocation;
             auditorium.AuditoriumClearEvent += new auditorium_MDI.AuditoriumClear(RoomClearCheck);
+            auditorium.FormClosed += new FormClosedEventHandler(contextFormClosing);
+            contextform = new ContextForm();
+            contextform.Location = new Point(auditorium.DesktopLocation.X, auditorium.DesktopLocation.Y + 550);
+            contextform.Show();
         }
 
         bool AllClearCheck() {

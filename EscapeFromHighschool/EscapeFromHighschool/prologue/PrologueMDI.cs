@@ -91,7 +91,11 @@ namespace EscapeFromHighschool
         {
 
         }
-
+        //메인메뉴 보이게하기
+        public void ShowMainMenu()
+        {
+            MainMenu.Visible = true;
+        }
         private void btnLibrary_Click(object sender, EventArgs e)
         {
             LibraryStageOpenEvent();

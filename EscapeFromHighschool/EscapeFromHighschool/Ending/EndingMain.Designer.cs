@@ -53,8 +53,8 @@ namespace EscapeFromHighschool
             this.btnSinClose = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.EndingPanel = new System.Windows.Forms.Panel();
-            this.FinalExitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.FinalExitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbdoor)).BeginInit();
@@ -298,16 +298,6 @@ namespace EscapeFromHighschool
             this.EndingPanel.TabIndex = 3;
             this.EndingPanel.Visible = false;
             // 
-            // FinalExitButton
-            // 
-            this.FinalExitButton.Location = new System.Drawing.Point(352, 416);
-            this.FinalExitButton.Name = "FinalExitButton";
-            this.FinalExitButton.Size = new System.Drawing.Size(211, 85);
-            this.FinalExitButton.TabIndex = 0;
-            this.FinalExitButton.Text = "종료";
-            this.FinalExitButton.UseVisualStyleBackColor = true;
-            this.FinalExitButton.Click += new System.EventHandler(this.FinalExitButton_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -316,10 +306,21 @@ namespace EscapeFromHighschool
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(344, 228);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 46);
+            this.label1.Size = new System.Drawing.Size(230, 45);
             this.label1.TabIndex = 1;
             this.label1.Text = "The End";
             this.label1.Visible = false;
+            // 
+            // FinalExitButton
+            // 
+            this.FinalExitButton.Location = new System.Drawing.Point(352, 416);
+            this.FinalExitButton.Name = "FinalExitButton";
+            this.FinalExitButton.Size = new System.Drawing.Size(211, 85);
+            this.FinalExitButton.TabIndex = 0;
+            this.FinalExitButton.Text = "종료";
+            this.FinalExitButton.UseVisualStyleBackColor = true;
+            this.FinalExitButton.Visible = false;
+            this.FinalExitButton.Click += new System.EventHandler(this.FinalExitButton_Click);
             // 
             // EndingMain
             // 

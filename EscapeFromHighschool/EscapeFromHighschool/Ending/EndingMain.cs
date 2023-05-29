@@ -12,6 +12,10 @@ namespace EscapeFromHighschool
 {
     public partial class EndingMain : Form
     {
+        public delegate void NormalEnding();
+        public event NormalEnding NormalEndingEvent;
+        public delegate void HiddenEnding();
+        public event HiddenEnding HiddenEndingEvent;
         public EndingMain()
         {
             InitializeComponent();
@@ -23,6 +27,11 @@ namespace EscapeFromHighschool
         bool isMat = false;
         string password = "";
         int passwordCount = 0;
+        public void EndingButtonShow()
+        {
+            label1.Visible = true;
+            FinalExitButton.Visible = true;
+        }
         //Sin 금고 패널 보여주기
         private void pbSin_Click(object sender, EventArgs e)
         {
@@ -142,21 +151,17 @@ namespace EscapeFromHighschool
             passwordShowChange(tbPassword);
 
         }
-        void TrueEndingStart() { 
-            
-        }
-        void HiddenEndingStart() { 
-        
-        }
         private void lockEnter_Click(object sender, EventArgs e)
         {
             if (isSin && password == sin)
             {
+                NormalEndingEvent();
                 EndingPanel.Visible = true;
                 pnPassword.Visible = false;
             }
             else if (isMat && password == mat)
             {
+                HiddenEndingEvent();
                 pnPassword.Visible = false;
                 EndingPanel.Visible = true;
             }

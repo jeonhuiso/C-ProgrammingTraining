@@ -66,6 +66,7 @@ namespace ComputerRoom
             this.Controls.Add(this.btnComputer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Comp_Room";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Computer Room";
             this.ResumeLayout(false);
 

@@ -412,7 +412,7 @@
             this.Controls.Add(this.sci_locker);
             this.Controls.Add(this.sci_laptop);
             this.Name = "science";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.locked_locker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locker_open)).EndInit();
