@@ -14,7 +14,10 @@ namespace ComputerRoom
     {
         public delegate void CompClear(string n);
         public event CompClear ComClearEvent;
+        public delegate void PCClick();
+        public event PCClick PCClickEvent;
         public windows_bg wbg = new windows_bg();
+        
         
         public Comp_Room()
         {
@@ -25,8 +28,11 @@ namespace ComputerRoom
         }
         private void btnComputer_Click(object sender, EventArgs e)
         {
+            PCClickEvent();
             wbg.ComClearEvent += new windows_bg.CompClear(ComClear);
-            wbg.ShowDialog();
+            wbg.Location = this.DesktopLocation;
+            wbg.Show();
+            
             
         }
 

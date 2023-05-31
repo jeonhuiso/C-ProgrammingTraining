@@ -75,7 +75,29 @@ namespace EscapeFromHighschool
             contextForm.EndCommentEvent += new ContextForm.EndComment(EndCommentMain);
 
         }
+        public void BtnEnable(string what) { 
+            if (what == "library")
+            {
+                btnLibrary.Enabled = false;
+                btnLibrary.BackgroundImage = Image.FromFile(address + "x.png");
+            }
+            if (what == "auditorium")
+            {
+                btnAuditorium.Enabled = false;
+                btnAuditorium.BackgroundImage = Image.FromFile(address + "x.png");
+            }
+            if (what == "computer")
+            {
+                btnComputer.Enabled = false;
+                btnComputer.BackgroundImage = Image.FromFile(address + "x.png");
+            }
+            if (what == "science")
+            {
+                btnScience.Enabled = false;
+                btnScience.BackgroundImage = Image.FromFile(address + "x.png");
+            }
 
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
             StartMain.Visible = false;

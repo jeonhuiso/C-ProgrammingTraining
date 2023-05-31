@@ -161,7 +161,7 @@ namespace ComputerRoom
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "windows_bg";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Window";
             ((System.ComponentModel.ISupportInitialize)(this.boxQuiz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxFolder)).EndInit();
