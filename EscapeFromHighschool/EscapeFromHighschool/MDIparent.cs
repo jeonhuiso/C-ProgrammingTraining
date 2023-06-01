@@ -87,6 +87,7 @@ namespace EscapeFromHighschool
             CompRoom.ComClearEvent += new Comp_Room.CompClear((s) => { contextform.ScriptParse("CompEnd", "CompRoom"); });
             CompRoom.FormClosed += new FormClosedEventHandler(contextFormClosing);
             CompRoom.PCClickEvent += new Comp_Room.PCClick(() => contextform.ScriptParse("CompOn", "CompRoom"));
+
             contextform = new ContextForm();
             contextform.Location = new Point(CompRoom.DesktopLocation.X, CompRoom.DesktopLocation.Y + 550);
             contextform.StartCommentEvent += new ContextForm.StartComment(() => CompRoom.Enabled = false);
@@ -102,6 +103,7 @@ namespace EscapeFromHighschool
             sciencRoom.Location = prologueMDI.DesktopLocation;
             sciencRoom.scienceRoomclearEvent += new science.scienceRoomClear(RoomClearCheck);
             sciencRoom.FormClosed += new FormClosedEventHandler(contextFormClosing);
+
             contextform = new ContextForm();
             contextform.StartCommentEvent += new ContextForm.StartComment(() => sciencRoom.Enabled = false);
             contextform.EndCommentEvent += new ContextForm.EndComment(() => sciencRoom.Enabled = true);
@@ -114,18 +116,19 @@ namespace EscapeFromHighschool
             libraryStage.Show();
             libraryStage.libraryStageClearEvent += new LibraryStage.LibraryStageClear(RoomClearCheck);
         }
-         void AuditoriumOpen()
+        void AuditoriumOpen()
         {
             auditorium = new auditorium.auditorium_MDI();
             auditorium.Show();
             auditorium.Location = prologueMDI.DesktopLocation;
             auditorium.AuditoriumClearEvent += new auditorium_MDI.AuditoriumClear(RoomClearCheck);
             auditorium.FormClosed += new FormClosedEventHandler(contextFormClosing);
+            auditorium.AuditoriumClearEvent += new auditorium_MDI.AuditoriumClear(s => {contextform.ScriptParse("Audiend", "Audi"); });
             contextform = new ContextForm();
-            contextform.StartCommentEvent += new ContextForm.StartComment(() => auditorium.Enabled = false);
-            contextform.EndCommentEvent += new ContextForm.EndComment(() => auditorium.Enabled = true);
+            contextform.StartCommentEvent += new ContextForm.StartComment(() => { auditorium.Enabled = false;contextform.Visible = true; });
+            contextform.EndCommentEvent += new ContextForm.EndComment(() => { auditorium.Enabled = true;contextform.Visible = false; });
             contextform.Location = new Point(auditorium.DesktopLocation.X, auditorium.DesktopLocation.Y + 550);
-            
+            contextform.ScriptParse("AudiStart", "Audi");
             contextform.Show();
         }
 
