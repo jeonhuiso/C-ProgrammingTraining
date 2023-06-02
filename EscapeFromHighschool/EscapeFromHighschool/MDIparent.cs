@@ -87,7 +87,7 @@ namespace EscapeFromHighschool
             CompRoom.ComClearEvent += new Comp_Room.CompClear((s) => { contextform.ScriptParse("CompEnd", "CompRoom"); });
             CompRoom.FormClosed += new FormClosedEventHandler(contextFormClosing);
             CompRoom.PCClickEvent += new Comp_Room.PCClick(() => contextform.ScriptParse("CompOn", "CompRoom"));
-
+            
             contextform = new ContextForm();
             contextform.Location = new Point(CompRoom.DesktopLocation.X, CompRoom.DesktopLocation.Y + 550);
             contextform.StartCommentEvent += new ContextForm.StartComment(() => CompRoom.Enabled = false);
@@ -103,11 +103,16 @@ namespace EscapeFromHighschool
             sciencRoom.Location = prologueMDI.DesktopLocation;
             sciencRoom.scienceRoomclearEvent += new science.scienceRoomClear(RoomClearCheck);
             sciencRoom.FormClosed += new FormClosedEventHandler(contextFormClosing);
-
+            sciencRoom.LaptopOpenEvent += new science.LaptopOpen(() => { contextform.ScriptParse("scienceCom", "science"); });
+            sciencRoom.LockerOpenEvent += new science.LockerOpen(() =>contextform.ScriptParse("scienceLockOpen","science"));
+            sciencRoom.LockerBoomEvent += new science.LockerBoom(() => contextform.ScriptParse("scienceBoom", "science"));
+            sciencRoom.NaClickEvent += new science.NaClick(() => contextform.ScriptParse("scienceNaClick", "science"));
+            sciencRoom.FormClosed += new FormClosedEventHandler(contextFormClosing);
             contextform = new ContextForm();
             contextform.StartCommentEvent += new ContextForm.StartComment(() => sciencRoom.Enabled = false);
             contextform.EndCommentEvent += new ContextForm.EndComment(() => sciencRoom.Enabled = true);
-            contextform.Location = new Point(sciencRoom.DesktopLocation.X, sciencRoom.DesktopLocation.Y + 550);
+            contextform.Location = new Point(sciencRoom.DesktopLocation.X, sciencRoom.DesktopLocation.Y + 600);
+            contextform.ScriptParse("scienceStart", "science");
             contextform.Show();
         }
         void libraryStageOpen()
