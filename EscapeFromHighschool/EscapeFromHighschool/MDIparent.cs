@@ -132,7 +132,7 @@ namespace EscapeFromHighschool
             contextform = new ContextForm();
             contextform.StartCommentEvent += new ContextForm.StartComment(() => { auditorium.Enabled = false;contextform.Visible = true; });
             contextform.EndCommentEvent += new ContextForm.EndComment(() => { auditorium.Enabled = true;contextform.Visible = false; });
-            contextform.Location = new Point(auditorium.DesktopLocation.X, auditorium.DesktopLocation.Y + 550);
+            contextform.Location = new Point(auditorium.DesktopLocation.X, auditorium.DesktopLocation.Y + 600);
             contextform.ScriptParse("AudiStart", "Audi");
             contextform.Show();
         }
