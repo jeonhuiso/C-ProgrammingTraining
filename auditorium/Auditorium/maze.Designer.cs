@@ -365,8 +365,7 @@ namespace auditorium
             // 
             // maze
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::auditorium.Properties.Resources.tablet;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
