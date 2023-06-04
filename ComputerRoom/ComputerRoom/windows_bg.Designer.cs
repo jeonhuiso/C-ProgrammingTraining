@@ -1,4 +1,6 @@
-﻿namespace ComputerRoom
+﻿using System.Drawing;
+
+namespace ComputerRoom
 {
     partial class windows_bg
     {
@@ -29,143 +31,145 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(windows_bg));
-            boxQuiz = new PictureBox();
-            lbl_boxQuiz = new Label();
-            boxFolder = new PictureBox();
-            lblFolder = new Label();
-            ofd = new OpenFileDialog();
-            Mail = new PictureBox();
-            label2 = new Label();
-            lblMail = new Label();
-            boxStartMenu = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)boxQuiz).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)boxFolder).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Mail).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)boxStartMenu).BeginInit();
-            SuspendLayout();
+            this.boxQuiz = new System.Windows.Forms.PictureBox();
+            this.lbl_boxQuiz = new System.Windows.Forms.Label();
+            this.boxFolder = new System.Windows.Forms.PictureBox();
+            this.lblFolder = new System.Windows.Forms.Label();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.Mail = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.boxStartMenu = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.boxQuiz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxFolder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxStartMenu)).BeginInit();
+            this.SuspendLayout();
             // 
             // boxQuiz
             // 
-            boxQuiz.BackColor = Color.Transparent;
-            boxQuiz.BackgroundImage = (Image)resources.GetObject("boxQuiz.BackgroundImage");
-            boxQuiz.Image = (Image)resources.GetObject("boxQuiz.Image");
-            boxQuiz.Location = new Point(381, 145);
-            boxQuiz.Name = "boxQuiz";
-            boxQuiz.Size = new Size(81, 69);
-            boxQuiz.SizeMode = PictureBoxSizeMode.StretchImage;
-            boxQuiz.TabIndex = 3;
-            boxQuiz.TabStop = false;
-            boxQuiz.Click += boxQuiz_Click;
+            this.boxQuiz.BackColor = System.Drawing.Color.Transparent;
+            this.boxQuiz.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("boxQuiz.BackgroundImage")));
+            this.boxQuiz.Image = ((System.Drawing.Image)(resources.GetObject("boxQuiz.Image")));
+            this.boxQuiz.Location = new System.Drawing.Point(381, 145);
+            this.boxQuiz.Name = "boxQuiz";
+            this.boxQuiz.Size = new System.Drawing.Size(81, 69);
+            this.boxQuiz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxQuiz.TabIndex = 3;
+            this.boxQuiz.TabStop = false;
+            this.boxQuiz.Click += new System.EventHandler(this.boxQuiz_Click);
             // 
             // lbl_boxQuiz
             // 
-            lbl_boxQuiz.AutoSize = true;
-            lbl_boxQuiz.BackColor = SystemColors.Control;
-            lbl_boxQuiz.ForeColor = SystemColors.ControlLightLight;
-            lbl_boxQuiz.Image = (Image)resources.GetObject("lbl_boxQuiz.Image");
-            lbl_boxQuiz.Location = new Point(396, 217);
-            lbl_boxQuiz.Name = "lbl_boxQuiz";
-            lbl_boxQuiz.Size = new Size(45, 20);
-            lbl_boxQuiz.TabIndex = 5;
-            lbl_boxQuiz.Text = "QUIZ";
+            this.lbl_boxQuiz.AutoSize = true;
+            this.lbl_boxQuiz.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_boxQuiz.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_boxQuiz.Image = ((System.Drawing.Image)(resources.GetObject("lbl_boxQuiz.Image")));
+            this.lbl_boxQuiz.Location = new System.Drawing.Point(396, 217);
+            this.lbl_boxQuiz.Name = "lbl_boxQuiz";
+            this.lbl_boxQuiz.Size = new System.Drawing.Size(41, 15);
+            this.lbl_boxQuiz.TabIndex = 5;
+            this.lbl_boxQuiz.Text = "QUIZ";
             // 
             // boxFolder
             // 
-            boxFolder.BackgroundImage = (Image)resources.GetObject("boxFolder.BackgroundImage");
-            boxFolder.Image = (Image)resources.GetObject("boxFolder.Image");
-            boxFolder.Location = new Point(8, 250);
-            boxFolder.Name = "boxFolder";
-            boxFolder.Size = new Size(90, 83);
-            boxFolder.SizeMode = PictureBoxSizeMode.StretchImage;
-            boxFolder.TabIndex = 9;
-            boxFolder.TabStop = false;
-            boxFolder.Click += boxFolder_Click;
+            this.boxFolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("boxFolder.BackgroundImage")));
+            this.boxFolder.Image = ((System.Drawing.Image)(resources.GetObject("boxFolder.Image")));
+            this.boxFolder.Location = new System.Drawing.Point(8, 250);
+            this.boxFolder.Name = "boxFolder";
+            this.boxFolder.Size = new System.Drawing.Size(90, 83);
+            this.boxFolder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxFolder.TabIndex = 9;
+            this.boxFolder.TabStop = false;
+            this.boxFolder.Click += new System.EventHandler(this.boxFolder_Click);
             // 
             // lblFolder
             // 
-            lblFolder.AutoSize = true;
-            lblFolder.ForeColor = SystemColors.ControlLightLight;
-            lblFolder.Image = (Image)resources.GetObject("lblFolder.Image");
-            lblFolder.Location = new Point(19, 336);
-            lblFolder.Name = "lblFolder";
-            lblFolder.Size = new Size(70, 20);
-            lblFolder.TabIndex = 10;
-            lblFolder.Text = "Directory";
+            this.lblFolder.AutoSize = true;
+            this.lblFolder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFolder.Image = ((System.Drawing.Image)(resources.GetObject("lblFolder.Image")));
+            this.lblFolder.Location = new System.Drawing.Point(19, 336);
+            this.lblFolder.Name = "lblFolder";
+            this.lblFolder.Size = new System.Drawing.Size(65, 15);
+            this.lblFolder.TabIndex = 10;
+            this.lblFolder.Text = "Directory";
             // 
             // ofd
             // 
-            ofd.FileName = "openFileDialog1";
+            this.ofd.FileName = "openFileDialog1";
             // 
             // Mail
             // 
-            Mail.BackgroundImage = (Image)resources.GetObject("Mail.BackgroundImage");
-            Mail.Image = (Image)resources.GetObject("Mail.Image");
-            Mail.Location = new Point(-7, 105);
-            Mail.Margin = new Padding(4);
-            Mail.Name = "Mail";
-            Mail.Size = new Size(114, 94);
-            Mail.SizeMode = PictureBoxSizeMode.StretchImage;
-            Mail.TabIndex = 12;
-            Mail.TabStop = false;
-            Mail.Click += Mail_Click;
+            this.Mail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mail.BackgroundImage")));
+            this.Mail.Image = ((System.Drawing.Image)(resources.GetObject("Mail.Image")));
+            this.Mail.Location = new System.Drawing.Point(-7, 105);
+            this.Mail.Margin = new System.Windows.Forms.Padding(4);
+            this.Mail.Name = "Mail";
+            this.Mail.Size = new System.Drawing.Size(114, 94);
+            this.Mail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Mail.TabIndex = 12;
+            this.Mail.TabStop = false;
+            this.Mail.Click += new System.EventHandler(this.Mail_Click);
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(32, 203);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(0, 20);
-            label2.TabIndex = 13;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(32, 203);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 15);
+            this.label2.TabIndex = 13;
             // 
             // lblMail
             // 
-            lblMail.AutoSize = true;
-            lblMail.ForeColor = SystemColors.ControlLightLight;
-            lblMail.Image = (Image)resources.GetObject("lblMail.Image");
-            lblMail.Location = new Point(29, 194);
-            lblMail.Margin = new Padding(4, 0, 4, 0);
-            lblMail.Name = "lblMail";
-            lblMail.Size = new Size(39, 20);
-            lblMail.TabIndex = 14;
-            lblMail.Text = "Mail";
+            this.lblMail.AutoSize = true;
+            this.lblMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMail.Image = ((System.Drawing.Image)(resources.GetObject("lblMail.Image")));
+            this.lblMail.Location = new System.Drawing.Point(29, 194);
+            this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(33, 15);
+            this.lblMail.TabIndex = 14;
+            this.lblMail.Text = "Mail";
             // 
             // boxStartMenu
             // 
-            boxStartMenu.Image = (Image)resources.GetObject("boxStartMenu.Image");
-            boxStartMenu.Location = new Point(-1, 525);
-            boxStartMenu.Name = "boxStartMenu";
-            boxStartMenu.Size = new Size(84, 27);
-            boxStartMenu.SizeMode = PictureBoxSizeMode.StretchImage;
-            boxStartMenu.TabIndex = 18;
-            boxStartMenu.TabStop = false;
-            boxStartMenu.Click += boxStartMenu_Click;
+            this.boxStartMenu.Image = ((System.Drawing.Image)(resources.GetObject("boxStartMenu.Image")));
+            this.boxStartMenu.Location = new System.Drawing.Point(-1, 525);
+            this.boxStartMenu.Name = "boxStartMenu";
+            this.boxStartMenu.Size = new System.Drawing.Size(84, 27);
+            this.boxStartMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxStartMenu.TabIndex = 18;
+            this.boxStartMenu.TabStop = false;
+            this.boxStartMenu.Click += new System.EventHandler(this.boxStartMenu_Click);
             // 
             // windows_bg
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(882, 553);
-            Controls.Add(boxStartMenu);
-            Controls.Add(lblMail);
-            Controls.Add(label2);
-            Controls.Add(Mail);
-            Controls.Add(lbl_boxQuiz);
-            Controls.Add(boxQuiz);
-            Controls.Add(lblFolder);
-            Controls.Add(boxFolder);
-            DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
-            IsMdiContainer = true;
-            Name = "windows_bg";
-            Text = "Window";
-            ((System.ComponentModel.ISupportInitialize)boxQuiz).EndInit();
-            ((System.ComponentModel.ISupportInitialize)boxFolder).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Mail).EndInit();
-            ((System.ComponentModel.ISupportInitialize)boxStartMenu).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(882, 553);
+            this.Controls.Add(this.boxStartMenu);
+            this.Controls.Add(this.lblMail);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Mail);
+            this.Controls.Add(this.lbl_boxQuiz);
+            this.Controls.Add(this.boxQuiz);
+            this.Controls.Add(this.lblFolder);
+            this.Controls.Add(this.boxFolder);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
+            this.Name = "windows_bg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Window";
+            ((System.ComponentModel.ISupportInitialize)(this.boxQuiz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxFolder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxStartMenu)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

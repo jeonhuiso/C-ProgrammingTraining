@@ -39,12 +39,6 @@ namespace EscapeFromHighschool
         {
           
             i = 0;
-            PrivateFontCollection fontCollection = new PrivateFontCollection();
-            fontCollection.AddFontFile("강원교육현옥샘.ttf");
-            foreach(Control c in this.Controls)
-            {
-                c.Font = new Font(fontCollection.Families[0], 17f);
-            }
         }
         // 대사 시작 순간 사용하세요
         public void ScriptParse(string jsonName,string token) {
@@ -52,6 +46,12 @@ namespace EscapeFromHighschool
                 return;
             try
             {
+                PrivateFontCollection fontCollection = new PrivateFontCollection();
+                fontCollection.AddFontFile("강원교육현옥샘.ttf");
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(fontCollection.Families[0], 17f);
+                }
                 string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\..\scriptList") + "\\" + jsonName + ".json");
                 ImageLink= Path.GetFullPath(@"..\..\..\..\Image");
                 job = JObject.Parse(@jsonData);

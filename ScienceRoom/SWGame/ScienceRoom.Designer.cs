@@ -303,7 +303,7 @@
             this.sci_phenol.ForeColor = System.Drawing.Color.Transparent;
             this.sci_phenol.Location = new System.Drawing.Point(587, 191);
             this.sci_phenol.Name = "sci_phenol";
-            this.sci_phenol.Size = new System.Drawing.Size(39, 82);
+            this.sci_phenol.Size = new System.Drawing.Size(47, 100);
             this.sci_phenol.TabIndex = 15;
             this.sci_phenol.Text = "      \r\n  \r\n  \r\n  \r\n  \r\n ";
             this.sci_phenol.UseVisualStyleBackColor = false;
@@ -443,6 +443,7 @@
             this.Controls.Add(this.sci_laptop);
             this.Controls.Add(this.note);
             this.Name = "science";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.locked_locker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locker_open)).EndInit();

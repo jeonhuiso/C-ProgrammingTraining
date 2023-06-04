@@ -83,6 +83,7 @@ namespace EscapeFromHighschool
             this.Controls.Add(this.CharactoPicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContextForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ContextForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtScript_KeyDown);

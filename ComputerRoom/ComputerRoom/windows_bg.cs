@@ -4,6 +4,9 @@ namespace ComputerRoom
 {
     public partial class windows_bg : Form
     {
+        public delegate void CompClear();
+        public event CompClear ComClearEvent;
+        FileOpen fo;
         public windows_bg()
         {
             InitializeComponent();
@@ -12,16 +15,19 @@ namespace ComputerRoom
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
-
+        void ComClear() {
+            ComClearEvent();
+        }
         private void boxFolder_Click(object sender, EventArgs e)
         {
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 if (ofd.SafeFileName == "noname")
                 {
-                    FileOpen fo = new FileOpen();
+                    fo = new FileOpen();
                     fo.Owner = this;
                     fo.Show();
+                    fo.ComClearEvent += new FileOpen.CompClear(ComClear);
                 }
                 else
                 {

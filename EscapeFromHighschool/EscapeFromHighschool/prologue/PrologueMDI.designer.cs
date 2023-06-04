@@ -122,6 +122,7 @@ namespace EscapeFromHighschool
             // btnAuditorium
             // 
             this.btnAuditorium.BackColor = System.Drawing.Color.Transparent;
+            this.btnAuditorium.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAuditorium.FlatAppearance.BorderSize = 0;
             this.btnAuditorium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAuditorium.Location = new System.Drawing.Point(697, 324);
@@ -134,6 +135,7 @@ namespace EscapeFromHighschool
             // btnComputer
             // 
             this.btnComputer.BackColor = System.Drawing.Color.Transparent;
+            this.btnComputer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnComputer.FlatAppearance.BorderSize = 0;
             this.btnComputer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComputer.Location = new System.Drawing.Point(22, 348);
@@ -146,6 +148,7 @@ namespace EscapeFromHighschool
             // btnScience
             // 
             this.btnScience.BackColor = System.Drawing.Color.Transparent;
+            this.btnScience.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnScience.FlatAppearance.BorderSize = 0;
             this.btnScience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScience.Location = new System.Drawing.Point(424, 306);
@@ -158,6 +161,7 @@ namespace EscapeFromHighschool
             // btnLibrary
             // 
             this.btnLibrary.BackColor = System.Drawing.Color.Transparent;
+            this.btnLibrary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLibrary.FlatAppearance.BorderSize = 0;
             this.btnLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibrary.Location = new System.Drawing.Point(31, 206);

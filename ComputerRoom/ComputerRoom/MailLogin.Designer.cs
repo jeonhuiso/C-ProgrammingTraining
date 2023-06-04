@@ -1,4 +1,6 @@
-﻿namespace ComputerRoom
+﻿using System.Drawing;
+
+namespace ComputerRoom
 {
     partial class MailLogin
     {
@@ -29,122 +31,130 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailLogin));
-            panel1 = new Panel();
-            lblHint = new Label();
-            lblLogin = new Label();
-            boxLoginLogo = new PictureBox();
-            btnLogin = new Button();
-            txtPassword = new TextBox();
-            txtID = new TextBox();
-            label2 = new Label();
-            label1 = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)boxLoginLogo).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHint = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.boxLoginLogo = new System.Windows.Forms.PictureBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.boxLoginLogo)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.Control;
-            panel1.Controls.Add(lblHint);
-            panel1.Controls.Add(lblLogin);
-            panel1.Controls.Add(boxLoginLogo);
-            panel1.Controls.Add(btnLogin);
-            panel1.Controls.Add(txtPassword);
-            panel1.Controls.Add(txtID);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(184, 92);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(355, 209);
-            panel1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.lblHint);
+            this.panel1.Controls.Add(this.lblLogin);
+            this.panel1.Controls.Add(this.boxLoginLogo);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.txtID);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(164, 69);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(316, 157);
+            this.panel1.TabIndex = 0;
             // 
             // lblHint
             // 
-            lblHint.AutoSize = true;
-            lblHint.ForeColor = Color.Red;
-            lblHint.Location = new Point(30, 150);
-            lblHint.Name = "lblHint";
-            lblHint.Size = new Size(82, 20);
-            lblHint.TabIndex = 7;
-            lblHint.Text = "힌트 : 점수";
-            lblHint.Visible = false;
+            this.lblHint.AutoSize = true;
+            this.lblHint.ForeColor = System.Drawing.Color.Red;
+            this.lblHint.Location = new System.Drawing.Point(27, 116);
+            this.lblHint.Name = "lblHint";
+            this.lblHint.Size = new System.Drawing.Size(82, 15);
+            this.lblHint.TabIndex = 7;
+            this.lblHint.Text = "힌트 : 점수";
+            this.lblHint.Visible = false;
             // 
             // lblLogin
             // 
-            lblLogin.AutoSize = true;
-            lblLogin.ForeColor = Color.Red;
-            lblLogin.Location = new Point(30, 179);
-            lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(64, 20);
-            lblLogin.TabIndex = 6;
-            lblLogin.Text = "lblLogin";
-            lblLogin.Visible = false;
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.ForeColor = System.Drawing.Color.Red;
+            this.lblLogin.Location = new System.Drawing.Point(27, 134);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(43, 15);
+            this.lblLogin.TabIndex = 6;
+            this.lblLogin.Text = "Login";
+            this.lblLogin.Visible = false;
             // 
             // boxLoginLogo
             // 
-            boxLoginLogo.Image = (Image)resources.GetObject("boxLoginLogo.Image");
-            boxLoginLogo.Location = new Point(120, 3);
-            boxLoginLogo.Name = "boxLoginLogo";
-            boxLoginLogo.Size = new Size(125, 62);
-            boxLoginLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            boxLoginLogo.TabIndex = 5;
-            boxLoginLogo.TabStop = false;
+            this.boxLoginLogo.Image = ((System.Drawing.Image)(resources.GetObject("boxLoginLogo.Image")));
+            this.boxLoginLogo.Location = new System.Drawing.Point(107, 2);
+            this.boxLoginLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boxLoginLogo.Name = "boxLoginLogo";
+            this.boxLoginLogo.Size = new System.Drawing.Size(111, 46);
+            this.boxLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxLoginLogo.TabIndex = 5;
+            this.boxLoginLogo.TabStop = false;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(224, 141);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(94, 29);
-            btnLogin.TabIndex = 4;
-            btnLogin.Text = "Log In";
-            btnLogin.UseVisualStyleBackColor = true;
-            btnLogin.Click += btnLogin_Click;
+            this.btnLogin.Location = new System.Drawing.Point(199, 109);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(89, 26);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Log In";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(120, 108);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(198, 27);
-            txtPassword.TabIndex = 3;
+            this.txtPassword.Location = new System.Drawing.Point(107, 81);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(176, 25);
+            this.txtPassword.TabIndex = 3;
             // 
             // txtID
             // 
-            txtID.Location = new Point(120, 71);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(198, 27);
-            txtID.TabIndex = 2;
+            this.txtID.Location = new System.Drawing.Point(107, 53);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(176, 25);
+            this.txtID.TabIndex = 2;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(30, 115);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Password";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Password";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(30, 74);
-            label1.Name = "label1";
-            label1.Size = new Size(24, 20);
-            label1.TabIndex = 0;
-            label1.Text = "ID";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
             // 
             // MailLogin
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonShadow;
-            ClientSize = new Size(732, 403);
-            Controls.Add(panel1);
-            Name = "MailLogin";
-            Text = "Mail";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)boxLoginLogo).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(651, 302);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "MailLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Mail";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.boxLoginLogo)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

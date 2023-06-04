@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>EscapeFromHighschool</RootNamespace>
     <AssemblyName>EscapeFromHighschool</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -159,9 +160,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StageComputer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\마지막문닫힘.png" />
   </ItemGroup>
@@ -169,6 +168,10 @@
     <ProjectReference Include="..\..\auditorium\auditorium.csproj">
       <Project>{77266c2b-45e5-4a74-a445-a8727430747d}</Project>
       <Name>auditorium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ComputerRoom\ComputerRoom\ComputerRoom.csproj">
+      <Project>{6cf0fd3f-a3d3-4b27-bbbf-91be616207c9}</Project>
+      <Name>ComputerRoom</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ScienceRoom\SWGame\SWGame.csproj">
       <Project>{b7e65ca4-eb55-48f0-a8c8-7a154b218047}</Project>

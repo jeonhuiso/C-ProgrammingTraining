@@ -15,6 +15,14 @@ namespace SWGame
 {
     public partial class science : Form
     {
+        public delegate void LaptopOpen();
+        public event LaptopOpen LaptopOpenEvent;
+        public delegate void LockerOpen();
+        public event LockerOpen LockerOpenEvent;
+        public delegate void LockerBoom();
+        public event LockerBoom LockerBoomEvent;
+        public delegate void NaClick();
+        public event NaClick NaClickEvent;
         public science()
         {
             InitializeComponent();
@@ -175,8 +183,10 @@ namespace SWGame
         {
             sci_screen screen = new sci_screen(sci_ans);
             screen.Owner = this;
+            var a = screen.ShowDialog();
+            //Event()
             //정답 여부 전달받기
-            if (screen.ShowDialog() == DialogResult.OK) {
+            if (a == DialogResult.OK) {
                 screen.sci_ans = sci_ans;
             }
 
@@ -188,7 +198,7 @@ namespace SWGame
                 sci_1.Visible = false;
                 Na.Visible = true;
                 Na.SendToBack();
-
+                LaptopOpenEvent();
                 MessageBox.Show("이제 사물함을 열 수 있다.");
             }
         }
@@ -206,6 +216,7 @@ namespace SWGame
                     //수조이벤트, 수조에 열쇠를 보고 손을 살짝 담갔다가 놀라는 대사
                     locker_open.Visible = true;
                     lock_event = 1;
+                    LockerOpenEvent();
                 }
                 else if (Na_check == false && lock_event == 1)
                 {
@@ -215,6 +226,7 @@ namespace SWGame
                 else if (Na_check == true && lock_event == 1)
                 {
                     //수조가 터지고 열쇠를 획득
+                    LockerBoomEvent();
                     broken_locker.Visible = true;
                     lock_event = 2;
                 }
@@ -245,6 +257,7 @@ namespace SWGame
                 {
                     MessageBox.Show("열쇠로 문을 열고 밖으로 나갔다.");
                     scienceRoomclearEvent("science");
+                    this.Dispose();
                     //clear
                 }
             }
@@ -312,6 +325,7 @@ namespace SWGame
             if(Na_event == false)
             {
                 MessageBox.Show("페놀프탈레인 용액이 반응하고 불꽃색을 생각하면 아마 나트륨 덩어리인 것 같다.");
+                NaClickEvent();
                 Na_event = true;
             }
 

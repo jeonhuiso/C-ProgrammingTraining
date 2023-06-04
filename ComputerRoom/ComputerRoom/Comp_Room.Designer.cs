@@ -1,4 +1,6 @@
-﻿namespace ComputerRoom
+﻿using System.Drawing;
+
+namespace ComputerRoom
 {
     partial class Comp_Room
     {
@@ -29,43 +31,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comp_Room));
-            btnComputer = new Button();
-            btnGoBack = new Button();
-            SuspendLayout();
+            this.btnComputer = new System.Windows.Forms.Button();
+            this.btnGoBack = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // btnComputer
             // 
-            btnComputer.BackgroundImage = (Image)resources.GetObject("btnComputer.BackgroundImage");
-            btnComputer.FlatStyle = FlatStyle.Flat;
-            btnComputer.Image = (Image)resources.GetObject("btnComputer.Image");
-            btnComputer.Location = new Point(248, 208);
-            btnComputer.Name = "btnComputer";
-            btnComputer.Size = new Size(135, 82);
-            btnComputer.TabIndex = 0;
-            btnComputer.UseVisualStyleBackColor = true;
-            btnComputer.Click += btnComputer_Click;
+            this.btnComputer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnComputer.BackgroundImage")));
+            this.btnComputer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComputer.Image = ((System.Drawing.Image)(resources.GetObject("btnComputer.Image")));
+            this.btnComputer.Location = new System.Drawing.Point(248, 208);
+            this.btnComputer.Name = "btnComputer";
+            this.btnComputer.Size = new System.Drawing.Size(135, 82);
+            this.btnComputer.TabIndex = 0;
+            this.btnComputer.UseVisualStyleBackColor = true;
+            this.btnComputer.Click += new System.EventHandler(this.btnComputer_Click);
             // 
             // btnGoBack
             // 
-            btnGoBack.Location = new Point(273, 502);
-            btnGoBack.Name = "btnGoBack";
-            btnGoBack.Size = new Size(94, 39);
-            btnGoBack.TabIndex = 1;
-            btnGoBack.Text = "나가기";
-            btnGoBack.UseVisualStyleBackColor = true;
-            btnGoBack.Click += btnGoBack_Click;
+            this.btnGoBack.Location = new System.Drawing.Point(273, 502);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(94, 39);
+            this.btnGoBack.TabIndex = 1;
+            this.btnGoBack.Text = "나가기";
+            this.btnGoBack.UseVisualStyleBackColor = true;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
             // Comp_Room
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(882, 553);
-            Controls.Add(btnGoBack);
-            Controls.Add(btnComputer);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "Comp_Room";
-            Text = "Computer Room";
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(882, 553);
+            this.Controls.Add(this.btnGoBack);
+            this.Controls.Add(this.btnComputer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Comp_Room";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Computer Room";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

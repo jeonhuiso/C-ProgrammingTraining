@@ -26,12 +26,24 @@ namespace EscapeFromHighschool
         public void CommentEnd() {
             endingMain.Enabled = true;
         }
+        public void NornalEnding() {
+            contextForm.EndCommentEvent += new ContextForm.EndComment(() => { endingMain.EndingButtonShow(); });
+            contextForm.ScriptParse("NormalEnding", "ending");
+
+        }
+        public void HiddenEnding() {
+            contextForm.EndCommentEvent += new ContextForm.EndComment(() => { endingMain.EndingButtonShow(); });
+            contextForm.ScriptParse("HiddenEnding", "ending");
+
+        }
         private void EndingMDI_Load(object sender, EventArgs e)
         {
             endingMain = new EndingMain();
             endingMain.MdiParent = this;
             endingMain.Location = new Point(0, 0);
             endingMain.Show();
+            endingMain.HiddenEndingEvent += new EndingMain.HiddenEnding(HiddenEnding);
+            endingMain.NormalEndingEvent += new EndingMain.NormalEnding(NornalEnding);
             contextForm = new ContextForm();
             contextForm.MdiParent = this;
             contextForm.Show();
