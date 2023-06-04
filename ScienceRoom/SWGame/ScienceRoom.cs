@@ -339,5 +339,17 @@ namespace SWGame
                 Na.FlatAppearance.BorderSize = 0;
             }
         }
+
+        //note_img 클릭 이벤트(노트 닫기)
+        private void note_Click(object sender, EventArgs e)
+        {
+            note_img.Visible = false;
+        }
+
+        //note 클릭 이벤트(노트 열기)
+        private void note_Click_1(object sender, EventArgs e)
+        {
+            note_img.Visible = true;
+        }
     }
 }
