@@ -126,5 +126,8 @@
   <ItemGroup>
     <None Include="image\페놀용액.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\룰.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
