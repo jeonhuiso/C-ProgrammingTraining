@@ -15,8 +15,8 @@ namespace auditorium
         Button[,] user_clock; // 유저가 사용하는 시계
         Button[,] make_clock; // 퍼즐의 성공여부를 위해 사용하는 왼쪽 시계
         private int level = 0; // 단계 확인
-        private int game_start_x = 43; // 왼쪽 시계의 시작위치 x
-        private int game_start_y = 90; // 왼쪽 시계의 시작위치 y
+        private int game_start_x = 60; // 왼쪽 시계의 시작위치 x
+        private int game_start_y = 130; // 왼쪽 시계의 시작위치 y
         private int time_or_color = 0; // 시간과 색상을 구별
         private int game_ex_num = 0; // 게임 설명 페이지 확인
         int current_time; // 현재 시간
@@ -38,7 +38,7 @@ namespace auditorium
             make_clock = new Button[4 + level, 4 + level];
             user_clock = new Button[4 + level, 4 + level];
             make_game(make_clock, 4 + level, 0, 0);
-            make_game(user_clock, 4 + level, 260, 1);
+            make_game(user_clock, 4 + level, 375, 1);
             make_clock[0, 0].Text = "확인";
             make_clock[0, 0].Enabled = true;
             make_clock[0, 0].Click += new EventHandler(make_check_btn);
@@ -50,7 +50,7 @@ namespace auditorium
 
         private void make_game(Button[,] clock, int num, int wid, int make_user) // make_clock = 0, user_clock = 1 으로 시계를 2개 생성
         {
-            int btn_size = 250 / num;
+            int btn_size = 350 / num;
             for (int i = 0; i < num; i++)
             {
                 for (int j = 0; j < num; j++)

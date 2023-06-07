@@ -52,10 +52,10 @@ namespace auditorium
                 for (int j = 0; j < size; j++)
                 {
                     goal_button[i, j] = new Button();
-                    goal_button[i, j].Width = 20;
-                    goal_button[i, j].Height = 20;
-                    goal_button[i, j].Top = 80 + i * 20;
-                    goal_button[i, j].Left = 52 + j * 20;
+                    goal_button[i, j].Width = 30;
+                    goal_button[i, j].Height = 30;
+                    goal_button[i, j].Top = 100 + i * 30;
+                    goal_button[i, j].Left = 75 + j * 30;
                     goal_button[i, j].Enabled = false;
                     if (small_goal[i, j] == 0)
                     {
@@ -73,13 +73,13 @@ namespace auditorium
                     this.Controls.Add(goal_button[i, j]);
                 }
             }
-            root_top = 60;
-            root_left = 210;
+            root_top = 100;
+            root_left = 300;
             use_button_num = 0;
             last_current_i = 0;
             last_current_j = 0;
             root_button = new Button[size, size]; 
-            int use_size = 300 / size;
+            int use_size = 450 / size;
             for (int i = 0; i < size; i++) // 사용자의 버튼을 생성하고, 이벤트 추가
             {
                 for (int j = 0; j < size; j++)
@@ -114,14 +114,14 @@ namespace auditorium
             btn_second_num.Text = second_num.ToString();
             btn_third_num.Text = third_num.ToString();
 
-            first_make_other_btn(btn_first_num, use_size, 200, 100, 0);
-            first_make_other_btn(btn_second_num, use_size, 200, 100, 1);
-            first_make_other_btn(btn_third_num, use_size, 200, 100, 2);
+            first_make_other_btn(btn_first_num, use_size, 275, 150, 0);
+            first_make_other_btn(btn_second_num, use_size, 275, 150, 1);
+            first_make_other_btn(btn_third_num, use_size, 275, 150, 2);
 
             use_button = new Button[first_num + second_num + third_num];
-            make_other_btn(use_size, 200, 100, 0, 0, first_num);
-            make_other_btn(use_size, 200, 100, 1, first_num, first_num + second_num);
-            make_other_btn(use_size, 200, 100, 2, first_num + second_num, first_num + second_num + third_num);
+            make_other_btn(use_size, 275, 150, 0, 0, first_num);
+            make_other_btn(use_size, 275, 150, 1, first_num, first_num + second_num);
+            make_other_btn(use_size, 275, 150, 2, first_num + second_num, first_num + second_num + third_num);
         }
 
         private void first_make_other_btn(Button btn, int size, int location_i, int location_j, int color)
