@@ -68,10 +68,6 @@ namespace auditorium
                 for (int j = 0; j < 25; j++)
                 {
                     pic[i, j] = new PictureBox();
-                    pic[i, j].Width = 20;
-                    pic[i, j].Height = 20;
-                    pic[i, j].Left = 20 * j + 45;
-                    pic[i, j].Top = 20 * i + 55;
                     this.Controls.Add(pic[i, j]);
                 }
             }
@@ -87,7 +83,7 @@ namespace auditorium
             {
                 if (open_ch == 0)
                 {
-                    con.ScriptParse("maze_discovery_enemy", "discovery");
+                    con.ScriptParse("maze_discovery_enemy", "discovery"); // 적이 나를 발견시 context
                     con.print();
                 }
             }
@@ -95,8 +91,8 @@ namespace auditorium
             {
                 if (open_ch == 0)
                 {
-                   // con.ScriptParse("maze_nomal", "nomal");
-                   // con.print();
+                    con.ScriptParse("maze_nomal", "nomal"); // 아무 일도 없는 경우 context
+                    con.print();
                 }
             }
         }
@@ -336,10 +332,10 @@ namespace auditorium
             {
                 for (int j = 0; j < 25; j++)
                 {
-                    pic[i, j].Width = 20;
-                    pic[i, j].Height = 20;
-                    pic[i, j].Left = 20 * j + 45;
-                    pic[i, j].Top = 20 * i + 55;
+                    pic[i, j].Width = 30;
+                    pic[i, j].Height = 30;
+                    pic[i, j].Left = 30 * j + 49;
+                    pic[i, j].Top = 30 * i + 75;
                     pic[i, j].BackColor = SystemColors.Control;
                     pic[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
                     if (maze_array[i, j] == 0) // 벽은 일반 길로 표현

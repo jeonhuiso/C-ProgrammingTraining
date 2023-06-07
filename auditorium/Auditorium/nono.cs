@@ -15,8 +15,8 @@ namespace auditorium
         private Button[,] nono_btn; // 퍼즐을 풀때 사용하는 버튼
         private int[,] nono_check_array; // 퍼즐에 대한 정보를 저장하는 배열
         private int level = 0; // 퍼즐 단계 확인을 위한 정수
-        private int s_location_x = 150; // 퍼즐의 시작 위치 x축
-        private int s_location_y = 48; // 퍼즐의 시작 위치 y축
+        private int s_location_x = 190; // 퍼즐의 시작 위치 x축
+        private int s_location_y = 80; // 퍼즐의 시작 위치 y축
         private int game_ex_num = 0; // 게임 설명시 페이지를 확인하기 위한 정수
         int current_time; // 현재 시간
 
@@ -43,7 +43,7 @@ namespace auditorium
         private void make_game(int size) // 랜덤을 이용해 눌러야 하는 버튼을 생성
         {
             Random rand = new Random();
-            int use_size = 300 / size; // 버튼 크기 지정
+            int use_size = 450 / size; // 버튼 크기 지정
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
