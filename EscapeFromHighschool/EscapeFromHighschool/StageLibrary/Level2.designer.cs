@@ -40,8 +40,8 @@ namespace EscapeFromHighschool
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBookExit = new System.Windows.Forms.Button();
             this.lbstory = new System.Windows.Forms.Label();
+            this.btnBookExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.book6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book4)).BeginInit();
@@ -180,6 +180,18 @@ namespace EscapeFromHighschool
             this.panel1.TabIndex = 2;
             this.panel1.Visible = false;
             // 
+            // lbstory
+            // 
+            this.lbstory.AutoEllipsis = true;
+            this.lbstory.AutoSize = true;
+            this.lbstory.Location = new System.Drawing.Point(51, 63);
+            this.lbstory.Name = "lbstory";
+            this.lbstory.Size = new System.Drawing.Size(372, 120);
+            this.lbstory.TabIndex = 1;
+            this.lbstory.Text = "진실에 다가가기 위한 마지막 답변은\r\n내 일생과 관련이 있다.\r\n나는 나의 것을 돌려받으려 했을 뿐이지만\r\n그것은 백의 마법사에게 좋은 명분만을 " +
+    "줬을 뿐이었다.\r\n내 일생의 마지막은 결국   으로 마감했다.\r\n제자여 너가 내 한을 풀어주고\r\n나보다 더 앞으로 나아가길 바란다.\r\n-흑의 마" +
+    "법사";
+            // 
             // btnBookExit
             // 
             this.btnBookExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -192,19 +204,6 @@ namespace EscapeFromHighschool
             this.btnBookExit.Text = "나가기";
             this.btnBookExit.UseVisualStyleBackColor = true;
             this.btnBookExit.Click += new System.EventHandler(this.btnBookExit_Click);
-            // 
-            // lbstory
-            // 
-            this.lbstory.AutoEllipsis = true;
-            this.lbstory.AutoSize = true;
-            this.lbstory.Location = new System.Drawing.Point(51, 63);
-            this.lbstory.Name = "lbstory";
-            this.lbstory.Size = new System.Drawing.Size(372, 120);
-            this.lbstory.TabIndex = 1;
-            this.lbstory.Text = "진실에 다가가기 위한 마지막 답변은\r\n내 일생과 관련이 있다.\r\n나는 나의 것을 돌려받으려 했을 뿐이지만\r\n그것은 백의 마법사에게 좋은 명분만을 " +
-    "줬을 뿐이었다.\r\n내 일생의 마지막은 결국   으로 마감했다.\r\n제자여 너가 내 한을 풀어주고\r\n나보다 더 앞으로 나아가길 바란다.\r\n-흑의 마" +
-    "법사";
-            this.lbstory.Click += new System.EventHandler(this.label1_Click);
             // 
             // Level2
             // 

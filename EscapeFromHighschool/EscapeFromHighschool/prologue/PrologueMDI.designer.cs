@@ -55,7 +55,6 @@ namespace EscapeFromHighschool
             this.StartMain.Name = "StartMain";
             this.StartMain.Size = new System.Drawing.Size(900, 800);
             this.StartMain.TabIndex = 3;
-            this.StartMain.Paint += new System.Windows.Forms.PaintEventHandler(this.StartMain_Paint);
             // 
             // btnExit
             // 
@@ -117,7 +116,6 @@ namespace EscapeFromHighschool
             this.MainMenu.Size = new System.Drawing.Size(900, 600);
             this.MainMenu.TabIndex = 3;
             this.MainMenu.Visible = false;
-            this.MainMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.MainMenu_Paint);
             // 
             // btnAuditorium
             // 
@@ -125,7 +123,7 @@ namespace EscapeFromHighschool
             this.btnAuditorium.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAuditorium.FlatAppearance.BorderSize = 0;
             this.btnAuditorium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAuditorium.Location = new System.Drawing.Point(697, 324);
+            this.btnAuditorium.Location = new System.Drawing.Point(707, 321);
             this.btnAuditorium.Name = "btnAuditorium";
             this.btnAuditorium.Size = new System.Drawing.Size(181, 175);
             this.btnAuditorium.TabIndex = 0;

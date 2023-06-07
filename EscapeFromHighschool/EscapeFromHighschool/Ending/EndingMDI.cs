@@ -18,19 +18,22 @@ namespace EscapeFromHighschool
         }
         EndingMain endingMain;
         ContextForm contextForm;
-
+        //대사 시작시 실행되는 이벤트 핸들러
         public void commentStart() {
             endingMain.Enabled = false; 
             contextForm.Enabled = true;
         }
+        //대사 종료시 실행되는 이벤트 핸들러
         public void CommentEnd() {
             endingMain.Enabled = true;
         }
+        //노말엔딩 실행 이벤트핸들러 추가 메서드
         public void NornalEnding() {
             contextForm.EndCommentEvent += new ContextForm.EndComment(() => { endingMain.EndingButtonShow(); });
             contextForm.ScriptParse("NormalEnding", "ending");
 
         }
+        //히든엔딩 실행 이벤트핸들러 추가 메서드
         public void HiddenEnding() {
             contextForm.EndCommentEvent += new ContextForm.EndComment(() => { endingMain.EndingButtonShow(); });
             contextForm.ScriptParse("HiddenEnding", "ending");

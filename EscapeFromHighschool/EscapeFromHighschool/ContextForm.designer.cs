@@ -70,7 +70,6 @@ namespace EscapeFromHighschool
             this.txtComment.ReadOnly = true;
             this.txtComment.Size = new System.Drawing.Size(742, 172);
             this.txtComment.TabIndex = 3;
-            this.txtComment.TextChanged += new System.EventHandler(this.txtComment_TextChanged);
             this.txtComment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtScript_KeyDown);
             // 
             // ContextForm

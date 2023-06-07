@@ -40,6 +40,7 @@ namespace EscapeFromHighschool
           
             i = 0;
         }
+        //json파일 탐색 후 대사 출력해주는 메서드
         // 대사 시작 순간 사용하세요
         public void ScriptParse(string jsonName,string token) {
             if (txtSpeaker.Text != "" && txtComment.Text != "")
@@ -52,15 +53,18 @@ namespace EscapeFromHighschool
                 {
                     c.Font = new Font(fontCollection.Families[0], 17f);
                 }
+
                 string jsonData = File.ReadAllText(Path.GetFullPath(@"..\..\..\..\scriptList") + "\\" + jsonName + ".json");
                 ImageLink= Path.GetFullPath(@"..\..\..\..\Image");
                 job = JObject.Parse(@jsonData);
                 jtkn = job[token];
-            foreach (JToken data in jtkn) {
-                SpeakerList.Add((string)data["Speaker"]);
-                CommentList.Add((string)data["Comment"]);
-                ImageList.Add((string)data["Image"]);
-            }
+
+                foreach (JToken data in jtkn) {
+                    SpeakerList.Add((string)data["Speaker"]);
+                    CommentList.Add((string)data["Comment"]);
+                    ImageList.Add((string)data["Image"]);
+                }
+
                 if (SpeakerList.Count() != 0) {
                     txtComment.Text = CommentList[0];
                     txtSpeaker.Text = SpeakerList[0];
@@ -75,6 +79,7 @@ namespace EscapeFromHighschool
             }
             
         }
+        //다음 대사로 넘기기 위한 메서드
         public void ShowComment(KeyEventArgs e) {
             if (e.KeyCode == Keys.Space|| e.KeyCode == Keys.Enter)
             {
@@ -101,16 +106,9 @@ namespace EscapeFromHighschool
                 }
             }
         }
-
         private void txtScript_KeyDown(object sender, KeyEventArgs e)
         {
             ShowComment(e);
-
-        }
-
-        private void txtComment_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

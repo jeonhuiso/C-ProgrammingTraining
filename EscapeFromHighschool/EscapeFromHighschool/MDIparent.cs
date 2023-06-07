@@ -22,17 +22,24 @@ namespace EscapeFromHighschool
         {
             InitializeComponent();
         }
+        //prologue form
+        PrologueMDI prologueMDI;
+        //각 스테이지 form
         auditorium_MDI auditorium;
         science sciencRoom;
-        PrologueMDI prologueMDI;
         LibraryStage libraryStage;
         Comp_Room CompRoom;
+        //엔딩 form
         EndingMDI endingMDI;
+        //대사창 form
         ContextForm contextform;
+        //스테이지 확인용 string
         string[] stageMain = new string[4] { "library", "auditorium", "science", "computer" };
+        //각 스테이지 클리어 여부를 나타내는 bool자료형 배열
         bool[] stageClearCheck = new bool[4] { false, false, false, false };  
         private void MDIparent_Load(object sender, EventArgs e)
         {
+            //각 폼 객체 생성
             prologueMDI = new PrologueMDI();
             prologueMDI.Show();
             prologueMDI.LibraryStageOpenEvent += new PrologueMDI.LibraryStageOpen(libraryStageOpen);
@@ -41,6 +48,7 @@ namespace EscapeFromHighschool
                prologueMDI.ComputerStageOpenEvent += new PrologueMDI.ComputerStageOpen(CompOpen);
 
         }
+        //방 클리어 확인용 메소드
         private void RoomClearCheck(string n) {
             for (int i = 0; i < 4; i++) {
                 if (n == stageMain[i])
@@ -66,7 +74,7 @@ namespace EscapeFromHighschool
                     prologueMDI.BtnEnable("computer");
                 }
             }
-
+            //모든 스테이지 클리어시 엔딩용 form 생성
             if (AllClearCheck()) {
                 prologueMDI.Dispose();
                 endingMDI = new EndingMDI();
@@ -75,9 +83,11 @@ namespace EscapeFromHighschool
            // MessageBox.Show("clear :"+ stageClearCheck[0].ToString()+ stageClearCheck[1].ToString()+stageClearCheck[2].ToString()+stageClearCheck[3].ToString());
 
         }
+        //이벤트 핸들러
         void contextFormClosing(object sender, FormClosedEventArgs e) {
             contextform.Dispose();
         }
+        //컴퓨터실 스테이지 클릭시 생성
         void CompOpen()
         {
             CompRoom =new Comp_Room();
@@ -89,13 +99,14 @@ namespace EscapeFromHighschool
             CompRoom.PCClickEvent += new Comp_Room.PCClick(() => contextform.ScriptParse("CompOn", "CompRoom"));
             
             contextform = new ContextForm();
-            contextform.Location = new Point(CompRoom.DesktopLocation.X, CompRoom.DesktopLocation.Y + 550);
+            contextform.Location = new Point(CompRoom.DesktopLocation.X, CompRoom.DesktopLocation.Y + 600);
             contextform.StartCommentEvent += new ContextForm.StartComment(() => CompRoom.Enabled = false);
             contextform.EndCommentEvent += new ContextForm.EndComment(() => CompRoom.Enabled = true);
             contextform.Show();
             contextform.ScriptParse("CompRoomStart","CompRoom");
             
         }
+        //과학실 스테이지 클릭시 생성
         void ScienceOpen()
         {
             sciencRoom = new science();
@@ -115,12 +126,14 @@ namespace EscapeFromHighschool
             contextform.ScriptParse("scienceStart", "science");
             contextform.Show();
         }
+        //도서관 스테이지 클릭시 생성
         void libraryStageOpen()
         {
             libraryStage = new LibraryStage();
             libraryStage.Show();
             libraryStage.libraryStageClearEvent += new LibraryStage.LibraryStageClear(RoomClearCheck);
         }
+        //강당 클릭시 생성
         void AuditoriumOpen()
         {
             auditorium = new auditorium.auditorium_MDI();
@@ -128,6 +141,7 @@ namespace EscapeFromHighschool
             auditorium.Location = prologueMDI.DesktopLocation;
             auditorium.AuditoriumClearEvent += new auditorium_MDI.AuditoriumClear(RoomClearCheck);
             auditorium.FormClosed += new FormClosedEventHandler(contextFormClosing);
+            
             auditorium.AuditoriumClearEvent += new auditorium_MDI.AuditoriumClear(s => {contextform.ScriptParse("Audiend", "Audi"); });
             contextform = new ContextForm();
             contextform.StartCommentEvent += new ContextForm.StartComment(() => { auditorium.Enabled = false;contextform.Visible = true; });
@@ -136,17 +150,17 @@ namespace EscapeFromHighschool
             contextform.ScriptParse("AudiStart", "Audi");
             contextform.Show();
         }
-
+        //모든 스테이지가 클리어 되었는지 확인시켜주는 메소드
         bool AllClearCheck() {
             if (stageClearCheck[0] && stageClearCheck[1] && stageClearCheck[2] && stageClearCheck[3])
                 return true;
             else
                 return false;
         }
+        //모든 form을 바로 종료시키기 위한 버튼 이벤트 핸들러
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
-
         }
     }
 }

@@ -14,6 +14,7 @@ namespace EscapeFromHighschool
 {
     public partial class PrologueMDI : Form
     {
+        //각 스테이지 실행시 호출되는 이벤트
         public delegate void LibraryStageOpen();
         public event LibraryStageOpen LibraryStageOpenEvent;
         public delegate void AuditoriumStageOpen();
@@ -22,19 +23,23 @@ namespace EscapeFromHighschool
         public event ComputerStageOpen ComputerStageOpenEvent;
         public delegate void ScienceStageOpen();
         public event ScienceStageOpen ScienceStageOpenEvent;
+
+        const string address = "..\\..\\..\\..\\Image\\";
+        ContextForm contextForm;
+        int page = 0;
         public PrologueMDI()
         {
             InitializeComponent();
         }
-        const string address = "..\\..\\..\\..\\Image\\";
-        ContextForm contextForm;
-        int page = 0;
+
+        //프롤로그 실행시 사용하는 이벤트핸들러
         void StartCommentMain() {
             contextForm.Enabled = true;
         }
         void MainMenuLoad() {
 
         }
+        //프롤로그 실행 메서드
         void EndCommentMain()
         {
             switch (++page) {
@@ -75,16 +80,18 @@ namespace EscapeFromHighschool
             contextForm.EndCommentEvent += new ContextForm.EndComment(EndCommentMain);
 
         }
+        //해당 스테이지 클리어시 스테이지 진입버튼 사용 불가하게 하는 메서드
         public void BtnEnable(string what) { 
-            if (what == "library")
+           /* if (what == "library")
             {
                 btnLibrary.Enabled = false;
                 btnLibrary.BackgroundImage = Image.FromFile(address + "x.png");
             }
             if (what == "auditorium")
             {
-                btnAuditorium.Enabled = false;
-                btnAuditorium.BackgroundImage = Image.FromFile(address + "x.png");
+                    btnAuditorium.Enabled = false;
+                    btnAuditorium.BackgroundImage = Image.FromFile(address + "x.png");
+            
             }
             if (what == "computer")
             {
@@ -95,29 +102,28 @@ namespace EscapeFromHighschool
             {
                 btnScience.Enabled = false;
                 btnScience.BackgroundImage = Image.FromFile(address + "x.png");
-            }
+            }*/
 
         }
+        //시작화면에서 게임시작 버튼 클릭시 실행 이벤트핸들러
         private void btnStart_Click(object sender, EventArgs e)
         {
             StartMain.Visible = false;
             contextForm.ScriptParse("prologue1", "prologue");
         }
 
+        //시작 화면에서 나가기 버튼 클릭시 실행 이벤트핸들러
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void StartMain_Paint(object sender, PaintEventArgs e)
-        {
-
         }
         //메인메뉴 보이게하기
         public void ShowMainMenu()
         {
             MainMenu.Visible = true;
         }
+
+        //각 스테이지 버튼 클릭시 실행 이벤트핸들러
         private void btnLibrary_Click(object sender, EventArgs e)
         {
             LibraryStageOpenEvent();
@@ -126,10 +132,6 @@ namespace EscapeFromHighschool
         private void button3_Click(object sender, EventArgs e)
         {
             ComputerStageOpenEvent();
-        }
-
-        private void MainMenu_Paint(object sender, PaintEventArgs e)
-        {
         }
 
         private void btnAuditorium_Click(object sender, EventArgs e)
