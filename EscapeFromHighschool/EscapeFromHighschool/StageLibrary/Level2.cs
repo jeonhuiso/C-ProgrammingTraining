@@ -18,10 +18,13 @@ namespace EscapeFromHighschool
         {
             InitializeComponent();
         }
+        //level2 클리어시 이벤트
         public delegate void sendStage2Clear(bool isclear);
         public event sendStage2Clear sendStage2Event;
+        //level2 실행시 이벤트
         public delegate void Level2Load();
         public event Level2Load level2LoadEvent;
+
         List<PictureBox> bookList = new List<PictureBox>(new PictureBox[6]);
         List<bool> bookchecked = new List<bool>(6){true,false,false,true,false,false};
         
@@ -46,6 +49,8 @@ namespace EscapeFromHighschool
             BookChange();
 
         }
+
+        //책 이미지 변경 메서드
         void BookChange() {
             for (int i = 0; i < bookchecked.Count; i++)
             {
@@ -55,14 +60,17 @@ namespace EscapeFromHighschool
                     bookList[i].BackgroundImage = imageList1.Images[1];
             }
         }
+        //책에 마우스 커서 진입시 테두리 켜지는 메서드
         private void bookMouseEnter(object sender, EventArgs e)
         {
             ((PictureBox)sender).BorderStyle = BorderStyle.FixedSingle;
         }
+        //책에 마우스 커서 이탈시 테두리 켜지는 메서드
         private void bookMouseLeave(object sender, EventArgs e)
         {
             ((PictureBox)sender).BorderStyle = BorderStyle.None;
         }
+        //책 클릭시 관련된 책들이 들어가거나 나오는 메서드
         private void bookClick(object sender, MouseEventArgs e)
         {
             for(int i=0;i<bookList.Count;i++)
@@ -81,12 +89,13 @@ namespace EscapeFromHighschool
                 }
             }
             BookChange();
+            //모든 책이 전부 들어갈시 클리어 이벤트 실행
             if(bookchecked[0]&& bookchecked[1] && bookchecked[2] && bookchecked[3] && bookchecked[4] && bookchecked[5])
             {
                 sendStage2Event(true);
             }
         }
-
+        //visible이 바뀌면 생성 이벤트 실행
         private void Level2_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible == true)
@@ -95,20 +104,15 @@ namespace EscapeFromHighschool
                 level2LoadEvent();
             }
         }
-
+        //히든 엔딩용 암호를 얻기위한 책 클릭시
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
         }
-
+        //책을 다 보았을시
         private void btnBookExit_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

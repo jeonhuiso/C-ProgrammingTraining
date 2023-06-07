@@ -12,8 +12,10 @@ namespace EscapeFromHighschool
 {
     public partial class EndingMain : Form
     {
+        //노말엔딩 이벤트 
         public delegate void NormalEnding();
         public event NormalEnding NormalEndingEvent;
+        //히든엔딩 이벤트
         public delegate void HiddenEnding();
         public event HiddenEnding HiddenEndingEvent;
         public EndingMain()
@@ -27,6 +29,7 @@ namespace EscapeFromHighschool
         bool isMat = false;
         string password = "";
         int passwordCount = 0;
+        //엔딩 끝나고 종료버튼 보여주는 메서드
         public void EndingButtonShow()
         {
             label1.Visible = true;
@@ -123,11 +126,7 @@ namespace EscapeFromHighschool
         private void passwordShowChange(TextBox changeWhat) {
             changeWhat.Text = password;
         }
-
-        private void pbdoor_Click(object sender, EventArgs e)
-        {
-
-        }
+        //패스워드 입력창에서 닫기 버튼 클릭시 실행 이벤트핸들러
         private void BtnClose(object sender,EventArgs e)
         {
             ((Control)sender).Parent.Visible = false;
@@ -137,7 +136,7 @@ namespace EscapeFromHighschool
             keyGet[0] = false;
             keyGet[1] = false;
         }
-
+        //패스워드 backspace버튼 클릭시
         private void lockDel_Click(object sender, EventArgs e)
         {
             if (password.Length <= 1)
@@ -151,6 +150,7 @@ namespace EscapeFromHighschool
             passwordShowChange(tbPassword);
 
         }
+        //패스워드 enter버튼 클릭시
         private void lockEnter_Click(object sender, EventArgs e)
         {
             if (isSin && password == sin)
@@ -169,12 +169,7 @@ namespace EscapeFromHighschool
                // MessageBox.Show("nope");
             }
         }
-
-        private void pnPassword_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        // 엔딩 이후 게임 종료버튼 클릭시 모두 종료시키는 이벤트핸들러
         private void FinalExitButton_Click(object sender, EventArgs e)
         {
             this.Parent.Parent.Dispose();

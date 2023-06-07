@@ -50,9 +50,12 @@
             this.locker_open = new System.Windows.Forms.PictureBox();
             this.broken_locker = new System.Windows.Forms.PictureBox();
             this.Na = new System.Windows.Forms.Button();
+            this.note_img = new System.Windows.Forms.PictureBox();
+            this.note = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.locked_locker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locker_open)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.broken_locker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.note_img)).BeginInit();
             this.SuspendLayout();
             // 
             // sci_1
@@ -387,11 +390,38 @@
             this.Na.MouseEnter += new System.EventHandler(this.Na_MouseEnter);
             this.Na.MouseLeave += new System.EventHandler(this.Na_MouseLeave);
             // 
+            // note_img
+            // 
+            this.note_img.BackColor = System.Drawing.Color.Transparent;
+            this.note_img.Image = global::SWGame.Properties.Resources.룰;
+            this.note_img.Location = new System.Drawing.Point(240, 63);
+            this.note_img.Name = "note_img";
+            this.note_img.Size = new System.Drawing.Size(420, 418);
+            this.note_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.note_img.TabIndex = 22;
+            this.note_img.TabStop = false;
+            this.note_img.Click += new System.EventHandler(this.note_Click);
+            // 
+            // note
+            // 
+            this.note.BackColor = System.Drawing.Color.Transparent;
+            this.note.FlatAppearance.BorderSize = 0;
+            this.note.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.note.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.note.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.note.Location = new System.Drawing.Point(348, 200);
+            this.note.Name = "note";
+            this.note.Size = new System.Drawing.Size(76, 69);
+            this.note.TabIndex = 23;
+            this.note.UseVisualStyleBackColor = false;
+            this.note.Click += new System.EventHandler(this.note_Click_1);
+            // 
             // science
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::SWGame.Properties.Resources.과학실;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.note_img);
             this.Controls.Add(this.broken_locker);
             this.Controls.Add(this.locked_locker);
             this.Controls.Add(this.locker_open);
@@ -411,12 +441,14 @@
             this.Controls.Add(this.sci_2);
             this.Controls.Add(this.sci_locker);
             this.Controls.Add(this.sci_laptop);
+            this.Controls.Add(this.note);
             this.Name = "science";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.locked_locker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locker_open)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.broken_locker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.note_img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,6 +475,8 @@
         private System.Windows.Forms.PictureBox locker_open;
         private System.Windows.Forms.PictureBox broken_locker;
         private System.Windows.Forms.Button Na;
+        private System.Windows.Forms.PictureBox note_img;
+        private System.Windows.Forms.Button note;
     }
 }
 

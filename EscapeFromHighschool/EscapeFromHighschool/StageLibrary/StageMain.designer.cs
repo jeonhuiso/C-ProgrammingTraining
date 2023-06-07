@@ -67,7 +67,6 @@ namespace EscapeFromHighschool
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StageMain";
             this.Text = "StageMain";
-            this.Load += new System.EventHandler(this.StageMain_Load);
             this.ResumeLayout(false);
 
         }

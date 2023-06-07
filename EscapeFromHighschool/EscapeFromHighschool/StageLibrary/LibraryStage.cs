@@ -28,11 +28,13 @@ namespace EscapeFromHighschool
         StageMain stageMain;
         bool[] levelClear;
         static bool[] problemsolve = new bool[3] { false, false,false };
-
+        //도서관 스테이지 클리어시 실행되는 이벤트핸들러
         void StageLibraryClear() {
             libraryStageClearEvent("library");
+            stageMain.Dispose();
             this.Dispose();
         }
+        //1번째 문제 클리어시 실행되는 이벤트 핸들러
          void CheckProblem1Solve(bool isClear)
         {
             level1.Dispose();
@@ -53,6 +55,7 @@ namespace EscapeFromHighschool
                 MainReload();
             }
         }
+        //2번째 문제 클리어시 실행되는 이벤트 핸들러
         void CheckProblem2Solve(bool isClear)
         {
             level2.Dispose();
@@ -111,6 +114,7 @@ namespace EscapeFromHighschool
             }
 
         }
+        //level1 실행
         void Level1Show() {
             level1 = new Level1();
             level1.MdiParent = this;
@@ -120,6 +124,7 @@ namespace EscapeFromHighschool
             level1.Show();
             level1.Location = new System.Drawing.Point(0, 0);
         }
+        //level2 실행
         void Level2Show() {
             level2 = new Level2();
             level2.sendStage2Event += new Level2.sendStage2Clear(CheckProblem2Solve);
@@ -129,6 +134,7 @@ namespace EscapeFromHighschool
             level2.Show();
             level2.Location = new System.Drawing.Point(0, 0);
         }
+        //도서관 스테이지 메인화면 다시 리로드하는 메서드
         private void MainReload() {
             stageMain.Dispose();
             contextform.Dispose();

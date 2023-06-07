@@ -213,7 +213,6 @@ namespace EscapeFromHighschool
             this.Problem.Size = new System.Drawing.Size(896, 571);
             this.Problem.TabIndex = 3;
             this.Problem.Visible = false;
-            this.Problem.Paint += new System.Windows.Forms.PaintEventHandler(this.Problem_Paint);
             // 
             // btnStoryNext
             // 

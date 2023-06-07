@@ -24,8 +24,8 @@ namespace EscapeFromHighschool
         }
 
         bool[] bookMove = new bool[3] { false, false, false };//순서대로 진실 거짓 무지
-        bool[] bookCorrect = new bool[3] { false, false, false };
-        bool[] hiddenCorrect = new bool[3] { false, false, false };
+        bool[] bookCorrect = new bool[3] { false, false, false }; //(노멀엔딩용) 책 순서대로 넣었는지 확인용
+        bool[] hiddenCorrect = new bool[3] { false, false, false };//(히든엔딩용) 책 순서대로 넣었는지 확인용
         int storyPage =1;
         Label[] storyPageList;
         //문제 load
@@ -158,7 +158,7 @@ namespace EscapeFromHighschool
                     bookMove[i] = false;
             }
         }
-
+        //책을 드래그 할 수 있도록 하는 메서드
         public void BookMouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -186,6 +186,7 @@ namespace EscapeFromHighschool
                 point = Cursor.Position;
             }
         }
+        //책받침대에서 책을 꺼내오는 버튼에 사용하는 이벤트 핸들러
         private void BtnRemove_Click(object sender, EventArgs e) {
             if (((Control)sender).Parent.Controls.Count==2) {
                 for (int i = 0; i < ((Control)sender).Parent.Controls.Count; i++) {
@@ -236,6 +237,7 @@ namespace EscapeFromHighschool
             }
         }
 
+        //책 이후 페이지 버튼
         private void btnStoryNext_Click(object sender, EventArgs e)
         {
             if (storyPage == 1) {
@@ -254,7 +256,7 @@ namespace EscapeFromHighschool
                 storyPageList[0].Visible = false;
             }
         }
-
+        //책 이전 페이지 버튼
         private void btnStoryBefore_Click(object sender, EventArgs e)
         {
             if (storyPage == 2)
@@ -276,12 +278,7 @@ namespace EscapeFromHighschool
             
         }
 
-
-        private void Problem_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //level1 클리어 여부를 확인하는 이벤트 핸들러
         private void Level1_VisibleChanged(object sender, EventArgs e)
         {
                 for (int i = 0; i < bookShelf1.Controls.Count; i++)

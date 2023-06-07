@@ -91,7 +91,6 @@ namespace EscapeFromHighschool
             this.pbdoor.Size = new System.Drawing.Size(285, 359);
             this.pbdoor.TabIndex = 1;
             this.pbdoor.TabStop = false;
-            this.pbdoor.Click += new System.EventHandler(this.pbdoor_Click);
             // 
             // pnPassword
             // 
@@ -104,7 +103,6 @@ namespace EscapeFromHighschool
             this.pnPassword.Size = new System.Drawing.Size(682, 402);
             this.pnPassword.TabIndex = 2;
             this.pnPassword.Visible = false;
-            this.pnPassword.Paint += new System.Windows.Forms.PaintEventHandler(this.pnPassword_Paint);
             // 
             // lblBoxName
             // 
