@@ -22,7 +22,7 @@ namespace auditorium
             con = new Context();
             con.Show();
             con.MdiParent = this;
-            con.Location = new System.Drawing.Point(0, 400);
+            con.Location = new System.Drawing.Point(0, 600);
 
             aud = new auditorium(con);
             aud.MdiParent = this;

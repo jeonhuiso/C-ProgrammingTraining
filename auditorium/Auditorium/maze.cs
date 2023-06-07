@@ -570,12 +570,12 @@ namespace auditorium
         {
             if (open_check < 2)
             {
-                con.ScriptParse("maze_open_door1", "open");
+                con.ScriptParse("maze_open_door1", "open"); // 문열림
                 con.print();
             }
             else if (open_check <= 2 && open_check < 6)
             {
-                con.ScriptParse("maze_open_door2", "open");
+                con.ScriptParse("maze_open_door2", "open"); // 열렸을때 주인공
                 con.print();
             }
             else
