@@ -83,16 +83,16 @@ namespace auditorium
             {
                 if (open_ch == 0)
                 {
-                    con.ScriptParse("maze_discovery_enemy", "discovery"); // 적이 나를 발견시 context
-                    con.print();
+                    //con.ScriptParse("maze_discovery_enemy", "discovery"); // 적이 나를 발견시 context
+                    //con.print();
                 }
             }
             else
             {
                 if (open_ch == 0)
                 {
-                    con.ScriptParse("maze_nomal", "nomal"); // 아무 일도 없는 경우 context
-                    con.print();
+                    //con.ScriptParse("maze_nomal", "nomal"); // 아무 일도 없는 경우 context
+                    //con.print();
                 }
             }
         }
@@ -537,14 +537,16 @@ namespace auditorium
         private void time_over_Click(object sender, EventArgs e)
         {
             this.Close();
+            game_exit();
         }
+
         public delegate void AuditoriumClear();
         public event AuditoriumClear AuditoriumClearEvent;
         private void maze_no_all_puzzle_Click(object sender, EventArgs e)
         {
             AuditoriumClearEvent();
             this.Close();
-            //clear
+            game_exit();
 
         }
 
@@ -562,21 +564,20 @@ namespace auditorium
         {
             AuditoriumClearEvent();
             this.Close();
-            //clear
-
+            game_exit();
         }
 
         private void open_door_timer_Tick(object sender, EventArgs e)
         {
             if (open_check < 2)
             {
-                con.ScriptParse("maze_open_door1", "open"); // 문열림
-                con.print();
+                //con.ScriptParse("maze_open_door1", "open"); // 문열림
+                //con.print();
             }
             else if (open_check <= 2 && open_check < 6)
             {
-                con.ScriptParse("maze_open_door2", "open"); // 열렸을때 주인공
-                con.print();
+                //con.ScriptParse("maze_open_door2", "open"); // 열렸을때 주인공
+                //con.print();
             }
             else
             {
@@ -596,6 +597,18 @@ namespace auditorium
         private void key_insert(object sender, EventArgs e)
         {
             key_button.Text = ((Button)sender).Text;
+        }
+
+        private void game_exit()
+        {
+            for (int i = 0; i < 16; i++) // picturebox 설정 + enemy 초기 방향 설정
+            {
+                for (int j = 0; j < 25; j++)
+                {
+                    this.Controls.Remove(pic[i, j]);
+                    pic[i, j].Dispose();
+                }
+            }
         }
     }
 }

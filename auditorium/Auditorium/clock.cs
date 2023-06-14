@@ -437,6 +437,7 @@ namespace auditorium
         private void clock_game_success_Click(object sender, EventArgs e) // 퍼즐이 끝났을 때 사용하는 버튼
         {
             this.Close();
+            game_exit();
         }
 
         private void btn_left_ex_Click(object sender, EventArgs e) // 퍼즐 설명 왼쪽으로 넘기기 버튼
@@ -517,6 +518,7 @@ namespace auditorium
             if(current_time > 600)
             {
                 this.Close();
+                game_exit();
             }
         }
 
@@ -524,6 +526,21 @@ namespace auditorium
         {
             pan_clock_explain.Visible = false;
             fail_txt.Visible = false;
+        }
+
+        private void game_exit()
+        {
+            for(int i  = 0; i < 4 + level; i++)
+            {
+                for (int j = 0; j < 4 + level; j++)
+                {
+                    this.Controls.Remove(user_clock[i, j]);
+                    this.Controls.Remove(make_clock[i, j]);
+                    user_clock[i, j].Dispose();
+                    make_clock[i, j].Dispose();
+                }
+
+            }
         }
     }
 }

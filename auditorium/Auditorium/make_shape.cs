@@ -493,6 +493,7 @@ namespace auditorium
         private void shape_game_success_Click(object sender, EventArgs e) // 퍼즐 성공시 실행하는 버튼
         {
             this.Close();
+            game_exit();
         }
 
         private void fail_txt_Click(object sender, EventArgs e) // 퍼즐을 맞추는데 실패시 발생하는 버튼
@@ -509,6 +510,26 @@ namespace auditorium
             if (current_time > 600)
             {
                 this.Close();
+                game_exit();
+            }
+        }
+
+        private void game_exit()
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                for(int j = 0; j < 5; j++)
+                {
+                    this.Controls.Remove(root_button[i, j]);
+                    this.Controls.Remove(goal_button[i, j]);
+                    root_button[i, j].Dispose();
+                    goal_button[i, j].Dispose();
+                }
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                this.Controls.Remove(use_button[i]);
+                use_button[i].Dispose();
             }
         }
     }
