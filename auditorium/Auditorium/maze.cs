@@ -83,16 +83,16 @@ namespace auditorium
             {
                 if (open_ch == 0)
                 {
-                    //con.ScriptParse("maze_discovery_enemy", "discovery"); // 적이 나를 발견시 context
-                    //con.print();
+                    con.ScriptParse("maze_discovery_enemy", "discovery"); // 적이 나를 발견시 context
+                    con.print();
                 }
             }
             else
             {
                 if (open_ch == 0)
                 {
-                    //con.ScriptParse("maze_nomal", "nomal"); // 아무 일도 없는 경우 context
-                    //con.print();
+                    con.ScriptParse("maze_nomal", "nomal"); // 아무 일도 없는 경우 context
+                    con.print();
                 }
             }
         }
@@ -571,13 +571,13 @@ namespace auditorium
         {
             if (open_check < 2)
             {
-                //con.ScriptParse("maze_open_door1", "open"); // 문열림
-                //con.print();
+                con.ScriptParse("maze_open_door1", "open"); // 문열림
+                con.print();
             }
             else if (open_check <= 2 && open_check < 6)
             {
-                //con.ScriptParse("maze_open_door2", "open"); // 열렸을때 주인공
-                //con.print();
+                con.ScriptParse("maze_open_door2", "open"); // 열렸을때 주인공
+                con.print();
             }
             else
             {
