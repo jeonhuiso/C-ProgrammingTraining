@@ -40,7 +40,6 @@ namespace auditorium
             this.Name = "auditorium_MDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "auditorium_MDI";
-            this.Load += new System.EventHandler(this.auditorium_MDI_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.auditorium_MDI_MouseClick);
             this.ResumeLayout(false);
 

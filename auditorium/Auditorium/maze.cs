@@ -537,14 +537,16 @@ namespace auditorium
         private void time_over_Click(object sender, EventArgs e)
         {
             this.Close();
+            game_exit();
         }
+
         public delegate void AuditoriumClear();
         public event AuditoriumClear AuditoriumClearEvent;
         private void maze_no_all_puzzle_Click(object sender, EventArgs e)
         {
             AuditoriumClearEvent();
             this.Close();
-            //clear
+            game_exit();
 
         }
 
@@ -562,8 +564,7 @@ namespace auditorium
         {
             AuditoriumClearEvent();
             this.Close();
-            //clear
-
+            game_exit();
         }
 
         private void open_door_timer_Tick(object sender, EventArgs e)
@@ -596,6 +597,18 @@ namespace auditorium
         private void key_insert(object sender, EventArgs e)
         {
             key_button.Text = ((Button)sender).Text;
+        }
+
+        private void game_exit()
+        {
+            for (int i = 0; i < 16; i++) // picturebox 설정 + enemy 초기 방향 설정
+            {
+                for (int j = 0; j < 25; j++)
+                {
+                    this.Controls.Remove(pic[i, j]);
+                    pic[i, j].Dispose();
+                }
+            }
         }
     }
 }

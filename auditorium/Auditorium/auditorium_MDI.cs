@@ -46,9 +46,5 @@ namespace auditorium
         {
             this.SendToBack();
         }
-
-        private void auditorium_MDI_Load(object sender, EventArgs e)
-        {
-        }
     }
 }
