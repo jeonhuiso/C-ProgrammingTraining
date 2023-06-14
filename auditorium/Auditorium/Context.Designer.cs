@@ -39,6 +39,7 @@ namespace auditorium
             // 
             this.txtComment.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.txtComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtComment.Font = new System.Drawing.Font("함초롬바탕", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtComment.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtComment.Location = new System.Drawing.Point(191, 32);
             this.txtComment.Margin = new System.Windows.Forms.Padding(4);
