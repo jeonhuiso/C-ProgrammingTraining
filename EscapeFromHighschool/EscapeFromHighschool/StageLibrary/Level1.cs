@@ -69,7 +69,9 @@ namespace EscapeFromHighschool
                     bookMove[0] = false;
                 if (((Button)sender).Name == "Book_Of_Lie")
                     bookMove[1] = true;
-                else if (((Button)sender).Name == "Book_Of_Dumb")
+                else 
+                    bookMove[1] = false;
+                if (((Button)sender).Name == "Book_Of_Dumb")
                     bookMove[2] = true;
                 else
                     bookMove[2] = false;
@@ -80,13 +82,14 @@ namespace EscapeFromHighschool
         public void BookMouseUp(object sender, MouseEventArgs e) {
             if (e.Button == MouseButtons.Left)
             {
-                foreach (Control x in this.Controls)
+                foreach (Control x in this.Controls)//모든 컨트롤 확인
                 {
-                    if (x is GroupBox && (string)x.Tag == "bookshelf") {
-                        if (((Control)sender).Bounds.IntersectsWith(x.Bounds)&&x.Controls.Count==1) {
-                            x.Controls.Add((Control)sender);
-                            ((Control)sender).Location = new Point(20, 30);
+                    if (x is GroupBox && (string)x.Tag == "bookshelf") {//해당 컨트롤이 책 받침대일때
+                        if (((Control)sender).Bounds.IntersectsWith(x.Bounds)&&x.Controls.Count==1) {//책과 책 받침대가 서로 충돌 할 경우
+                            x.Controls.Add((Control)sender);        //책 받침대(GroupBox)에 책(Button)추가
+                            ((Control)sender).Location = new Point(20, 30); //책의 위치 지정
 
+                            //책이 올바른 책받침대에 두어져 있는지 확인
                             if (x.Name == "bookShelf1")
                             {
                                 if (x.Controls[1].Name == "Book_Of_Truth")
@@ -142,6 +145,7 @@ namespace EscapeFromHighschool
                         }
                     }
                 }
+                //책 받침대와 충돌하지 않거나 책받침대에 놓여져 있지 않은 책들은 원래 자리로 복구
                 if ((string)(((Control)sender).Parent.Tag) != "bookshelf")
                 {
                     if (((Button)sender).Name == "Book_Of_Truth")
@@ -162,9 +166,10 @@ namespace EscapeFromHighschool
         public void BookMouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-            {
+            {   //이전 마우스 위치에서 현재 마우스 위치까지 움직인 길이를 구함
                 int x = Cursor.Position.X - point.X;
                 int y = Cursor.Position.Y - point.Y;
+                //현재 클릭되고있는 책의 위치를 (x,y)만큼 이동
                 if (bookMove[0])
                 {
                     Point tmp = Book_Of_Truth.Location;

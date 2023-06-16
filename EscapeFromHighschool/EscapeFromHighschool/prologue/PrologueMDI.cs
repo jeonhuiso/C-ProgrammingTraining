@@ -82,7 +82,7 @@ namespace EscapeFromHighschool
         }
         //해당 스테이지 클리어시 스테이지 진입버튼 사용 불가하게 하는 메서드
         public void BtnEnable(string what) { 
-           /* if (what == "library")
+            if (what == "library")
             {
                 btnLibrary.Enabled = false;
                 btnLibrary.BackgroundImage = Image.FromFile(address + "x.png");
@@ -102,7 +102,7 @@ namespace EscapeFromHighschool
             {
                 btnScience.Enabled = false;
                 btnScience.BackgroundImage = Image.FromFile(address + "x.png");
-            }*/
+            }
 
         }
         //시작화면에서 게임시작 버튼 클릭시 실행 이벤트핸들러
