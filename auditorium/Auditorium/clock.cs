@@ -265,7 +265,7 @@ namespace auditorium
                     make_clock = new Button[4 + level, 4 + level];
                     user_clock = new Button[4 + level, 4 + level];
                     make_game(make_clock, 4 + level, 0, 0);
-                    make_game(user_clock, 4 + level, 260, 1);
+                    make_game(user_clock, 4 + level, 375, 1);
                     make_clock[0, 0].Text = "확인";
                     make_clock[0, 0].Enabled = true;
                     make_clock[0, 0].Click += new EventHandler(make_check_btn);
