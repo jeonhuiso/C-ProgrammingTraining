@@ -50,28 +50,35 @@ namespace EscapeFromHighschool
         }
         //방 클리어 확인용 메소드
         private void RoomClearCheck(string n) {
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 4; i++)
+            {
                 if (n == stageMain[i])
                 {
                     stageClearCheck[i] = true;
-                    
-                   // MessageBox.Show(stageMain[i] + "clear");
+
+                    // MessageBox.Show(stageMain[i] + "clear");
                 }
-                if (stageMain[i] == "library" && stageClearCheck[i])
+                if (prologueMDI != null)
                 {
-                    prologueMDI.BtnEnable("library");
-                }else
-                if (stageMain[i] == "auditorium" && stageClearCheck[i])
-                {
-                    prologueMDI.BtnEnable("auditorium");
-                }else
-                if (stageMain[i] == "science" && stageClearCheck[i])
-                {
-                    prologueMDI.BtnEnable("science");
-                }else
-                if (stageMain[i] == "computer" && stageClearCheck[i])
-                {
-                    prologueMDI.BtnEnable("computer");
+                    if (stageMain[i] == "library" && stageClearCheck[i])
+                    {
+                        prologueMDI.BtnEnable("library");
+                    }
+                    else
+                    if (stageMain[i] == "auditorium" && stageClearCheck[i])
+                    {
+                        prologueMDI.BtnEnable("auditorium");
+                    }
+                    else
+                    if (stageMain[i] == "science" && stageClearCheck[i])
+                    {
+                        prologueMDI.BtnEnable("science");
+                    }
+                    else
+                    if (stageMain[i] == "computer" && stageClearCheck[i])
+                    {
+                        prologueMDI.BtnEnable("computer");
+                    }
                 }
             }
             //모든 스테이지 클리어시 엔딩용 form 생성

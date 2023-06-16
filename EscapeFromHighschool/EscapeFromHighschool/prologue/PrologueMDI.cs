@@ -89,8 +89,8 @@ namespace EscapeFromHighschool
             }
             if (what == "auditorium")
             {
-                    btnAuditorium.Enabled = false;
-                    btnAuditorium.BackgroundImage = Image.FromFile(address + "x.png");
+                  btnAuditorium.Enabled = false;
+                  btnAuditorium.BackgroundImage = Image.FromFile(address + "x.png");
             
             }
             if (what == "computer")
