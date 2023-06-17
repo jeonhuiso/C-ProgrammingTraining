@@ -194,22 +194,22 @@ namespace auditorium
 
         }
 
-        public int return_first() 
+        public int return_first() // 1번째 블록 개수
         {
             return first;
         }
 
-        public int return_second()
+        public int return_second() // 2번째 블록 개수
         {
             return second;
         }
 
-        public int return_third()
+        public int return_third() // 3번재 블록 개수
         {
             return third;
         }
 
-        public int[,] re_return_shape()
+        public int[,] re_return_shape() // 현재 모양 반환
         {
             return return_shape;
         }

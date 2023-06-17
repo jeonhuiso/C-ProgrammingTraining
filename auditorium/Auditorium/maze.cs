@@ -71,9 +71,7 @@ namespace auditorium
                     this.Controls.Add(pic[i, j]);
                 }
             }
-
             new_maze_init();
-
             maze_timer.Start();
         }
 
@@ -599,7 +597,7 @@ namespace auditorium
             key_button.Text = ((Button)sender).Text;
         }
 
-        private void game_exit()
+        private void game_exit() // 게임 종료시 동적 할당 버튼 제거
         {
             for (int i = 0; i < 16; i++) // picturebox 설정 + enemy 초기 방향 설정
             {
