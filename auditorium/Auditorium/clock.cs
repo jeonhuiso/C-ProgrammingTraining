@@ -104,7 +104,7 @@ namespace auditorium
                 col.RemoveAt(use_remove);
             }
 
-            List<int> color = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
+            List<int> color = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 }; // 색상을 부여하기 위한 list
             row.Clear();
             col.Clear();
             int color_choice = 0;
@@ -113,7 +113,7 @@ namespace auditorium
                 row.Add(i);
                 col.Add(i);
             }
-            for (int i = 1; i < num; i++)
+            for (int i = 1; i < num; i++) // 랜덤하게 색상 부여
             {
                 use_remove = rand.Next(3 * (row.Count - 1)) % row.Count;
                 color_choice = rand.Next(7 * (color.Count - 1)) % color.Count;
@@ -123,7 +123,7 @@ namespace auditorium
 
                 use_remove = rand.Next(3 * (col.Count - 1)) % col.Count;
                 color_choice = rand.Next(7 * (color.Count - 1)) % color.Count;
-                make_color_add(1, col[use_remove], num, color[color_choice]);
+                make_color_add(1, col[use_remove], num, color[color_choice]); // 버튼에 색상 부여
                 col.RemoveAt(use_remove);
                 color.RemoveAt(color_choice);
             }
@@ -251,6 +251,8 @@ namespace auditorium
                 {
                     this.Controls.Remove(make_clock[i, j]);
                     this.Controls.Remove(user_clock[i, j]);
+                    make_clock[i, j].Dispose();
+                    user_clock[i, j].Dispose();
                 }
         }
 
@@ -528,7 +530,7 @@ namespace auditorium
             fail_txt.Visible = false;
         }
 
-        private void game_exit()
+        private void game_exit() // 게임 종료시 동적 할당 제거
         {
             for(int i  = 0; i < 4 + level; i++)
             {

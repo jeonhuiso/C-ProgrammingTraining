@@ -14,9 +14,9 @@ namespace auditorium
     {
         public delegate void AuditoriumClear(string n);
         public event AuditoriumClear AuditoriumClearEvent;
-        Context con;
-        auditorium aud;
-        public auditorium_MDI()
+        Context con; // 대화창
+        auditorium aud; // maze 게임 들어가기전 문 선택
+        public auditorium_MDI() // auditorium mdi
         {
             InitializeComponent();
             con = new Context();

@@ -124,7 +124,7 @@ namespace auditorium
             make_other_btn(use_size, 275, 150, 2, first_num + second_num, first_num + second_num + third_num);
         }
 
-        private void first_make_other_btn(Button btn, int size, int location_i, int location_j, int color)
+        private void first_make_other_btn(Button btn, int size, int location_i, int location_j, int color) // 다른 게임 버튼 생성
         {
             if (color == 0)
             {
@@ -355,10 +355,15 @@ namespace auditorium
                     {
                         this.Controls.Remove(goal_button[i, j]);
                         this.Controls.Remove(root_button[i, j]);
+                        goal_button[i, j].Dispose();
+                        root_button[i, j].Dispose();
                     }
                 }
                 for (int i = 0; i < first_num + second_num + third_num; i++)
+                {
                     this.Controls.Remove(use_button[i]);
+                    use_button[i].Dispose();
+                }
                 make_shape_init(5);
                 btn_reset.Text = "♥ x  " + (int.Parse(btn_reset.Text.Remove(0, 5)) - 1).ToString();
             }
@@ -514,7 +519,7 @@ namespace auditorium
             }
         }
 
-        private void game_exit()
+        private void game_exit() // 게임 종료시 동적 할당된 버튼 제거
         {
             for(int i = 0; i < 5; i++)
             {

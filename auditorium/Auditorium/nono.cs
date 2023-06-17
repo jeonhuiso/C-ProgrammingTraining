@@ -92,7 +92,7 @@ namespace auditorium
             for (int i = 1; i < size; i++) // 숫자를 넣기 위해 사용, 모든 배열을 확인해 각 줄당 몇개가 연속으로 있는지 확인
             {
                 btn_check_num = 0;
-                for (int j = 1; j < size; j++)
+                for (int j = 1; j < size; j++) // row 버튼 숫자 저장
                 {
                     if (nono_check_array[i - 1, j - 1] == 1)
                     {
@@ -113,7 +113,7 @@ namespace auditorium
                 }
 
                 btn_check_num = 0;
-                for (int j = 1; j < size; j++)
+                for (int j = 1; j < size; j++) // col 버튼 숫자 추가
                 {
                     if (nono_check_array[j - 1, i - 1] == 1)
                     {
@@ -165,8 +165,7 @@ namespace auditorium
                 for (int i = 0; i < 4 + level; i++)
                     for (int j = 0; j < 4 + level; j++)
                         this.Controls.Remove(nono_btn[i, j]);
-                level++;
-                if (level == 4) // 게임 성공
+                if (level == 3) // 게임 성공
                 {
                     pan_nono_explain.Visible = true;
                     nono_game_success.Visible = true;
@@ -174,6 +173,8 @@ namespace auditorium
                 }
                 else // 다음 단계 실행
                 {
+                    game_exit();
+                    level++;
                     nono_btn = new Button[4 + level, 4 + level];
                     nono_check_array = new int[3 + level, 3 + level];
                     make_game(4 + level);
@@ -382,7 +383,7 @@ namespace auditorium
             game_exit();
         }
 
-        private void game_exit()
+        private void game_exit() // 동적 할당한 버튼 제거
         {
             for(int i = 0;  i< 4+level; i++)
             {
