@@ -50,6 +50,7 @@ namespace EscapeFromHighschool
         }
         //방 클리어 확인용 메소드
         private void RoomClearCheck(string n) {
+
             for (int i = 0; i < 4; i++)
             {
                 if (n == stageMain[i])
@@ -57,6 +58,14 @@ namespace EscapeFromHighschool
                     stageClearCheck[i] = true;
 
                     // MessageBox.Show(stageMain[i] + "clear");
+                }
+                //모든 스테이지 클리어시 엔딩용 form 생성
+                if (AllClearCheck())
+                {
+                    prologueMDI.Dispose();
+                    endingMDI = new EndingMDI();
+                    endingMDI.Show();
+                    break;
                 }
                 if (prologueMDI != null)
                 {
@@ -81,12 +90,7 @@ namespace EscapeFromHighschool
                     }
                 }
             }
-            //모든 스테이지 클리어시 엔딩용 form 생성
-            if (AllClearCheck()) {
-                prologueMDI.Dispose();
-                endingMDI = new EndingMDI();
-                endingMDI.Show();
-            }
+            
            // MessageBox.Show("clear :"+ stageClearCheck[0].ToString()+ stageClearCheck[1].ToString()+stageClearCheck[2].ToString()+stageClearCheck[3].ToString());
 
         }
